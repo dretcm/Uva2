@@ -1,4401 +1,7230 @@
-UVa
-===
-For my solution on UVa Online Judge.
-Maybe it's not best solution for these problem set.
-It also exists some bugs.
-
-* [PCHome BLOG](http://mypaper.pchome.com.tw/zerojudge)
-
-* [GitHub BLOG](http://morris821028.github.io/)
-
-
-## List ##
-
-```
-.
-├── ACM-ICPC
-│   ├── pa
-│   ├── paa
-│   │   ├── Debug
-│   │   │   ├── makefile
-│   │   │   ├── objects.mk
-│   │   │   ├── paa
-│   │   │   ├── sources.mk
-│   │   │   └── src
-│   │   │       ├── paa.d
-│   │   │       ├── paa.o
-│   │   │       └── subdir.mk
-│   │   └── src
-│   │       └── paa.cpp
-│   ├── pb
-│   │   ├── Debug
-│   │   │   ├── makefile
-│   │   │   ├── objects.mk
-│   │   │   ├── pb
-│   │   │   ├── sources.mk
-│   │   │   └── src
-│   │   │       ├── pb.d
-│   │   │       ├── pb.o
-│   │   │       └── subdir.mk
-│   │   └── src
-│   │       └── pb.cpp
-│   ├── pc
-│   │   ├── Debug
-│   │   │   ├── makefile
-│   │   │   ├── objects.mk
-│   │   │   ├── pc
-│   │   │   ├── sources.mk
-│   │   │   └── src
-│   │   │       ├── pc.d
-│   │   │       ├── pc.o
-│   │   │       └── subdir.mk
-│   │   └── src
-│   │       └── pc.cpp
-│   ├── pd
-│   │   ├── Debug
-│   │   │   ├── makefile
-│   │   │   ├── objects.mk
-│   │   │   ├── pd
-│   │   │   ├── pd.in
-│   │   │   ├── sources.mk
-│   │   │   └── src
-│   │   │       ├── pd.d
-│   │   │       ├── pd.o
-│   │   │       └── subdir.mk
-│   │   └── src
-│   │       └── pd.cpp
-│   ├── pd_1
-│   │   ├── Debug
-│   │   │   ├── makefile
-│   │   │   ├── objects.mk
-│   │   │   ├── pd_1
-│   │   │   ├── sources.mk
-│   │   │   └── src
-│   │   │       ├── pd_1.d
-│   │   │       ├── pd_1.o
-│   │   │       └── subdir.mk
-│   │   └── src
-│   │       ├── pd_1.cpp
-│   │       ├── pd_1.exe
-│   │       └── pd_1.o
-│   ├── pe
-│   │   ├── Debug
-│   │   │   ├── makefile
-│   │   │   ├── objects.mk
-│   │   │   ├── pe
-│   │   │   ├── sources.mk
-│   │   │   └── src
-│   │   │       ├── pe.d
-│   │   │       ├── pe.o
-│   │   │       └── subdir.mk
-│   │   └── src
-│   │       └── pe.cpp
-│   ├── pg
-│   │   ├── Debug
-│   │   │   ├── makefile
-│   │   │   ├── objects.mk
-│   │   │   ├── sources.mk
-│   │   │   └── src
-│   │   │       ├── pg.d
-│   │   │       ├── pg.o
-│   │   │       └── subdir.mk
-│   │   └── src
-│   │       └── pg.cpp
-│   └── ph
-│       ├── Debug
-│       │   ├── makefile
-│       │   ├── objects.mk
-│       │   ├── ph
-│       │   ├── sources.mk
-│       │   └── src
-│       │       ├── ph.d
-│       │       ├── ph.o
-│       │       └── subdir.mk
-│       └── src
-│           └── ph.cpp
-├── ACM-ICPC-Regionals-Daejeon
-│   ├── pA.cpp
-│   ├── pB.cpp
-│   ├── pC.cpp
-│   ├── pD.cpp
-│   ├── pFF.cpp
-│   ├── pG.cpp
-│   ├── pJ.cpp
-│   └── pf.cpp
-├── ACM-ICPC[Regionals2009][Phuket]
-│   ├── pa.cpp
-│   ├── pb.cpp
-│   ├── pc.cpp
-│   ├── pc.exe
-│   └── pc.o
-├── ACM-ICPC[Regionals2011][Dalian]
-│   └── 新增資料夾
-│       ├── pa.cpp
-│       ├── pa.exe
-│       ├── pa.o
-│       ├── pc.cpp
-│       ├── pc.exe
-│       ├── pc.o
-│       ├── pc_dfs.cpp
-│       ├── pc_dfs.exe
-│       ├── pc_dfs.o
-│       ├── pd.cpp
-│       ├── pd.exe
-│       ├── pd.o
-│       ├── pe.cpp
-│       ├── pe.exe
-│       ├── pe.o
-│       ├── pf.cpp
-│       ├── pf.exe
-│       ├── pf.o
-│       ├── pl.cpp
-│       ├── pll.cpp
-│       ├── pll.exe
-│       ├── pll.o
-│       ├── plll.cpp
-│       ├── plll.exe
-│       └── plll.o
-├── ACM-ICPC[Regionals2011][Phuket]
-│   ├── pa.cpp
-│   ├── pa.exe
-│   ├── pa.o
-│   ├── pb.cpp
-│   ├── pb.exe
-│   ├── pb.o
-│   ├── pc.cpp
-│   ├── pc.exe
-│   ├── pc.o
-│   ├── pd.cpp
-│   ├── pd.exe
-│   ├── pd.o
-│   ├── pg.cpp
-│   ├── pg.exe
-│   ├── pg.o
-│   ├── pi.cpp
-│   ├── pi.exe
-│   ├── pi.o
-│   ├── pj.c
-│   ├── pj.cpp
-│   ├── pj.exe
-│   ├── pj.o
-│   ├── pxx.c
-│   ├── pxx.cpp
-│   ├── pxx.exe
-│   ├── pxx.o
-│   ├── testpE.cpp
-│   ├── testpE.exe
-│   ├── testpE.o
-│   ├── trashpH.cpp
-│   ├── trashpH.exe
-│   └── trashpH.o
-├── HDUOJ
-│   ├── 4288 Coder.cpp
-│   ├── 4289 Control.cpp
-│   ├── 4291 A Short problem.cpp
-│   ├── 4296 Buildings.cpp
-│   ├── 4454 Stealing a Cake.cpp
-│   ├── 4455 Substring.cpp
-│   ├── 4460 Friend Chains.cpp
-│   ├── 4461 The Power of Xiangqi.cpp
-│   ├── 4462 Scaring the Birds.cpp
-│   └── 4463 Outlets.cpp
-├── IOI_Camp
-│   ├── IOICamp Judge.htm
-│   ├── IOICamp JudgeP19.htm
-│   ├── IOICamp JudgeP19_files
-│   │   ├── MathJax.js
-│   │   ├── bootstrap.css
-│   │   ├── bootstrap.js
-│   │   ├── highlight.js
-│   │   ├── jquery-1.js
-│   │   ├── pangu.js
-│   │   └── solarized_light.css
-│   ├── IOICamp JudgeP59.htm
-│   ├── IOICamp JudgeP59_files
-│   │   ├── MathJax.js
-│   │   ├── bootstrap.css
-│   │   ├── bootstrap.js
-│   │   ├── highlight.js
-│   │   ├── jquery-1.js
-│   │   ├── pangu.js
-│   │   └── solarized_light.css
-│   ├── IOICamp Judge_files
-│   │   ├── MathJax.js
-│   │   ├── bootstrap.css
-│   │   ├── bootstrap.js
-│   │   ├── highlight.js
-│   │   ├── jquery-1.js
-│   │   ├── pangu.js
-│   │   └── solarized_light.css
-│   ├── ioicamp2014_websitebackup.zip
-│   ├── ioicampP17程度差距 EX .cpp
-│   ├── ioicampP19胖胖兮的書架.cpp
-│   ├── ioicampP49胖胖兮的書架 EX.cpp
-│   ├── ioicampP53電力傳輸系統.cpp
-│   ├── ioicampP56最佳二元搜尋樹.cpp
-│   ├── ioicampP59A+ 遊戲.cpp
-│   ├── ioicampP68胖胖天特大薯.cpp
-│   ├── ioicampP68胖胖天特大薯[v2].cpp
-│   ├── ioicampP68胖胖天特大薯[v3].cpp
-│   ├── ioicampP70迷宮魔法.cpp
-│   └── ioicampP72我太受歡迎了該怎麼辦.cpp
-├── ITSA
-│   ├── ITSA201111
-│   │   ├── P1.cpp
-│   │   ├── P2.cpp
-│   │   ├── P3.cpp
-│   │   └── Programming Contest exams 10th.pdf
-│   ├── ITSA201112
-│   │   ├── 11th ITSA team.xlsx
-│   │   ├── Competition Document 11th.doc
-│   │   ├── P1.cpp
-│   │   ├── P2.cpp
-│   │   ├── P3.cpp
-│   │   ├── P3.exe
-│   │   ├── P4.cpp
-│   │   ├── P4.exe
-│   │   ├── P5.cpp
-│   │   ├── P5.exe
-│   │   ├── Programming Contest exams 11th.pdf
-│   │   └── Registration Form.doc
-│   ├── ITSA201202
-│   │   ├── P1.cpp
-│   │   ├── P2.cpp
-│   │   ├── P3.cpp
-│   │   ├── P4.cpp
-│   │   ├── P5.cpp
-│   │   └── Programming Contest exams 12th.pdf
-│   ├── ITSA201203
-│   │   ├── P1.cpp
-│   │   ├── P2.cpp
-│   │   ├── P3.cpp
-│   │   ├── P4.cpp
-│   │   ├── P5.cpp
-│   │   └── Programming Contest exams 13th.pdf
-│   ├── ITSA201204
-│   │   ├── P1.cpp
-│   │   ├── P2.cpp
-│   │   ├── P3.cpp
-│   │   ├── P4.cpp
-│   │   ├── P5.cpp
-│   │   ├── Programming Contest exams 14th.pdf
-│   │   └── Registration Form.doc
-│   ├── ITSA201205
-│   │   ├── 15th ITSA team.xlsx
-│   │   ├── Programming Contest exams 15th.pdf
-│   │   ├── p1.cpp
-│   │   ├── p2.cpp
-│   │   ├── p3.cpp
-│   │   ├── p4.cpp
-│   │   └── p5.cpp
-│   ├── ITSA201208
-│   │   ├── 16th ITSA team(1).xlsx
-│   │   ├── Programming Contest exams 16th.pdf
-│   │   ├── p1.cpp
-│   │   ├── p2.cpp
-│   │   ├── p3.cpp
-│   │   ├── p4.cpp
-│   │   └── p5.cpp
-│   ├── ITSA201209
-│   │   ├── 17th ITSA team.xlsx
-│   │   ├── Competition Document 17th.doc
-│   │   ├── Programming Contest exams 17th.pdf
-│   │   ├── Registration Form2012.doc
-│   │   ├── p1.cpp
-│   │   ├── p2.cpp
-│   │   ├── p3.cpp
-│   │   ├── p4.cpp
-│   │   └── pp5.cpp
-│   ├── ITSA201210
-│   │   ├── 18th ITSA team.xlsx
-│   │   ├── Competition  Document 18th.doc
-│   │   ├── Programming Contest exams 18th.pdf
-│   │   ├── Registration Form2012.doc
-│   │   ├── p1.cpp
-│   │   ├── p2.cpp
-│   │   ├── p3.cpp
-│   │   ├── p4.cpp
-│   │   ├── p5.cpp
-│   │   └── pp2.cpp
-│   ├── ITSA201211
-│   │   ├── 19th ITSA team.xlsx
-│   │   ├── Competition  Document 19th.doc
-│   │   ├── Programming Contest exams 19th.pdf
-│   │   ├── Registration Form2012.doc
-│   │   ├── p1.cpp
-│   │   ├── p2.cpp
-│   │   ├── p3.cpp
-│   │   ├── p4.cpp
-│   │   └── p5.cpp
-│   ├── ITSA_Judge
-│   │   ├── [C_DP01-中] 參加活動.cpp
-│   │   ├── [C_DP02-中] 法碼秤重.cpp
-│   │   ├── [C_DP03-中] 細菌繁殖.cpp
-│   │   ├── [C_DP04-中] 房地產.cpp
-│   │   ├── [C_DP06-中] 永遠不會死的老鼠.cpp
-│   │   ├── [C_DP07-中] 矩陣相乘順序.cpp
-│   │   ├── [C_DP08-中] 換零錢.cpp
-│   │   ├── [C_DP11-易] 排隊購票.cpp
-│   │   └── [C_DP18-中] 沙漠綠洲.cpp
-│   └── ITSA桂冠盃
-│       ├── a574. ITSA2012 桂冠 n維區間查詢.cpp
-│       ├── p3.cpp
-│       ├── p33.cpp
-│       ├── p5.cpp
-│       ├── p5.exe
-│       └── p5.o
-├── MD5
-│   ├── Hash_1.0.4_XiaZaiBa.exe
-│   ├── MD5.cpp
-│   ├── MD5.exe
-│   ├── MD5修正.cpp
-│   ├── MD5修正.exe
-│   ├── 網路MD5.cpp
-│   └── 網路MD5.exe
-├── MOCC
-│   ├── [MOCC][week6]A.cpp
-│   ├── [MOCC][week9]A.cpp
-│   ├── [MOCC][week9]B.cpp
-│   ├── [MOCC][week9]C.cpp
-│   ├── [MOCC][week9]D.cpp
-│   ├── [MOCC][week9]E.cpp
-│   └── [MOCC][week9]X.cpp
-├── NCPC2012
-│   ├── NCPC2012pB.docx
-│   ├── NCPC2012pC.docx
-│   ├── NCPC2012pF.docx
-│   ├── NCPC2012pG.docx
-│   ├── NCPC2012pG.jpg
-│   ├── NCPC2012pI.docx
-│   ├── NPSC2012.JPG
-│   ├── NPSC2012pD.docx
-│   ├── PI.jpg
-│   ├── Untitled1.c
-│   ├── gr_pg.cpp
-│   ├── in.txt
-│   ├── in2.txt.txt
-│   ├── out.txt
-│   ├── out2.txt.txt
-│   ├── pa.cpp
-│   ├── pa.exe
-│   ├── pa.o
-│   ├── pb.cpp
-│   ├── pc.cpp
-│   ├── pc.exe
-│   ├── pc.o
-│   ├── pd.cpp
-│   ├── pf.cpp
-│   ├── pg.cpp
-│   ├── pi.cpp
-│   ├── pi.exe
-│   ├── pi.o
-│   ├── pin.cpp
-│   └── 掃瞄002.JPG
-├── PTC
-│   ├── PTC201109
-│   │   ├── 201107B.cpp
-│   │   ├── 201109A.pdf
-│   │   ├── 201109B.pdf
-│   │   ├── 201109C.pdf
-│   │   └── 201109D.pdf
-│   ├── PTC201111
-│   │   ├── 201111A.pdf
-│   │   ├── 201111B.pdf
-│   │   ├── 201111C.pdf
-│   │   ├── 201111D.pdf
-│   │   ├── 201111E.pdf
-│   │   ├── C.cpp
-│   │   ├── D.cpp
-│   │   └── E.cpp
-│   ├── PTC201112
-│   │   ├── 201112A.pdf
-│   │   ├── 201112B.pdf
-│   │   ├── 201112C.pdf
-│   │   ├── 201112D.pdf
-│   │   ├── 201112E.pdf
-│   │   ├── PA.cpp
-│   │   ├── PA.exe
-│   │   ├── PB.cpp
-│   │   ├── PB.exe
-│   │   ├── PC.cpp
-│   │   ├── PC.exe
-│   │   ├── PE.cpp
-│   │   └── PE.exe
-│   ├── PTC201202
-│   │   ├── 201202A.pdf
-│   │   ├── 201202B.pdf
-│   │   ├── 201202C.pdf
-│   │   ├── 201202D.pdf
-│   │   ├── 201202E.pdf
-│   │   ├── PA.cpp
-│   │   ├── PB.cpp
-│   │   ├── PC.cpp
-│   │   ├── PD.cpp
-│   │   └── PE.cpp
-│   ├── PTC201203
-│   │   ├── 201203A.pdf
-│   │   ├── 201203B.pdf
-│   │   ├── 201203C.pdf
-│   │   ├── 201203D.pdf
-│   │   ├── 201203E.pdf
-│   │   ├── PB.cpp
-│   │   └── PC.cpp
-│   ├── PTC201205
-│   │   ├── 201205A.pdf
-│   │   ├── 201205B.pdf
-│   │   ├── 201205C.pdf
-│   │   ├── 201205D.pdf
-│   │   ├── 201205E.pdf
-│   │   ├── pa.cpp
-│   │   ├── pb.cpp
-│   │   ├── pc.cpp
-│   │   ├── pd.cpp
-│   │   ├── pe.cpp
-│   │   └── rrrrrrrrrrrrrrrrpd.cpp
-│   ├── PTC201206
-│   │   ├── 201206A.pdf
-│   │   ├── 201206B.pdf
-│   │   ├── 201206C.pdf
-│   │   ├── 201206D.pdf
-│   │   ├── 201206E.pdf
-│   │   ├── pB.cpp
-│   │   ├── pC.cpp
-│   │   ├── pD.cpp
-│   │   └── pE.cpp
-│   ├── PTC201208
-│   │   ├── 201208A.pdf
-│   │   ├── 201208B.pdf
-│   │   ├── 201208C.pdf
-│   │   ├── 201208D.pdf
-│   │   ├── 201208E.pdf
-│   │   ├── pA.cpp
-│   │   ├── pB.cpp
-│   │   ├── pC.cpp
-│   │   └── pD.cpp
-│   ├── PTC201209
-│   │   ├── 201209A.pdf
-│   │   ├── 201209B.pdf
-│   │   ├── 201209C.pdf
-│   │   ├── 201209D.pdf
-│   │   ├── 201209E.pdf
-│   │   ├── pA.cpp
-│   │   ├── pB.cpp
-│   │   ├── pC.cpp
-│   │   ├── pD.cpp
-│   │   └── pE.cpp
-│   ├── PTC201210
-│   │   ├── 201210A.pdf
-│   │   ├── 201210B.pdf
-│   │   ├── 201210C.pdf
-│   │   ├── 201210D.pdf
-│   │   ├── pc.cpp
-│   │   ├── pc.exe
-│   │   ├── pc.o
-│   │   ├── pd.cpp
-│   │   ├── pd.exe
-│   │   ├── pd.o
-│   │   ├── pe.cpp
-│   │   ├── pe.exe
-│   │   ├── pe.o
-│   │   ├── ptc_score.jpg
-│   │   └── test.exe
-│   ├── PTC201211
-│   │   ├── 201211A.pdf
-│   │   ├── 201211B.pdf
-│   │   ├── 201211C.pdf
-│   │   ├── 201211D.pdf
-│   │   ├── 201211E.pdf
-│   │   ├── pA.cpp
-│   │   ├── pB.cpp
-│   │   ├── pD.cpp
-│   │   ├── pc.cpp
-│   │   ├── pcc.cpp
-│   │   ├── pd(1).cpp
-│   │   └── pe.cpp
-│   ├── PTC201212
-│   │   ├── 201212A.pdf
-│   │   ├── 201212B.pdf
-│   │   ├── 201212C.pdf
-│   │   ├── 201212D.pdf
-│   │   ├── 201212E.pdf
-│   │   ├── pA.cpp
-│   │   ├── pC.cpp
-│   │   ├── pd.cpp
-│   │   └── pe.cpp
-│   ├── PTC201301
-│   │   ├── 201301A.pdf
-│   │   ├── 201301B.pdf
-│   │   ├── 201301C.pdf
-│   │   ├── 201301D.pdf
-│   │   ├── 201301E.pdf
-│   │   ├── pb.cpp
-│   │   ├── pc.cpp
-│   │   ├── pc2.cpp
-│   │   ├── pcc.cpp
-│   │   └── pe.cpp
-│   ├── PTC201303
-│   │   ├── 201303A.pdf
-│   │   ├── 201303B.pdf
-│   │   ├── 201303C.pdf
-│   │   ├── 201303D.pdf
-│   │   ├── 201303E.pdf
-│   │   ├── Main.java
-│   │   ├── Pp.PNG
-│   │   ├── paa.cpp
-│   │   ├── pbb.cpp
-│   │   ├── pcc.cpp
-│   │   ├── pdd.cpp
-│   │   └── pee.cpp
-│   ├── PTC201304
-│   │   ├── 201304A.pdf
-│   │   ├── 201304B.pdf
-│   │   ├── 201304C.pdf
-│   │   ├── 201304D.pdf
-│   │   ├── 201304E.pdf
-│   │   ├── PTC201304.PNG
-│   │   ├── PTC20130401.PNG
-│   │   ├── pb.cpp
-│   │   ├── pc.cpp
-│   │   ├── pc.exe
-│   │   ├── pc.o
-│   │   ├── pd.cpp
-│   │   ├── pd.exe
-│   │   ├── pd.o
-│   │   ├── pe(1).cpp
-│   │   ├── pe.cpp
-│   │   ├── pe.exe
-│   │   └── pe.o
-│   └── PTC201403
-│       ├── 201403A.pdf
-│       ├── 201403B.pdf
-│       ├── 201403C.pdf
-│       ├── 201403D.pdf
-│       ├── 201403E.pdf
-│       ├── PA.cpp
-│       ├── PB.cpp
-│       ├── PC.cpp
-│       ├── PD.cpp
-│       └── PE.cpp
-├── README.md
-├── UVaTestData
-│   ├── v1in
-│   │   ├── 100.in
-│   │   ├── 101.in
-│   │   ├── 102.in
-│   │   ├── 103.in
-│   │   ├── 104.in
-│   │   ├── 106.in
-│   │   ├── 109.in
-│   │   ├── 110.in
-│   │   ├── 115.in
-│   │   ├── 116.in
-│   │   ├── 118.in
-│   │   ├── 121.in
-│   │   ├── 122.in
-│   │   ├── 123.in
-│   │   ├── 125.in
-│   │   ├── 126.in
-│   │   ├── 128.in
-│   │   ├── 129.in
-│   │   ├── 130.in
-│   │   ├── 131.in
-│   │   ├── 132.in
-│   │   ├── 134.in
-│   │   ├── 137.in
-│   │   ├── 143.in
-│   │   ├── 149.in
-│   │   ├── 150.in
-│   │   ├── 157.in
-│   │   ├── 158.in
-│   │   ├── 162.in
-│   │   ├── 163.in
-│   │   ├── 164.in
-│   │   ├── 165.in
-│   │   ├── 167.in
-│   │   ├── 169.in
-│   │   ├── 171.in
-│   │   ├── 172.in
-│   │   ├── 173.in
-│   │   ├── 174.in
-│   │   ├── 175.in
-│   │   ├── 176.in
-│   │   ├── 180.in
-│   │   ├── 181.in
-│   │   ├── 182.in
-│   │   ├── 184.in
-│   │   ├── 185.in
-│   │   ├── 189.in
-│   │   ├── 192.in
-│   │   ├── 193.in
-│   │   ├── 194.in
-│   │   ├── 196.in
-│   │   ├── 198.in
-│   │   └── 199.in
-│   ├── v1out
-│   │   ├── 100.out
-│   │   ├── 101.out
-│   │   ├── 102.out
-│   │   ├── 103.out
-│   │   ├── 104.out
-│   │   ├── 105.out
-│   │   ├── 106.out
-│   │   ├── 107.out
-│   │   ├── 108.out
-│   │   ├── 109.out
-│   │   ├── 110.out
-│   │   ├── 111.out
-│   │   ├── 112.out
-│   │   ├── 113.out
-│   │   ├── 114.out
-│   │   ├── 115.out
-│   │   ├── 116.out
-│   │   ├── 117.out
-│   │   ├── 118.out
-│   │   ├── 119.out
-│   │   ├── 120.out
-│   │   ├── 121.out
-│   │   ├── 122.out
-│   │   ├── 123.out
-│   │   ├── 124.out
-│   │   ├── 125.out
-│   │   ├── 126.out
-│   │   ├── 127.out
-│   │   ├── 128.out
-│   │   ├── 129.out
-│   │   ├── 130.out
-│   │   ├── 131.out
-│   │   ├── 132.out
-│   │   ├── 133.out
-│   │   ├── 134.out
-│   │   ├── 135.out
-│   │   ├── 136.out
-│   │   ├── 137.out
-│   │   ├── 138.out
-│   │   ├── 139.out
-│   │   ├── 140.out
-│   │   ├── 141.out
-│   │   ├── 142.out
-│   │   ├── 143.out
-│   │   ├── 144.out
-│   │   ├── 145.out
-│   │   ├── 146.out
-│   │   ├── 147.out
-│   │   ├── 148.out
-│   │   ├── 149.out
-│   │   ├── 150.out
-│   │   ├── 151.out
-│   │   ├── 152.out
-│   │   ├── 153.out
-│   │   ├── 154.out
-│   │   ├── 155.out
-│   │   ├── 156.out
-│   │   ├── 157.out
-│   │   ├── 158.out
-│   │   ├── 159.out
-│   │   ├── 160.out
-│   │   ├── 161.out
-│   │   ├── 162.out
-│   │   ├── 163.out
-│   │   ├── 164.out
-│   │   ├── 165.out
-│   │   ├── 166.out
-│   │   ├── 167.out
-│   │   ├── 168.out
-│   │   ├── 169.out
-│   │   ├── 170.out
-│   │   ├── 171.out
-│   │   ├── 172.out
-│   │   ├── 173.out
-│   │   ├── 174.out
-│   │   ├── 175.out
-│   │   ├── 176.out
-│   │   ├── 177.out
-│   │   ├── 178.out
-│   │   ├── 179.out
-│   │   ├── 180.out
-│   │   ├── 181.out
-│   │   ├── 182.out
-│   │   ├── 183.out
-│   │   ├── 184.out
-│   │   ├── 185.out
-│   │   ├── 186.out
-│   │   ├── 187.out
-│   │   ├── 188.out
-│   │   ├── 189.out
-│   │   ├── 190.out
-│   │   ├── 191.out
-│   │   ├── 192.out
-│   │   ├── 194.out
-│   │   ├── 195.out
-│   │   ├── 196.out
-│   │   ├── 197.out
-│   │   ├── 198.out
-│   │   └── 199.out
-│   ├── v2in
-│   │   ├── 270.in
-│   │   ├── 271.in
-│   │   ├── 272.in
-│   │   ├── 273.in
-│   │   ├── 274.in
-│   │   ├── 275.in
-│   │   ├── 276.in
-│   │   └── 277.in
-│   ├── v2out
-│   │   ├── 270.out
-│   │   ├── 271.out
-│   │   ├── 272.out
-│   │   ├── 273.out
-│   │   ├── 274.out
-│   │   ├── 275.out
-│   │   ├── 276.out
-│   │   └── 277.out
-│   ├── v3in
-│   │   ├── 300.IN
-│   │   ├── 301.IN
-│   │   ├── 302.IN
-│   │   ├── 303.IN
-│   │   ├── 304.IN
-│   │   ├── 305.IN
-│   │   ├── 306.IN
-│   │   ├── 307.IN
-│   │   ├── 308.in
-│   │   ├── 309.in
-│   │   ├── 310.in
-│   │   ├── 311.in
-│   │   ├── 312.in
-│   │   ├── 313.in
-│   │   ├── 314.in
-│   │   ├── 315.in
-│   │   ├── 316.in
-│   │   ├── 317.in
-│   │   ├── 318.in
-│   │   ├── 319.in
-│   │   ├── 320.in
-│   │   ├── 321.in
-│   │   ├── 322.in
-│   │   ├── 323.in
-│   │   ├── 324.in
-│   │   ├── 325.in
-│   │   ├── 326.in
-│   │   ├── 327.in
-│   │   ├── 328.in
-│   │   ├── 329.in
-│   │   ├── 330.in
-│   │   ├── 345.in
-│   │   ├── 346.in
-│   │   ├── 347.in
-│   │   ├── 348.in
-│   │   ├── 349.in
-│   │   ├── 350.in
-│   │   ├── 351.in
-│   │   ├── 377.in
-│   │   ├── 378.in
-│   │   ├── 379.in
-│   │   ├── 380.in
-│   │   ├── 381.in
-│   │   ├── 382.in
-│   │   ├── 383.in
-│   │   ├── 384.in
-│   │   ├── 385.in
-│   │   ├── 387.in
-│   │   ├── 388.in
-│   │   ├── 389.in
-│   │   ├── 390.in
-│   │   ├── 391.in
-│   │   ├── 392.in
-│   │   ├── 393.in
-│   │   ├── 394.in
-│   │   ├── 395.in
-│   │   ├── 396.in
-│   │   ├── 397.in
-│   │   ├── 398.in
-│   │   └── 399.in
-│   ├── v3out
-│   │   ├── 300.OUT
-│   │   ├── 301.OUT
-│   │   ├── 302.OUT
-│   │   ├── 303.OUT
-│   │   ├── 304.OUT
-│   │   ├── 305.OUT
-│   │   ├── 306.OUT
-│   │   ├── 307.OUT
-│   │   ├── 308.out
-│   │   ├── 309.out
-│   │   ├── 310.out
-│   │   ├── 311.out
-│   │   ├── 312.out
-│   │   ├── 313.out
-│   │   ├── 314.out
-│   │   ├── 315.out
-│   │   ├── 316.out
-│   │   ├── 317.out
-│   │   ├── 318.out
-│   │   ├── 319.out
-│   │   ├── 320.out
-│   │   ├── 321.out
-│   │   ├── 322.out
-│   │   ├── 323.out
-│   │   ├── 324.out
-│   │   ├── 325.out
-│   │   ├── 326.out
-│   │   ├── 327.out
-│   │   ├── 328.out
-│   │   ├── 329.out
-│   │   ├── 330.out
-│   │   ├── 345.out
-│   │   ├── 346.out
-│   │   ├── 347.out
-│   │   ├── 348.out
-│   │   ├── 349.out
-│   │   ├── 350.out
-│   │   ├── 377.out
-│   │   ├── 378.out
-│   │   ├── 379.out
-│   │   ├── 380.out
-│   │   ├── 381.out
-│   │   ├── 382.out
-│   │   ├── 383.out
-│   │   ├── 384.out
-│   │   ├── 385.out
-│   │   ├── 386.out
-│   │   ├── 387.out
-│   │   ├── 388.out
-│   │   ├── 389.out
-│   │   ├── 390.out
-│   │   ├── 391.out
-│   │   ├── 392.out
-│   │   ├── 393.out
-│   │   ├── 394.out
-│   │   ├── 395.out
-│   │   ├── 396.out
-│   │   ├── 397.out
-│   │   ├── 398.out
-│   │   └── 399.out
-│   ├── v4in
-│   │   ├── 400.in
-│   │   ├── 401.in
-│   │   ├── 402.in
-│   │   ├── 403.in
-│   │   ├── 404.in
-│   │   ├── 405.in
-│   │   ├── 406.in
-│   │   ├── 407.in
-│   │   ├── 408.in
-│   │   ├── 409.in
-│   │   ├── 410.in
-│   │   ├── 411.in
-│   │   ├── 412.in
-│   │   ├── 413.in
-│   │   ├── 414.in
-│   │   ├── 415.in
-│   │   ├── 416.in
-│   │   ├── 417.in
-│   │   ├── 418.in
-│   │   ├── 419.in
-│   │   ├── 420.in
-│   │   ├── 421.in
-│   │   ├── 422.in
-│   │   ├── 423.in
-│   │   ├── 424.in
-│   │   ├── 425.in
-│   │   ├── 425pc.c
-│   │   ├── 436.in
-│   │   ├── 437.in
-│   │   ├── 438.in
-│   │   ├── 439.in
-│   │   ├── 440.in
-│   │   ├── 441.in
-│   │   ├── 442.in
-│   │   └── 443.in
-│   ├── v4out
-│   │   ├── 400.out
-│   │   ├── 401.out
-│   │   ├── 402.out
-│   │   ├── 403.out
-│   │   ├── 404.out
-│   │   ├── 405.out
-│   │   ├── 406.out
-│   │   ├── 407.out
-│   │   ├── 408.out
-│   │   ├── 409.out
-│   │   ├── 410.out
-│   │   ├── 411.out
-│   │   ├── 412.out
-│   │   ├── 413.out
-│   │   ├── 414.out
-│   │   ├── 415.out
-│   │   ├── 416.out
-│   │   ├── 417.out
-│   │   ├── 418.out
-│   │   ├── 419.out
-│   │   ├── 420.out
-│   │   ├── 421.out
-│   │   ├── 422.out
-│   │   ├── 423.out
-│   │   ├── 424.out
-│   │   ├── 425.out
-│   │   ├── 436.out
-│   │   ├── 437.out
-│   │   ├── 438.out
-│   │   ├── 439.out
-│   │   ├── 440.out
-│   │   ├── 441.out
-│   │   ├── 442.out
-│   │   └── 443.out
-│   ├── v5in
-│   │   ├── 500.in
-│   │   ├── 501.in
-│   │   ├── 502.in
-│   │   ├── 503.in
-│   │   ├── 504.in
-│   │   ├── 505.in
-│   │   ├── 514.IN
-│   │   ├── 515.IN
-│   │   ├── 516.IN
-│   │   ├── 517.IN
-│   │   ├── 518.IN
-│   │   ├── 519.IN
-│   │   ├── 520.IN
-│   │   ├── 521.IN
-│   │   ├── 529.IN
-│   │   ├── 530.IN
-│   │   ├── 531.IN
-│   │   ├── 532.IN
-│   │   ├── 533.IN
-│   │   ├── 534.IN
-│   │   ├── 535.IN
-│   │   ├── 536.IN
-│   │   ├── 537.IN
-│   │   ├── 538.IN
-│   │   ├── 539.IN
-│   │   ├── 540.IN
-│   │   ├── 541.IN
-│   │   ├── 542.IN
-│   │   ├── 543.IN
-│   │   ├── 544.IN
-│   │   ├── 565.in
-│   │   ├── 566.in
-│   │   ├── 567.in
-│   │   ├── 568.in
-│   │   ├── 569.in
-│   │   ├── 570.in
-│   │   ├── 571.in
-│   │   ├── 572.in
-│   │   ├── 573.in
-│   │   ├── 574.in
-│   │   ├── 575.in
-│   │   ├── 576.in
-│   │   ├── 577.in
-│   │   ├── 585.in
-│   │   ├── 586.in
-│   │   ├── 587.in
-│   │   ├── 588.in
-│   │   ├── 589.in
-│   │   ├── 590.in
-│   │   ├── 591.in
-│   │   ├── 592.in
-│   │   └── 593.in
-│   ├── v5out
-│   │   ├── 500.out
-│   │   ├── 501.out
-│   │   ├── 502.out
-│   │   ├── 503.OUT
-│   │   ├── 504.OUT
-│   │   ├── 505.OUT
-│   │   ├── 514.OUT
-│   │   ├── 515.OUT
-│   │   ├── 516.OUT
-│   │   ├── 517.OUT
-│   │   ├── 518.OUT
-│   │   ├── 519.OUT
-│   │   ├── 520.OUT
-│   │   ├── 521.OUT
-│   │   ├── 529.OUT
-│   │   ├── 530.OUT
-│   │   ├── 531.OUT
-│   │   ├── 532.OUT
-│   │   ├── 533.OUT
-│   │   ├── 534.OUT
-│   │   ├── 535.OUT
-│   │   ├── 536.OUT
-│   │   ├── 537.OUT
-│   │   ├── 538.OUT
-│   │   ├── 539.OUT
-│   │   ├── 540.OUT
-│   │   ├── 541.OUT
-│   │   ├── 542.OUT
-│   │   ├── 543.OUT
-│   │   ├── 544.OUT
-│   │   ├── 565.out
-│   │   ├── 566.out
-│   │   ├── 567.out
-│   │   ├── 568.out
-│   │   ├── 569.out
-│   │   ├── 570.out
-│   │   ├── 571.out
-│   │   ├── 572.out
-│   │   ├── 573.out
-│   │   ├── 574.out
-│   │   ├── 575.out
-│   │   ├── 576.out
-│   │   ├── 577.out
-│   │   ├── 585.out
-│   │   ├── 586.out
-│   │   ├── 587.out
-│   │   ├── 588.out
-│   │   ├── 589.out
-│   │   ├── 590.out
-│   │   ├── 591.out
-│   │   ├── 592.out
-│   │   └── 593.out
-│   ├── v6in
-│   │   ├── 600.in
-│   │   ├── 601.in
-│   │   ├── 602.in
-│   │   ├── 603.in
-│   │   ├── 604.in
-│   │   ├── 605.in
-│   │   ├── 606.IN
-│   │   ├── 607.IN
-│   │   ├── 608.IN
-│   │   ├── 609.IN
-│   │   ├── 610.IN
-│   │   ├── 611.IN
-│   │   ├── 612.IN
-│   │   ├── 613.IN
-│   │   ├── 614.IN
-│   │   ├── 615.IN
-│   │   ├── 616.IN
-│   │   ├── 617.IN
-│   │   ├── 618.IN
-│   │   ├── 619.IN
-│   │   ├── 637.IN
-│   │   ├── 638.IN
-│   │   ├── 639.IN
-│   │   ├── 641.IN
-│   │   ├── 642.IN
-│   │   ├── 649.IN
-│   │   ├── 650.IN
-│   │   ├── 651.in
-│   │   ├── 652.in
-│   │   ├── 653.in
-│   │   ├── 654.in
-│   │   ├── 655.in
-│   │   ├── 656.in
-│   │   ├── 657.in
-│   │   ├── 658.in
-│   │   ├── 659.in
-│   │   ├── 660.in
-│   │   ├── 661.in
-│   │   ├── 662.in
-│   │   ├── 663.in
-│   │   ├── 664.in
-│   │   ├── 665.in
-│   │   ├── 666.in
-│   │   ├── 667.in
-│   │   ├── 668.in
-│   │   ├── 669.in
-│   │   ├── 670.in
-│   │   ├── 671.in
-│   │   ├── 672.in
-│   │   ├── 686.IN
-│   │   ├── 687.IN
-│   │   ├── 688.IN
-│   │   ├── 689.IN
-│   │   ├── 690.IN
-│   │   ├── 691.IN
-│   │   ├── 692.IN
-│   │   └── 693.IN
-│   ├── v6out
-│   │   ├── 600.out
-│   │   ├── 601.out
-│   │   ├── 602.out
-│   │   ├── 603.out
-│   │   ├── 604.out
-│   │   ├── 605.out
-│   │   ├── 606.out
-│   │   ├── 607.OUT
-│   │   ├── 608.OUT
-│   │   ├── 609.OUT
-│   │   ├── 611.OUT
-│   │   ├── 612.OUT
-│   │   ├── 613.OUT
-│   │   ├── 614.OUT
-│   │   ├── 615.OUT
-│   │   ├── 616.OUT
-│   │   ├── 617.OUT
-│   │   ├── 618.OUT
-│   │   ├── 619.OUT
-│   │   ├── 637.OUT
-│   │   ├── 638.OUT
-│   │   ├── 639.OUT
-│   │   ├── 640.OUT
-│   │   ├── 641.OUT
-│   │   ├── 642.OUT
-│   │   ├── 649.OUT
-│   │   ├── 650.OUT
-│   │   ├── 651.out
-│   │   ├── 652.out
-│   │   ├── 653.out
-│   │   ├── 654.out
-│   │   ├── 655.out
-│   │   ├── 656.out
-│   │   ├── 657.out
-│   │   ├── 658.out
-│   │   ├── 659.out
-│   │   ├── 660.out
-│   │   ├── 661.out
-│   │   ├── 662.out
-│   │   ├── 663.out
-│   │   ├── 664.out
-│   │   ├── 665.out
-│   │   ├── 666.out
-│   │   ├── 667.out
-│   │   ├── 668.out
-│   │   ├── 669.out
-│   │   ├── 670.out
-│   │   ├── 671.out
-│   │   └── 672.out
-│   ├── v7in
-│   │   ├── 700.in
-│   │   ├── 705.in
-│   │   ├── 706.in
-│   │   ├── 707.in
-│   │   ├── 708.in
-│   │   ├── 709.in
-│   │   ├── 710.in
-│   │   ├── 711.in
-│   │   ├── 712.in
-│   │   ├── 728.IN
-│   │   ├── 730.IN
-│   │   ├── 733.in
-│   │   ├── 734.IN
-│   │   ├── 735.IN
-│   │   ├── 736.IN
-│   │   ├── 737.IN
-│   │   ├── 738.IN
-│   │   ├── 739.IN
-│   │   ├── 751.IN
-│   │   ├── 752.in
-│   │   ├── 753.in
-│   │   ├── 754.in
-│   │   ├── 756.IN
-│   │   ├── 757.IN
-│   │   └── 758.in
-│   └── v7out
-│       ├── 700.out
-│       ├── 705.out
-│       ├── 706.out
-│       ├── 707.out
-│       ├── 708.out
-│       ├── 709.out
-│       ├── 710.out
-│       ├── 711.out
-│       ├── 712.out
-│       ├── 728.out
-│       ├── 730.OUT
-│       ├── 734.OUT
-│       ├── 735.OUT
-│       ├── 736.OUT
-│       ├── 737.OUT
-│       ├── 738.OUT
-│       ├── 739.OUT
-│       ├── 751.OUT
-│       ├── 752.out
-│       ├── 753.out
-│       ├── 754.OUT
-│       ├── 756.OUT
-│       ├── 757.OUT
-│       └── 758.OUT
-├── from_other
-│   ├── Given_Netsphere
-│   │   └── scramble
-│   │       ├── bin
-│   │       │   └── Debug
-│   │       │       └── scramble.exe
-│   │       ├── main.cpp
-│   │       ├── main.o
-│   │       ├── obj
-│   │       │   └── Debug
-│   │       │       └── main.o
-│   │       ├── scramble.cbp
-│   │       ├── scramble.depend
-│   │       └── scramble.layout
-│   ├── Given_abcd6891
-│   │   └── d868_AC.cpp
-│   ├── Given_example
-│   │   ├── A153.java
-│   │   ├── A202(1).c
-│   │   ├── A202.c
-│   │   ├── A204(1).java
-│   │   ├── A204(2).java
-│   │   ├── A204.java
-│   │   ├── A207(1).c
-│   │   ├── A207(2).c
-│   │   ├── A207.c
-│   │   ├── D314.c
-│   │   ├── D522.c
-│   │   ├── D906.c
-│   │   ├── final_project
-│   │   │   ├── bin
-│   │   │   │   └── Debug
-│   │   │   │       ├── final_project.exe
-│   │   │   │       ├── final_project.rar
-│   │   │   │       └── maze.txt
-│   │   │   ├── board.cpp
-│   │   │   ├── board.h
-│   │   │   ├── final_project.cbp
-│   │   │   ├── final_project.depend
-│   │   │   ├── final_project.exe
-│   │   │   ├── final_project.layout
-│   │   │   ├── final_project.rar
-│   │   │   ├── final_project_v4.1.rar
-│   │   │   ├── heap.cpp
-│   │   │   ├── heap.h
-│   │   │   ├── main.cpp
-│   │   │   ├── maze.txt
-│   │   │   ├── node.cpp
-│   │   │   ├── node.h
-│   │   │   └── obj
-│   │   │       └── Debug
-│   │   │           ├── board.o
-│   │   │           ├── heap.o
-│   │   │           ├── main.o
-│   │   │           └── node.o
-│   │   └── 新文字文件.txt
-│   ├── Given_leopan
-│   │   └── next_permutation.cpp
-│   └── Given_liouzhou_101
-│       └── liouzhou_101_code1.txt
-├── my-problem
-│   ├── allpair
-│   │   ├── brute.cpp
-│   │   ├── morris_sol.cpp
-│   │   └── testdata_generate.cpp
-│   ├── 等高線
-│   │   ├── brute.cpp
-│   │   ├── rect.cpp
-│   │   └── testdata_generate.cpp
-│   ├── 人格分裂
-│   │   ├── brute.cpp
-│   │   ├── morris.ggb
-│   │   ├── morris_sol.cpp
-│   │   ├── split2.ggb
-│   │   └── testdata_generate.cpp
-│   ├── 動態前綴
-│   │   ├── brute.cpp
-│   │   ├── lcp.cpp
-│   │   ├── lcp2.cpp
-│   │   └── testdata_generate.cpp
-│   ├── 單調測試
-│   │   └── monotone.cpp
-│   ├── 妮可密碼
-│   │   ├── brute.cpp
-│   │   ├── in.txt
-│   │   ├── inker.cpp
-│   │   ├── out.txt
-│   │   ├── password.txt
-│   │   ├── sol.cpp
-│   │   ├── sol_inker.cpp
-│   │   ├── sol_morris.cpp
-│   │   └── testdata_generate.cpp
-│   ├── 學姊日談
-│   │   ├── brute.cpp
-│   │   ├── flere2.md
-│   │   ├── morris_sol.cpp
-│   │   ├── problem.aux
-│   │   ├── problem.log
-│   │   ├── problem.pdf
-│   │   ├── problem.synctex.gz
-│   │   ├── problem.tex
-│   │   └── testdata_generate.cpp
-│   ├── 最近餐館
-│   │   ├── brute.cpp
-│   │   ├── sol.cpp
-│   │   └── testdata_generate.cpp
-│   ├── 樹形鎖頭
-│   │   ├── brute.cpp
-│   │   ├── morris_sol.cpp
-│   │   ├── testdata_generate.cpp
-│   │   └── tree.pptx
-│   ├── 河道分界
-│   │   ├── in.txt
-│   │   ├── out.txt
-│   │   ├── pin.cpp
-│   │   ├── river.ggb
-│   │   └── test.cpp
-│   ├── 災難再臨
-│   │   ├── brute.cpp
-│   │   ├── image.PNG
-│   │   ├── morris_sol.cpp
-│   │   ├── testdata_generate.cpp
-│   │   ├── 投影片1.JPG
-│   │   ├── 投影片10.JPG
-│   │   ├── 投影片11.JPG
-│   │   ├── 投影片12.JPG
-│   │   ├── 投影片13.JPG
-│   │   ├── 投影片2.JPG
-│   │   ├── 投影片3.JPG
-│   │   ├── 投影片4.JPG
-│   │   ├── 投影片5.JPG
-│   │   ├── 投影片6.JPG
-│   │   ├── 投影片7.JPG
-│   │   ├── 投影片8.JPG
-│   │   └── 投影片9.JPG
-│   ├── 神魔之塔
-│   │   ├── inker.md
-│   │   └── inker2.cpp
-│   ├── 計畫巧遇
-│   │   ├── brute.cpp
-│   │   ├── flere.md
-│   │   ├── in.txt
-│   │   ├── morris_sol.cpp
-│   │   ├── out1.txt
-│   │   ├── problem.aux
-│   │   ├── problem.log
-│   │   ├── problem.pdf
-│   │   ├── problem.synctex.gz
-│   │   ├── problem.tex
-│   │   └── testdata_generate.cpp
-│   ├── 順來逆受
-│   │   ├── sol.cpp
-│   │   └── testdata_generate.cpp
-│   ├── 少女與戰車
-│   │   ├── brute.cpp
-│   │   ├── tank
-│   │   │   ├── pp1.png
-│   │   │   ├── pp10.jpg
-│   │   │   ├── pp11.png
-│   │   │   ├── pp2.png
-│   │   │   ├── pp3.jpg
-│   │   │   ├── pp4.jpg
-│   │   │   ├── pp5.png
-│   │   │   ├── pp6.png
-│   │   │   ├── pp7.jpg
-│   │   │   ├── pp8.png
-│   │   │   ├── pp9.jpg
-│   │   │   ├── snow.png
-│   │   │   ├── snowbackground.jpg
-│   │   │   └── test.html
-│   │   ├── tank.cpp
-│   │   └── testdata_generate.cpp
-│   ├── 多維範圍詢問
-│   │   ├── brute.cpp
-│   │   ├── rangetree.cpp
-│   │   └── testdata_generate.cpp
-│   ├── 竹馬不敵天降
-│   │   ├── brute.cpp
-│   │   ├── solution.cpp
-│   │   └── testdata_generate.cpp
-│   ├── 平面最小生成樹
-│   │   ├── brute.cpp
-│   │   ├── pin.cpp
-│   │   └── 平面最小生成樹.cpp
-│   └── 二元搜尋樹快速鍵造
-│       ├── sol.cpp
-│       └── testdata_generate.cpp
-├── noip2005复赛
-│   ├── 测试数据
-│   │   ├── Main.java
-│   │   ├── equal
-│   │   │   ├── equal0.ans
-│   │   │   ├── equal0.in
-│   │   │   ├── equal1.ans
-│   │   │   ├── equal1.in
-│   │   │   ├── equal2.ans
-│   │   │   ├── equal2.in
-│   │   │   ├── equal3.ans
-│   │   │   ├── equal3.in
-│   │   │   ├── equal4.ans
-│   │   │   ├── equal4.in
-│   │   │   ├── equal5.ans
-│   │   │   ├── equal5.in
-│   │   │   ├── equal6.ans
-│   │   │   ├── equal6.in
-│   │   │   ├── equal7.ans
-│   │   │   ├── equal7.in
-│   │   │   ├── equal8.ans
-│   │   │   ├── equal8.in
-│   │   │   ├── equal9.ans
-│   │   │   └── equal9.in
-│   │   ├── fire
-│   │   │   ├── fire0.ans
-│   │   │   ├── fire0.in
-│   │   │   ├── fire1.ans
-│   │   │   ├── fire1.in
-│   │   │   ├── fire2.ans
-│   │   │   ├── fire2.in
-│   │   │   ├── fire3.ans
-│   │   │   ├── fire3.in
-│   │   │   ├── fire4.ans
-│   │   │   ├── fire4.in
-│   │   │   ├── fire5.ans
-│   │   │   ├── fire5.in
-│   │   │   ├── fire6.ans
-│   │   │   ├── fire6.in
-│   │   │   ├── fire7.ans
-│   │   │   ├── fire7.in
-│   │   │   ├── fire8.ans
-│   │   │   ├── fire8.in
-│   │   │   ├── fire9.ans
-│   │   │   └── fire9.in
-│   │   ├── river
-│   │   │   ├── river0.ans
-│   │   │   ├── river0.in
-│   │   │   ├── river1.ans
-│   │   │   ├── river1.in
-│   │   │   ├── river2.ans
-│   │   │   ├── river2.in
-│   │   │   ├── river3.ans
-│   │   │   ├── river3.in
-│   │   │   ├── river4.ans
-│   │   │   ├── river4.in
-│   │   │   ├── river5.ans
-│   │   │   ├── river5.in
-│   │   │   ├── river6.ans
-│   │   │   ├── river6.in
-│   │   │   ├── river7.ans
-│   │   │   ├── river7.in
-│   │   │   ├── river8.ans
-│   │   │   ├── river8.in
-│   │   │   ├── river9.ans
-│   │   │   └── river9.in
-│   │   ├── scholar
-│   │   │   ├── scholar0.ans
-│   │   │   ├── scholar0.in
-│   │   │   ├── scholar1.ans
-│   │   │   ├── scholar1.in
-│   │   │   ├── scholar2.ans
-│   │   │   ├── scholar2.in
-│   │   │   ├── scholar3.ans
-│   │   │   ├── scholar3.in
-│   │   │   ├── scholar4.ans
-│   │   │   ├── scholar4.in
-│   │   │   ├── scholar5.ans
-│   │   │   ├── scholar5.in
-│   │   │   ├── scholar6.ans
-│   │   │   ├── scholar6.in
-│   │   │   ├── scholar7.ans
-│   │   │   ├── scholar7.in
-│   │   │   ├── scholar8.ans
-│   │   │   ├── scholar8.in
-│   │   │   ├── scholar9.ans
-│   │   │   └── scholar9.in
-│   │   └── solution.cpp
-│   └── 复赛试题.doc
-├── other
-│   └── ZJOI 2012 DAY2 災難.cpp
-├── out.txt
-├── temp
-│   ├── 10366 - Faucet Flow.cpp
-│   ├── 10384 - The Wall Pushers.cpp
-│   ├── 10561 - Treblecross.cpp
-│   ├── 10618 - Tango Tango Insurrection.cpp
-│   ├── 10641 - Barisal Stadium.cpp
-│   ├── 10663 - Non-Powerful Subsets.cpp
-│   ├── 11117 - Little Quilt.cpp
-│   ├── 11214 - Guarding the Chessboard[DLX].cpp
-│   ├── 11256 - Repetitive Multiple.cpp
-│   ├── 11277 - Cyclic Polygons.cpp
-│   ├── 11440 - Help Tomisu.cpp
-│   ├── 11465 - Count the Polygons.cpp
-│   ├── 11468 - Substring.cpp
-│   ├── 11490 - Just Another Problem.cpp
-│   ├── 11522 - Pyramid Number.cpp
-│   ├── 1153 - Keep the Customer Satisfied.cpp
-│   ├── 11534 - Say Goodbye to Tic-Tac-Toe.cpp
-│   ├── 11665 - Chinese Ink.cpp
-│   ├── 11681 - Tower for Cellular Telephony.cpp
-│   ├── 11694 - Gokigen Naname.cpp
-│   ├── 11779 - Lost File.cpp
-│   ├── 11809 - Floating-Point Numbers.cpp
-│   ├── 11840 - Tic-tac-toe.cpp
-│   ├── 11846 - Finding Seats Again.cpp
-│   ├── 11853 - Paintball.cpp
-│   ├── 11904 - One Unit Machine.cpp
-│   ├── 11927 - Games Are Important.cpp
-│   ├── 12093 - Protecting Zonk.cpp
-│   ├── 12099 - The Bookcase.cpp
-│   ├── 12107 - Digit Puzzle.cpp
-│   ├── 12107 - Digit Puzzle[BFS][TLE].cpp
-│   ├── 12130 - Summits.cpp
-│   ├── 12170 - Easy Climb.cpp
-│   ├── 12171 - Sculpture.cpp
-│   ├── 12323 - Inspecting Radars.cpp
-│   ├── 12528 - Environment Protection.cpp
-│   ├── 12528 - Environment Protection[simpson].cpp
-│   ├── 12558 - Egyptian Fractions (HARD version)[TLE].cpp
-│   ├── 12559 - Finding Black Circles.cpp
-│   ├── 12559 - Finding Black Circles[FFT][TLE].cpp
-│   ├── 12563 - Jin Ge Jin Qu hao.cpp
-│   ├── 12569 - Planning mobile robot on Tree (EASY Version).cpp
-│   ├── 1289 - Stacking Plates.cpp
-│   ├── 1312 - Cricket Field.cpp
-│   ├── 1336 - Fixing the Great Wall.cpp
-│   ├── 1343 - The Rotation Game[BFS][TLE].cpp
-│   ├── 1343 - The Rotation Game[IDA].cpp
-│   ├── 1354 - Mobile Computing.cpp
-│   ├── 1380 - A Scheduling Problem.cpp
-│   ├── 1393 - Highways.cpp
-│   ├── 1412 - Fund Management.cpp
-│   ├── 1439 - Exclusive Access 2.cpp
-│   ├── 1442 - Cav.cpp
-│   ├── 1443 - Garlands.cpp
-│   ├── 1471 - Defense Lines.cpp
-│   ├── 1533 - Moving Pegs.cpp
-│   ├── 1543 - Telescope.cpp
-│   ├── 1580 - Pirate Chest.cpp
-│   ├── 1589 - Xiangqi.cpp
-│   ├── 1591 - Data Mining.cpp
-│   ├── 1593 - Alignment of Code.cpp
-│   ├── 1596 - Bug Hunt.cpp
-│   ├── 1597 - Searching the Web.cpp
-│   ├── 1598 - Exchange.cpp
-│   ├── 1599 - Ideal Path.cpp
-│   ├── 1601 - The Morning after Halloween[DoubleBfs].cpp
-│   ├── 1601 - The Morning after Halloween[bfs].cpp
-│   ├── 1602 - Lattice Animals.cpp
-│   ├── 1603 - Square Destroyer.cpp
-│   ├── 1604 - Cubic Eight-Puzzle[BFS].cpp
-│   ├── 1606 - Amphiphilic Carbon Molecules.cpp
-│   ├── 1607 - Gates.cpp
-│   ├── 1609 - Foul Play.cpp
-│   ├── 1611 - Crane.cpp
-│   ├── 1612 - Guess.cpp
-│   ├── 1613 - K-Graph Oddity.cpp
-│   ├── 1615 - Highway.cpp
-│   ├── 1616 - Caravan Robbers.cpp
-│   ├── 1617 - Laptop.cpp
-│   ├── 1618 - Weak Key.cpp
-│   ├── 1619 - Feel Good.cpp
-│   ├── 1620 - Lazy Susan.cpp
-│   ├── 1623 - Enter The Dragon.cpp
-│   ├── 1624 - Knots.cpp
-│   ├── 1628 - Pizza Delivery.cpp
-│   ├── 1630 - Folding.cpp
-│   ├── 1631 - Locker.cpp
-│   ├── 1633 - Dyslexic Gollum.cpp
-│   ├── 1634 - The Picnic.cpp
-│   ├── 1639 - Candy.cpp
-│   ├── 1643 - Angle and Squares.cpp
-│   ├── 1648 - Business Center.cpp
-│   ├── 212 - Use of Hospital Facilities.cpp
-│   ├── 506 - System Dependencies.cpp
-│   ├── 508 - Morse Mismatches.cpp
-│   ├── 509 - RAID!.cpp
-│   ├── 511 - Do You Know the Way to San Jose.cpp
-│   ├── 751 - Triangle War.cpp
-│   ├── 752 - Unscrambling Images.pp.cpp
-│   ├── 754 - Treasure Hunt.cpp
-│   ├── 757-Gone-Fishing.cpp
-│   ├── 804 - Petri Net Simulation.cpp
-│   ├── 822 - Queue and A.cpp
-│   ├── FBHackerCup2015_P15.cpp
-│   ├── FBHackerCup2015_P30.cpp
-│   ├── FBHackerCup2015_P55.cpp
-│   ├── LeetCode - Symmetric Tree.cpp
-│   ├── SGU - 383 Caravans[v2].cpp
-│   ├── SGU 383 - Caravans.cpp
-│   ├── a822. 101學年度桃竹苗區資訊學科能力競賽 5.滾球遊戲.cpp
-│   ├── b122. 用餐地點 (Lunch).cpp
-│   ├── b256. E. 大風吹.cpp
-│   ├── b298[ANSI C].c
-│   ├── b327.cpp
-│   ├── b348. 最近餐館.cpp
-│   ├── d739.cpp
-│   ├── d739[maxflow].cpp
-│   ├── prob_solve1298.cpp
-│   └── test.cpp
-├── unknown
-│   ├── 18豆.cpp
-│   ├── 2013.cpp
-│   ├── 2013CCPC[ProblemSet].pdf
-│   ├── 2038 - Strategic game.cpp
-│   ├── 2048sim.cpp
-│   ├── 2048sim[v2].cpp
-│   ├── A-Star K短.cpp
-│   ├── ArrayInitTest.cpp
-│   ├── Big Number of Teams will Solve This ~.cpp
-│   ├── C++ use dir.cpp
-│   ├── COLOR執行.jpg
-│   ├── DDD2.cpp
-│   ├── DLS.cpp
-│   ├── DP.txt
-│   ├── DS-6.cpp
-│   ├── DSE.cpp
-│   ├── Digital 顯示.cpp
-│   ├── E7.java
-│   ├── EllysXors.cpp
-│   ├── Empty.cpp
-│   ├── Exp.cpp
-│   ├── Force.cpp
-│   ├── Gray.cpp
-│   ├── HASH
-│   │   ├── HASH.cpp
-│   │   ├── HASH.dev
-│   │   ├── HASH.h
-│   │   ├── Makefile.win
-│   │   └── main.cpp
-│   ├── HW5 huffmancode.cpp
-│   ├── Hackup1.cpp
-│   ├── ICOCCC.c
-│   ├── ITSAP2.cpp
-│   ├── LCA.cpp
-│   ├── LCAoffline.cpp
-│   ├── LineSE.cpp
-│   ├── MakeMaze.cpp
-│   ├── Math.cpp
-│   ├── MinCostMaxFlow.cpp
-│   ├── MinExp.cpp
-│   ├── Modular multiplicative inverse.cpp
-│   ├── NCPC2011 ProblemH.cpp
-│   ├── NFA2DFA.cpp
-│   ├── NFA2DFA[v2].cpp
-│   ├── NFAtoDFS.cpp
-│   ├── PHP作業
-│   │   ├── lesson9.php
-│   │   ├── php_session2.php
-│   │   ├── phphw3.jpg
-│   │   ├── phphw4.PNG
-│   │   ├── 第六章 陣列的使用.ppt
-│   │   ├── 第八章 日期時間的應用.ppt
-│   │   └── 第十一章_物件導向簡述.ppt
-│   ├── POJ - 1785 Binary Search Heap Construction.cpp
-│   ├── POJ 1166.cpp
-│   ├── Pro_Con.c
-│   ├── Problem 1. code.cpp
-│   ├── Problem 2. Statistics.cpp
-│   ├── Problem 3. Path of Certain Length.cpp
-│   ├── Problem 4. Partitioning a ladder.cpp
-│   ├── Problem F.docx
-│   ├── Problem H - Tree.cpp
-│   ├── Problem H.docx
-│   ├── Problem1.cpp
-│   ├── Problem3.cpp
-│   ├── Problem4.cpp
-│   ├── PrombleF.cpp
-│   ├── PrombleK.cpp
-│   ├── RaceCon.c
-│   ├── RegexToNFA[simple].cpp
-│   ├── RegexToNFA[simple][v2].cpp
-│   ├── RegexToNFA[simple][v3].cpp
-│   ├── SA.c
-│   ├── Sagit's 計分程式.cpp
-│   ├── SegmentTree(2D).cpp
-│   ├── SipPatLa.cpp
-│   ├── SuffixArray(rewrite).c
-│   ├── SuffixArray(rewrite).cpp
-│   ├── TC模版.c
-│   ├── Trie.cpp
-│   ├── Trie[非遞迴].cpp
-│   ├── W3-100502205-楊翔雲.docx
-│   ├── [POJ] 2489 - Line Segments.cpp
-│   ├── [PTC][11.12] E - Kingdom Tour.cpp
-│   ├── addressAddTest.cpp
-│   ├── algorithmhw.c
-│   ├── bee.cpp
-│   ├── bignumber
-│   │   ├── Bignumber.cpp
-│   │   └── Bignumber_sin.cpp
-│   ├── bitfield.cpp
-│   ├── brainfuckG.c
-│   ├── cmdUse.c
-│   ├── complierHW3.cpp
-│   ├── dancinglink.cpp
-│   ├── definetest.cpp
-│   ├── det.cpp
-│   ├── det_org.cpp
-│   ├── dp2-slides.pdf
-│   ├── easy1.cpp
-│   ├── guw6@.jpg
-│   ├── hw1p2.c
-│   ├── itself.cpp
-│   ├── know_SA.cpp
-│   ├── link list AVL.cpp
-│   ├── linked list.cpp
-│   ├── liouzhou_101_code.cpp
-│   ├── minCoverCircle.cpp
-│   ├── onefor.cpp
-│   ├── pout.cpp
-│   ├── printitself.cpp
-│   ├── rand_not_array.cpp
-│   ├── runDFA.cpp
-│   ├── runTeam.cpp
-│   ├── sort ALL
-│   │   ├── A153(1).c
-│   │   ├── A153(2).c
-│   │   ├── A153(3).c
-│   │   ├── A153.c
-│   │   ├── AVL tree.cpp
-│   │   ├── Heap sort.cpp
-│   │   ├── QuickSort.cpp
-│   │   ├── Splay sort.cpp
-│   │   ├── 新文件2.cpp
-│   │   └── 分堆插入.cpp
-│   ├── srm553_250pt.cpp
-│   ├── srm553_500pt.cpp
-│   ├── stack_maze.cpp
-│   ├── templateForIO.cpp
-│   ├── test.cpp
-│   ├── testCout.cpp
-│   ├── testForArrayAddress.cpp
-│   ├── testForTemplate.cpp
-│   ├── textAnimatin.c
-│   ├── threadsample.cpp
-│   ├── union.cpp
-│   ├── unrarAll.cpp
-│   ├── virtualMethodText.cpp
-│   ├── 圓交.cpp
-│   ├── 跑關.cpp
-│   ├── 接線.png
-│   ├── 區間MAX.cpp
-│   ├── 反矩陣.cpp
-│   ├── 學長委託
-│   │   ├── [HW5-4] A Simple Channel Router.cpp
-│   │   ├── [HW5-4] A Simple Channel Router.exe
-│   │   ├── [HW5-4] A Simple Channel Router.o
-│   │   ├── cmd.exe.lnk
-│   │   ├── input.txt
-│   │   └── prog5_4.pdf
-│   ├── 傳統排列.cpp
-│   ├── 內件排序.cpp
-│   ├── 基數排序.cpp
-│   ├── 好多因子.cpp
-│   ├── 快速排列.cpp
-│   ├── 數獨求姊.cpp
-│   ├── 正式模仿.cpp
-│   ├── 正式模仿.exe
-│   ├── 最小生成樹.cpp
-│   ├── 電話客服中心.cpp
-│   ├── 重疊區間個數[force].cpp
-│   └── 重疊區間個數[nlogn].cpp
-├── volume001
-│   ├── 100 - The 3n + 1 problem.cpp
-│   ├── 100 - The 3n + 1 problem[zkw].cpp
-│   ├── 102 - Ecological Bin Packing.cpp
-│   ├── 103 - Stacking Boxes.cpp
-│   ├── 104 - Arbitrage.cpp
-│   ├── 109 - SCUD Busters.cpp
-│   ├── 110 - Meta-Loopless Sorts.c
-│   ├── 111 - History Grading.cpp
-│   ├── 112 - Tree Summing.cpp
-│   ├── 113 - Power of Cryptography.cpp
-│   ├── 117 - The Postal Worker Rings Once.cpp
-│   ├── 118 - Mutant Flatworld Explorers.c
-│   ├── 119 - Greedy Gift Givers.cpp
-│   ├── 120 - Stacks of Flapjacks.cpp
-│   ├── 121 - Pipe Fitters.cpp
-│   ├── 123 - Searching Quickly.cpp
-│   ├── 124 - Following Orders.cpp
-│   ├── 125 - Numbering Paths.cpp
-│   ├── 128 - Software CRC.cpp
-│   ├── 132 - Bumpy Objects.cpp
-│   ├── 133 - The Dole Queue.cpp
-│   ├── 134 - Loglan-A Logical Language.cpp
-│   ├── 135 - No Rectangles.cpp
-│   ├── 136 - Ugly Numbers.cpp
-│   ├── 139 - Telephone Tangles.cpp
-│   ├── 140 - Bandwidth.cpp
-│   ├── 141 - The Spot Game.cpp
-│   ├── 143 - Orchard Trees.cpp
-│   ├── 144 - Student Grants.cpp
-│   ├── 145 - Gondwanaland Telecom.cpp
-│   ├── 146 - ID Codes.cpp
-│   ├── 148 - Anagram checker.cpp
-│   ├── 149 - Forests.cpp
-│   ├── 150 - Double Time.cpp
-│   ├── 151 - Power Crisis.cpp
-│   ├── 152 - Tree's a Crowd.cpp
-│   ├── 153 - Permalex.cpp
-│   ├── 154 - Recycling.cpp
-│   ├── 155 - All Squares.cpp
-│   ├── 156 - Ananagrams.cpp
-│   ├── 157 - Route Finding.cpp
-│   ├── 158 - Calendar.cpp
-│   ├── 160 - Factors and Factorials.cpp
-│   ├── 161 - Traffic Lights.cpp
-│   ├── 163 - City Directions.cpp
-│   ├── 164 - String Computer.cpp
-│   ├── 165 - Stamps.cpp
-│   ├── 166 - Making Change.cpp
-│   ├── 167 - The Sultan's Successors.cpp
-│   ├── 170 - Clock Patience.cpp
-│   ├── 171 - Car Trialling.cpp
-│   ├── 172 - Calculator Language.cpp
-│   ├── 172 - Calculator Language[v2].cpp
-│   ├── 174 - Strategy.cpp
-│   ├── 177 - Paper Folding.cpp
-│   ├── 181 - Hearts.cpp
-│   ├── 184 - Laser Lines.cpp
-│   ├── 185 - Roman Numerals.cpp
-│   ├── 187 - Transaction Processing.cpp
-│   ├── 188 - Perfect Hash.cpp
-│   ├── 190 - Circle Through Three Points.cpp
-│   ├── 191 - Intersection.cpp
-│   ├── 193 - Graph Coloring.cpp
-│   └── 198 - Peter's Calculator.cpp
-├── volume002
-│   ├── 200 - Rare Order.cpp
-│   ├── 201 - Squares.cpp
-│   ├── 202 - Repeating Decimals.cpp
-│   ├── 208 - Firetruck.cpp
-│   ├── 209 - Triangular Vertices.cpp
-│   ├── 213 - Message Decoding.cpp
-│   ├── 215 - Spreadsheet Calculator.cpp
-│   ├── 216 - Getting in Line.cpp
-│   ├── 218 - Moth Eradication.cpp
-│   ├── 221 - Urban Elevations.cpp
-│   ├── 222 - Budget Travel.c
-│   ├── 225 - Golygons.cpp
-│   ├── 227 - Puzzle.cpp
-│   ├── 229 - Scanner.cpp
-│   ├── 231 - Testing the CATCHER.cpp
-│   ├── 232 - Crossword Answers.cpp
-│   ├── 233 - Package Pricing.cpp
-│   ├── 238 - Jill's Bike.cpp
-│   ├── 239 - Tempus et mobilius. Time and motion.cpp
-│   ├── 242 - Stamps and Envelope Size.cpp
-│   ├── 245 - Uncompress.cpp
-│   ├── 246 - 10-20-30.cpp
-│   ├── 247 - Calling Circles.cpp
-│   ├── 250 - Pattern Matching Prelims.cpp
-│   ├── 253 - Cube painting..c
-│   ├── 254 - Towers of Hanoi.cpp
-│   ├── 254 - Towers of Hanoi_sol.cpp
-│   ├── 255 - Correct Move.cpp
-│   ├── 256 - Quirksome Squares.cpp
-│   ├── 257 - Palinwords.cpp
-│   ├── 263 - Number Chains.cpp
-│   ├── 264 - Count on Cantor.cpp
-│   ├── 268 - Double Trouble.cpp
-│   ├── 269 - Counting Patterns.cpp
-│   ├── 270 - Lining Up.cpp
-│   ├── 271 - Simply Syntax.cpp
-│   ├── 272 - TEX Quotes.cpp
-│   ├── 273 - Jack Straws.cpp
-│   ├── 276 - Egyptian Multiplication.cpp
-│   ├── 280 - Vertex.cpp
-│   ├── 290 - Palindroms --- smordnilaP.cpp
-│   ├── 291 - The House Of Santa Claus.cpp
-│   ├── 296 - Safebreaker.cpp
-│   ├── 297 - Quadtrees.c
-│   ├── 298 - Race Tracks.cpp
-│   └── 299 - Train Swapping.cpp
-├── volume003
-│   ├── 300 - Maya Calendar.cpp
-│   ├── 302 - John's trip.cpp
-│   ├── 307 - Sticks.cpp
-│   ├── 308 - Tin Cutter.cpp
-│   ├── 313 - Intervals.cpp
-│   ├── 315 - Network.cpp
-│   ├── 320 - Border.cpp
-│   ├── 324 - Factorial Frequencies.cpp
-│   ├── 325 - Identifying Legal Pascal Real Constants.cpp
-│   ├── 326 - Extrapolation Using a Difference Table.cpp
-│   ├── 327 - Evaluating Simple C Expressions.cpp
-│   ├── 331 - Mapping the Swaps.cpp
-│   ├── 333 - Recognizing Good ISBNs.cpp
-│   ├── 334 - Identifying Concurrent Events.cpp
-│   ├── 336 - A Node Too Far.cpp
-│   ├── 338 - Long Multiplication.cpp
-│   ├── 341 - Non-Stop Travel.cpp
-│   ├── 343 - What Base Is This.cpp
-│   ├── 344 - Roman Digititis.cpp
-│   ├── 345 - It's Ir-Resist-Able.cpp
-│   ├── 347 - Run.cpp
-│   ├── 348 - Optimal Array Multiplication Sequence.cpp
-│   ├── 349 - Transferable Voting (II).cpp
-│   ├── 352 - The Seasonal War.cpp
-│   ├── 353 - Pesky Palindromes.cpp
-│   ├── 355 - The Bases Are Loaded.cpp
-│   ├── 356 - Square Pegs And Round Holes.cpp
-│   ├── 357 - Let Me Count The Ways.c
-│   ├── 358 - Don't Have A Cow.cpp
-│   ├── 361 - Cops and Robbers.cpp
-│   ├── 362 - 18,000 Seconds Remaining.cpp
-│   ├── 369 - Combinations.cpp
-│   ├── 372 - WhatFix Notation.cpp
-│   ├── 374 - Big Mod.cpp
-│   ├── 375 - Inscribed Circles and Isosceles Triangles.cpp
-│   ├── 378 - Intersecting Lines.cpp
-│   ├── 381 - Making the Grade.cpp
-│   ├── 382 - Perfection.cpp
-│   ├── 384 - Slurpys.cpp
-│   ├── 385 - DNA Translation.cpp
-│   ├── 387 - A Puzzling Problem.cpp
-│   ├── 389 - Basically Speaking.cpp
-│   ├── 391 - Mark-up.cpp
-│   ├── 392 - Polynomial Showdown.cpp
-│   └── 397 - Equation Elation.cpp
-├── volume004
-│   ├── 400 - Unix ls.cpp
-│   ├── 401 - Palindromes.cpp
-│   ├── 402 - MASH.cpp
-│   ├── 403 - Postscript.cpp
-│   ├── 406 - Prime Cuts.cpp
-│   ├── 408 - Uniform Generator.cpp
-│   ├── 409 - Excuses, Excuses.cpp
-│   ├── 412 - Pi.cpp
-│   ├── 412 - Pi[Neton].cpp
-│   ├── 413 - Up and Down Sequences.c
-│   ├── 414 - Machined Surfaces.cpp
-│   ├── 416 - LED Test.cpp
-│   ├── 417 - Word Index.cpp
-│   ├── 422 - Word-Search Wonder.cpp
-│   ├── 423 - MPI Maelstrom.cpp
-│   ├── 424 - Integer Inquiry.cpp
-│   ├── 427 - FlatLand Piano Movers.cpp
-│   ├── 428 - Swamp County Roofs.cpp
-│   ├── 429 - Word Transformation.cpp
-│   ├── 433 - Bank.cpp
-│   ├── 435 - Block Voting.cpp
-│   ├── 436 - Arbitrage (II).cpp
-│   ├── 437 - The Tower of Babylon.cpp
-│   ├── 438 - The Circumference of the Circle.cpp
-│   ├── 440 - Eeny Meeny Moo.cpp
-│   ├── 441 - Lotto.c
-│   ├── 442 - Matrix Chain Multiplication.cpp
-│   ├── 443 - Humble Numbers.cpp
-│   ├── 444 - Encoder and Decoder.cpp
-│   ├── 445 - Marvelous Mazes.c
-│   ├── 447 - Population Explosion.cpp
-│   ├── 448 - OOPS.cpp
-│   ├── 450 - Little Black Book.cpp
-│   ├── 451 - Poker Solitaire Evaluator.cpp
-│   ├── 452 - Project Scheduling.cpp
-│   ├── 453 - Intersecting Circles.cpp
-│   ├── 454 - Anagrams.cpp
-│   ├── 455 - Periodic Strings.cpp
-│   ├── 456 - Robotic Stacker.cpp
-│   ├── 458 - The Decoder.cpp
-│   ├── 459 - Graph Connectivity.cpp
-│   ├── 460 - Overlapping Rectangles.c
-│   ├── 464 - Sentence.Phrase Generator.cpp
-│   ├── 465 - Overflow.cpp
-│   ├── 466 - Mirror Mirror.cpp
-│   ├── 467 - Synching Signals.cpp
-│   ├── 468 - Key to Success.cpp
-│   ├── 469 - Wetlands of Florida.cpp
-│   ├── 471 - Magic Numbers.cpp
-│   ├── 473 - Raucous Rockers.cpp
-│   ├── 474 - Heads _ Tails Probability.c
-│   ├── 478 - Points in Figures Rectangles, Circles, Triangles.cpp
-│   ├── 482 - Permutation Arrays.cpp
-│   ├── 483 - Word Scramble.cpp
-│   ├── 484 - The Department of Redundancy Department.cpp
-│   ├── 486 - English-Number Translator.cpp
-│   ├── 487 - Boggle Blitz.cpp
-│   ├── 488 - Triangle Wave.cpp
-│   ├── 490 - Rotating Sentences.c
-│   ├── 492 - Pig-Latin.cpp
-│   ├── 493 - Rational Spiral.cpp
-│   ├── 494 - Kindergarten Counting Game.cpp
-│   ├── 496 - Simply Subsets.cpp
-│   ├── 497 - Strategic Defense Initiative.cpp
-│   ├── 498 - Polly the Polynomial.cpp
-│   └── 499 - What's The Frequency, Kenneth.c
-├── volume005
-│   ├── 501 - Black Box.cpp
-│   ├── 507 - Jill Rides Again.cpp
-│   ├── 515 - King.cpp
-│   ├── 516 - Prime Land.cpp
-│   ├── 523 - Minimum Transport Cost.cpp
-│   ├── 526 - String Distance and Transform Process.cpp
-│   ├── 529 - Addition Chains.cpp
-│   ├── 531 - Compromise.cpp
-│   ├── 533 - Equation Solver.cpp
-│   ├── 535 - Globetrotter.cpp
-│   ├── 538 - Balancing Bank Accounts.cpp
-│   ├── 539 - The Settlers of Catan.cpp
-│   ├── 540 - Team Queue.cpp
-│   ├── 541 - Error Correction.cpp
-│   ├── 542 - France '98.cpp
-│   ├── 543 - Goldbach's Conjecture.cpp
-│   ├── 544 - Heavy Cargo.cpp
-│   ├── 545 - Heads.cpp
-│   ├── 547 - DDF.cpp
-│   ├── 548 - Tree.cpp
-│   ├── 550 - Multiplying by Rotation.cpp
-│   ├── 551 - Nesting a Bunch of Brackets.cpp
-│   ├── 552 - Filling the Gaps.cpp
-│   ├── 554 - Caesar Cypher.cpp
-│   ├── 555 - Bridge Hands.cpp
-│   ├── 558 - Wormholes.cpp
-│   ├── 558 - Wormholes2.cpp
-│   ├── 560 - Magic.cpp
-│   ├── 561 - Jackpot.cpp
-│   ├── 563 - Crimewave.cpp
-│   ├── 565 - Pizza Anyone.cpp
-│   ├── 567 - Risk.cpp
-│   ├── 571 - Jugs.cpp
-│   ├── 572 - Oil Deposits.cpp
-│   ├── 574 - Sum It Up.cpp
-│   ├── 575 - Skew Binary.cpp
-│   ├── 579 - ClockHands.cpp
-│   ├── 583 - Prime Factors.cpp
-│   ├── 585 - Triangles.cpp
-│   ├── 587 - There's treasure everywhere.cpp
-│   ├── 589 - Pushing Boxes.cpp
-│   ├── 590 - Always on the run.cpp
-│   ├── 591 - Box of Bricks.cpp
-│   ├── 592 - Island of Logic.cpp
-│   ├── 594 - One Little, Two Little, Three Little Endians.cpp
-│   └── 599 - The Forrest for the Trees.cpp
-├── volume006
-│   ├── 601 - The PATH.cpp
-│   ├── 612 - DNA Sorting.cpp
-│   ├── 614 - Mapping the Route.cpp
-│   ├── 615 - Is It A Tree.cpp
-│   ├── 616 - Coconuts, Revisited.cpp
-│   ├── 620 - Cellular Structure.cpp
-│   ├── 621 - Secret Research.cpp
-│   ├── 622 - Grammar Evaluation.cpp
-│   ├── 623 - 500!.cpp
-│   ├── 624 - CD.cpp
-│   ├── 626 - Ecosystem.cpp
-│   ├── 627 - The Net.cpp
-│   ├── 628 - Passwords.cpp
-│   ├── 630 - Anagrams (II).cpp
-│   ├── 632 - Compression (II).cpp
-│   ├── 634 - Polygon.cpp
-│   ├── 636 - Squares (III).cpp
-│   ├── 638 - Finding Rectangles.cpp
-│   ├── 640 - Self Numbers.cpp
-│   ├── 640 - Self Numbers_v2.cpp
-│   ├── 641 - Do the Untwist.cpp
-│   ├── 642 - Word Amalgamation.cpp
-│   ├── 644 - Immediate Decodability.cpp
-│   ├── 652 - Eight.cpp
-│   ├── 657 - The die is cast.cpp
-│   ├── 662 - Fast Food.cpp
-│   ├── 665 - False coin.cpp
-│   ├── 670 - The dog task.cpp
-│   ├── 671 - Spell checker.cpp
-│   ├── 673 - Parentheses Balance.cpp
-│   ├── 674 - Coin Change.cpp
-│   ├── 675 - Convex Hull of the Polygon.cpp
-│   ├── 677 - All Walks of length n from the first node.cpp
-│   ├── 681 - Convex Hull Finding.cpp
-│   ├── 684 - Integral Determinant.cpp
-│   ├── 686 - Goldbach's Conjecture (II).cpp
-│   ├── 688 - Mobile Phone Coverage.cpp
-│   ├── 694 - The Collatz Sequence.cpp
-│   ├── 694. Distinct Substrings.cpp
-│   └── 699 - The Falling Leaves.cpp
-├── volume007
-│   ├── 700 - Date Bugs.cpp
-│   ├── 701 - The Archeologists' Dilemma.cpp
-│   ├── 705 - Slash Maze.cpp
-│   ├── 706 - LCD Display.cpp
-│   ├── 707 - Robbery.cpp
-│   ├── 708 - Dreisam Equations.cpp
-│   ├── 709 - Formatting Text.cpp
-│   ├── 711 - Dividing up.cpp
-│   ├── 712 - S-Trees.cpp
-│   ├── 713 - Adding Reversed Numbers.cpp
-│   ├── 714 - Copying Books.cpp
-│   ├── 719 - Glass Beads.cpp
-│   ├── 721 - Invitation Cards.cpp
-│   ├── 722 - Lakes.cpp
-│   ├── 725 - Division.cpp
-│   ├── 726 - Decode.cpp
-│   ├── 729 - The Hamming Distance Problem.cpp
-│   ├── 732 - Anagrams by Stack.cpp
-│   ├── 737 - Gleaming the Cubes.cpp
-│   ├── 738 - A Logical Problem .cpp
-│   ├── 739 - Soundex Indexing.cpp
-│   ├── 740 - Baudot Data Communication Code.cpp
-│   ├── 741 - Burrows Wheeler Decoder.cpp
-│   ├── 745 - Numeric Puzzles Again.cpp
-│   ├── 750 - 8 Queens Chess Problem.cpp
-│   ├── 753 - A Plug for UNIX.cpp
-│   ├── 755 - 487--3279.cpp
-│   ├── 756 - Biorhythms.cpp
-│   ├── 758 - The Same Game.cpp
-│   ├── 759 - The Return of the Roman Empire.cpp
-│   ├── 760 - DNA Sequencing.cpp
-│   ├── 762 - We Ship Cheap.cpp
-│   ├── 763 - Fibinary Numbers.c
-│   ├── 766 - Sum of powers.cpp
-│   ├── 775 - Hamiltonian Cycle.cpp
-│   ├── 775 - Hamiltonian Cycle2.cpp
-│   ├── 776 - Monkeys in a Regular Forest.cpp
-│   ├── 782 - Contour Painting.cpp
-│   ├── 784 - Maze Exploration.cpp
-│   ├── 785 - Grid Colouring.cpp
-│   ├── 789 - Indexing.cpp
-│   ├── 793 - Network Connections.cpp
-│   ├── 795 - Sandorf's Cipher.cpp
-│   └── 796 - Critical Links.cpp
-├── volume008
-│   ├── 806 - Spatial Structures.cpp
-│   ├── 807 - Towers of Powers.cpp
-│   ├── 808 - Bee Breeding.cpp
-│   ├── 810 - A Dicey Problem.cpp
-│   ├── 811 - The Fortified Forest.cpp
-│   ├── 814 - The Letter Carrier's Rounds.cpp
-│   ├── 816 - Abbott's Revenge.cpp
-│   ├── 817 - According to Bartjens.cpp
-│   ├── 818 - Cutting Chains.cpp
-│   ├── 821 - Page Hopping.c
-│   ├── 825 - Walking on the Safe Side.cpp
-│   ├── 828 - Deciphering Messages.cpp
-│   ├── 830 - Shark.cpp
-│   ├── 833 - Water Falls.cpp
-│   ├── 834 - Continued Fractions.cpp
-│   ├── 835 - Square of Primes (2).cpp
-│   ├── 835 - Square of Primes.cpp
-│   ├── 835 - Square of Primes2.cpp
-│   ├── 836 - Largest Submatrix.cpp
-│   ├── 837 - Light and Transparencies.cpp
-│   ├── 838 - Worm World[heap].cpp
-│   ├── 839 - Not so Mobile.cpp
-│   ├── 840 - Deadlock Detection.cpp
-│   ├── 843 - Crypt Kicker.cpp
-│   ├── 844 - Pousse.cpp
-│   ├── 846 - Steps.cpp
-│   ├── 852 - Deciding victory in Go.cpp
-│   ├── 855 - Lunch in Grid City.cpp
-│   ├── 860 - Entropy Text Analyzer.cpp
-│   ├── 861 - Little Bishops.cpp
-│   ├── 865 - Substitution Cypher.cpp
-│   ├── 866 - Intersecting Line Segments.cpp
-│   ├── 868 - Numerical Maze.cpp
-│   ├── 869 - Airline Comparison.cpp
-│   ├── 870 - Intersecting Rectangles.cpp
-│   ├── 871 - Counting Cells in a Blob.cpp
-│   ├── 872 - Ordering.cpp
-│   ├── 879 - Circuit Nets.cpp
-│   ├── 880 - Cantor Fractions.cpp
-│   ├── 881 - Points, Polygons and Containers.cpp
-│   ├── 892 - Finding words.cpp
-│   ├── 895 - Word Problem.cpp
-│   └── 897 - Anagrammatic Primes.cpp
-├── volume009
-│   ├── 902 - Password Search.cpp
-│   ├── 902 - Password Search[Trie].cpp
-│   ├── 904 - Overlapping Air Traffic Control Zones.cpp
-│   ├── 906 - Rational Neighbor.cpp
-│   ├── 907 - Winterim Backpacking Trip.cpp
-│   ├── 908 - Re-connecting Computer Sites.cpp
-│   ├── 909 - The BitPack Data Compression Problem[v2].cpp
-│   ├── 914 - Jumping Champion.cpp
-│   ├── 915 - Stack of Cylinders.cpp
-│   ├── 918 - ASCII Mandelbrot.cpp
-│   ├── 920 - Sunny Mountains.cpp
-│   ├── 921 - A Word Puzzle in the Sunny Mountains.cpp
-│   ├── 924 - Spreading The News.cpp
-│   ├── 926 - Walking Around Wisely.cpp
-│   ├── 927 - Integer Sequences from Addition of Terms.cpp
-│   ├── 930 - Polynomial Roots.cpp
-│   ├── 932 - Checking the N-Queens Problem.cpp
-│   ├── 938 - Gilix.cpp
-│   ├── 941 - Permutations. cpp.c
-│   ├── 941 - Permutations.cpp
-│   ├── 944 - Happy Numbers.cpp
-│   ├── 946 - A Pile of Boxes.cpp
-│   ├── 947 - Master Mind Helper.cpp
-│   ├── 967 - Circular.cpp
-│   ├── 970 - Particles.cpp
-│   ├── 972 - Horizon Line.cpp
-│   ├── 974 - Kaprekar Numbers.cpp
-│   ├── 979 - The Abominable Triangleman.cpp
-│   ├── 983 - Localized Summing for Blurring.cpp
-│   ├── 988 - Many Paths, One Destination.cpp
-│   ├── 989 - Su Doku.c
-│   ├── 990 - Diving for Gold.cpp
-│   ├── 991 - Safe Salutations.c
-│   ├── 995 - Super Divisible Numbers.cpp
-│   ├── 997 - Show the Sequence.cpp
-│   └── 999 - Book signatures.cpp
-├── volume010
-│   ├── 1000 - Airport Configuration.cpp
-│   ├── 1001 - Say Cheese.cpp
-│   ├── 1006 - Fixed Partition Memory Management.cpp
-│   ├── 1008 - A Vexing Problem.cpp
-│   ├── 1009 - Balloons in a Box.cpp
-│   ├── 1011 - Crossing the Desert.cpp
-│   ├── 1025 - A Spy in the Metro.cpp
-│   ├── 1027 - Toll.cpp
-│   ├── 1029 - Heliport.cpp
-│   ├── 1030 - Image Is Everything.cpp
-│   ├── 1031 - Insecure in Prague.cpp
-│   ├── 1045 - The Great Wall Game.cpp
-│   ├── 1051 - Bipartite Numbers[bfs2].cpp
-│   ├── 1051 - Bipartite Numbers[fail].cpp
-│   ├── 1056 - Degrees of Separation.cpp
-│   ├── 1069 - Always an integer.cpp
-│   ├── 1073 - Glenbow Museum.cpp
-│   ├── 1075 - Painter.cpp
-│   ├── 1093 - Castles.cpp
-│   ├── 1099 - Sharing Chocolate.cpp
-│   ├── 1108 - Mining Your Own Business.cpp
-│   └── 1182 - Sequence Alignment.cpp
-├── volume011
-│   ├── 1110 - Pyramids.cpp
-│   ├── 1118 - Binary Stirling Numbers.cpp
-│   ├── 1119 - Project File Dependencies.cpp
-│   ├── 1121 - Subsequence.cpp
-│   ├── 1124 - Celebrity jeopardy.cpp
-│   ├── 1125 - Sherlock Holmes.cpp
-│   ├── 1137 - Phony primes.cpp
-│   ├── 1149 - Bin Packing.cpp
-│   ├── 1152 - 4 Values whose Sum is 0.cpp
-│   ├── 1158 - CubesSquared.cpp
-│   ├── 1163 - The Right Tip.cpp
-│   ├── 1169 - Robotruck.cpp
-│   ├── 1174 - IP-TV.cpp
-│   ├── 1174 - IP-TVv2.cpp
-│   ├── 1185 - Big Number.cpp
-│   ├── 1187 - Diamonds.cpp
-│   ├── 1189 - Find The Multiple.cpp
-│   ├── 1194 - Machine Schedule.cpp
-│   └── 1196 - Tiling Up Blocks.cpp
-├── volume012
-│   ├── 1200 - A DP Problem.cpp
-│   ├── 1203 - Argus.cpp
-│   ├── 1205 - Color a Tree.cpp
-│   ├── 1206 - Boundary Points.cpp
-│   ├── 1207 - AGTC.cpp
-│   ├── 1208 - Oreon.cpp
-│   ├── 1210 - Sum of Consecutive Prime Numbers.c
-│   ├── 1212 - Duopoly.cpp
-│   ├── 1213 - Sum of Different Primes.c
-│   ├── 1215 - String Cutting.cpp
-│   ├── 1216 - The Bug Sensor Problem.cpp
-│   ├── 1225 - Digit Counting.cpp
-│   ├── 1226 - Numerical surprises.cpp
-│   ├── 1227 - The longest constant gene.cpp
-│   ├── 1230 - MODEX.cpp
-│   ├── 1232 - SKYLINE.cpp
-│   ├── 1234 - RACING.cpp
-│   ├── 1235 - Anti Brute Force Lock.cpp
-│   ├── 1237 - Expert Enough.cpp
-│   ├── 1238 - Free Parentheses.cpp
-│   ├── 1238 - Free Parentheses[v2].cpp
-│   ├── 1244 - Palindromic paths.cpp
-│   ├── 1249 - Euclid.cpp
-│   ├── 1252 - Twenty Questions.cpp
-│   ├── 1254 - Top 10.cpp
-│   ├── 1258 - Nowhere Money.cpp
-│   ├── 1260 - Sales.cpp
-│   ├── 1261 - String Popping.cpp
-│   ├── 1263 - Mines.cpp
-│   ├── 1264 - Binary Search Tree.cpp
-│   ├── 1266 - Magic Square.cpp
-│   ├── 1267 - Network.cpp
-│   ├── 1291 - Dance Dance Revolution.cpp
-│   └── 1292 - Strategic game.cpp
-├── volume013
-│   ├── 1309 - Sudoku.cpp
-│   ├── 1314 - Hidden Password.cpp
-│   ├── 1316 - Supermarket.cpp
-│   ├── 1329 - Corporative Network.cpp
-│   ├── 1331 - Minimax Triangulation.cpp
-│   ├── 1335 - Beijing Guards.cpp
-│   ├── 1339 - Ancient Cipher.cpp
-│   ├── 1341 - Different Digits.cpp
-│   ├── 1344 - Tian Ji -- The Horse Racing.cpp
-│   ├── 1345 - Jamie's Contact Groups.cpp
-│   ├── 1363 - Joseph's Problem.cpp
-│   ├── 1368 - DNA Consensus String.cpp
-│   ├── 1374 - Power Calculus.cpp
-│   ├── 1379 - Pitcher Rotation.cpp
-│   ├── 1381 - Balancing the Scale.cpp
-│   ├── 1382 - Distant Galaxy.cpp
-│   ├── 1383 - Harmony Forever.cpp
-│   ├── 1390 - Interconnect.cpp
-│   ├── 1392 - DNA Regions.cpp
-│   ├── 1392 - DNA Regionsv2.cpp
-│   ├── 1394 - And Then There Was One.cpp
-│   ├── 1395 - Slim Span.cpp
-│   └── 1396 - Most Distant Point from the Sea.cpp
-├── volume014
-│   ├── 1400 - Ray, Pass me the dishes.cpp
-│   ├── 1400 - Ray, Pass me the dishes[v2].cpp
-│   ├── 1401 - Remember the Word.cpp
-│   ├── 1404 - Prime k-tuple.cpp
-│   ├── 1417 - Traffic Jam.cpp
-│   ├── 1419 - Binary Clock.cpp
-│   ├── 1419 - Ugly Windows.cpp
-│   ├── 1423 - Guess.cpp
-│   ├── 1428 - Ping pong.cpp
-│   ├── 1432 - Fire-Control System.cpp
-│   ├── 1449 - Dominating Patterns.cpp
-│   ├── 1451 - Average.cpp
-│   ├── 1468 - Restaurant.cpp
-│   ├── 1475 - Jungle Outpost.cpp
-│   ├── 1479 - Graph and Queries(1).cpp
-│   ├── 1482 - Playing With Stones.cpp
-│   └── 1494 - Qin Shi Huang's National Road System.cpp
-├── volume015
-│   ├── 1501 - Construct the Great Wall.cpp
-│   ├── 1530 - Floating Point Numbers.cpp
-│   ├── 1544 - Simple Arithmetics.cpp
-│   ├── 1556 - Disk Tree.cpp
-│   ├── 1572 - Self-Assembly.cpp
-│   ├── 1575 - Factors.cpp
-│   ├── 1577 - Low Power.cpp
-│   ├── 1579 - Matryoshka.cpp
-│   ├── 1583 - Digit Generator.cpp
-│   ├── 1584 - Circular Sequence.cpp
-│   ├── 1585 - Score.cpp
-│   ├── 1586 - Molar mass.cpp
-│   ├── 1587 - Box.cpp
-│   ├── 1588 - Kickdown.cpp
-│   ├── 1590 - IP Networks.cpp
-│   ├── 1592 - Database.cpp
-│   ├── 1594 - Ducci Sequence.cpp
-│   └── 1595 - Symmetry.cpp
-├── volume016
-│   ├── 1600 - Patrol Robot.cpp
-│   ├── 1605 - Building for UN.cpp
-│   ├── 1608 - Non-boring sequences.cpp
-│   ├── 1608 - Non-boring sequences[v2].cpp
-│   ├── 1610 - Party Games.cpp
-│   ├── 1614 - Hell on the Markets.cpp
-│   ├── 1625 - Color Length.cpp
-│   ├── 1626 - Brackets sequence.cpp
-│   ├── 1627 - Team them up!.cpp
-│   ├── 1629 - Cake slicing.cpp
-│   ├── 1635 - Irrelevant Elements.cpp
-│   ├── 1636 - Headshot.cpp
-│   ├── 1640 - The Counting Problem[digit].cpp
-│   ├── 1641 - ASCII Area.cpp
-│   ├── 1642 - Magical GCD.cpp
-│   ├── 1644 - Prime Gap.cpp
-│   ├── 1645 - Count.cpp
-│   ├── 1646 - Edge Case.cpp
-│   ├── 1647 - Computer Transformation.cpp
-│   ├── 1649 - Binomial coefficients.cpp
-│   ├── 1659 - Help Little Laura.cpp
-│   ├── 1665 - Islands.cpp
-│   ├── 1665 - Islands[v2].cpp
-│   └── 1674 - Lightning Energy Report.cpp
-├── volume040
-│   └── 4020 - Hard Rode.cpp
-├── volume041
-│   └── 4104 - MODEX.cpp
-├── volume047
-│   ├── 4723 - Ducci Sequence.cpp
-│   ├── 4725 - Airport.cpp
-│   ├── 4726 - Average.cpp
-│   ├── 4727 - Jump.cpp
-│   ├── 4728 - Squares.cpp
-│   └── 4731 - Cellular Network.cpp
-├── volume048
-│   └── 4867 - Maximum Square.cpp
-├── volume050
-│   └── 5067 - Membership Management.cpp
-├── volume051
-│   └── 5102 - Fermat Point in Quadrangle.cpp
-├── volume056
-│   └── 5610 - Stars.cpp
-├── volume058
-│   ├── 5861 - Hidden Terminal Problem.cpp
-│   ├── 5862 - City Travel.cpp
-│   ├── 5864 - Register Allocation.cpp
-│   ├── 5864 - Register Allocation[another].cpp
-│   ├── 5865 - Finding Bottleneck Shorstet Paths.cpp
-│   └── 5867 - Finding Feasible Paths.cpp
-├── volume100
-│   ├── 10000 - Longest Paths.cpp
-│   ├── 10001 - Garden of Eden.cpp
-│   ├── 10002 - Center of Masses.cpp
-│   ├── 10003 - Cutting Sticks.cpp
-│   ├── 10005 - Packing polygons.cpp
-│   ├── 10006 - Carmichael Numbers.cpp
-│   ├── 10008 - What's Cryptanalysis.cpp
-│   ├── 10010 - Where's Waldorf.cpp
-│   ├── 10012 - How Big Is It.cpp
-│   ├── 10013 - Super long sums.cpp
-│   ├── 10014 - Simple calculations.cpp
-│   ├── 10015 - Joseph's Cousin.cpp
-│   ├── 10017 - The Never Ending Towers of Hanoi.cpp
-│   ├── 10018 - Reverse and Add.cpp
-│   ├── 10019 - Funny Encryption Method.cpp
-│   ├── 10020 - Minimal coverage.cpp
-│   ├── 10023 - Square root.cpp
-│   ├── 10023 - Square root2.cpp
-│   ├── 10023 - Square root3.cpp
-│   ├── 10023 - Square root4.cpp
-│   ├── 10024 - Curling up the cube.cpp
-│   ├── 10025 - The  1  2  ...  n = k problem.cpp
-│   ├── 10026 - Shoemaker's Problem.cpp
-│   ├── 10029 - Edit Step Ladders.cpp
-│   ├── 10029 - Edit Step Ladders[Trie].cpp
-│   ├── 10029 - Edit Step Ladders[hashmap].cpp
-│   ├── 10032 - Tug of War.cpp
-│   ├── 10033 - Interpreter.cpp
-│   ├── 10034 - Freckles.cpp
-│   ├── 10035 - Primary Arithmetic.cpp
-│   ├── 10036 - Divisibility.c
-│   ├── 10036 - Divisibility.cpp
-│   ├── 10037 - Bridge.cpp
-│   ├── 10038 - Jolly Jumpers.cpp
-│   ├── 10039 - Railroads.cpp
-│   ├── 10040 - Ouroboros Snake.cpp
-│   ├── 10040 - Ouroboros Snake[v2].cpp
-│   ├── 10041 - Vito's Family.cpp
-│   ├── 10042 - Smith Numbers.cpp
-│   ├── 10043 - Chainsaw Massacre.cpp
-│   ├── 10044 - Erdos Numbers.cpp
-│   ├── 10047 - The Monocycle.cpp
-│   ├── 10048 - Audiophobia.cpp
-│   ├── 10050 - Hartals.cpp
-│   ├── 10054 - The Necklace.cpp
-│   ├── 10055 - Hashmat the Brave Warrior.cpp
-│   ├── 10056 - What is the Probability.cpp
-│   ├── 10057 - A mid-summer night's dream.cpp
-│   ├── 10061 - How many zero's and how many digits.cpp
-│   ├── 10062 - Tell me the frequencies.cpp
-│   ├── 10063 - Knuth's Permutation.c
-│   ├── 10065 - Useless Tile Packers.cpp
-│   ├── 10067 - Playing with Wheels.cpp
-│   ├── 10070 - Leap Year or Not Leap Year and ....c
-│   ├── 10071 - Back to High School Physics.cpp
-│   ├── 10074 - Take the Land.cpp
-│   ├── 10075 - Airlines.cpp
-│   ├── 10077 - The Stern-Brocot Number System.cpp
-│   ├── 10078 - The Art Gallery.cpp
-│   ├── 10079 - Pizza Cutting.cpp
-│   ├── 10080 - Gopher II.cpp
-│   ├── 10081 - Tight Words.cpp
-│   ├── 10084 - Hotter Colder.cpp
-│   ├── 10085 - The most distant state.cpp
-│   ├── 10089 - Repackaging.cpp
-│   ├── 10090 - Marbles.cpp
-│   ├── 10092 - The Problem with the Problem Setter.cpp
-│   ├── 10093 - An Easy Problem!.cpp
-│   ├── 10094 - Place the Guards.cpp
-│   ├── 10094 - Place the Guards[DLX].cpp
-│   ├── 10094 - Place the Guards[math].cpp
-│   ├── 10094 - Place the Guards[random].cpp
-│   └── 10099 - The Tourist Guide.cpp
-├── volume101
-│   ├── 10100 - Longest Match.cpp
-│   ├── 10101 - Bangla Numbers.cpp
-│   ├── 10104 - Euclid Problem.cpp
-│   ├── 10105 - Polynomial Coefficients.cpp
-│   ├── 10107 - What is the Median.cpp
-│   ├── 10109 - Solving Systems of Linear Equations.cpp
-│   ├── 10110 - Light, more light.cpp
-│   ├── 10112 - Myacm Triangles.cpp
-│   ├── 10115 - Automatic Editing.cpp
-│   ├── 10116 - Robot Motion.cpp
-│   ├── 10117 - Nice Milk.cpp
-│   ├── 10118 - Free Candies.cpp
-│   ├── 10120 - Gift.cpp
-│   ├── 10123 - No Tipping.cpp
-│   ├── 10124 - Subway.cpp
-│   ├── 10124 - Subway[v2].cpp
-│   ├── 10124 - Subway[v3].cpp
-│   ├── 10125 - Sumsets.cpp
-│   ├── 10127 - Ones.cpp
-│   ├── 10128 - Queue.cpp
-│   ├── 10129 - Play on Words.cpp
-│   ├── 10130 - SuperSale.cpp
-│   ├── 10131 - Is Bigger Smarter.cpp
-│   ├── 10132 - File Fragmentation.cpp
-│   ├── 10136 - Chocolate Chip Cookies.cpp
-│   ├── 10139 - Factovisors.cpp
-│   ├── 10140 - Prime Distance.cpp
-│   ├── 10141 - Request for Proposal.cpp
-│   ├── 10142 - Australian Voting.cpp
-│   ├── 10144 - Expression.cpp
-│   ├── 10146 - Dictionary.cpp
-│   ├── 10147 - Highways.cpp
-│   ├── 10148 - Advertisement.cpp
-│   ├── 10149 - Yahtzee.cpp
-│   ├── 10149 - Yahtzee[Anotherdp].cpp
-│   ├── 10149 - Yahtzee[Anotherdp_plus].cpp
-│   ├── 10150 - Doublets.cpp
-│   ├── 10152 - ShellSort.cpp
-│   ├── 10154 - Weights and Measures.cpp
-│   ├── 10158 - War.cpp
-│   ├── 10160 - Servicing Stations.cpp
-│   ├── 10161 - Ant on a Chessboard.cpp
-│   ├── 10162 - Last Digit.cpp
-│   ├── 10164 - Number Game.cpp
-│   ├── 10167 - Birthday Cake.c
-│   ├── 10168 - Summation of Four Primes.cpp
-│   ├── 10169 - Urn-ball Probabilities.cpp
-│   ├── 10170 - The Hotel with Infinite Rooms.cpp
-│   ├── 10171 - Meeting Prof. Miguel.cpp
-│   ├── 10173 - Smallest Bounding Rectangle.cpp
-│   ├── 10174 - Couple-Bachelor-Spinster Numbers.cpp
-│   ├── 10176 - Ocean Deep  - Make it shallow.cpp
-│   ├── 10177 - (2.3.4)-D Sqr.Rects.Cubes.Boxes.cpp
-│   ├── 10178 - Count the Faces.cpp
-│   ├── 10179 - Irreducable Basic Fractions.cpp
-│   ├── 10181 - 15-Puzzle Problem.cpp
-│   ├── 10182 - Bee Maja.cpp
-│   ├── 10184 - Equidistance.cpp
-│   ├── 10185 - Phylogenetic Trees Inherited.cpp
-│   ├── 10186 - Euro Cup 2000.cpp
-│   ├── 10188 - Automated Judge Script.cpp
-│   ├── 10189 - Minesweeper.cpp
-│   ├── 10190 - Divide, But Not Quite Conquer.cpp
-│   ├── 10191 - Longest Nap.cpp
-│   ├── 10192 - Vacation.cpp
-│   ├── 10194 - Football (aka Soccer).cpp
-│   ├── 10195 - The Knights Of The Round Table.cpp
-│   └── 10199 - Tourist Guide.cpp
-├── volume102
-│   ├── 10201 - Adventures in Moving - Part IV.cpp
-│   ├── 10202 - Pairsumonious Numbers.cpp
-│   ├── 10205 - Stack 'em Up.cpp
-│   ├── 10206 - Stars.cpp
-│   ├── 10206 - Stars2.cpp
-│   ├── 10206 - Stars3.cpp
-│   ├── 10209 - Is This Integration.cpp
-│   ├── 10213 - How Many Pieces of Land.cpp
-│   ├── 10215 - The LargestSmallest Box.c
-│   ├── 10219 - Find the ways !.cpp
-│   ├── 10220 - I Love Big Numbers !.cpp
-│   ├── 10221 - Satellites.cpp
-│   ├── 10226 - Hardwood Species.cpp
-│   ├── 10226 - Hardwood Species[Trie].cpp
-│   ├── 10227 - Forests.cpp
-│   ├── 10228 - Star not a Tree.cpp
-│   ├── 10229 - Modular Fibonacci.cpp
-│   ├── 10234 - Frequent Substrings.cpp
-│   ├── 10242 - Fourth Point !!.cpp
-│   ├── 10243 - FireFireFire.cpp
-│   ├── 10245 - The Closest Pair Problem.cpp
-│   ├── 10248 - The Integer All-time Champ.cpp
-│   ├── 10248 - The Integer All-time Champ[匹配].cpp
-│   ├── 10249 - The Grand Dinner.cpp
-│   ├── 10252 - Common Permutation.cpp
-│   ├── 10253 - Series-Parallel Networks.cpp
-│   ├── 10254 - The Priest Mathematician.cpp
-│   ├── 10256 - The Great Divide.cpp
-│   ├── 10258 - Contest Scoreboard.cpp
-│   ├── 10260 - Soundex.cpp
-│   ├── 10261 - Ferry Loading.cpp
-│   ├── 10263 - Railway.cpp
-│   ├── 10264 - The Most Potent Corner.cpp
-│   ├── 10266 - Surveying.cpp
-│   ├── 10267 - Graphical Editor.cpp
-│   ├── 10268 - 498-bis.cpp
-│   ├── 10271 - Chopsticks.cpp
-│   ├── 10276 - Hanoi Tower Troubles Again!.c
-│   ├── 10278 - Fire Station.cpp
-│   ├── 10279 - Mine Sweeper.cpp
-│   ├── 10281 - Average Speed.cpp
-│   ├── 10282 - Babelfish.cpp
-│   ├── 10283 - The Kissing Circles.cpp
-│   ├── 10286 - Trouble with a Pentagon.cpp
-│   ├── 10288 - Coupons.cpp
-│   ├── 10293 - Word Length and Frequency.cpp
-│   ├── 10295 - Hay Points.cpp
-│   ├── 10296 - Jogging Trail.cpp
-│   └── 10296 - Jogging Trails.cpp
-├── volume103
-│   ├── 10300 - Ecological Premium.cpp
-│   ├── 10304 - Optimal Binary Search Tree.cpp
-│   ├── 10305 - Ordering Tasks.cpp
-│   ├── 10306 - e-Coins.cpp
-│   ├── 10308 - Roads in the North.cpp
-│   ├── 10309 - Turn the Lights Off.cpp
-│   ├── 10310 - Dog and Gopher.c
-│   ├── 10311 - Goldbach and Euler.cpp
-│   ├── 10312 - Expression Bracketing.cpp
-│   ├── 10313 - Pay the Price.cpp
-│   ├── 10315 - Poker Hands.cpp
-│   ├── 10316 - Airline Hub.cpp
-│   ├── 10319 - Manhattan.cpp
-│   ├── 10320 - Cow Trouble! Help Please.cpp
-│   ├── 10321 - Polygon Intersection.cpp
-│   ├── 10325 - The Lottery.cpp
-│   ├── 10327 - Flip Sort.cpp
-│   ├── 10328 - Coin Toss.cpp
-│   ├── 10334 - Ray Through Glasses.cpp
-│   ├── 10335 - Ray Inside a Polygon.cpp
-│   ├── 10338 - Mischievous Children.c
-│   ├── 10340 - All in All.cpp
-│   ├── 10341 - Solve It.cpp
-│   ├── 10341 - Solve It.o
-│   ├── 10341 - Solve It[Netwon].cpp
-│   ├── 10342 - Always Late.cpp
-│   ├── 10342 - Always Late[spfa].cpp
-│   ├── 10343 - Base64 Decoding.cpp
-│   ├── 10346 - Peter's Smokes.cpp
-│   ├── 10347 - Medians.c
-│   ├── 10348 - Submarines.cpp
-│   ├── 10349 - Antenna Placement.cpp
-│   ├── 10352 - Count the eWords.cpp
-│   ├── 10356 - Rough Roads.cpp
-│   ├── 10360 - Rat Attack.cpp
-│   ├── 10363 - Tic Tac Toe.cpp
-│   ├── 10365 - Blocks.cpp
-│   ├── 10368 - Euclid's Game.cpp
-│   ├── 10369 - Arctic Network.cpp
-│   ├── 10370 - Above Average.cpp
-│   ├── 10374 - Election.cpp
-│   ├── 10375 - Choose and divide.cpp
-│   ├── 10378 - Complex Numbers.cpp
-│   ├── 10381 - The Rock.cpp
-│   ├── 10382 - Watering Grass.cpp
-│   ├── 10387 - Billiard.cpp
-│   ├── 10389 - Subway.cpp
-│   ├── 10391 - Compound Words.cpp
-│   ├── 10393 - The One-Handed Typist.cpp
-│   ├── 10397 - Connect the Campus.cpp
-│   ├── 10397 - Connect the Campus[Delaunay].cpp
-│   └── 10397 - Connect the Campus[random].cpp
-├── volume104
-│   ├── 10401 - Injured Queen Problem.cpp
-│   ├── 10404 - Bachet's Game.cpp
-│   ├── 10405 - Longest Common Subsequence.cpp
-│   ├── 10407 - Simple division.cpp
-│   ├── 10408 - Farey sequences.cpp
-│   ├── 10409 - Die Game.cpp
-│   ├── 10415 - Eb Alto Saxophone Player.cpp
-│   ├── 10419 - Sum-up the Primes.cpp
-│   ├── 10420 - List of Conquests.cpp
-│   ├── 10424 - Love Calculator.cpp
-│   ├── 10427 - Naughty Sleepy Boys.cpp
-│   ├── 10432 - Polygon Inside A Circle.c
-│   ├── 10433 - Automorphic Numbers.cpp
-│   ├── 10438 - Meta Editor.cpp
-│   ├── 10440 - Ferry Loading II.cpp
-│   ├── 10449 - Traffic.cpp
-│   ├── 10450 - World Cup Noise.cpp
-│   ├── 10451 - Ancient Village Sports.cpp
-│   ├── 10452 - Marcus.cpp
-│   ├── 10457 - Magic Car.cpp
-│   ├── 10459 - The Tree Root.cpp
-│   ├── 10462 - Is There A Second Way Left.cpp
-│   ├── 10465 - Homer Simpson.cpp
-│   ├── 10467 - Parse Tree.cpp
-│   ├── 10469 - To Carry or not to Carry.cpp
-│   ├── 10474 - Where is the Marble.cpp
-│   ├── 10480 - Sabotage.cpp
-│   ├── 10482 - The Candyman Can.cpp
-│   ├── 10483 - The Sum Equals the Product.cpp
-│   ├── 10484 - Divisibility of Factors.cpp
-│   ├── 10487 - Closest Sums.c
-│   ├── 10489 - Boxes of Chocolates.cpp
-│   ├── 10490 - Mr. Azad and his Son.cpp
-│   ├── 10491 - Cows and Cars.cpp
-│   └── 10496 - Collecting Beepers.cpp
-├── volume105
-│   ├── 10500 - Robot maps.cpp
-│   ├── 10502 - Counting Rectangles.cpp
-│   ├── 10503 - The dominoes solitaire.cpp
-│   ├── 10505 - Montesco vs Capuleto.cpp
-│   ├── 10508 - Word Morphing.cpp
-│   ├── 10509 - R U Kidding Mr. Feynman.cpp
-│   ├── 10511 - Councilling.cpp
-│   ├── 10511 - Councilling[maxflow].cpp
-│   ├── 10515 - Powers Et Al.cpp
-│   ├── 10520 - Determine it.cpp
-│   ├── 10524 - Matrix Reloaded.cpp
-│   ├── 10527 - Persistent Numbers.cpp
-│   ├── 10529 - Dumb Bones.cpp
-│   ├── 10530 - Guessing Game.cpp
-│   ├── 10532 - Combination! Once Again.cpp
-│   ├── 10534 - Wavio SequenceV2.cpp
-│   ├── 10537 - The Toll! Revisited.cpp
-│   ├── 10539 - Almost Prime Numbers.cpp
-│   ├── 10539 - Almost Prime Numbers2.cpp
-│   ├── 10541 - Stripe.cpp
-│   ├── 10545 - Maximal Quadrilateral.cpp
-│   ├── 10551 - Basic Remains.cpp
-│   ├── 10554 - Calories from Fat.cpp
-│   ├── 10555 - Dead Fraction.cpp
-│   ├── 10557 - XYZZY.cpp
-│   ├── 10562 - Undraw the Trees.cpp
-│   ├── 10563 - Least Squares.cpp
-│   ├── 10566 - Crossed Ladders.cpp
-│   ├── 10568 - n Group k.cpp
-│   ├── 10571 - Products.cpp
-│   ├── 10573 - Geometry Paradox.cpp
-│   ├── 10574 - Counting Rectangles.cpp
-│   ├── 10574 - Counting Rectanglesv2.cpp
-│   ├── 10576 - Y2K Accounting Bug.cpp
-│   ├── 10582 - ASCII Labyrinth.cpp
-│   ├── 10585 - Center of symmetry.cpp
-│   ├── 10586 - Polynomial Remains.cpp
-│   ├── 10589 - Area.cpp
-│   ├── 10592 - Freedom Fighter.cpp
-│   ├── 10594 - Data Flow.cpp
-│   ├── 10596 - Morning Walk.cpp
-│   └── 10597 - Right Words.cpp
-├── volume106
-│   ├── 10600 - ACM Contest and Blackout.cpp
-│   ├── 10602 - Editor Nottoobad.cpp
-│   ├── 10603 - Fill.cpp
-│   ├── 10608 - Friends.cpp
-│   ├── 10611 - The Playboy Chimp.cpp
-│   ├── 10613 - Mushroom Misery.cpp
-│   ├── 10616 - Divisible Group Sums.cpp
-│   ├── 10617 - Again Palindrome.cpp
-│   ├── 10622 - Perfect P-th Powers.cpp
-│   ├── 10624 - Super Number.cpp
-│   ├── 10625 - GNU = GNU'sNotUnix.cpp
-│   ├── 10633 - Rare Easy Problem.cpp
-│   ├── 10642 - Can You Solve It.cpp
-│   ├── 10651 - Pebble Solitaire.cpp
-│   ├── 10652 - Board Wrapping.cpp
-│   ├── 10653 - Bombs! NO they are Mines!!.cpp
-│   ├── 10656 - Maximum Sum (II).cpp
-│   ├── 10659 - Fitting Text into Slides.cpp
-│   ├── 10660 - Citizen attention offices.cpp
-│   ├── 10664 - Luggage.cpp
-│   ├── 10665 - Diatribe against Pigeonholes.cpp
-│   ├── 10666 - The Eurocup is Here.cpp
-│   ├── 10667 - Largest Block.cpp
-│   ├── 10668 - Expanding Rods.cpp
-│   ├── 10672 - Marbles on a tree.cpp
-│   ├── 10673 - Play with Floor and Ceil.cpp
-│   ├── 10677 - Base Equality.cpp
-│   ├── 10678 - The Grazing Cow.cpp
-│   ├── 10679 - I Love Strings (2).cpp
-│   ├── 10679 - I Love Strings(AC).cpp
-│   ├── 10679 - I Love Strings.cpp
-│   ├── 10679 - I Love Strings[SA].cpp
-│   ├── 10679 - I Love Strings[case1].cpp
-│   ├── 10680 - LCM.cpp
-│   ├── 10681 - Teobaldo's Trip.cpp
-│   ├── 10682 - Forr.cpp
-│   ├── 10683 - The decadary watch.cpp
-│   ├── 10684 - The jackpot.cpp
-│   ├── 10685 - Nature.cpp
-│   ├── 10686 - SQF Problems.cpp
-│   ├── 10688 - The Poor Giant.cpp
-│   ├── 10689 - Yet another Number Sequence.cpp
-│   ├── 10692 - Huge Mods.cpp
-│   ├── 10693 - Traffic Volume.cpp
-│   ├── 10694 - Combinatorial Summation.java
-│   ├── 10696 - f91.cpp
-│   └── 10699 - Count the factors.cpp
-├── volume107
-│   ├── 10700 - Camel trading.cpp
-│   ├── 10701 - Pre, in and post.cpp
-│   ├── 10702 - Travelling Salesman.cpp
-│   ├── 10703 - Free spots.cpp
-│   ├── 10704 - Traffic.cpp
-│   ├── 10706 - Number Sequence.cpp
-│   ├── 10707 - 2D-Nim.cpp
-│   ├── 10709 - Intersection is Not that Easy.cpp
-│   ├── 10709 - Intersection is Not that Easy[v2].cpp
-│   ├── 10712 - Count the Numbers.cpp
-│   ├── 10713 - Map.cpp
-│   ├── 10714 - Ants.cpp
-│   ├── 10715 - Cat.cpp
-│   ├── 10715 - Cat[v2].cpp
-│   ├── 10715 - Cat[v3].cpp
-│   ├── 10715 - Cat[v4].cpp
-│   ├── 10715 - Cat[v5].cpp
-│   ├── 10717 - Mint.cpp
-│   ├── 10718 - Bit Mask.cpp
-│   ├── 10719 - Quotient Polynomial.cpp
-│   ├── 10720 - Graph Construction.cpp
-│   ├── 10721 - Bar Codes.cpp
-│   ├── 10722 - Super Lucky Numbers.cpp
-│   ├── 10722 - Super Lucky Numbersv2.cpp
-│   ├── 10728 - Help.cpp
-│   ├── 10729 - Treequivalence.cpp
-│   ├── 10730 - Antiarithmetic.cpp
-│   ├── 10731 - Test.cpp
-│   ├── 10732 - The Strange Research.cpp
-│   ├── 10733 - The Colored Cubes.cpp
-│   ├── 10738 - Riemann vs Mertens.cpp
-│   ├── 10739 - String to Palindrome.cpp
-│   ├── 10740 - Not the Best.cpp
-│   ├── 10744 - The Optimal Super-Highway.cpp
-│   ├── 10745 - Dominant Strings.cpp
-│   ├── 10746 - Crime Wave - The Sequel.cpp
-│   ├── 10747 - Maximum Subsequence.cpp
-│   ├── 10755 - Garbage Heap.cpp
-│   ├── 10759 - Dice Throwing.cpp
-│   ├── 10763 - Foreign Exchange.cpp
-│   ├── 10769 - Pillars.cpp
-│   ├── 10773 - Back to Intermediate Math.cpp
-│   ├── 10776 - Determine The Combination.cpp
-│   ├── 10779 - Collectors Problem.cpp
-│   ├── 10783 - Odd Sum.cpp
-│   ├── 10784 - Diagonal.cpp
-│   ├── 10788 - Parenthesizing Palindromes.cpp
-│   ├── 10789 - Prime Frequency.cpp
-│   ├── 10790 - How Many Points of Intersection.cpp
-│   ├── 10793 - The Orc Attack.cpp
-│   └── 10794 - The Deadly Olympic Returns!!!.cpp
-├── volume108
-│   ├── 10800 - Not That Kind of Graph.cpp
-│   ├── 10801 - Lift Hopping.cpp
-│   ├── 10802 - Lex Smallest Drive.cpp
-│   ├── 10803 - Thunder Mountain.cpp
-│   ├── 10804 - Gopher Strategy.cpp
-│   ├── 10806 - Dijkstra, Dijkstra.cpp
-│   ├── 10806 - Dijkstra, Dijkstra[v2].cpp
-│   ├── 10807 - Prim.cpp
-│   ├── 10810 - Ultra-QuickSort.cpp
-│   ├── 10812 - Beat the Spread!.cpp
-│   ├── 10815 - Andy's First Dictionary.cpp
-│   ├── 10816 - Travel in Desert.cpp
-│   ├── 10817 - Headmaster's Headache.cpp
-│   ├── 10819 - Trouble of 13-Dots.cpp
-│   ├── 10820 - Send a Table.cpp
-│   ├── 10823 - Of Circles and Squares.cpp
-│   ├── 10825 - Anagram and Multiplication.cpp
-│   ├── 10827 - Maximum sum on a torus.cpp
-│   ├── 10828 - Back to Kernighan-Ritchie.cpp
-│   ├── 10828 - Back to Kernighan-Ritchie2.cpp
-│   ├── 10830 - A New Function.cpp
-│   ├── 10835 - Playing with Coins[AC][dp].cpp
-│   ├── 10838 - The Pawn Chess.cpp
-│   ├── 10841 - Lift Hopping in the Real World.cpp
-│   ├── 10842 - Traffic Flow.cpp
-│   ├── 10848 - Make Palindrome Checker.cpp
-│   ├── 10851 - 2D Hieroglyphs decoder.cpp
-│   ├── 10852 - Less Prime.cpp
-│   ├── 10855 - Rotated square.cpp
-│   ├── 10858 - Unique Factorization.cpp
-│   ├── 10860 - Many a Little makes a Mickle.cpp
-│   ├── 10867 - Cutting a Polygon.cpp
-│   ├── 10870 - Recurrences.cpp
-│   ├── 10871 - Primed Subsequence.cpp
-│   ├── 10874 - Segments.cpp
-│   ├── 10877 - Diceoids.cpp
-│   ├── 10879 - Code Refactoring.c
-│   ├── 10880 - Colin and Ryan.cpp
-│   ├── 10881 - Piotr's Ants.cpp
-│   ├── 10883 - Supermean.cpp
-│   ├── 10888 - Warehouse.cpp
-│   ├── 10889 - The Lost Gift.cpp
-│   ├── 10890 - Maze.cpp
-│   ├── 10890 - Maze[v2].cpp
-│   ├── 10891 - Game of Sum.cpp
-│   ├── 10892 - LCM Cardinality.cpp
-│   ├── 10894 - Save Hridoy.cpp
-│   ├── 10895 - Matrix Transpose.cpp
-│   ├── 10896 - Known Plaintext Attack.cpp
-│   └── 10897 - Travelling Distance.cpp
-├── volume109
-│   ├── 10900 - So you want to be a 2n-aire.cpp
-│   ├── 10901 - Ferry Loading III.cpp
-│   ├── 10902 - Pick-up Sticks.cpp
-│   ├── 10903 - Rock-Paper-Scissors Tournament.cpp
-│   ├── 10906 - Strange Integration.cpp
-│   ├── 10907 - Art Gallery.cpp
-│   ├── 10908 - Largest Square.cpp
-│   ├── 10909 - Lucky Number.cpp
-│   ├── 10910 - Marks Distribution.c
-│   ├── 10912 - Simple Minded Hashing.cpp
-│   ├── 10913 - Walking on a Grid.cpp
-│   ├── 10916 - Factstone Benchmark.cpp
-│   ├── 10918 - Tri Tiling.cpp
-│   ├── 10921 - Find the Telephone.cpp
-│   ├── 10922 - 2 the 9s.cpp
-│   ├── 10924 - Prime Words.cpp
-│   ├── 10928 - My Dear Neighbours.cpp
-│   ├── 10929 - You can say 11.cpp
-│   ├── 10930 - A-Sequence.cpp
-│   ├── 10934 - Dropping water balloons.cpp
-│   ├── 10935 - Throwing cards away I.cpp
-│   ├── 10940 - Throwing cards away II.cpp
-│   ├── 10943 - How do you add.cpp
-│   ├── 10944 - Nuts for nuts.cpp
-│   ├── 10945 - Mother bear.cpp
-│   ├── 10946 - You want what filled.cpp
-│   ├── 10947 - Bear with me, again.cpp
-│   ├── 10948 - The primary problem.cpp
-│   ├── 10954 - Add All.cpp
-│   ├── 10961 - Chasing After Don Giovanni.cpp
-│   ├── 10963 - The Swallowing Ground.cpp
-│   ├── 10967 - The Great Escape.cpp
-│   ├── 10967 - The Great Escape[Accept].cpp
-│   ├── 10969 - Sweet Dream.cpp
-│   ├── 10970 - Big Chocolate.cpp
-│   ├── 10973 - Triangle Counting.cpp
-│   ├── 10975 - Dueue's Quiz.cpp
-│   ├── 10975 - Dueue's Quiz[AC].cpp
-│   ├── 10978 - Let's Play Magic.cpp
-│   ├── 10980 - Lowest Price in Town.cpp
-│   ├── 10986 - Sending email.cpp
-│   ├── 10989 - Bomb, Divide and Conquer.cpp
-│   ├── 10990 - Another New Function.cpp
-│   ├── 10991 - Region.c
-│   ├── 10994 - Simple Addition.cpp
-│   └── 10998 - Flipping Colors.cpp
-├── volume110
-│   ├── 11001 - Necklace.cpp
-│   ├── 11002 - Towards Zero.cpp
-│   ├── 11002 - Towards Zero_V2.cpp
-│   ├── 11003 - Boxes.cpp
-│   ├── 11005 - Cheapest Base.cpp
-│   ├── 11015 - 05-2 Rendezvous.c
-│   ├── 11016 - Square Counting.cpp
-│   ├── 11016 - Square Counting[v2].cpp
-│   ├── 11019 - Matrix Matcher.cpp
-│   ├── 11020 - Efficient Solutions.cpp
-│   ├── 11022 - String Factoring.cpp
-│   ├── 11026 - A Grouping Problem.cpp
-│   ├── 11027 - Palindromic Permutation.cpp
-│   ├── 11028 - Sum of Product.cpp
-│   ├── 11029 - Leading and Trailing.cpp
-│   ├── 11030 - Predator II.cpp
-│   ├── 11030 - Predator II2.cpp
-│   ├── 11031 - Looking for a Subset.cpp
-│   ├── 11032 - Function Overloading.cpp
-│   ├── 11032 - Function Overloading2.cpp
-│   ├── 11034 - Ferry Loading IV.cpp
-│   ├── 11035 - Card Hands.cpp
-│   ├── 11036 - Eventually Periodic Sequence.cpp
-│   ├── 11038 - How Many O's.cpp
-│   ├── 11040 - Add bricks in the wall.cpp
-│   ├── 11042 - Complex, difficult and complicated.cpp
-│   ├── 11045 - My T-shirt suits me.cpp
-│   ├── 11048 - Automatic Correction of Misspellings.cpp
-│   ├── 11049 - Basic wall maze.cpp
-│   ├── 11053 - Flavius Josephus Reloaded.cpp
-│   ├── 11053 - Flavius Josephus Reloaded[v2].cpp
-│   ├── 11054 - Wine trading in Gergovia.cpp
-│   ├── 11055 - Homogeneous squares.cpp
-│   ├── 11056 - Formula 1.cpp
-│   ├── 11060 - Beverages.cpp
-│   ├── 11062 - Andy's Second Dictionary.cpp
-│   ├── 11063 - B2-Sequence.cpp
-│   ├── 11064 - Number Theory.cpp
-│   ├── 11067 - Little Red Riding Hood.cpp
-│   ├── 11068 - An Easy Task.cpp
-│   ├── 11071 - Permutation Representation.cpp
-│   ├── 11073 - Euler's Totient Function.cpp
-│   ├── 11074 - Draw Grid.cpp
-│   ├── 11076 - Add Again.cpp
-│   ├── 11080 - Place the Guards.cpp
-│   ├── 11081 - Strings.cpp
-│   ├── 11084 - Anagram Division.cpp
-│   ├── 11084 Anagram Division.cpp
-│   ├── 11085 - Back to the 8-Queens.cpp
-│   ├── 11086 - Composite Prime.cpp
-│   ├── 11087 - Divisibility Testing.cpp
-│   ├── 11089 - Fi-binary Number.cpp
-│   ├── 11090 - Going in Cycle.cpp
-│   ├── 11090 - Going in Cycle2.cpp
-│   ├── 11093 - Just Finish it up.cpp
-│   ├── 11094 - Continents.cpp
-│   ├── 11096 - Nails.cpp
-│   ├── 11097 - Poor My Problem!.cpp
-│   ├── 11099 - Next Same-Factored.cpp
-│   └── 11099 - Next Same-Factored[v2].cpp
-├── volume111
-│   ├── 11104 - Cousins.cpp
-│   ├── 11105 - Semi-prime H-numbers.cpp
-│   ├── 11106 - Rectilinear Polygon.cpp
-│   ├── 11107 - Life Forms.cpp
-│   ├── 11110 - Equidivisions.cpp
-│   ├── 11111 - Generalized Matrioshkas.cpp
-│   ├── 11112 - Babylonian Roulette.cpp
-│   ├── 11113 - Continuous Fractions.cpp
-│   ├── 11115 - Uncle Jack.cpp
-│   ├── 11121 - Base -2.cpp
-│   ├── 11122 - Tri Tri.cpp
-│   ├── 11122 - Tri Tri[ConvexHull].cpp
-│   ├── 11123 - Counting Trapizoid.cpp
-│   ├── 11130 - Billiard bounces.cpp
-│   ├── 11136 - Hoax or what.cpp
-│   ├── 11137 - Ingenuous Cubrency.cpp
-│   ├── 11138 - Nuts and Bolts.cpp
-│   ├── 11149 - Power of Matrix.cpp
-│   ├── 11150 - Cola.cpp
-│   ├── 11151 - Longest Palindrome.cpp
-│   ├── 11152 - Colourful Flowers.cpp
-│   ├── 11153 - Museums.cpp
-│   ├── 11159 - Factors and Multiples.cpp
-│   ├── 11162 - Independent Attacking Zones.cpp
-│   ├── 11166 - Power Signs.cpp
-│   ├── 11172 - Relational Operator.cpp
-│   ├── 11173 - Grey Codes.cpp
-│   ├── 11175 - From D to E and Back.cpp
-│   ├── 11178 - Morley's Theorem.cpp
-│   ├── 11181 - ProbabilityGiven.cpp
-│   ├── 11184 - Joyful Ride.cpp
-│   ├── 11185 - Ternary.cpp
-│   ├── 11186 - Circum Triangle.cpp
-│   ├── 11192 - Group Reverse.cpp
-│   └── 11198 - Dancing Digits.cpp
-├── volume112
-│   ├── 11200 - Sapitaur's labyrinth.cpp
-│   ├── 11203.c
-│   ├── 11204 - Musical instruments.cpp
-│   ├── 11205 - The broken pedometer.cpp
-│   ├── 11215 - How Many Numbers.cpp
-│   ├── 11218 - KTV.cpp
-│   ├── 11219 - How old are you.cpp
-│   ├── 11220 - Decoding the message.cpp
-│   ├── 11221 - Magic square palindromes.cpp
-│   ├── 11222 - Only I did it.cpp
-│   ├── 11223 - O dah dah dah.cpp
-│   ├── 11227 - The silver bullet.cpp
-│   ├── 11228 - Transportation system.cpp
-│   ├── 11231 - Black and white painting.cpp
-│   ├── 11233 - Deli Deli.cpp
-│   ├── 11234 - Expressions.cpp
-│   ├── 11235 - Frequent values.cpp
-│   ├── 11235 - Frequent values[vx].cpp
-│   ├── 11236 - Grocery store.cpp
-│   ├── 11239 - Open Source.cpp
-│   ├── 11243 - Texas Trip.cpp
-│   ├── 11244 - Counting Stars.cpp
-│   ├── 11245 - Anti-Arithmetic-Sequence.cpp
-│   ├── 11247 - Income Tax.cpp
-│   ├── 11248 - Frequency Hopping.cpp
-│   ├── 11254 - Consecutive Integers.cpp
-│   ├── 11258 - String Partition.cpp
-│   ├── 11259 - Coin Changing Again.cpp
-│   ├── 11260 - Odd Root Sum.cpp
-│   ├── 11262 - Weird Fence.cpp
-│   ├── 11262 - Weird Fence[v2].cpp
-│   ├── 11265 - The Sultan's Problem.cpp
-│   ├── 11266 - Equations.cpp
-│   ├── 11278 - One-Handed Typist.cpp
-│   ├── 11280 - Flying to Fredericton.cpp
-│   ├── 11284 - Shopping Trip.cpp
-│   ├── 11286 - Conformity.cpp
-│   ├── 11286 - Conformity[Map].cpp
-│   ├── 11287 - Pseudoprime Numbers.cpp
-│   └── 11297 - Census(zkw).cpp
-├── volume113
-│   ├── 11307 - Alternative Arborescence.cpp
-│   ├── 11309 - Counting Chaos.cpp
-│   ├── 11314 - Hardly Hard.cpp
-│   ├── 11317 - GCD+LCM.cpp
-│   ├── 11319 - Stupid Sequence.cpp
-│   ├── 11319 - Stupid Sequence[v2].cpp
-│   ├── 11323 - Satisfying Constraints.cpp
-│   ├── 11324 - The Largest Clique.cpp
-│   ├── 11327 - Enumerating Rational Numbers.cpp
-│   ├── 11332 - Summing Digits.cpp
-│   ├── 11338 - Minefield.cpp
-│   ├── 11340 - Newspaper.cpp
-│   ├── 11343 - Isolated Segments.cpp
-│   ├── 11344 - The Huge One.cpp
-│   ├── 11345 - Rectangles.cpp
-│   ├── 11347 - Multifactorials.cpp
-│   ├── 11349 - Symmetric Matrix.c
-│   ├── 11350 - Stern-Brocot Tree.cpp
-│   ├── 11353 - A Different Kind of Sorting.cpp
-│   ├── 11355 - Cool Points.cpp
-│   ├── 11358 - Faster Processing Feasibility.cpp
-│   ├── 11359 - Guards, Imbecile Guards.cpp
-│   ├── 11360 - Have Fun with Matrices.cpp
-│   ├── 11362 - Phone List.cpp
-│   ├── 11363 - Cuckoo Hashing.cpp
-│   ├── 11364 - Parking.cpp
-│   ├── 11367 - Full Tank.cpp
-│   ├── 11368 - Nested Dolls[test].cpp
-│   ├── 11369 - Shopaholic.cpp
-│   ├── 11370 - Moogle.cpp
-│   ├── 11371 - Number Theory for Newbies.cpp
-│   ├── 11375 - Matches.txt
-│   ├── 11376 - Tilt.cpp
-│   ├── 11378 - Bey Battle.cpp
-│   ├── 11380 - Down Went The Titanic.cpp
-│   ├── 11383 - Golden Tiger Claw.cpp
-│   ├── 11385 - Da Vinci Code.cpp
-│   ├── 11386 - Triples.cpp
-│   ├── 11387 - The 3-Regular Graph.cpp
-│   ├── 11389 - The Bus Driver Problem.cpp
-│   ├── 11390 - The Sultan's Feast.cpp
-│   ├── 11391 - Blobs in the Board.cpp
-│   ├── 11394 - Digit Blocks.cpp
-│   ├── 11396 - Claw Decomposition.cpp
-│   └── 11398 - The Base-1 Number System.c
-├── volume114
-│   ├── 11401 - Triangle Counting.cpp
-│   ├── 11402 - Ahoy, Pirates.cpp
-│   ├── 11402 - Ahoy, Pirates[離散].cpp
-│   ├── 11403 - Binary Multiplication.cpp
-│   ├── 11404 - Palindromic Subsequence.cpp
-│   ├── 11407 - Squares.cpp
-│   ├── 11408 - Count DePrimes.cpp
-│   ├── 11412 - Dig the Holes.cpp
-│   ├── 11413 - Fill the Containers.c
-│   ├── 11414 - Dream.cpp
-│   ├── 11415 - Count the Factorials.cpp
-│   ├── 11417 - GCD.c
-│   ├── 11418 - Clever Naming Patterns.cpp
-│   ├── 11421 - Arranging Cards.cpp
-│   ├── 11424 - GCD - Extreme (I).cpp
-│   ├── 11426 - GCD - Extreme (II).cpp
-│   ├── 11428 - Cubes.cpp
-│   ├── 11439 - Maximizing the ICPC.cpp
-│   ├── 11450 - Wedding shopping.cpp
-│   ├── 11455 - Behold my quadrangle.cpp
-│   ├── 11456 - Trainsorting.cpp
-│   ├── 11461 - Square Numbers.cpp
-│   ├── 11463 - Commandos.cpp
-│   ├── 11464 - Even Parity.cpp
-│   ├── 11466 - Largest Prime Divisor.cpp
-│   ├── 11470 - Square Sums.c
-│   ├── 11472 - Beautiful Numbers.cpp
-│   ├── 11473 - Campus Roads.cpp
-│   ├── 11475 - Extend to Palindrome.cpp
-│   ├── 11476 - Factorizing Larget Integers.cpp
-│   ├── 11478 - Halum.cpp
-│   ├── 11479 - Is this the easiest problem.cpp
-│   ├── 11480 - Jimmy's Balls.cpp
-│   ├── 11483 - Code Creator.cpp
-│   ├── 11488 - Hyper Prefix Sets.cpp
-│   ├── 11489 - Integer Game.cpp
-│   ├── 11490 - Just Another Problem.cpp
-│   ├── 11494 - Queen.cpp
-│   └── 11498 - Division of Nlogonia.c
-├── volume115
-│   ├── 11052 - Economic phone calls.cpp
-│   ├── 11501 - Laurel Creek.cpp
-│   ├── 11503 - Virtual Friends.cpp
-│   ├── 11504 - Dominos.cpp
-│   ├── 11505 - Logo.cpp
-│   ├── 11506 - Angry Programmer.cpp
-│   ├── 11507 - Bender B. Rodríguez Problem.cpp
-│   ├── 11507 - Bender.cpp
-│   ├── 11508 - Life on Mars.cpp
-│   ├── 11513 - 9 Puzzle.cpp
-│   ├── 11516 - WiFi.cpp
-│   ├── 11517 - Exact Change.cpp
-│   ├── 11518 - Dominos 2.cpp
-│   ├── 11519 - Logo 2.cpp
-│   ├── 11520 - Fill the Square.cpp
-│   ├── 11523 - Recycling.cpp
-│   ├── 11524 - InCircle.cpp
-│   ├── 11525 - Permutation.cpp
-│   ├── 11525 - Permutation[st].cpp
-│   ├── 11526 - H(n).c
-│   ├── 11529 - Strange Tax Calculation.cpp
-│   ├── 11530 - SMS Typing.cpp
-│   ├── 11532 - Simple Adjacency Maximization.cpp
-│   ├── 11535 - Set of Marbles.cpp
-│   ├── 11536 - Smallest Sub-Array.cpp
-│   ├── 11536 - Smallest Sub-Array[v2].cpp
-│   ├── 11539 - Another Word Game.cpp
-│   ├── 11541 - Decoding.c
-│   ├── 11542 - Square.cpp
-│   ├── 11545 - Avoiding Jungle in the Dark.cpp
-│   ├── 11547 - Automatic Answer.c
-│   ├── 11548 - Blackboard Bonanza.cpp
-│   ├── 11550 - Demanding Dilemma.cpp
-│   ├── 11551 - Experienced Endeavour.cpp
-│   ├── 11552 - Fewest Flops.cpp
-│   ├── 11553 - Grid Game.cpp
-│   ├── 11556 - Best Compression Ever.cpp
-│   ├── 11559 - Event Planning.cpp
-│   ├── 11561 - Getting Gold.cpp
-│   ├── 11565 - Simple Equations.cpp
-│   ├── 11567 - Moliu Number Generator.cpp
-│   ├── 11569 - Lovely Hint.cpp
-│   ├── 11573 - Ocean Currents.cpp
-│   ├── 11576 - Scrolling Sign.cpp
-│   ├── 11577 - Letter Frequency.c
-│   ├── 11579 - Triangle Trouble.cpp
-│   ├── 11585 - Nurikabe.cpp
-│   ├── 11586 - Train Tracks.cpp
-│   ├── 11587 - Brick Game.cpp
-│   ├── 11588 - Image Coding.cpp
-│   ├── 11597 - Spanning Subtree.cpp
-│   └── 11598 - Optimal Segments.cpp
-├── volume116
-│   ├── 11600 - Masud Rana.cpp
-│   ├── 11603 - Its all about the Bandwidth.cpp
-│   ├── 11605 - Lights inside a 3d Grid.cpp
-│   ├── 11609 - Teams.cpp
-│   ├── 11613 - Acme Corporation.cpp
-│   ├── 11614 - Etruscan Warriors Never Play Chess.cpp
-│   ├── 11616 - Roman Numerals.cpp
-│   ├── 11617 - An Odd Love.cpp
-│   ├── 11621 - Small Factors.cpp
-│   ├── 11624 - Fire.cpp
-│   ├── 11626 - Convex Hull.cpp
-│   ├── 11628 - Another lottery.c
-│   ├── 11629 - Ballot evaluation.cpp
-│   ├── 11630 - Cyclic antimonotonic permutations.cpp
-│   ├── 11631 - Dark roads.cpp
-│   ├── 11632 - Elias gamma coding.cpp
-│   ├── 11633 - Food portion sizes.cpp
-│   ├── 11634 - Generate random numbers.cpp
-│   ├── 11638 - Temperature Monitoring.cpp
-│   ├── 11639 - Guard the Land.cpp
-│   ├── 11646 - Athletics Track.cpp
-│   ├── 11650 - Mirror Clock.c
-│   ├── 11651 - Krypton Number System.cpp
-│   ├── 11658 - Best Coalitions.cpp
-│   ├── 11661 - Burger Time.cpp
-│   ├── 11663 - GrayInc.cpp
-│   ├── 11666 - Logarithms.cpp
-│   ├── 11667 - Income Tax Hazard II.cpp
-│   ├── 11669 - Non Decreasing Prime Sequence.cpp
-│   ├── 11675 - Happy Friends.cpp
-│   ├── 11677 - Alarm Clock.cpp
-│   ├── 11680 - Dragster.cpp
-│   ├── 11686 - Pick up sticks.cpp
-│   ├── 11687 - Digits.cpp
-│   ├── 11689 - Soda Surpler.cpp
-│   ├── 11691 - Allergy Test.cpp
-│   ├── 11696 - Beacons.cpp
-│   └── 11697 - Playfair Cipher.cpp
-├── volume117
-│   ├── 11700 - Pipes.cpp
-│   ├── 11703 - sqrt log sin.cpp
-│   ├── 11704 - Caper pizza.cpp
-│   ├── 11705 - Grasshopper.cpp
-│   ├── 11708 - Lexicographical ranking.cpp
-│   ├── 11709 - Trust groups.cpp
-│   ├── 11710 - Expensive subway.cpp
-│   ├── 11711 - Turing.cpp
-│   ├── 11713 - Abstract Names.cpp
-│   ├── 11714 - Blind Sorting.c
-│   ├── 11715 - Car.cpp
-│   ├── 11716 - Digital Fortress.cpp
-│   ├── 11717 - Energy Saving Microcontroller.cpp
-│   ├── 11722 - Joining with Friend.cpp
-│   ├── 11723 - Numbering Roads.cpp
-│   ├── 11724 - Evaluate the Expression.cpp
-│   ├── 11725 - Colorful Board.cpp
-│   ├── 11727 - Cost Cutting.c
-│   ├── 11728 - Alternate Task.cpp
-│   ├── 11729 - Commando War.cpp
-│   ├── 11730 - Number Transformation.cpp
-│   ├── 11731 - Ex-circles.cpp
-│   ├── 11732 - “strcmp()” Anyone.cpp
-│   ├── 11733 - Airports.cpp
-│   ├── 11736 - Debugging RAM.cpp
-│   ├── 11737 - Extreme Primitive Society.cpp
-│   ├── 11742 - Social Constraints.cpp
-│   ├── 11744 - Parallel Carry Adder.cpp
-│   ├── 11745 - Slitherlin.cpp
-│   ├── 11747 - Heavy Cycle Edges.cpp
-│   ├── 11748 - Rigging Elections.cpp
-│   ├── 11751 - Installing Diagnostic Software.cpp
-│   ├── 11752 - The Super Powers.cpp
-│   ├── 11753 - Creating Palindrome.cpp
-│   ├── 11754 - Code Feat.cpp
-│   ├── 11759 - IBM Fencing.cpp
-│   ├── 11761 - Super Heronian Triangle.cpp
-│   ├── 11764 - Jumping Mario.cpp
-│   ├── 11765 - Component Placement.cpp
-│   ├── 11766 - Racing Car Computer.cpp
-│   ├── 11768 - Lattice Point or Not.cpp
-│   ├── 11769 - All Souls Night.cpp
-│   ├── 11769 - All Souls Night[v2].cpp
-│   ├── 11770 - Lighting Away.cpp
-│   ├── 11773 - King's Wish.cpp
-│   ├── 11776 - Oh Your Royal Greediness.cpp
-│   ├── 11777 - Automate the Grades.cpp
-│   ├── 11782 - Optimal Cut.cpp
-│   ├── 11783 - Nails.cpp
-│   ├── 11785 - Hypercube.cpp
-│   ├── 11786 - Global Raining at Bididibus.cpp
-│   ├── 11787 - Numeral Hieroglyphs.cpp
-│   ├── 11790 - Murcia's Skyline.cpp
-│   ├── 11792 - Krochanska is Here.cpp
-│   ├── 11795 - Mega Man's Mission.cpp
-│   ├── 11796 - Dog Distance.cpp
-│   ├── 11797 - Drutojan Express.cpp
-│   ├── 11798 - Colorful Board 2.cpp
-│   └── 11799 - Horror Dash.cpp
-├── volume118
-│   ├── 11802 - All Your Bases Belong to Us.cpp
-│   ├── 11804 - Argentina.cpp
-│   ├── 11805 - Bafana Bafana.cpp
-│   ├── 11813 - Shopping.cpp
-│   ├── 11817 - Tunnelling the Earth.cpp
-│   ├── 11824 - A Minimum Land Price.cpp
-│   ├── 11828 - Palindrome Again.cpp
-│   ├── 11828 - Palindrome Again[v2].cpp
-│   ├── 11830 - Contract Revision.cpp
-│   ├── 11832 - Account Book.cpp
-│   ├── 11832 - Account Book2.cpp
-│   ├── 11832 - Account Book3.cpp
-│   ├── 11837 - Musical Plagiarism.cpp
-│   ├── 11838 - Come and Go.cpp
-│   ├── 11844 - The Melding Plague.cpp
-│   ├── 11848 - Cargo Trains.cpp
-│   ├── 11849 - CD.c
-│   ├── 11850 - Alaska.cpp
-│   ├── 11851 - Celebrity Split.cpp
-│   ├── 11854 - Egypt.cpp
-│   ├── 11855 - Buzzwords.cpp
-│   ├── 11857 - Driving Range.cpp
-│   ├── 11858 - Frosh Week.cpp
-│   ├── 11858 - Frosh Week[v2].cpp
-│   ├── 11858 - Frosh Week[v3].cpp
-│   ├── 11860 - Document Analyzer.cpp
-│   ├── 11865 - Stream My Contest.cpp
-│   ├── 11869 - SOAP Response.cpp
-│   ├── 11870 - Antonyms.cpp
-│   ├── 11871 - New Land.cpp
-│   ├── 11871 - New Land[v2].cpp
-│   ├── 11871 - New Land[v3].cpp
-│   ├── 11874 - Travel Company.cpp
-│   ├── 11875 - Brick Game.cpp
-│   ├── 11876 - N + NOD (N).cpp
-│   ├── 11877 - The Coco-Cola Store.cpp
-│   ├── 11878 - Homework Checker.cpp
-│   ├── 11879 - Multiple of 17.c
-│   ├── 11881 - Internal Rate of Return.cpp
-│   ├── 11882 - Biggest Number.cpp
-│   ├── 11883 - Repairing a Road.cpp
-│   ├── 11888 - Abnormal 89's.cpp
-│   ├── 11889 - Benefit.cpp
-│   └── 11893 - Fabulous DAGy.cpp
-├── volume119
-│   ├── 11900 - Boiled Eggs.cpp
-│   ├── 11902 - Dominator.cpp
-│   ├── 11908 - Skyscraper.cpp
-│   ├── 11909 - Soya Milk.cpp
-│   ├── 11910 - Closest Fractions.cpp
-│   ├── 11917 - Do Your Own Homework.cpp
-│   ├── 11920 - 0 s, 1 s and  Marks.cpp
-│   ├── 11922 - Permutation Transformer.cpp
-│   ├── 11925 - Generating Permutations.cpp
-│   ├── 11926 - Multitasking.cpp
-│   ├── 11926 - Multitasking[queue].cpp
-│   ├── 11930 - Rectangles.cpp
-│   ├── 11931 - Maze Escape.cpp
-│   ├── 11933 - Splitting Numbers.cpp
-│   ├── 11934 - Magic Formula.cpp
-│   ├── 11941 - Creating a Quadtree.cpp
-│   ├── 11942 - Lumberjack Sequencing.cpp
-│   ├── 11946 - Code Number.cpp
-│   ├── 11948 - Reading a Quadtree.cpp
-│   ├── 11951 - Area.cpp
-│   ├── 11952 - Arithmetic.cpp
-│   ├── 11953 - Battleships.cpp
-│   ├── 11954 - Binary Calculator.cpp
-│   ├── 11955 - Binomial Theorem.cpp
-│   ├── 11956 - Brainfuck.cpp
-│   ├── 11957 - Checkers.cpp
-│   ├── 11958 - Coming Home.cpp
-│   ├── 11959 - Dice.cpp
-│   ├── 11960 - Divisor Game.cpp
-│   ├── 11961 - DNA.cpp
-│   ├── 11962 - DNA II.cpp
-│   ├── 11964 - Equation.cpp
-│   ├── 11965 - Extra Spaces.cpp
-│   ├── 11970 - Lucky Numbers.cpp
-│   ├── 11971 - Polygon.cpp
-│   ├── 11972 - Round Trip.cpp
-│   ├── 11974 - Switch The Lights.cpp
-│   ├── 11977 - Story of Tomisu Ghost.cpp
-│   ├── 11979 - Hamming Base.cpp
-│   ├── 11981 - Corrupted Friendship.cpp
-│   ├── 11983 - Weird Advertisement.cpp
-│   ├── 11984 - A Change in Thermal Unit.cpp
-│   ├── 11985 - Prime Independence.cpp
-│   ├── 11985 - Prime Independence[v2].cpp
-│   ├── 11985 - Prime Independence[v3].cpp
-│   ├── 11985 - Prime Independence[v4].cpp
-│   ├── 11987 - Almost Union-Find.cpp
-│   ├── 11988 - Broken Keyboard (a.k.a. Beiju Text).cpp
-│   ├── 11990 - Dynamic Inversion.cpp
-│   ├── 11991 - Easy Problem from Rujia Liu.cpp
-│   ├── 11992 - Fast Matrix Operations.cpp
-│   ├── 11992 - Fast Matrix Operations[四分樹].cpp
-│   ├── 11992 - Fast Matrix Operations[四分樹v2].cpp
-│   ├── 11995 - I Can Guess the Data Structure!.cpp
-│   └── 11997 - K Smallest Sums.cpp
-├── volume120
-│   ├── 12002 - Happy Birthday.cpp
-│   ├── 12003 - Array Transformer.cpp
-│   ├── 12004 - Bubble Sort.cpp
-│   ├── 12005 - Find Solutions.cpp
-│   ├── 12009 - Avaricious Maryanna.cpp
-│   ├── 12010 - Boring Homework.cpp
-│   ├── 12011 - Complete the Set.cpp
-│   ├── 12012 - Detection of Extraterrestrial.cpp
-│   ├── 12016 - Herbicide.cpp
-│   ├── 12017 - Imitation.cpp
-│   ├── 12018 - Juice Extractor.cpp
-│   ├── 12019 - Doom's Day Algorithm.cpp
-│   ├── 12022 - Ordering T-shirts.cpp
-│   ├── 12024 - Hats.c
-│   ├── 12027 - Very Big Perfect Squares.cpp
-│   ├── 12032 - The Monkey and the Oiled Bamboo.cpp
-│   ├── 12034 - Race.cpp
-│   ├── 12035 - War Map.cpp
-│   ├── 12035 - War Map[v2].cpp
-│   ├── 12036 - Stable Grid.cpp
-│   ├── 12039 - Goldbach's Cardinality.cpp
-│   ├── 12040 - Again Lucky Numbers.cpp
-│   ├── 12041 - BFS (Binary Fibonacci String).cpp
-│   ├── 12042 - Colorful Eggs.cpp
-│   ├── 12043 - Divisors.cpp
-│   ├── 12045 - Fun with Strings.cpp
-│   ├── 12046 - Great Numbers.cpp
-│   ├── 12048 - Inhabitants.cpp
-│   ├── 12049 - Just Prune The List.cpp
-│   ├── 12050 - Palindrome Numbers.cpp
-│   ├── 12051 - Mazes in Higher Dimensions.cpp
-│   ├── 12052 - Cyber cafe.cpp
-│   ├── 12057 - Prefix Codes.cpp
-│   ├── 12058 - Highway Monitor.cpp
-│   ├── 12060 - All Integer Average.cpp
-│   ├── 12063 - Zeros and Ones.cpp
-│   ├── 12064 - Count the Points Inside.cpp
-│   ├── 12064 - Count the Points Inside[force].cpp
-│   ├── 12064 - Count the Points Inside[simply].cpp
-│   ├── 12065 - Permutation Primes.cpp
-│   ├── 12068 - Harmonic Mean.cpp
-│   ├── 12071 - Understanding Recursion.cpp
-│   ├── 12081 - Reduced ID Numbers.cpp
-│   ├── 12083 - Guardian of Decency.cpp
-│   ├── 12086 - Potentiometers.cpp
-│   ├── 12086 - Potentiometers[BIT].cpp
-│   ├── 12086 - Potentiometers[zkw].cpp
-│   ├── 12088 - Expression.cpp
-│   ├── 12089 - The Luncheon.cpp
-│   ├── 12092 - Paint the Roads.cpp
-│   ├── 12094 - Battle of the Triangle.cpp
-│   └── 12096 - The SetStack Computer.cpp
-├── volume121
-│   ├── 12100 - Printer Queue.cpp
-│   ├── 12101 - Prime Path.cpp
-│   ├── 12103 - Leonardo's Notebook.cpp
-│   ├── 12105 - Bigger is Better.cpp
-│   ├── 12108 - Extraordinarily Tired Students.cpp
-│   ├── 12109 - Fairies' Defence.cpp
-│   ├── 12113 - Overlapping Squares.cpp
-│   ├── 12114 - Bachelor Arithmetic.cpp
-│   ├── 12115 - Nested Squares.cpp
-│   ├── 12117 - ACM Puzzles.cpp
-│   ├── 12118 - Inspector's Dilemma.cpp
-│   ├── 12119 - The Bells are Ringing.cpp
-│   ├── 12120 - Photographic Tour.cpp
-│   ├── 12123 - Magnetic Train Tracks.cpp
-│   ├── 12124 - Assemble.cpp
-│   ├── 12125 - March of the Penguins.cpp
-│   ├── 12126 - Containers.cpp
-│   ├── 12131 - Obfuscation.cpp
-│   ├── 12132 - Tower Parking.cpp
-│   ├── 12134 - Find the Format String.cpp
-│   ├── 12135 - Switch Bulbs.cpp
-│   ├── 12136 - Schedule of a Married Man.cpp
-│   ├── 12141 - Line Chart.cpp
-│   ├── 12141 - Line Chart[v2.cpp
-│   ├── 12144 - Almost Shortest Path.cpp
-│   ├── 12146 - Candy.cpp
-│   ├── 12149 - Feynman.cpp
-│   ├── 12150 - Pole Position.cpp
-│   ├── 12154 - Shrinking Polygons.cpp
-│   ├── 12157 - Tariff Plan.cpp
-│   ├── 12160 - Unlock the Lock.cpp
-│   ├── 12166 - Equilibrium Mobile.cpp
-│   ├── 12167 - Proving Equivalences.cpp
-│   ├── 12168 - Cat vs. Dog.cpp
-│   ├── 12169 - Disgruntled Judge.cpp
-│   ├── 12172 - Matchsticks.cpp
-│   ├── 12173 - White Water Rafting.cpp
-│   ├── 12174 - Shuffle.cpp
-│   ├── 12176 - Bring Your Own Horse.cpp
-│   ├── 12179 - Randomly-priced Tickets.cpp
-│   ├── 12182 - Toll Road.cpp
-│   ├── 12184 - Transcribed Books.cpp
-│   ├── 12189 - Dinner Hall.cpp
-│   ├── 12191 - File Recover.cpp
-│   ├── 12192 - Grapevine.cpp
-│   ├── 12194 - Isosceles Triangles.cpp
-│   ├── 12195 - Jingle Composing.cpp
-│   ├── 12196 - Klingon Levels.cpp
-│   ├── 12197 - Trick or Treat.cpp
-│   ├── 12198 - Working at the Restaurant.cpp
-│   ├── 12524 - Arranging Heaps.cpp
-│   └── test - 12141.cpp
-├── volume122
-│   ├── 12205 - Happy Telephones.cpp
-│   ├── 12206 - Stammering Aliens.cpp
-│   ├── 12207 - That is Your Queue.cpp
-│   ├── 12208 - How Many Ones Needed.cpp
-│   ├── 12210 - A Match Making Problem.cpp
-│   ├── 12216 - How Many bases.cpp
-│   ├── 12220 - Divisible Subsequences.cpp
-│   ├── 12226 - Simple Polygon.cpp
-│   ├── 12231 - Download Manager.cpp
-│   ├── 12232 - Exclusive-OR.cpp
-│   ├── 12235 - Help Bubu.cpp
-│   ├── 12239 - Bingo.cpp
-│   ├── 12240 - Cocircular Points.cpp
-│   ├── 12241 - Digits Count.cpp
-│   ├── 12243 - Flowers Flourish from France.cpp
-│   ├── 12245 - Hyperactive Girl.cpp
-│   ├── 12247 - Jollo.cpp
-│   ├── 12249 - Overlapping Scenes.cpp
-│   ├── 12257 - The Queue.cpp
-│   ├── 12260 - Free Goodies.cpp
-│   ├── 12261 - High Score.cpp
-│   ├── 12263 - Rankings.cpp
-│   ├── 12265 - Selling Land.cpp
-│   ├── 12266 - Stock Prices.cpp
-│   ├── 12271 - Comparing answers.cpp
-│   ├── 12274 - Jumping monkey.cpp
-│   ├── 12279 - Emoogle Balance.cpp
-│   ├── 12280 - A Digital Satire of Digital Age.cpp
-│   ├── 12281 - Hyper Box.cpp
-│   ├── 12283 - Halloween Costumes.cpp
-│   ├── 12289 - One-Two-Three.cpp
-│   ├── 12290 - Counting Game.cpp
-│   ├── 12292 - Polyomino Decomposer.cpp
-│   ├── 12293 - Box Game.cpp
-│   ├── 12295 - Optimal Symmetric Paths.cpp
-│   ├── 12298 - Super Poker II.cpp
-│   └── 12299 - RMQ with Shifts.cpp
-├── volume123
-│   ├── 12300 - Smallest Regular Polygon.cpp
-│   ├── 12301 - An Angular Puzzle.cpp
-│   ├── 12302 - Nine-Point Circle.cpp
-│   ├── 12307 - Smallest Enclosing Rectangle.cpp
-│   ├── 12311 - All-Pair Farthest Points.cpp
-│   ├── 12311 - All-Pair Farthest Points[testdataGenerate].cpp
-│   ├── 12311 - All-Pair Farthest Points[v2].cpp
-│   ├── 12311 - All-Pair Farthest Points[vn].cpp
-│   ├── 12311 - All-Pair Farthest Points[vv].cpp
-│   ├── 12316 - Sewing Buttons with Grandma.cpp
-│   ├── 12316 - Sewing Buttons with Grandma.java
-│   ├── 12317 - Document Compression.cpp
-│   ├── 12322 - Handgun Shooting Sport.cpp
-│   ├── 12325 - Zombie's Treasure Chest.cpp
-│   ├── 12333 - Revenge of Fibonacci.cpp
-│   ├── 12335 - Lexicographic Order.cpp
-│   ├── 12337 - Bob's Beautiful Balls.cpp
-│   ├── 12338 - Anti-Rhyme Pairs.cpp
-│   ├── 12342 - Tax Calculator.cpp
-│   ├── 12343 - Strange Simulation.cpp
-│   ├── 12345 - Dynamic len(set(a[LR])).cpp
-│   ├── 12345 - Dynamic len(set(a[LR]))[v2].cpp
-│   ├── 12347 - Binary Search Tree.cpp
-│   ├── 12355 - Consecutive Sums.cpp
-│   ├── 12357 - Ball Stacking.cpp
-│   ├── 12359 - Diccionario Portunol.cpp
-│   ├── 12363 - Hedge Mazes.cpp
-│   ├── 12365 - Jupiter Atacks!.cpp
-│   ├── 12368 - Candles.cpp
-│   ├── 12368 - Candles[v2.cpp].cpp
-│   ├── 12372 - Packing for Holiday.cpp
-│   ├── 12376 - As Long as I Learn, I Live.cpp
-│   ├── 12377 - Number Coding.cpp
-│   ├── 12379 - Central Post Office.cpp
-│   ├── 12382 - Grid of Lamps.cpp
-│   ├── 12384 - Span.cpp
-│   ├── 12385 - Interesting Sequences.cpp
-│   ├── 12386 - Smallest Polygon.cpp
-│   ├── 12390 - Distributing Ballot Boxes.cpp
-│   ├── 12391 - Game, Set and Match.cpp
-│   ├── 12392 - Guess the Numbers.cpp
-│   ├── 12393 - Non-negative Partial Sums.cpp
-│   ├── 12394 - Peer Review.cpp
-│   ├── 12395 - Regular Convex Polygon.cpp
-│   ├── 12396 - Remoteland.cpp
-│   ├── 12397 - Roman Numerals.cpp
-│   ├── 12398 - NumPuzz I.cpp
-│   └── 12399 - NumPuzz II.cpp
-├── volume124
-│   ├── 12403 - Save Setu.c
-│   ├── 12404 - Trapezium Drawing.cpp
-│   ├── 12405 - Scaresrpw.c
-│   ├── 12406 - Help Dexter.cpp
-│   ├── 12412 - A Typical Homework.cpp
-│   ├── 12416 - Excessive Space Remover.cpp
-│   ├── 12424 - Answering Queries on a Tree.cpp
-│   ├── 12425 - Best Friend.cpp
-│   ├── 12431 - Happy 109 Day.cpp
-│   ├── 12436 - Rip Van Winkle's Code.cpp
-│   ├── 12436 - Rip Van Winkle's Code[v2].cpp
-│   ├── 12439 - February 29.cpp
-│   ├── 12440 - Save the Trees.cpp
-│   ├── 12442 - Forwarding Emails.cpp
-│   ├── 12444 - Bits and Pieces.cpp
-│   ├── 12446 - How Many... in 3D.cpp
-│   ├── 12447 - Pieces and Bits.cpp
-│   ├── 12448 - Casino Advantage.cpp
-│   ├── 12450 - SpaceRecon Tournament.cpp
-│   ├── 12452 - Plants vs. Zombies HD SP.cpp
-│   ├── 12455 - Bars.cpp
-│   ├── 12456 - Mirror codes.cpp
-│   ├── 12458 - Oh, my trees!.cpp
-│   ├── 12458 - Oh, my trees![ANSI C].cpp
-│   ├── 12459 - Bees' ancestors.cpp
-│   ├── 12461 - Airplane.cpp
-│   ├── 12462 - Rectangle.cpp
-│   ├── 12463 - Little Nephew.cpp
-│   ├── 12464 - Professor Lazy, Ph.D.cpp
-│   ├── 12465 - The Turanga Leela Problem.cpp
-│   ├── 12467 - Secret Word.cpp
-│   ├── 12468 - Zapping.cpp
-│   ├── 12469 - Stones[test].cpp
-│   ├── 12470 - Tribonacci.cpp
-│   ├── 12473 - Common Palindrome.cpp
-│   ├── 12473 - Common Palindrome[other].cpp
-│   ├── 12473 - Common Palindrome[recur].cpp
-│   ├── 12473.docx
-│   ├── 12478 - Hardest Problem Ever (Easy).cpp
-│   ├── 12482 - Short Story Competition.cpp
-│   ├── 12483 - Toboggan of Marbles.cpp
-│   ├── 12484 - Cards.cpp
-│   ├── 12486 - Space Elevator.cpp
-│   ├── 12487 - Midnight Cowboy.cpp
-│   ├── 12488 - Start Grid.cpp
-│   ├── 12489 - Combating cancer.cpp
-│   ├── 12491 - Words.cpp
-│   ├── 12494 - Distinct Substring.cpp
-│   ├── 12494 - Distinct Substring[v2].cpp
-│   └── 12494 - Distinct Substring[v3].cpp
-├── volume125
-│   ├── 12502 - Three Families.cpp
-│   ├── 12503 - Robot Instructions.cpp
-│   ├── 12504 - Updating a Dictionary.cpp
-│   ├── 12505 - Searching in sqrt(n).cpp
-│   ├── 12506 - Shortest Names.cpp
-│   ├── 12507 - Kingdoms.cpp
-│   ├── 12510 - Collecting Coins.cpp
-│   ├── 12511 - Virus.cpp
-│   ├── 12517 - Digit Sum.cpp
-│   ├── 12519 - The Farnsworth Parabox.cpp
-│   ├── 12520 - Square Garden.cpp
-│   ├── 12527 - Different Digits.cpp
-│   ├── 12529 - Fix the Pond.cpp
-│   ├── 12532 - Interval Product.cpp
-│   ├── 12534 - Binary Matrix 2.cpp
-│   ├── 12534 - Binary Matrix 2[v2].cpp
-│   ├── 12535 - Probability Through Experiments.cpp
-│   ├── 12537 - Radiation.cpp
-│   ├── 12537 - Radiation_sol.cpp
-│   ├── 12538 - Version Controlled IDE.cpp
-│   ├── 12541 - Birthdates.cpp
-│   ├── 12542 - Prime Substring.cpp
-│   ├── 12543 - Longest Word.cpp
-│   ├── 12544 - Beehives.cpp
-│   ├── 12544 - Beehives[v2].cpp
-│   ├── 12546 - LCM Pair Sum.cpp
-│   ├── 12550 - How do spiders walk on water.cpp
-│   ├── 12551 - Shares.cpp
-│   ├── 12552 - The Moon of Valencia.cpp
-│   ├── 12553 - Countdown.cpp
-│   ├── 12554 - A Special Happy Birthday Song.cpp
-│   ├── 12555 - Baby Me.cpp
-│   ├── 12571 - Brother & Sisters.cpp
-│   ├── 12572 - RMQ Overkill.cpp
-│   ├── 12573 - Sohel Sir's Assignment.cpp
-│   ├── 12575 - Sin Cos Problem.cpp
-│   ├── 12577 - Hajj-e-Akbar.cpp
-│   ├── 12578 - 1062.cpp
-│   ├── 12582 - Wedding of Sultan.cpp
-│   ├── 12583 - Memory Overflow.cpp
-│   ├── 12587 - Reduce the Maintenance Cost.cpp
-│   ├── 12589 - Learning Vector.cpp
-│   ├── 12598 - Starting School.cpp
-│   ├── 12598 - Starting School[v2].cpp
-│   └── 12599 - Black and White.cpp
-├── volume126
-│   ├── 12602 - Nice Licence Plates.cpp
-│   ├── 12604 - Caesar Cipher.cpp
-│   ├── 12607 - Amazing Maze.cpp
-│   ├── 12611 - Beautiful Flag.cpp
-│   ├── 12614 - Earn For Future.cpp
-│   ├── 12618 - I Puzzle You[IDA(slow)].cpp
-│   ├── 12618 - I Puzzle You[doubleBFS].cpp
-│   ├── 12619 - Just Make A Wish.cpp
-│   ├── 12620 - Fibonacci Sum.cpp
-│   ├── 12621 - On a Diet.cpp
-│   ├── 12626 - I  love pizza.cpp
-│   ├── 12634 - Pairing Boys and Girls.cpp
-│   ├── 12636 - Disguised Giveaway.cpp
-│   ├── 12637 - 30 Minutes or Less.cpp
-│   ├── 12639 - Hexagonal Puzzle.cpp
-│   ├── 12641 - Reodrnreig Lteetrs in Wrods.cpp
-│   ├── 12642 - Shuffling Cards.cpp
-│   ├── 12644 - Vocabulary.cpp
-│   ├── 12645 - Water Supply.cpp
-│   ├── 12648 - Boss.cpp
-│   ├── 12649 - Folding Machine.cpp
-│   ├── 12651 - Triangles.cpp
-│   ├── 12652 - Lines of Containers.cpp
-│   ├── 12653 - Buses.cpp
-│   ├── 12654 - Patches.cpp
-│   ├── 12655 - Trucks.cpp
-│   ├── 12656 - Almost Palindrome.cpp
-│   ├── 12657 - Boxes in a Line.cpp
-│   ├── 12661 - Funny Car Racing.cpp
-│   ├── 12662 - Good Teacher.cpp
-│   ├── 12663 - High bridge, low bridge.cpp
-│   ├── 12665 - Joking with Fermat's Last Theorem.cpp
-│   ├── 12667 - Last Blood.cpp
-│   ├── 12670 - Counting ones.cpp
-│   ├── 12671 - Disjoint water supply.cpp
-│   ├── 12672 - Eleven.cpp
-│   ├── 12673 - Football.cpp
-│   ├── 12674 - Go up the ultras.cpp
-│   ├── 12677 - Join two kingdoms.cpp
-│   ├── 12682 - Joe is learning to speak.cpp
-│   ├── 12682 - Joe is learning to speak[v2].cpp
-│   ├── 12685 - Binary Tree.cpp
-│   ├── 12686 - Trending Topic.cpp
-│   ├── 12694 - Meeting Room Arrangement.cpp
-│   ├── 12696 - Cabin Baggage.cpp
-│   └── 12697 - Minimal Subarray Length.cpp
-├── volume127
-│   ├── 12684 - VivoParc.cpp
-│   ├── 12700 - Banglawash.cpp
-│   ├── 12701 - The Twin Head Dragon.cpp
-│   ├── 12702 - Dilation.cpp
-│   ├── 12703 - Little Rakin.cpp
-│   ├── 12704 - Little Masters.cpp
-│   ├── 12705 - Breaking Board.cpp
-│   ├── 12706 - Zero-Knowledge Protocol.cpp
-│   ├── 12707 - Block Meh.cpp
-│   ├── 12708 - GCD The Largest.cpp
-│   ├── 12709 - Falling Ants.cpp
-│   ├── 12710 - Game of MJ.cpp
-│   ├── 12712 - Pattern Locker.cpp
-│   ├── 12714 - Two Points Revisited.cpp
-│   ├── 12716 - GCD XOR.cpp
-│   ├── 12716 - GCD XOR[v2].cpp
-│   ├── 12717 - Fiasco.cpp
-│   ├── 12718 - Dromicpalin Substrings.cpp
-│   ├── 12720 - Algorithm of Phil.cpp
-│   ├── 12721 - Cheap B-Subsequence.cpp
-│   ├── 12722 - Cryptography of the Floating Key.cpp
-│   ├── 12723 - Dudu, the Possum.cpp
-│   ├── 12724 - Hnelpig Arnde.cpp
-│   ├── 12725 - Fat and Orial.cpp
-│   ├── 12726 - One Friend at a Time.cpp
-│   ├── 12730 - Skyrk's Bar.cpp
-│   ├── 12745 - Wishmaster.cpp
-│   ├── 12747 - Back to Edit Distance.cpp
-│   ├── 12748 - Wifi Access.cpp
-│   ├── 12749 - John's Tree.cpp
-│   ├── 12750 - Keep Rafa at Chelsea.cpp
-│   ├── 12751 - An Interesting Game.cpp
-│   ├── 12754 - Display Problem.cpp
-│   ├── 12755 - Easy Puzzle.cpp
-│   ├── 12761 - Blue Chips.cpp
-│   ├── 12763 - Dicey Dice.cpp
-│   ├── 12764 - Exercising Emoticons.cpp
-│   ├── 12765 - Factorial Products.cpp
-│   ├── 12769 - Kool Konstructions.cpp
-│   ├── 12770 - Palinagram.cpp
-│   ├── 12775 - Gift Dilemma.cpp
-│   ├── 12776 - Query for Divisor-free Numbers.cpp
-│   ├── 12778 - Minimum Sum.cpp
-│   ├── 12779 - The Largest Circle.cpp
-│   ├── 12783 - Weak Links.cpp
-│   ├── 12784 - Don't Care.cpp
-│   ├── 12785 - Emacs Plugin.cpp
-│   ├── 12786 - Friendship Networks.cpp
-│   ├── 12788 - Smooth Factor.cpp
-│   ├── 12790 - The Win-stay and Lose-shift Strategy.cpp
-│   ├── 12791 - Lap.cpp
-│   ├── 12792 - Shuffled Deck.cpp
-│   ├── 12793 - Confederation.cpp
-│   ├── 12794 - Miss Worm.cpp
-│   ├── 12795 - Ecology.cpp
-│   ├── 12796 - Teletransport.cpp
-│   ├── 12797 - Letters.cpp
-│   ├── 12798 - Handball.cpp
-│   └── 12799 - RSA.cpp
-├── volume128
-│   ├── 12800 - Cut.cpp
-│   ├── 12801 - Grandpa Pepe's Pizza.cpp
-│   ├── 12802 - Gift From the Gods.cpp
-│   ├── 12803 - Arithmetic Expressions.cpp
-│   ├── 12804 - The Necronomicon of Computing.cpp
-│   ├── 12805 - Raiders of the Lost Sign.cpp
-│   ├── 12806 - Grand Tichu.cpp
-│   ├── 12808 - Banning Balconing.cpp
-│   ├── 12809 - Binary Search Tree.cpp
-│   ├── 12810 - Sumthing.cpp
-│   ├── 12811 - The Turtle's Journey.cpp
-│   ├── 12812 - The Largest Diamond-Shaped Kite.cpp
-│   ├── 12813 - Mocking the Precision.cpp
-│   ├── 12815 - Taking the Stairs.cpp
-│   ├── 12816 - Isosceles Triangles.cpp
-│   ├── 12817 - Sleight of Hand(1).cpp
-│   ├── 12818 - Arc and Point.cpp
-│   ├── 12820 - Cool Word.cpp
-│   ├── 12821 - Double Shortest Paths.cpp
-│   ├── 12822 - Extraordinarily large LED.cpp
-│   ├── 12825 - Happy Robot.cpp
-│   ├── 12826 - Incomplete Chessboard.cpp
-│   ├── 12828 - Kick the ball!.cpp
-│   ├── 12830 - A Football Stadium.cpp
-│   ├── 12831 - Bob the Builder.cpp
-│   ├── 12832 - Chicken Lover.cpp
-│   ├── 12833 - Daily Potato.cpp
-│   ├── 12834 - Extreme Terror.cpp
-│   ├── 12837 - Hasmot Ali Professor.cpp
-│   ├── 12839 - Judge in Queue.cpp
-│   ├── 12840 - The Archery Puzzle.cpp
-│   ├── 12841 - In Puzzleland (III).cpp
-│   ├── 12841 - In Puzzleland (III)[ver2].cpp
-│   ├── 12842 - The Courier Problem.cpp
-│   ├── 12843 - Disputed Claims.cpp
-│   ├── 12844 - Outwitting the Weighing Machine.cpp
-│   ├── 12846 - A Daisy Puzzle Game.cpp
-│   ├── 12848 - In Puzzleland (IV).cpp
-│   ├── 12849 - Mother's Jam Puzzle.cpp
-│   ├── 12851 - The Tinker's Puzzle.cpp
-│   ├── 12852 - The Miser's Puzzle.cpp
-│   ├── 12853 - The Pony Cart Problem.cpp
-│   ├── 12854 - Automated Checking Machine.cpp
-│   ├── 12855 - Black and white stones.cpp
-│   ├── 12856 - Counting substhreengs.cpp
-│   ├── 12858 - Even distribution.cpp
-│   ├── 12860 - Galaxy collision.cpp
-│   ├── 12861 - Help cupid.cpp
-│   ├── 12862 - Intrepid climber.cpp
-│   ├── 12863 - Journey through the kingdom.cpp
-│   ├── 12863 - Journey through the kingdom[v2].cpp
-│   ├── 12863 - Journey through the kingdom[v3].cpp
-│   ├── 12863 - Journey through the kingdom[v4].cpp
-│   ├── 12863 - Journey through the kingdom[v5].cpp
-│   ├── 12865 - Volume Control.cpp
-│   ├── 12866 - Combination.cpp
-│   ├── 12869 - Zeroes.cpp
-│   ├── 12870 - Fishing.cpp
-│   ├── 12871 - Landmine Cleaner.cpp
-│   ├── 12872 - Hidden Plus Signs.cpp
-│   ├── 12873 - The Programmers.cpp
-│   ├── 12874 - Blanket.cpp
-│   ├── 12875 - Concert Tour.cpp
-│   ├── 12876 - City.cpp
-│   ├── 12878 - Flowery Trails.cpp
-│   ├── 12880 - Book Club.cpp
-│   ├── 12881 - Ricochet Robots.cpp
-│   ├── 12886 - The Big Painting.cpp
-│   ├── 12887 - The Soldier's Dilemma.cpp
-│   ├── 12890 - Easy Peasy.cpp
-│   ├── 12890 - Easy Peasy[v2].cpp
-│   ├── 12893 - Count It.cpp
-│   ├── 12894 - Perfect Flag.cpp
-│   ├── 12895 - Armstrong Number.cpp
-│   ├── 12896 - Mobile SMS.cpp
-│   ├── 12897 - Decoding Baby Boos.cpp
-│   └── 12898 - And Or.cpp
-├── volume129
-│   ├── 12904 - Load Balancing.cpp
-│   └── 12905 - Volume of Revolution.cpp
-└── zerojudge
-├── A174.c
-├── BST(Descartes).cpp
-├── a007.cpp
-├── a048. 函數增減性.cpp
-├── a054. 電話客服中心.cpp
-├── a058. MOD3.cpp
-├── a059. 完全平方和.cpp
-├── a063.cpp
-├── a064. SPOJ 4580.ABCDEF.cpp
-├── a065. 提款卡密碼.cpp
-├── a066. HNOI2002 營業額統計.cpp
-├── a068. E. 看動畫 加強版.cpp
-├── a073. POJ2832 How Many Pairs.cpp
-├── a080. NOI2000 Day2.1.單詞查找樹.cpp
-├── a081. NOI2000 Day2.2.青蛙過河.cpp
-├── a084. NOI2001 Day1.2.反正切函數的應用.cpp
-├── a094. NOI2003 Day1.1.木棒遊戲.cpp
-├── a097. PARKET.cpp
-├── a104. 排序.cpp
-├── a111. 12149 - Feynman.cpp
-├── a121. 質數又來囉.cpp
-├── a126.cpp
-├── a128. Sharing Chocolate.cpp
-├── a128. Sharing ChocolateII.cpp
-├── a130. 12015 - Google is Feeling Lucky.cpp
-├── a131. 739 - Soundex Indexing.cpp
-├── a132 10931 - Parity.cpp
-├── a133. 10066 - The Twin Towers.cpp
-├── a134. 948 - Fibonaccimal Base.cpp
-├── a135. 12250 - Language Detection.cpp
-├── a141. 柏森想要學妹!!!.cpp
-├── a144. 整數分拆.cpp
-├── a146. Sliding Window.cpp
-├── a147. Print it all.cpp
-├── a148. You Cannot Pass.cpp
-├── a149. 乘乘樂.cpp
-├── a158. 11827 - Maximum GCD.cpp
-├── a159. 11743 - Credit Check.cpp
-├── a160. 柏森想要下棋!!!.cpp
-├── a164. 區間最大連續和.cpp
-├── a165. Magic number.cpp
-├── a168. 3901 - Editor.cpp
-├── a169 POJ 3225 Help with Intervals.cpp
-├── a170. 天才的小明.cpp
-├── a171. 打印樹.cpp
-├── a174. 上帝玩不玩骰子？.cpp
-├── a175. 撒旦玩不玩骰子？(AVL).cpp
-├── a175. 撒旦玩不玩骰子？.cpp
-├── a176. Battle!.cpp
-├── a186. Three-Heap Wythoff's Game.cpp
-├── a190. 公元2317. 手觸之役.cpp
-├── a191. 在世界遙遠的彼方(test).cpp
-├── a191. 在世界遙遠的彼方.cpp
-├── a192. 接線問題.cpp
-├── a194. 死亡 FLAG.cpp
-├── a194. 死亡 FLAG2.cpp
-├── a206. 學長的鬼腳圖 (二).cpp
-├── a207 Exact cover.cpp
-├── a207.Exact cover(DL).cpp
-├── a207.cpp
-├── a209. 街友的寒冷夜晚.cpp
-├── a215. 明明愛數數.cpp
-├── a216. 數數愛明明.cpp
-├── a217. caps lock的災難.cpp
-├── a218. 連猴子都會的小case.cpp
-├── a219. 限制排列.cpp
-├── a223. 10298 - Power Strings.cpp
-├── a224. 明明愛明明.cpp
-├── a225. 明明愛排列.cpp
-├── a227. 三龍杯 - 河內之塔.cpp
-├── a228. 就少一個插座用很不方便.cpp
-├── a229. 括號匹配問題.cpp
-├── a233. 排序法~~~ 挑戰極限.cpp
-├── a240. 第一題. 1  17 小數第 n 位.cpp
-├── a241. 第二題 1  x 是有限小數.cpp
-├── a242. 第三題. 絕對值總和的最小值.cpp
-├── a245. 王老師愛兩條線.cpp
-├── a247. Fermat vs. Pythagoras.cpp
-├── a248. 新手訓練 ~ 陣列應用.cpp
-├── a249. Q679. Dropping Balls.cpp
-├── a251. 假費波那契數.cpp
-├── a252. Another LCS.cpp
-├── a253. 王老先生的磨菇田.cpp
-├── a254. 畢氏‧三角‧製造.cpp
-├── a259. Q10917. A Walk Through the Forest.cpp
-├── a263. 日期差幾天.c
-├── a263. 日期差幾天.cpp
-├── a264. 骰子疊疊樂.cpp
-├── a265. 紅黑樹.pp.c
-├── a266. 校內賽.cpp
-├── a267. 太空梭的油箱.cpp
-├── a270. 爬樓梯有益身心健康.cpp
-├── a271. 彩色蘿蔔.cpp
-├── a272. 猥瑣罐頭下樓梯.cpp
-├── a273. 小朋友下樓梯.cpp
-├── a274. 友誼的數字.cpp
-├── a275. 字串變變變.cpp
-├── a276. 又分糖果囉.cpp
-├── a277. 高手寂寞.cpp
-├── a279. 分糖果囉.cpp
-├── a280. 小朋友上樓梯.cpp
-├── a281.cpp
-├── a282. 認真念書.cpp
-├── a285. 女兒國婚友社.cpp
-├── a286. 難道這就是命中注定.cpp
-├── a290. 新手訓練系列 ~ 圖論.cpp
-├── a291. nAnB problem.cpp
-├── a293 A 百年國慶.cpp
-├── a299. NOIP2011 Day1.1.cpp
-├── a300.NOIP2011 Day1.2.cpp
-├── a302. NOIP2011 Day2.1.cpp
-├── a307.cpp
-├── a308. NOIP2011 2.cpp
-├── a313 B 街道國.cpp
-├── a314. C 導覽型機器人.cpp
-├── a315 D 滿州國皇帝之璽.cpp
-├── a316 E 守塔新武器.cpp
-├── a317.cpp
-├── a322.cpp
-├── a329. 貪婪的Tony.cpp
-├── a331. K-th Number.cpp
-├── a331[v3].cpp
-├── a348. 1. 貪食蛇.cpp
-├── a349. 2. 指令解譯器.cpp
-├── a350. 3. 緞帶的購買問題.cpp
-├── a361. A. 賓果遊戲.cpp
-├── a362. 1. 搬雕像.cpp
-├── a363. B. 分組競賽.c
-├── a364. 2. 神秘的進位問題.cpp
-├── a365. 3. 新井字遊戲.cpp
-├── a367. C. 圈圈國.cpp
-├── a370.cpp
-├── a373. 賽車.cpp
-├── a392 NOI2011 Day2.1.cpp
-├── a410. 解方程.c
-├── a414. 位元運算之進位篇.cpp
-├── a415. 4. 捷運路線.cpp
-├── a415. 4.cpp
-├── a416. 6. 城市馬拉松.cpp
-├── a416. 6.cpp
-├── a417. 螺旋矩陣.c
-├── a433. A. 三角形金磚.c
-├── a443. 10720 - Graph Construction.cpp
-├── a445. 新手訓練系列- 我的朋友很少.c
-├── a449. 國王烏龜的接駁車.c
-├── a450. 棒棒糖比身高.cpp
-├── a453. TOI2010 第一題.一元二次方程式.c
-├── a454. TOI2010 第二題.專案時程.cpp
-├── a455. TOI2010 第四題商品特賣問題.cpp
-├── a456. 子集合.c
-├── a457 TOI2010 第五題餐廳評鑑.cpp
-├── a457.cpp
-├── a458. Beats of the Angel 加強版.cpp
-├── a458.cpp
-├── a459. An Easy Language.cpp
-├── a462. Beats of the Angel.cpp
-├── a471. givesum~連續整數的固定和.cpp
-├── a473. 外援計畫.c
-├── a480. 導彈攔截系統.cpp
-├── a484. 美麗風景遞增之路.c
-├── a484. 美麗風景遞增之路.cpp
-├── a484. 美麗風景遞增之路2.c
-├── a484. 美麗風景遞增之路3.c
-├── a505 B. T-primes.cpp
-├── a506. 走投無路的國王.cpp
-├── a513. 最大值.cpp
-├── a517. Freak大危機!!!.cpp
-├── a521. 12414 - Calculating Yuan Fen.cpp
-├── a524. 手機之謎.cpp
-├── a528. 大數排序.cpp
-├── a532 MathSol.cpp
-├── a532. 奇特的數列.cpp
-├── a533. IOI2004 Day1.1.阿特米斯.cpp
-├── a534. IOI2008 Day2.1.花園問題.cpp
-├── a534.cpp
-├── a541 字典[Trie].cpp
-├── a541. 字典.cpp
-├── a542. 行列式det(A).cpp
-├── a545. Stressful.cpp
-├── a546. A - Perfect Permutation.cpp
-├── a552. 模型.cpp
-├── a561. 內存不足.cpp
-├── a562.cpp
-├── a563_dfs_test.cpp
-├── a564.cpp
-├── a565.cpp
-├── a567. 死線排程.cpp
-├── a568. ISSC 2012- problem B.cpp
-├── a569. 2-絕對遞增的質數子數列.cpp
-├── a570.cpp
-├── a571. 海港碼頭.cpp
-├── a572 IS&MS.cpp
-├── a576. No Cheating.cpp
-├── a576.cpp
-├── a577.cpp
-├── a580. 輻射擴散.cpp
-├── a583. 1. 座位距離計算問題.cpp
-├── a584. 2. 親等關係.cpp
-├── a586. 4. 捷運計價問題.cpp
-├── a588 A. 神秘的地圖.cpp
-├── a589. B. 老蚯的寶物.cpp
-├── a590.cpp
-├── a594 G. 電梯向上.cpp
-├── a605. 交錯和.cpp
-├── a621 1. Powers of Two.cpp
-├── a622 2. Vertical Printing.cpp
-├── a623 3. Combination.cpp
-├── a624 4. Password Analyzer.cpp
-├── a625 5. Overhanging Cards.cpp
-├── a626 6. Prime Directive.cpp
-├── a627 7. RAID Sizer.cpp
-├── a628 8. Number Spiral.cpp
-├── a629 9. Musical Intervals.cpp
-├── a630 10. New Math.cpp
-├── a631 11. LED Decoder.cpp
-├── a632 12. Domino Rally.cpp
-├── a633 13. Not Quite OCR.c
-├── a633 13. Not Quite OCR.cpp
-├── a634 14. Knights Path.cpp
-├── a638 Closest-pair problem.cpp
-├── a638. Closest-pair problem.cpp
-├── a639. DNA Density.cpp
-├── a640.cpp
-├── a641.cpp
-├── a646. 小民買糖果.cpp
-├── a646.cpp
-├── a647. 投資專家.cpp
-├── a648 A - Red Areas.cpp
-├── a648 A - Red Areas2.cpp
-├── a648. A - Red Areas3.cpp
-├── a651.cpp
-├── a656.cpp
-├── a666.cpp
-├── a666[v2].cpp
-├── a915.cpp
-├── a962. 新專輯.cpp
-├── a981.cpp
-├── a982.cpp
-├── b016. D. Mitlab.cpp
-├── b018. F. 營地.cpp
-├── b021. C. 畢業演奏.cpp
-├── b043. B. 踩地雷回來了.cpp
-├── b046. E. 智慧型單字查詢.cpp
-├── b054. 第五題：浮點數的表示式.cpp
-├── b058. 3. 關鍵邏輯閘.cpp
-├── b060. 5. 快遞服務.cpp
-├── b061. 6. 糊塗情報員.cpp
-├── b064. 3. 下界函數.cpp
-├── b064. 3.cpp
-├── b065. 4. 滿漢全席.cpp
-├── b066. 5. 六芒星棋遊戲：先還是後比較有利？.cpp
-├── b067. 6. 下棋問題.cpp
-├── b069. A. 千里傳情.cpp
-├── b071. C. 排水系統.cpp
-├── b090. D. 正直DE.cpp
-├── b091 E. 核心字串.cpp
-├── b094. H. 數字拼盤.cpp
-├── b099. E. 聯立多元一次方程式.cpp
-├── b109. 2. IC 板檢測.cpp
-├── b113. 6. 線性系統求解.cpp
-├── b125. 積木的拼疊問題Bricks.cpp
-├── b134. NOIP2006 1.cpp
-├── b134. NOIP2006 1.能量项链.cpp
-├── b135. NOIP2006 2.cpp
-├── b143. NOIP2005 2..cpp
-├── b145. NOIP2005_4.cpp
-├── b149. NOIP2004 4.cpp
-├── b153 NOIP.cpp
-├── b163. NOIP2007 2.字符串的展開.cpp
-├── b173.cpp
-├── b174. 旅遊規則.cpp
-├── b174.cpp
-├── b177. 山景 Skyline.cpp
-├── b178. 遊輪 Boat.cpp
-├── b180. 1. 遊園接駁車.cpp
-├── b190. 97七區資訊學科5(改編).cpp
-├── b199. D. 郵輪.cpp
-├── b199.cpp
-├── b200. E. 幼稚的災難.cpp
-├── b201. F. 國家.cpp
-├── b207. F. 世界盃.cpp
-├── b208 A. 蜜蜂的約會.cpp
-├── b212. E. 不景氣的年代.cpp
-├── b213. F. 數列.cpp
-├── b215. H. 幼稚國王的行程.cpp
-├── b217. 2. 系統.cpp
-├── b220. 5. 蛋糕師傅的煩惱.cpp
-├── b221. 6. 耕者有其田.cpp
-├── b237. CSAPC09 迷宮任務.cpp
-├── b238. A. 腹黑、傲嬌.cpp
-├── b239. B. 電腦出租公司.cpp
-├── b240. C. 瘋狂博士的小型圖書館.cpp
-├── b242. E. 檸檬汽水傳說.cpp
-├── b245. A. 草地上的松鼠.cpp
-├── b254. C. 矢量星球.cpp
-├── b255. D. 跑跑卡丁車.cpp
-├── b256 E. 大風吹.cpp
-├── b256. E. 大風吹[kd].cpp
-├── b258. G. 愛有等差.cpp
-├── b259. H. 補習班的報名熱.cpp
-├── b278.cpp
-├── b288.cpp
-├── b291.cpp
-├── b297.cpp
-├── b298.cpp
-├── b299.cpp
-├── b300.cpp
-├── b301.cpp
-├── b302.cpp
-├── b305.cpp
-├── b306.cpp
-├── b307.cpp
-├── b308.cpp
-├── b309.cpp
-├── b310.cpp
-├── b311.cpp
-├── b312.cpp
-├── b314.cpp
-├── b315.cpp
-├── b316.cpp
-├── b317.cpp
-├── c073. The Blocks Problem.cpp
-├── c082. Mutant Flatworld Expolrers.cpp
-├── c083. Roman Roulette.cpp
-├── c093. Counterfeit Dollar.cpp
-├── c095. False coin.cpp
-├── c099. Climbing Trees.cpp
-├── c100. Unidirectional TSP.cpp
-├── c102. Software CRC.cpp
-├── c103. The Psychic Poker Player.cpp
-├── c108. Joseph.cpp
-├── c109. Cipher.cpp
-├── c110. Packets.cpp
-├── c112. Optimal Array Multiplication Sequence.cpp
-├── c125. Frogger.cpp
-├── d042. 11420 - Chest of Drawers.cpp
-├── d088. 127 - Accordian Patience.cpp
-├── d089. 145 - Gondwanaland Telecom.cpp
-├── d094. 478 - Points in Figures. Rectangles and Circles, and Triangles.cpp
-├── d105. NOIP 2008 3.cpp
-├── d196. 11341 - Term Strategy.cpp
-├── d210. 老問題.cpp
-├── d222. Q11127 Triple-Free Binary Strings.cpp
-├── d223. Q10137 The Trip.cpp
-├── d228. kill man.cpp
-├── d232. 97北縣賽-3-資料統計問題.cpp
-├── d242. Q481. What Goes Up.cpp
-├── d244. 一堆石頭.cpp
-├── d246 Stone Game.cpp
-├── d249. 94北縣賽-1-心意相通的指數(Match).cpp
-├── d252. 94北縣賽-4-字串處理問題 (String).cpp
-├── d268. 11578 - Situp Benches.cpp
-├── d270. 11581 - Grid Successors.cpp
-├── d271. 11582 - Colossal Fibonacci Numbers!.cpp
-├── d272. 11583 - Alien DNA.cpp
-├── d273. 11584 - Partitioning by Palindromes.cpp
-├── d285. 727 Postfix Expression.cpp
-├── d287. 古怪的數學家.cpp
-├── d297. 算算算....Lunatic.cpp
-├── d313.cpp
-├── d315. sigma sinkx.cpp
-├── d316. Quadrangle！.cpp
-├── d343. 10578 - The Game of 31.cpp
-├── d347. 847 - A Multiplication Game.cpp
-├── d367. 我要最小值——.cpp
-├── d367. 我要最小值——加強版.cpp
-├── d368. 10196 - Check the Check.cpp
-├── d370. 2. 盤中飧.cpp
-├── d371. 3. Huffman 編碼中的編碼效能問題.cpp
-├── d372. 4. 合法執行路徑問題.cpp
-├── d372. 4. 合法執行路徑問題2.cpp
-├── d374. 6. X^2 ≡ 1 (mod M),cpp.c
-├── d374. 6. X^2 ≡ 1 (mod M).cpp
-├── d411. 算了好久.......cpp
-├── d416. 投影最大值.cpp
-├── d429. 第一題. 社團分組 (club).cpp
-├── d430. 第二題. 計算字數 (count).cpp
-├── d449. 垃圾信件.cpp
-├── d451. 科學記號.cpp
-├── d454.cpp
-├── d476. 區間查詢.cpp
-├── d476.cpp
-├── d477.cpp
-├── d481. 矩陣乘法.cpp
-├── d485. 我愛偶數.cpp
-├── d522. 走棋盤.cpp
-├── d524. Q10599 - Robots(II).c
-├── d524. Q10599 - Robots(II).cpp
-├── d526. Binary Search Tree (BST).cpp
-├── d537. 第四題.染色遊戲.cpp
-├── d546 3. 剪多邊形（molding）.cpp
-├── d547. 4. 秘密(secrets).cpp
-├── d548. 5. 購物網站（web）.cpp
-├── d552 Asphalt's Problem.cpp
-├── d578. 小涵的積木.cpp
-├── d589. B. 水之國的奇幻冒險.cpp
-├── d598. 3. 尋寶問題(DP).cpp
-├── d598. 3. 尋寶問題.cpp
-├── d618. 有限狀態自動機（Finite State Machine）.cpp
-├── d624. 燈泡問題.cpp
-├── d627. 我.我.我...這麼弱 -跨年倒數.cpp
-├── d632. C and S.cpp
-├── d633. 幼稚王國的麥田圖騰.cpp
-├── d639. 企鵝村三兄弟penguin.cpp
-├── d643. 勞動的符咒.cpp
-├── d644. 壞脾氣小小皮.cpp
-├── d645. 輪下亡魂.cpp
-├── d646. I2A的陰謀.cpp
-├── d650 好多骰子.cpp
-├── d652. 貪婪之糊.cpp
-├── d655. 許胖公仔.cpp
-├── d664. 11725 - Colorful Board.cpp
-├── d667. 820 - Internet Bandwidth.cpp
-├── d681. BinaryCount.cpp
-├── d686. Q10003. Cutting Sticks.cpp
-├── d692. 矢量星球 - 快速版本.cpp
-├── d705. 判斷質數(二).cpp
-├── d717. 好多因子.cpp
-├── d718. Waiting In Line.cpp
-├── d729. 10593 - Kites.cpp
-├── d730. 升旗典禮 ——加強版.cpp
-├── d731. 11039 - Building designing.cpp
-├── d733. 11329 - Curious Fleas.cpp
-├── d739. 最少路徑.cpp
-├── d750. 11321 - Sort! Sort!! and Sort!!!.cpp
-├── d751. Q10049-Self-describing Sequence.cpp
-├── d757. 11195 - Another n-Queen Problem.cpp
-├── d760. 10330 - Power Transmission.cpp
-├── d766. 11149 - Power of Matrix.cpp
-├── d767. 血緣關係.cpp
-├── d780. NOIP2009 4.靶形數獨cpp.c
-├── d781. 195 - Anagram.cpp
-├── d798 區域MAX.cpp
-├── d798.c
-├── d799. 區間求和 (樹狀數組).cpp
-├── d799. 區間求和.cpp
-├── d800.cpp
-├── d801.cpp
-├── d806. 水火不容.cpp
-├── d807. 方方.cpp
-├── d808. 黑暗部落.cpp
-├── d809. 黑暗土地.cpp
-├── d810. 大朋友下樓梯.cpp
-├── d814. 187. Twist and whirl - want to cheat.cpp
-├── d815. 水火不容II.cpp
-├── d816. 不要再晃啦！.cpp
-├── d825. 隔熱紙.cpp
-├── d826. 暗門.cpp
-├── d827. 買鉛筆.cpp
-├── d828. Pascal's triangle's secret (II).cpp
-├── d830. 暗門2.cpp
-├── d831. 畢業旅行.cpp
-├── d832. 遊樂場 DP.cpp
-├── d832. 遊樂場.cpp
-├── d832. 遊樂場DP.cpp
-├── d835. NOIP2003 1.乒乓球.cpp
-├── d836. NOIP2003 2.cpp
-├── d837. NOIP2003 3.棧.cpp
-├── d838. NOIP2003 4.麥森數.cpp
-├── d841. NOIP2003 3.cpp
-├── d842. NOIP2003 4.cpp
-├── d844 NOIP2002 3.cpp
-├── d849 NOIP2002 4.cpp
-├── d850. NOIP2002 1.均分紙牌.cpp
-├── d854. NOIP2001 1.一元三次方程求解.cpp
-├── d855. NOIP2001 2.數的劃分.cpp
-├── d859. NOIP2001 1.數的計算.cpp
-├── d860. NOIP2001 2.最大公約數與最小公倍數問題.cpp
-├── d861. NOIP2001 3.求先序排列.cpp
-├── d862. NOIP2001 4.裝箱問題.cpp
-├── d868. NOIP2000 1.計算器的改良.cpp
-├── d870 NOIP2000 3.cpp
-├── d870 NOIP2000 3.乘积最大.cpp
-├── d871. NOIP2000 4.單詞接龍.cpp
-├── d872. 過橋問題.cpp
-├── d873. Q465. Overflow.cpp
-├── d875. 4. 窮舉的階梯問題.cpp
-├── d879. Q10911. Forming Quiz teams.cpp
-├── d881. 作業苦多.cpp
-├── d885. NOIP2007 1.統計數字 番外篇.cpp
-├── d887. 1.山脈種類(chain).cpp
-├── d889. 2.黑傑克(jack).cpp
-├── d890. 3.禮物分配(gift).cpp
-├── d892. NOIP2010 1.機器翻譯.cpp
-├── d893. NOIP2010 2.cpp
-├── d898. Q10128 Queue.cpp
-├── d899. NOIP2010 1.數字統計.cpp
-├── d903. 數學達人.cpp
-├── d904. 換零錢.cpp
-├── d906. 2. 排座位問題.cpp
-├── d907. 3. 城市走法計數.cpp
-├── d908. 4. 最佳路徑.cpp
-├── d913. 1. 彈珠配置.cpp
-├── d914. 2. 圍棋資料庫比對.cpp
-├── d915. 3. 洗街車路線問題.cpp
-├── d916. 4. 高空煙火時間限制.cpp
-├── d917. 5. 貼磁磚.cpp
-├── d918. 6. 雨量趨勢.cpp
-├── d919. 最大面積.cpp
-├── d920. 智慧盤.cpp
-├── d923. 規律.cpp
-├── d925. 平均高度.cpp
-├── d929. A. 迴文.cpp
-├── d930. B. 薑餅部落的危機.cpp
-├── d931. C. 幽靈特務報到.cpp
-├── d932. D. 流水不腐.cpp
-├── d933. E. 傘兵.cpp
-├── d934. F. Lisa 的圍巾.cpp
-├── d944. B. 卡卡跑丁車.cpp
-├── d946. D. 阿克圖洛斯‧蒙斯克的煩惱.cpp
-├── d950. A. 帕斯卡三角形.cpp
-├── d951. B. 好吃的麵包.cpp
-├── d954. E. 得分.cpp
-├── d956. G. 失落的維京戰機.cpp
-├── d961. A. 耶誕老人到你家.cpp
-├── d963. C. 小丹尼與英文單字.cpp
-├── d965. E. 阿達的冒險.cpp
-├── d978. 最長回文字串.cpp
-├── d980. 11479 - Is this the easiest problem.cpp
-├── d984. 棄保效應.cpp
-└── d985. Gran Turismo 5.cpp
-```
+uva2/
+  - ACM-ICPC region
+    - ACM-ICPC[Regionals2009][Phuket]
+        - [pa.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2009][Phuket]/pa.cpp)
+        - [pb.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2009][Phuket]/pb.cpp)
+        - [pc.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2009][Phuket]/pc.cpp)
+        - [pc.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2009][Phuket]/pc.exe)
+        - [pc.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2009][Phuket]/pc.o)
+    - ACM-ICPC[Regionals2011][Dalian]
+      - 新增資料夾
+          - [pa.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pa.cpp)
+          - [pa.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pa.exe)
+          - [pa.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pa.o)
+          - [pc.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pc.cpp)
+          - [pc_dfs.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pc_dfs.cpp)
+          - [pc_dfs.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pc_dfs.exe)
+          - [pc_dfs.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pc_dfs.o)
+          - [pc.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pc.exe)
+          - [pc.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pc.o)
+          - [pd.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pd.cpp)
+          - [pd.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pd.exe)
+          - [pd.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pd.o)
+          - [pe.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pe.cpp)
+          - [pe.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pe.exe)
+          - [pe.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pe.o)
+          - [pf.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pf.cpp)
+          - [pf.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pf.exe)
+          - [pf.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pf.o)
+          - [pl.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pl.cpp)
+          - [pll.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pll.cpp)
+          - [pll.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pll.exe)
+          - [plll.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/plll.cpp)
+          - [plll.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/plll.exe)
+          - [plll.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/plll.o)
+          - [pll.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Dalian]/新增資料夾/pll.o)
+    - ACM-ICPC[Regionals2011][Phuket]
+        - [pa.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pa.cpp)
+        - [pa.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pa.exe)
+        - [pa.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pa.o)
+        - [pb.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pb.cpp)
+        - [pb.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pb.exe)
+        - [pb.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pb.o)
+        - [pc.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pc.cpp)
+        - [pc.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pc.exe)
+        - [pc.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pc.o)
+        - [pd.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pd.cpp)
+        - [pd.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pd.exe)
+        - [pd.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pd.o)
+        - [pg.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pg.cpp)
+        - [pg.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pg.exe)
+        - [pg.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pg.o)
+        - [pi.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pi.cpp)
+        - [pi.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pi.exe)
+        - [pi.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pi.o)
+        - [pj.c](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pj.c)
+        - [pj.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pj.cpp)
+        - [pj.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pj.exe)
+        - [pj.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pj.o)
+        - [pxx.c](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pxx.c)
+        - [pxx.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pxx.cpp)
+        - [pxx.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pxx.exe)
+        - [pxx.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/pxx.o)
+        - [testpE.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/testpE.cpp)
+        - [testpE.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/testpE.exe)
+        - [testpE.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/testpE.o)
+        - [trashpH.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/trashpH.cpp)
+        - [trashpH.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/trashpH.exe)
+        - [trashpH.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC[Regionals2011][Phuket]/trashpH.o)
+    - ACM-ICPC-Regionals-Daejeon
+        - [pA.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC-Regionals-Daejeon/pA.cpp)
+        - [pB.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC-Regionals-Daejeon/pB.cpp)
+        - [pC.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC-Regionals-Daejeon/pC.cpp)
+        - [pD.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC-Regionals-Daejeon/pD.cpp)
+        - [pf.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC-Regionals-Daejeon/pf.cpp)
+        - [pFF.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC-Regionals-Daejeon/pFF.cpp)
+        - [pG.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC-Regionals-Daejeon/pG.cpp)
+        - [pJ.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC-Regionals-Daejeon/pJ.cpp)
+    - ACM-ICPC unknown
+      - pa
+      - paa
+        - Debug
+            - [makefile](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/paa/Debug/makefile)
+            - [objects.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/paa/Debug/objects.mk)
+            - [paa](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/paa/Debug/paa)
+            - [sources.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/paa/Debug/sources.mk)
+          - src
+              - [paa.d](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/paa/Debug/src/paa.d)
+              - [paa.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/paa/Debug/src/paa.o)
+              - [subdir.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/paa/Debug/src/subdir.mk)
+        - src
+            - [paa.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/paa/src/paa.cpp)
+      - pb
+        - Debug
+            - [makefile](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pb/Debug/makefile)
+            - [objects.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pb/Debug/objects.mk)
+            - [pb](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pb/Debug/pb)
+            - [sources.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pb/Debug/sources.mk)
+          - src
+              - [pb.d](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pb/Debug/src/pb.d)
+              - [pb.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pb/Debug/src/pb.o)
+              - [subdir.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pb/Debug/src/subdir.mk)
+        - src
+            - [pb.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pb/src/pb.cpp)
+      - pc
+        - Debug
+            - [makefile](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pc/Debug/makefile)
+            - [objects.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pc/Debug/objects.mk)
+            - [pc](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pc/Debug/pc)
+            - [sources.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pc/Debug/sources.mk)
+          - src
+              - [pc.d](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pc/Debug/src/pc.d)
+              - [pc.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pc/Debug/src/pc.o)
+              - [subdir.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pc/Debug/src/subdir.mk)
+        - src
+            - [pc.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pc/src/pc.cpp)
+      - pd
+        - Debug
+            - [makefile](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd/Debug/makefile)
+            - [objects.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd/Debug/objects.mk)
+            - [pd](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd/Debug/pd)
+            - [pd.in](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd/Debug/pd.in)
+            - [sources.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd/Debug/sources.mk)
+          - src
+              - [pd.d](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd/Debug/src/pd.d)
+              - [pd.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd/Debug/src/pd.o)
+              - [subdir.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd/Debug/src/subdir.mk)
+        - src
+            - [pd.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd/src/pd.cpp)
+      - pd_1
+        - Debug
+            - [makefile](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd_1/Debug/makefile)
+            - [objects.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd_1/Debug/objects.mk)
+            - [pd_1](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd_1/Debug/pd_1)
+            - [sources.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd_1/Debug/sources.mk)
+          - src
+              - [pd_1.d](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd_1/Debug/src/pd_1.d)
+              - [pd_1.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd_1/Debug/src/pd_1.o)
+              - [subdir.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd_1/Debug/src/subdir.mk)
+        - src
+            - [pd_1.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd_1/src/pd_1.cpp)
+            - [pd_1.exe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd_1/src/pd_1.exe)
+            - [pd_1.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pd_1/src/pd_1.o)
+      - pe
+        - Debug
+            - [makefile](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pe/Debug/makefile)
+            - [objects.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pe/Debug/objects.mk)
+            - [pe](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pe/Debug/pe)
+            - [sources.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pe/Debug/sources.mk)
+          - src
+              - [pe.d](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pe/Debug/src/pe.d)
+              - [pe.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pe/Debug/src/pe.o)
+              - [subdir.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pe/Debug/src/subdir.mk)
+        - src
+            - [pe.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pe/src/pe.cpp)
+      - pg
+        - Debug
+            - [makefile](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pg/Debug/makefile)
+            - [objects.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pg/Debug/objects.mk)
+            - [sources.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pg/Debug/sources.mk)
+          - src
+              - [pg.d](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pg/Debug/src/pg.d)
+              - [pg.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pg/Debug/src/pg.o)
+              - [subdir.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pg/Debug/src/subdir.mk)
+        - src
+            - [pg.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/pg/src/pg.cpp)
+      - ph
+        - Debug
+            - [makefile](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/ph/Debug/makefile)
+            - [objects.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/ph/Debug/objects.mk)
+            - [ph](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/ph/Debug/ph)
+            - [sources.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/ph/Debug/sources.mk)
+          - src
+              - [ph.d](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/ph/Debug/src/ph.d)
+              - [ph.o](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/ph/Debug/src/ph.o)
+              - [subdir.mk](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/ph/Debug/src/subdir.mk)
+        - src
+            - [ph.cpp](/home/alexander/codes/uva2/ACM-ICPC region/ACM-ICPC unknown/ph/src/ph.cpp)
+  - contest
+    - FacebookHackerCup
+      - FBHacker2015
+          - [FBHackerCup2015_P15.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2015/FBHackerCup2015_P15.cpp)
+          - [FBHackerCup2015_P30.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2015/FBHackerCup2015_P30.cpp)
+          - [FBHackerCup2015_P55.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2015/FBHackerCup2015_P55.cpp)
+      - FBHacker2016QR
+        - A
+            - [format.sh](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016QR/A/format.sh)
+            - [main.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016QR/A/main.cpp)
+        - B
+            - [format.sh](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016QR/B/format.sh)
+            - [main.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016QR/B/main.cpp)
+        - C
+            - [format.sh](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016QR/C/format.sh)
+            - [main.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016QR/C/main.cpp)
+        - D
+            - [format.sh](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016QR/D/format.sh)
+            - [main.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016QR/D/main.cpp)
+      - FBHacker2016Round1
+        - A
+            - [main.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016Round1/A/main.cpp)
+        - B
+            - [main.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016Round1/B/main.cpp)
+        - C
+            - [main.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016Round1/C/main.cpp)
+        - D
+            - [main.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016Round1/D/main.cpp)
+            - [pin.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016Round1/D/pin.cpp)
+      - FBHacker2016Round2
+          - [FB2016R2 - Boomerang Decoration.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016Round2/FB2016R2 - Boomerang Decoration.cpp)
+          - [FB2016R2 - Carnival Coins.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016Round2/FB2016R2 - Carnival Coins.cpp)
+          - [FB2016R2 - Costly Labels2.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016Round2/FB2016R2 - Costly Labels2.cpp)
+          - [FB2016R2 - Costly Labels.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016Round2/FB2016R2 - Costly Labels.cpp)
+          - [FB2016R2 - Snakes and Ladders.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2016Round2/FB2016R2 - Snakes and Ladders.cpp)
+      - FBHacker2017QR
+          - [2017A.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2017QR/2017A.cpp)
+          - [2017B.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2017QR/2017B.cpp)
+          - [2017C.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2017QR/2017C.cpp)
+      - FBHacker2017Round1
+          - [A.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2017Round1/A.cpp)
+          - [B.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2017Round1/B.cpp)
+          - [C.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2017Round1/C.cpp)
+          - [D.cpp](/home/alexander/codes/uva2/contest/FacebookHackerCup/FBHacker2017Round1/D.cpp)
+    - FlerePracticeContest
+        - [flere201501A.cpp](/home/alexander/codes/uva2/contest/FlerePracticeContest/flere201501A.cpp)
+        - [flere201501B.cpp](/home/alexander/codes/uva2/contest/FlerePracticeContest/flere201501B.cpp)
+        - [flere201501C.cpp](/home/alexander/codes/uva2/contest/FlerePracticeContest/flere201501C.cpp)
+        - [flere201501D.cpp](/home/alexander/codes/uva2/contest/FlerePracticeContest/flere201501D.cpp)
+        - [flere201501E.cpp](/home/alexander/codes/uva2/contest/FlerePracticeContest/flere201501E.cpp)
+        - [flere201501F.cpp](/home/alexander/codes/uva2/contest/FlerePracticeContest/flere201501F.cpp)
+        - [flere201501G.cpp](/home/alexander/codes/uva2/contest/FlerePracticeContest/flere201501G.cpp)
+        - [flere201501I.cpp](/home/alexander/codes/uva2/contest/FlerePracticeContest/flere201501I.cpp)
+        - [Problem1.pdf](/home/alexander/codes/uva2/contest/FlerePracticeContest/Problem1.pdf)
+        - [Problem2.pdf](/home/alexander/codes/uva2/contest/FlerePracticeContest/Problem2.pdf)
+        - [Problem3.pdf](/home/alexander/codes/uva2/contest/FlerePracticeContest/Problem3.pdf)
+        - [Problem4.pdf](/home/alexander/codes/uva2/contest/FlerePracticeContest/Problem4.pdf)
+        - [Problem5.pdf](/home/alexander/codes/uva2/contest/FlerePracticeContest/Problem5.pdf)
+        - [Problem6.pdf](/home/alexander/codes/uva2/contest/FlerePracticeContest/Problem6.pdf)
+        - [Problem7.pdf](/home/alexander/codes/uva2/contest/FlerePracticeContest/Problem7.pdf)
+        - [Problem9.pdf](/home/alexander/codes/uva2/contest/FlerePracticeContest/Problem9.pdf)
+    - GoogleCodeJam
+      - APAC2016A
+          - [APAC2016RoundA A. Googol String.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/APAC2016A/APAC2016RoundA A. Googol String.cpp)
+          - [APAC2016RoundA B. gCube.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/APAC2016A/APAC2016RoundA B. gCube.cpp)
+          - [APAC2016RoundA C. gCampus.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/APAC2016A/APAC2016RoundA C. gCampus.cpp)
+          - [APAC2016RoundA D. gSnake.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/APAC2016A/APAC2016RoundA D. gSnake.cpp)
+      - GCJ20151A
+          - [GCJ20151A - Haircut.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20151A/GCJ20151A - Haircut.cpp)
+          - [GCJ20151A - Logging.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20151A/GCJ20151A - Logging.cpp)
+          - [GCJ20151A - Logging[fast].cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20151A/GCJ20151A - Logging[fast].cpp)
+          - [GCJ20151A - Mushroom Monster.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20151A/GCJ20151A - Mushroom Monster.cpp)
+      - GCJ20151B
+          - [GCJ20151B - Counter Culture.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20151B/GCJ20151B - Counter Culture.cpp)
+          - [GCJ20151B - Hiking Deer.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20151B/GCJ20151B - Hiking Deer.cpp)
+          - [GCJ20151B - Noisy Neighbors.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20151B/GCJ20151B - Noisy Neighbors.cpp)
+      - GCJ20151C
+          - [GCJ20151C -  Brattleship.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20151C/GCJ20151C -  Brattleship.cpp)
+          - [GCJ20151C -  Less Money, More Problems.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20151C/GCJ20151C -  Less Money, More Problems.cpp)
+          - [GCJ20151C -  Typewriter Monkey.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20151C/GCJ20151C -  Typewriter Monkey.cpp)
+      - GCJ20152
+          - [GCJ20152 - Kiddie Pool.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20152/GCJ20152 - Kiddie Pool.cpp)
+          - [GCJ20152 Kiddie Pool[MinkowskiSum].cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20152/GCJ20152 Kiddie Pool[MinkowskiSum].cpp)
+          - [GCJ20152 - Pegman.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20152/GCJ20152 - Pegman.cpp)
+      - GCJ2015QR
+          - [GCJ2015QR - Dijkstra.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2015QR/GCJ2015QR - Dijkstra.cpp)
+          - [GCJ2015QR -  Infinite House of Pancakes.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2015QR/GCJ2015QR -  Infinite House of Pancakes.cpp)
+          - [GCJ2015QR -  Ominous Omino.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2015QR/GCJ2015QR -  Ominous Omino.cpp)
+          - [GCJ2015QR - Standing Ovation.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2015QR/GCJ2015QR - Standing Ovation.cpp)
+      - GCJ20161A
+          - [Problem A. The Last Word.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20161A/Problem A. The Last Word.cpp)
+          - [Problem B. Rank and File.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20161A/Problem B. Rank and File.cpp)
+          - [Problem C. BFFs.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20161A/Problem C. BFFs.cpp)
+      - GCJ20161B
+          - [GCJ-1B-A.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20161B/GCJ-1B-A.cpp)
+          - [GCJ-1B-B.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20161B/GCJ-1B-B.cpp)
+          - [GCJ-1B-C.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20161B/GCJ-1B-C.cpp)
+      - GCJ20161C
+          - [GCJ2016-1C-A.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20161C/GCJ2016-1C-A.cpp)
+          - [GCJ2016-1C-B.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20161C/GCJ2016-1C-B.cpp)
+          - [GCJ2016-1C-C.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ20161C/GCJ2016-1C-C.cpp)
+      - GCJ2016QR
+        - A
+            - [Problem A. Counting Sheep.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2016QR/A/Problem A. Counting Sheep.cpp)
+        - B
+            - [Problem B. Revenge of the Pancakes.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2016QR/B/Problem B. Revenge of the Pancakes.cpp)
+        - C
+            - [Problem C. Coin Jam.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2016QR/C/Problem C. Coin Jam.cpp)
+        - D
+            - [Problem D. Fractiles.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2016QR/D/Problem D. Fractiles.cpp)
+      - GCJ2017QR
+          - [pA.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2017QR/pA.cpp)
+          - [pB.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2017QR/pB.cpp)
+          - [pC.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2017QR/pC.cpp)
+          - [pD.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2017QR/pD.cpp)
+      - GCJ2018QR
+          - [Cubic UFO.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2018QR/Cubic UFO.cpp)
+          - [GoGopher.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2018QR/GoGopher.cpp)
+          - [README.md](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2018QR/README.md)
+          - [Saving The Universe Again.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2018QR/Saving The Universe Again.cpp)
+          - [Trouble Sort.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2018QR/Trouble Sort.cpp)
+      - GCJ2019QR
+          - [A.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2019QR/A.cpp)
+          - [B.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2019QR/B.cpp)
+        - C
+            - [Solution.java](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2019QR/C/Solution.java)
+          - [D.cpp](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2019QR/D.cpp)
+          - [interactive_runner.py](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2019QR/interactive_runner.py)
+          - [README.md](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2019QR/README.md)
+          - [testing_tool.py](/home/alexander/codes/uva2/contest/GoogleCodeJam/GCJ2019QR/testing_tool.py)
+    - IOI Camp
+        - [ioicamp2014_websitebackup.zip](/home/alexander/codes/uva2/contest/IOI Camp/ioicamp2014_websitebackup.zip)
+      - IOICamp Judge_files
+          - [bootstrap.css](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp Judge_files/bootstrap.css)
+          - [bootstrap.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp Judge_files/bootstrap.js)
+          - [highlight.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp Judge_files/highlight.js)
+          - [jquery-1.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp Judge_files/jquery-1.js)
+          - [MathJax.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp Judge_files/MathJax.js)
+          - [pangu.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp Judge_files/pangu.js)
+          - [solarized_light.css](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp Judge_files/solarized_light.css)
+        - [IOICamp Judge.htm](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp Judge.htm)
+      - IOICamp JudgeP19_files
+          - [bootstrap.css](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP19_files/bootstrap.css)
+          - [bootstrap.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP19_files/bootstrap.js)
+          - [highlight.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP19_files/highlight.js)
+          - [jquery-1.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP19_files/jquery-1.js)
+          - [MathJax.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP19_files/MathJax.js)
+          - [pangu.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP19_files/pangu.js)
+          - [solarized_light.css](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP19_files/solarized_light.css)
+        - [IOICamp JudgeP19.htm](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP19.htm)
+      - IOICamp JudgeP59_files
+          - [bootstrap.css](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP59_files/bootstrap.css)
+          - [bootstrap.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP59_files/bootstrap.js)
+          - [highlight.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP59_files/highlight.js)
+          - [jquery-1.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP59_files/jquery-1.js)
+          - [MathJax.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP59_files/MathJax.js)
+          - [pangu.js](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP59_files/pangu.js)
+          - [solarized_light.css](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP59_files/solarized_light.css)
+        - [IOICamp JudgeP59.htm](/home/alexander/codes/uva2/contest/IOI Camp/IOICamp JudgeP59.htm)
+        - [ioicampP17程度差距 EX .cpp](/home/alexander/codes/uva2/contest/IOI Camp/ioicampP17程度差距 EX .cpp)
+        - [ioicampP19胖胖兮的書架.cpp](/home/alexander/codes/uva2/contest/IOI Camp/ioicampP19胖胖兮的書架.cpp)
+        - [ioicampP49胖胖兮的書架 EX.cpp](/home/alexander/codes/uva2/contest/IOI Camp/ioicampP49胖胖兮的書架 EX.cpp)
+        - [ioicampP53電力傳輸系統.cpp](/home/alexander/codes/uva2/contest/IOI Camp/ioicampP53電力傳輸系統.cpp)
+        - [ioicampP56最佳二元搜尋樹.cpp](/home/alexander/codes/uva2/contest/IOI Camp/ioicampP56最佳二元搜尋樹.cpp)
+        - [ioicampP59A+ 遊戲.cpp](/home/alexander/codes/uva2/contest/IOI Camp/ioicampP59A+ 遊戲.cpp)
+        - [ioicampP68胖胖天特大薯.cpp](/home/alexander/codes/uva2/contest/IOI Camp/ioicampP68胖胖天特大薯.cpp)
+        - [ioicampP68胖胖天特大薯[v2].cpp](/home/alexander/codes/uva2/contest/IOI Camp/ioicampP68胖胖天特大薯[v2].cpp)
+        - [ioicampP68胖胖天特大薯[v3].cpp](/home/alexander/codes/uva2/contest/IOI Camp/ioicampP68胖胖天特大薯[v3].cpp)
+        - [ioicampP70迷宮魔法.cpp](/home/alexander/codes/uva2/contest/IOI Camp/ioicampP70迷宮魔法.cpp)
+        - [ioicampP72我太受歡迎了該怎麼辦.cpp](/home/alexander/codes/uva2/contest/IOI Camp/ioicampP72我太受歡迎了該怎麼辦.cpp)
+    - IPSC
+      - IPSC2016-practice
+          - [IPSC2016-test-S.cpp](/home/alexander/codes/uva2/contest/IPSC/IPSC2016-practice/IPSC2016-test-S.cpp)
+          - [IPSC2016-test-T.cpp](/home/alexander/codes/uva2/contest/IPSC/IPSC2016-practice/IPSC2016-test-T.cpp)
+          - [IPSC2016-test-U-easy.cpp](/home/alexander/codes/uva2/contest/IPSC/IPSC2016-practice/IPSC2016-test-U-easy.cpp)
+    - IPSC2015Practice
+        - [IPSC_S.cpp](/home/alexander/codes/uva2/contest/IPSC2015Practice/IPSC_S.cpp)
+        - [IPSC_S[v2].cpp](/home/alexander/codes/uva2/contest/IPSC2015Practice/IPSC_S[v2].cpp)
+        - [IPSC_T.cpp](/home/alexander/codes/uva2/contest/IPSC2015Practice/IPSC_T.cpp)
+        - [IPSC_U.cpp](/home/alexander/codes/uva2/contest/IPSC2015Practice/IPSC_U.cpp)
+    - ITSA
+      - ITSA201111
+          - [P1.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201111/P1.cpp)
+          - [P2.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201111/P2.cpp)
+          - [P3.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201111/P3.cpp)
+          - [Programming Contest exams 10th.pdf](/home/alexander/codes/uva2/contest/ITSA/ITSA201111/Programming Contest exams 10th.pdf)
+      - ITSA201112
+          - [11th ITSA team.xlsx](/home/alexander/codes/uva2/contest/ITSA/ITSA201112/11th ITSA team.xlsx)
+          - [Competition Document 11th.doc](/home/alexander/codes/uva2/contest/ITSA/ITSA201112/Competition Document 11th.doc)
+          - [P1.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201112/P1.cpp)
+          - [P2.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201112/P2.cpp)
+          - [P3.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201112/P3.cpp)
+          - [P3.exe](/home/alexander/codes/uva2/contest/ITSA/ITSA201112/P3.exe)
+          - [P4.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201112/P4.cpp)
+          - [P4.exe](/home/alexander/codes/uva2/contest/ITSA/ITSA201112/P4.exe)
+          - [P5.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201112/P5.cpp)
+          - [P5.exe](/home/alexander/codes/uva2/contest/ITSA/ITSA201112/P5.exe)
+          - [Programming Contest exams 11th.pdf](/home/alexander/codes/uva2/contest/ITSA/ITSA201112/Programming Contest exams 11th.pdf)
+          - [Registration Form.doc](/home/alexander/codes/uva2/contest/ITSA/ITSA201112/Registration Form.doc)
+      - ITSA201202
+          - [P1.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201202/P1.cpp)
+          - [P2.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201202/P2.cpp)
+          - [P3.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201202/P3.cpp)
+          - [P4.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201202/P4.cpp)
+          - [P5.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201202/P5.cpp)
+          - [Programming Contest exams 12th.pdf](/home/alexander/codes/uva2/contest/ITSA/ITSA201202/Programming Contest exams 12th.pdf)
+      - ITSA201203
+          - [P1.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201203/P1.cpp)
+          - [P2.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201203/P2.cpp)
+          - [P3.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201203/P3.cpp)
+          - [P4.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201203/P4.cpp)
+          - [P5.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201203/P5.cpp)
+          - [Programming Contest exams 13th.pdf](/home/alexander/codes/uva2/contest/ITSA/ITSA201203/Programming Contest exams 13th.pdf)
+      - ITSA201204
+          - [P1.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201204/P1.cpp)
+          - [P2.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201204/P2.cpp)
+          - [P3.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201204/P3.cpp)
+          - [P4.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201204/P4.cpp)
+          - [P5.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201204/P5.cpp)
+          - [Programming Contest exams 14th.pdf](/home/alexander/codes/uva2/contest/ITSA/ITSA201204/Programming Contest exams 14th.pdf)
+          - [Registration Form.doc](/home/alexander/codes/uva2/contest/ITSA/ITSA201204/Registration Form.doc)
+      - ITSA201205
+          - [15th ITSA team.xlsx](/home/alexander/codes/uva2/contest/ITSA/ITSA201205/15th ITSA team.xlsx)
+          - [p1.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201205/p1.cpp)
+          - [p2.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201205/p2.cpp)
+          - [p3.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201205/p3.cpp)
+          - [p4.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201205/p4.cpp)
+          - [p5.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201205/p5.cpp)
+          - [Programming Contest exams 15th.pdf](/home/alexander/codes/uva2/contest/ITSA/ITSA201205/Programming Contest exams 15th.pdf)
+      - ITSA201208
+          - [16th ITSA team(1).xlsx](/home/alexander/codes/uva2/contest/ITSA/ITSA201208/16th ITSA team(1).xlsx)
+          - [p1.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201208/p1.cpp)
+          - [p2.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201208/p2.cpp)
+          - [p3.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201208/p3.cpp)
+          - [p4.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201208/p4.cpp)
+          - [p5.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201208/p5.cpp)
+          - [Programming Contest exams 16th.pdf](/home/alexander/codes/uva2/contest/ITSA/ITSA201208/Programming Contest exams 16th.pdf)
+      - ITSA201209
+          - [17th ITSA team.xlsx](/home/alexander/codes/uva2/contest/ITSA/ITSA201209/17th ITSA team.xlsx)
+          - [Competition Document 17th.doc](/home/alexander/codes/uva2/contest/ITSA/ITSA201209/Competition Document 17th.doc)
+          - [p1.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201209/p1.cpp)
+          - [p2.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201209/p2.cpp)
+          - [p3.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201209/p3.cpp)
+          - [p4.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201209/p4.cpp)
+          - [pp5.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201209/pp5.cpp)
+          - [Programming Contest exams 17th.pdf](/home/alexander/codes/uva2/contest/ITSA/ITSA201209/Programming Contest exams 17th.pdf)
+          - [Registration Form2012.doc](/home/alexander/codes/uva2/contest/ITSA/ITSA201209/Registration Form2012.doc)
+      - ITSA201210
+          - [18th ITSA team.xlsx](/home/alexander/codes/uva2/contest/ITSA/ITSA201210/18th ITSA team.xlsx)
+          - [Competition  Document 18th.doc](/home/alexander/codes/uva2/contest/ITSA/ITSA201210/Competition  Document 18th.doc)
+          - [p1.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201210/p1.cpp)
+          - [p2.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201210/p2.cpp)
+          - [p3.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201210/p3.cpp)
+          - [p4.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201210/p4.cpp)
+          - [p5.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201210/p5.cpp)
+          - [pp2.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201210/pp2.cpp)
+          - [Programming Contest exams 18th.pdf](/home/alexander/codes/uva2/contest/ITSA/ITSA201210/Programming Contest exams 18th.pdf)
+          - [Registration Form2012.doc](/home/alexander/codes/uva2/contest/ITSA/ITSA201210/Registration Form2012.doc)
+      - ITSA201211
+          - [19th ITSA team.xlsx](/home/alexander/codes/uva2/contest/ITSA/ITSA201211/19th ITSA team.xlsx)
+          - [Competition  Document 19th.doc](/home/alexander/codes/uva2/contest/ITSA/ITSA201211/Competition  Document 19th.doc)
+          - [p1.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201211/p1.cpp)
+          - [p2.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201211/p2.cpp)
+          - [p3.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201211/p3.cpp)
+          - [p4.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201211/p4.cpp)
+          - [p5.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA201211/p5.cpp)
+          - [Programming Contest exams 19th.pdf](/home/alexander/codes/uva2/contest/ITSA/ITSA201211/Programming Contest exams 19th.pdf)
+          - [Registration Form2012.doc](/home/alexander/codes/uva2/contest/ITSA/ITSA201211/Registration Form2012.doc)
+      - ITSA2015
+        - B-team
+            - [2015ITSA-B8-Weighted-Binary-Tree.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/B-team/2015ITSA-B8-Weighted-Binary-Tree.cpp)
+            - [2015ITSA-B9-Minimum Risk Shortest Path.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/B-team/2015ITSA-B9-Minimum Risk Shortest Path.cpp)
+          - [ITSA2015-A.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-A.cpp)
+          - [ITSA2015-B.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-B.cpp)
+          - [ITSA2015-C.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-C.cpp)
+          - [ITSA2015-D.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-D.cpp)
+          - [ITSA2015-E[bfsTLE].cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-E[bfsTLE].cpp)
+          - [ITSA2015-ET[SimulatedAnnealingWA].cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-ET[SimulatedAnnealingWA].cpp)
+          - [ITSA2015-F.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-F.cpp)
+          - [ITSA2015-G.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-G.cpp)
+          - [ITSA2015-G[v2].cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-G[v2].cpp)
+          - [ITSA2015-H.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-H.cpp)
+          - [ITSA2015-I.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-I.cpp)
+          - [ITSA2015-I[fast2].cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-I[fast2].cpp)
+          - [ITSA2015-I[fast4].cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-I[fast4].cpp)
+          - [ITSA2015-I[fast4].exe](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-I[fast4].exe)
+          - [ITSA2015-I[fast].cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-I[fast].cpp)
+          - [ITSA2015-I[test].cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-I[test].cpp)
+          - [ITSA2015-J.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-J.cpp)
+          - [ITSA2015-K.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015-K.cpp)
+          - [ITSA2015ProblemSet.pdf](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/ITSA2015ProblemSet.pdf)
+          - [TEST_generator_ITSA2015-I.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA2015/TEST_generator_ITSA2015-I.cpp)
+      - ITSA_Judge
+          - [[C_DP01-中] 參加活動.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA_Judge/[C_DP01-中] 參加活動.cpp)
+          - [[C_DP02-中] 法碼秤重.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA_Judge/[C_DP02-中] 法碼秤重.cpp)
+          - [[C_DP03-中] 細菌繁殖.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA_Judge/[C_DP03-中] 細菌繁殖.cpp)
+          - [[C_DP04-中] 房地產.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA_Judge/[C_DP04-中] 房地產.cpp)
+          - [[C_DP06-中] 永遠不會死的老鼠.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA_Judge/[C_DP06-中] 永遠不會死的老鼠.cpp)
+          - [[C_DP07-中] 矩陣相乘順序.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA_Judge/[C_DP07-中] 矩陣相乘順序.cpp)
+          - [[C_DP08-中] 換零錢.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA_Judge/[C_DP08-中] 換零錢.cpp)
+          - [[C_DP11-易] 排隊購票.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA_Judge/[C_DP11-易] 排隊購票.cpp)
+          - [[C_DP18-中] 沙漠綠洲.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA_Judge/[C_DP18-中] 沙漠綠洲.cpp)
+      - ITSA桂冠盃
+          - [a574. ITSA2012 桂冠 n維區間查詢.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA桂冠盃/a574. ITSA2012 桂冠 n維區間查詢.cpp)
+          - [p33.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA桂冠盃/p33.cpp)
+          - [p3.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA桂冠盃/p3.cpp)
+          - [p5.cpp](/home/alexander/codes/uva2/contest/ITSA/ITSA桂冠盃/p5.cpp)
+          - [p5.exe](/home/alexander/codes/uva2/contest/ITSA/ITSA桂冠盃/p5.exe)
+          - [p5.o](/home/alexander/codes/uva2/contest/ITSA/ITSA桂冠盃/p5.o)
+    - NCPC
+      - NPSC2012
+          - [gr_pg.cpp](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/gr_pg.cpp)
+          - [in2.txt.txt](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/in2.txt.txt)
+          - [in.txt](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/in.txt)
+          - [NCPC2012pB.docx](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/NCPC2012pB.docx)
+          - [NCPC2012pC.docx](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/NCPC2012pC.docx)
+          - [NCPC2012pF.docx](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/NCPC2012pF.docx)
+          - [NCPC2012pG.docx](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/NCPC2012pG.docx)
+          - [NCPC2012pG.jpg](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/NCPC2012pG.jpg)
+          - [NCPC2012pI.docx](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/NCPC2012pI.docx)
+          - [NPSC2012.JPG](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/NPSC2012.JPG)
+          - [NPSC2012pD.docx](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/NPSC2012pD.docx)
+          - [out2.txt.txt](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/out2.txt.txt)
+          - [out.txt](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/out.txt)
+          - [pa.cpp](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/pa.cpp)
+          - [pb.cpp](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/pb.cpp)
+          - [pc.cpp](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/pc.cpp)
+          - [pd.cpp](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/pd.cpp)
+          - [pf.cpp](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/pf.cpp)
+          - [pg.cpp](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/pg.cpp)
+          - [pi.cpp](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/pi.cpp)
+          - [PI.jpg](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/PI.jpg)
+          - [pin.cpp](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/pin.cpp)
+          - [Untitled1.c](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/Untitled1.c)
+          - [掃瞄002.JPG](/home/alexander/codes/uva2/contest/NCPC/NPSC2012/掃瞄002.JPG)
+    - noip2005复赛
+        - [复赛试题.doc](/home/alexander/codes/uva2/contest/noip2005复赛/复赛试题.doc)
+      - 测试数据
+        - equal
+            - [equal0.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal0.ans)
+            - [equal0.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal0.in)
+            - [equal1.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal1.ans)
+            - [equal1.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal1.in)
+            - [equal2.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal2.ans)
+            - [equal2.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal2.in)
+            - [equal3.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal3.ans)
+            - [equal3.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal3.in)
+            - [equal4.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal4.ans)
+            - [equal4.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal4.in)
+            - [equal5.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal5.ans)
+            - [equal5.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal5.in)
+            - [equal6.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal6.ans)
+            - [equal6.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal6.in)
+            - [equal7.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal7.ans)
+            - [equal7.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal7.in)
+            - [equal8.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal8.ans)
+            - [equal8.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal8.in)
+            - [equal9.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal9.ans)
+            - [equal9.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/equal/equal9.in)
+        - fire
+            - [fire0.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire0.ans)
+            - [fire0.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire0.in)
+            - [fire1.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire1.ans)
+            - [fire1.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire1.in)
+            - [fire2.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire2.ans)
+            - [fire2.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire2.in)
+            - [fire3.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire3.ans)
+            - [fire3.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire3.in)
+            - [fire4.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire4.ans)
+            - [fire4.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire4.in)
+            - [fire5.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire5.ans)
+            - [fire5.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire5.in)
+            - [fire6.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire6.ans)
+            - [fire6.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire6.in)
+            - [fire7.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire7.ans)
+            - [fire7.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire7.in)
+            - [fire8.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire8.ans)
+            - [fire8.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire8.in)
+            - [fire9.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire9.ans)
+            - [fire9.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/fire/fire9.in)
+          - [Main.java](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/Main.java)
+        - river
+            - [river0.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river0.ans)
+            - [river0.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river0.in)
+            - [river1.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river1.ans)
+            - [river1.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river1.in)
+            - [river2.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river2.ans)
+            - [river2.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river2.in)
+            - [river3.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river3.ans)
+            - [river3.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river3.in)
+            - [river4.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river4.ans)
+            - [river4.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river4.in)
+            - [river5.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river5.ans)
+            - [river5.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river5.in)
+            - [river6.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river6.ans)
+            - [river6.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river6.in)
+            - [river7.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river7.ans)
+            - [river7.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river7.in)
+            - [river8.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river8.ans)
+            - [river8.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river8.in)
+            - [river9.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river9.ans)
+            - [river9.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/river/river9.in)
+        - scholar
+            - [scholar0.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar0.ans)
+            - [scholar0.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar0.in)
+            - [scholar1.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar1.ans)
+            - [scholar1.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar1.in)
+            - [scholar2.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar2.ans)
+            - [scholar2.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar2.in)
+            - [scholar3.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar3.ans)
+            - [scholar3.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar3.in)
+            - [scholar4.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar4.ans)
+            - [scholar4.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar4.in)
+            - [scholar5.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar5.ans)
+            - [scholar5.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar5.in)
+            - [scholar6.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar6.ans)
+            - [scholar6.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar6.in)
+            - [scholar7.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar7.ans)
+            - [scholar7.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar7.in)
+            - [scholar8.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar8.ans)
+            - [scholar8.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar8.in)
+            - [scholar9.ans](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar9.ans)
+            - [scholar9.in](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/scholar/scholar9.in)
+          - [solution.cpp](/home/alexander/codes/uva2/contest/noip2005复赛/测试数据/solution.cpp)
+    - NPSC
+      - 2015-senior
+          - [2015NPSCseniorB.cpp](/home/alexander/codes/uva2/contest/NPSC/2015-senior/2015NPSCseniorB.cpp)
+          - [2015NPSCseniorB-opt.cpp](/home/alexander/codes/uva2/contest/NPSC/2015-senior/2015NPSCseniorB-opt.cpp)
+      - 2018-final-senior
+          - [E-knapsack.cpp](/home/alexander/codes/uva2/contest/NPSC/2018-final-senior/E-knapsack.cpp)
+    - PTC
+      - PTC201109
+          - [201107B.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201109/201107B.cpp)
+          - [201109A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201109/201109A.pdf)
+          - [201109B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201109/201109B.pdf)
+          - [201109C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201109/201109C.pdf)
+          - [201109D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201109/201109D.pdf)
+      - PTC201111
+          - [201111A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201111/201111A.pdf)
+          - [201111B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201111/201111B.pdf)
+          - [201111C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201111/201111C.pdf)
+          - [201111D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201111/201111D.pdf)
+          - [201111E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201111/201111E.pdf)
+          - [C.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201111/C.cpp)
+          - [D.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201111/D.cpp)
+          - [E.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201111/E.cpp)
+      - PTC201112
+          - [201112A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201112/201112A.pdf)
+          - [201112B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201112/201112B.pdf)
+          - [201112C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201112/201112C.pdf)
+          - [201112D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201112/201112D.pdf)
+          - [201112E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201112/201112E.pdf)
+          - [PA.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201112/PA.cpp)
+          - [PA.exe](/home/alexander/codes/uva2/contest/PTC/PTC201112/PA.exe)
+          - [PB.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201112/PB.cpp)
+          - [PB.exe](/home/alexander/codes/uva2/contest/PTC/PTC201112/PB.exe)
+          - [PC.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201112/PC.cpp)
+          - [PC.exe](/home/alexander/codes/uva2/contest/PTC/PTC201112/PC.exe)
+          - [PE.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201112/PE.cpp)
+          - [PE.exe](/home/alexander/codes/uva2/contest/PTC/PTC201112/PE.exe)
+      - PTC201202
+          - [201202A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201202/201202A.pdf)
+          - [201202B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201202/201202B.pdf)
+          - [201202C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201202/201202C.pdf)
+          - [201202D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201202/201202D.pdf)
+          - [201202E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201202/201202E.pdf)
+          - [PA.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201202/PA.cpp)
+          - [PB.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201202/PB.cpp)
+          - [PC.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201202/PC.cpp)
+          - [PD.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201202/PD.cpp)
+          - [PE.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201202/PE.cpp)
+      - PTC201203
+          - [201203A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201203/201203A.pdf)
+          - [201203B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201203/201203B.pdf)
+          - [201203C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201203/201203C.pdf)
+          - [201203D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201203/201203D.pdf)
+          - [201203E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201203/201203E.pdf)
+          - [PB.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201203/PB.cpp)
+          - [PC.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201203/PC.cpp)
+      - PTC201205
+          - [201205A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201205/201205A.pdf)
+          - [201205B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201205/201205B.pdf)
+          - [201205C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201205/201205C.pdf)
+          - [201205D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201205/201205D.pdf)
+          - [201205E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201205/201205E.pdf)
+          - [pa.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201205/pa.cpp)
+          - [pb.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201205/pb.cpp)
+          - [pc.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201205/pc.cpp)
+          - [pd.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201205/pd.cpp)
+          - [pe.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201205/pe.cpp)
+          - [rrrrrrrrrrrrrrrrpd.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201205/rrrrrrrrrrrrrrrrpd.cpp)
+      - PTC201206
+          - [201206A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201206/201206A.pdf)
+          - [201206B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201206/201206B.pdf)
+          - [201206C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201206/201206C.pdf)
+          - [201206D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201206/201206D.pdf)
+          - [201206E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201206/201206E.pdf)
+          - [pB.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201206/pB.cpp)
+          - [pC.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201206/pC.cpp)
+          - [pD.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201206/pD.cpp)
+          - [pE.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201206/pE.cpp)
+      - PTC201208
+          - [201208A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201208/201208A.pdf)
+          - [201208B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201208/201208B.pdf)
+          - [201208C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201208/201208C.pdf)
+          - [201208D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201208/201208D.pdf)
+          - [201208E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201208/201208E.pdf)
+          - [pA.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201208/pA.cpp)
+          - [pB.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201208/pB.cpp)
+          - [pC.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201208/pC.cpp)
+          - [pD.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201208/pD.cpp)
+      - PTC201209
+          - [201209A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201209/201209A.pdf)
+          - [201209B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201209/201209B.pdf)
+          - [201209C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201209/201209C.pdf)
+          - [201209D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201209/201209D.pdf)
+          - [201209E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201209/201209E.pdf)
+          - [pA.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201209/pA.cpp)
+          - [pB.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201209/pB.cpp)
+          - [pC.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201209/pC.cpp)
+          - [pD.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201209/pD.cpp)
+          - [pE.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201209/pE.cpp)
+      - PTC201210
+          - [201210A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201210/201210A.pdf)
+          - [201210B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201210/201210B.pdf)
+          - [201210C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201210/201210C.pdf)
+          - [201210D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201210/201210D.pdf)
+          - [pc.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201210/pc.cpp)
+          - [pc.exe](/home/alexander/codes/uva2/contest/PTC/PTC201210/pc.exe)
+          - [pc.o](/home/alexander/codes/uva2/contest/PTC/PTC201210/pc.o)
+          - [pd.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201210/pd.cpp)
+          - [pd.exe](/home/alexander/codes/uva2/contest/PTC/PTC201210/pd.exe)
+          - [pd.o](/home/alexander/codes/uva2/contest/PTC/PTC201210/pd.o)
+          - [pe.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201210/pe.cpp)
+          - [pe.exe](/home/alexander/codes/uva2/contest/PTC/PTC201210/pe.exe)
+          - [pe.o](/home/alexander/codes/uva2/contest/PTC/PTC201210/pe.o)
+          - [ptc_score.jpg](/home/alexander/codes/uva2/contest/PTC/PTC201210/ptc_score.jpg)
+          - [test.exe](/home/alexander/codes/uva2/contest/PTC/PTC201210/test.exe)
+      - PTC201211
+          - [201211A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201211/201211A.pdf)
+          - [201211B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201211/201211B.pdf)
+          - [201211C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201211/201211C.pdf)
+          - [201211D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201211/201211D.pdf)
+          - [201211E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201211/201211E.pdf)
+          - [pA.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201211/pA.cpp)
+          - [pB.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201211/pB.cpp)
+          - [pcc.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201211/pcc.cpp)
+          - [pc.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201211/pc.cpp)
+          - [pd(1).cpp](/home/alexander/codes/uva2/contest/PTC/PTC201211/pd(1).cpp)
+          - [pD.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201211/pD.cpp)
+          - [pe.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201211/pe.cpp)
+      - PTC201212
+          - [201212A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201212/201212A.pdf)
+          - [201212B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201212/201212B.pdf)
+          - [201212C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201212/201212C.pdf)
+          - [201212D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201212/201212D.pdf)
+          - [201212E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201212/201212E.pdf)
+          - [pA.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201212/pA.cpp)
+          - [pC.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201212/pC.cpp)
+          - [pd.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201212/pd.cpp)
+          - [pe.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201212/pe.cpp)
+      - PTC201301
+          - [201301A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201301/201301A.pdf)
+          - [201301B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201301/201301B.pdf)
+          - [201301C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201301/201301C.pdf)
+          - [201301D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201301/201301D.pdf)
+          - [201301E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201301/201301E.pdf)
+          - [pb.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201301/pb.cpp)
+          - [pc2.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201301/pc2.cpp)
+          - [pcc.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201301/pcc.cpp)
+          - [pc.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201301/pc.cpp)
+          - [pe.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201301/pe.cpp)
+      - PTC201303
+          - [201303A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201303/201303A.pdf)
+          - [201303B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201303/201303B.pdf)
+          - [201303C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201303/201303C.pdf)
+          - [201303D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201303/201303D.pdf)
+          - [201303E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201303/201303E.pdf)
+          - [Main.java](/home/alexander/codes/uva2/contest/PTC/PTC201303/Main.java)
+          - [paa.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201303/paa.cpp)
+          - [pbb.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201303/pbb.cpp)
+          - [pcc.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201303/pcc.cpp)
+          - [pdd.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201303/pdd.cpp)
+          - [pee.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201303/pee.cpp)
+          - [Pp.PNG](/home/alexander/codes/uva2/contest/PTC/PTC201303/Pp.PNG)
+      - PTC201304
+          - [201304A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201304/201304A.pdf)
+          - [201304B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201304/201304B.pdf)
+          - [201304C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201304/201304C.pdf)
+          - [201304D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201304/201304D.pdf)
+          - [201304E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201304/201304E.pdf)
+          - [pb.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201304/pb.cpp)
+          - [pc.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201304/pc.cpp)
+          - [pc.exe](/home/alexander/codes/uva2/contest/PTC/PTC201304/pc.exe)
+          - [pc.o](/home/alexander/codes/uva2/contest/PTC/PTC201304/pc.o)
+          - [pd.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201304/pd.cpp)
+          - [pd.exe](/home/alexander/codes/uva2/contest/PTC/PTC201304/pd.exe)
+          - [pd.o](/home/alexander/codes/uva2/contest/PTC/PTC201304/pd.o)
+          - [pe(1).cpp](/home/alexander/codes/uva2/contest/PTC/PTC201304/pe(1).cpp)
+          - [pe.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201304/pe.cpp)
+          - [pe.exe](/home/alexander/codes/uva2/contest/PTC/PTC201304/pe.exe)
+          - [pe.o](/home/alexander/codes/uva2/contest/PTC/PTC201304/pe.o)
+          - [PTC20130401.PNG](/home/alexander/codes/uva2/contest/PTC/PTC201304/PTC20130401.PNG)
+          - [PTC201304.PNG](/home/alexander/codes/uva2/contest/PTC/PTC201304/PTC201304.PNG)
+      - PTC201403
+          - [201403A.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201403/201403A.pdf)
+          - [201403B.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201403/201403B.pdf)
+          - [201403C.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201403/201403C.pdf)
+          - [201403D.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201403/201403D.pdf)
+          - [201403E.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201403/201403E.pdf)
+          - [PA.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201403/PA.cpp)
+          - [PB.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201403/PB.cpp)
+          - [PC.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201403/PC.cpp)
+          - [PD.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201403/PD.cpp)
+          - [PE.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201403/PE.cpp)
+      - PTC201506
+          - [PTC201506A.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201506/PTC201506A.cpp)
+          - [PTC201506B.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201506/PTC201506B.cpp)
+          - [PTC201506B[try].cpp](/home/alexander/codes/uva2/contest/PTC/PTC201506/PTC201506B[try].cpp)
+          - [PTC201506C.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201506/PTC201506C.cpp)
+          - [PTC201506D[v2].cpp](/home/alexander/codes/uva2/contest/PTC/PTC201506/PTC201506D[v2].cpp)
+          - [PTC201506E.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201506/PTC201506E.cpp)
+          - [PTC201506.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201506/PTC201506.pdf)
+      - PTC201508
+          - [gmon.out](/home/alexander/codes/uva2/contest/PTC/PTC201508/gmon.out)
+          - [PTC201508A.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201508/PTC201508A.cpp)
+          - [PTC201508B.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201508/PTC201508B.cpp)
+          - [PTC201508C.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201508/PTC201508C.cpp)
+          - [PTC201508D.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201508/PTC201508D.cpp)
+          - [PTC201508E.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201508/PTC201508E.cpp)
+          - [PTC201508Ev2.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201508/PTC201508Ev2.cpp)
+          - [PTC201508.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201508/PTC201508.pdf)
+      - PTC201509
+          - [PTC201509A.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201509/PTC201509A.cpp)
+          - [PTC201509B.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201509/PTC201509B.cpp)
+          - [PTC201509C.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201509/PTC201509C.cpp)
+          - [PTC201509.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201509/PTC201509.pdf)
+      - PTC201510
+          - [PTC201510A.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201510/PTC201510A.cpp)
+          - [PTC201510Av2.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201510/PTC201510Av2.cpp)
+          - [PTC201510B.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201510/PTC201510B.cpp)
+          - [PTC201510C.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201510/PTC201510C.cpp)
+          - [PTC201510D.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201510/PTC201510D.cpp)
+          - [PTC201510E.cpp](/home/alexander/codes/uva2/contest/PTC/PTC201510/PTC201510E.cpp)
+          - [PTC201510.pdf](/home/alexander/codes/uva2/contest/PTC/PTC201510/PTC201510.pdf)
+    - Tmt514BeverageCup
+        - [problem.pdf](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/problem.pdf)
+        - [README.md](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/README.md)
+        - [tmt201505 - A.cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - A.cpp)
+        - [tmt201505 - B.cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - B.cpp)
+        - [tmt201505 - C[fail].cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - C[fail].cpp)
+        - [tmt201505 - D.cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - D.cpp)
+      - tmt201505 - E
+          - [atan2_eps_test.cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - E/atan2_eps_test.cpp)
+          - [brute_for_small.cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - E/brute_for_small.cpp)
+          - [fixed-Problem-C.-Logging[v2].cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - E/fixed-Problem-C.-Logging[v2].cpp)
+          - [fixed-Problem-C.-Logging[v2].exe](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - E/fixed-Problem-C.-Logging[v2].exe)
+          - [pin.cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - E/pin.cpp)
+          - [testC.cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - E/testC.cpp)
+          - [tmt201505 - E.cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - E/tmt201505 - E.cpp)
+        - [tmt201505 - F.cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - F.cpp)
+        - [tmt201505 - G.cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - G.cpp)
+        - [tmt201505 - H[test].cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/tmt201505 - H[test].cpp)
+      - warmup
+          - [2310.pdf](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/warmup/2310.pdf)
+          - [2311.pdf](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/warmup/2311.pdf)
+          - [2312.pdf](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/warmup/2312.pdf)
+          - [2314.pdf](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/warmup/2314.pdf)
+          - [2315.pdf](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/warmup/2315.pdf)
+          - [tmt201505 - A.cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/warmup/tmt201505 - A.cpp)
+          - [tmt201505 - B.cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/warmup/tmt201505 - B.cpp)
+          - [tmt201505 - C.cpp](/home/alexander/codes/uva2/contest/Tmt514BeverageCup/warmup/tmt201505 - C.cpp)
+    - TopcoderSRM
+        - [SRM 659 - ApplesAndOrangesEasy.cpp](/home/alexander/codes/uva2/contest/TopcoderSRM/SRM 659 - ApplesAndOrangesEasy.cpp)
+        - [SRM 659 - CampLunch.cpp](/home/alexander/codes/uva2/contest/TopcoderSRM/SRM 659 - CampLunch.cpp)
+        - [SRM 659 - PublicTransitHard.cpp](/home/alexander/codes/uva2/contest/TopcoderSRM/SRM 659 - PublicTransitHard.cpp)
+  - course
+    - AlgorithmDesignAndAnalysis2020Fall
+        - [ADA-p2.cpp](/home/alexander/codes/uva2/course/AlgorithmDesignAndAnalysis2020Fall/ADA-p2.cpp)
+        - [ADA-p3-brute.cpp](/home/alexander/codes/uva2/course/AlgorithmDesignAndAnalysis2020Fall/ADA-p3-brute.cpp)
+        - [ADA-p3.cpp](/home/alexander/codes/uva2/course/AlgorithmDesignAndAnalysis2020Fall/ADA-p3.cpp)
+        - [Homework-1.pdf](/home/alexander/codes/uva2/course/AlgorithmDesignAndAnalysis2020Fall/Homework-1.pdf)
+  - message attachment
+    - Given_abcd6891
+        - [d868_AC.cpp](/home/alexander/codes/uva2/message attachment/Given_abcd6891/d868_AC.cpp)
+    - Given_dreamoon
+        - [dreamoon 2.html](/home/alexander/codes/uva2/message attachment/Given_dreamoon/dreamoon 2.html)
+        - [dreamoon 2.md](/home/alexander/codes/uva2/message attachment/Given_dreamoon/dreamoon 2.md)
+        - [dreamoon 3.html](/home/alexander/codes/uva2/message attachment/Given_dreamoon/dreamoon 3.html)
+        - [dreamoon 3.md](/home/alexander/codes/uva2/message attachment/Given_dreamoon/dreamoon 3.md)
+        - [dreamoon 4.html](/home/alexander/codes/uva2/message attachment/Given_dreamoon/dreamoon 4.html)
+        - [dreamoon 4.md](/home/alexander/codes/uva2/message attachment/Given_dreamoon/dreamoon 4.md)
+        - [dreamoon 5.html](/home/alexander/codes/uva2/message attachment/Given_dreamoon/dreamoon 5.html)
+        - [dreamoon 5.md](/home/alexander/codes/uva2/message attachment/Given_dreamoon/dreamoon 5.md)
+        - [dreamoon 6.html](/home/alexander/codes/uva2/message attachment/Given_dreamoon/dreamoon 6.html)
+        - [dreamoon 6.md](/home/alexander/codes/uva2/message attachment/Given_dreamoon/dreamoon 6.md)
+        - [dreamoon.html](/home/alexander/codes/uva2/message attachment/Given_dreamoon/dreamoon.html)
+        - [dreamoon.md](/home/alexander/codes/uva2/message attachment/Given_dreamoon/dreamoon.md)
+    - Given_example
+        - [A153.java](/home/alexander/codes/uva2/message attachment/Given_example/A153.java)
+        - [A202(1).c](/home/alexander/codes/uva2/message attachment/Given_example/A202(1).c)
+        - [A202.c](/home/alexander/codes/uva2/message attachment/Given_example/A202.c)
+        - [A204(1).java](/home/alexander/codes/uva2/message attachment/Given_example/A204(1).java)
+        - [A204(2).java](/home/alexander/codes/uva2/message attachment/Given_example/A204(2).java)
+        - [A204.java](/home/alexander/codes/uva2/message attachment/Given_example/A204.java)
+        - [A207(1).c](/home/alexander/codes/uva2/message attachment/Given_example/A207(1).c)
+        - [A207(2).c](/home/alexander/codes/uva2/message attachment/Given_example/A207(2).c)
+        - [A207.c](/home/alexander/codes/uva2/message attachment/Given_example/A207.c)
+        - [D314.c](/home/alexander/codes/uva2/message attachment/Given_example/D314.c)
+        - [D522.c](/home/alexander/codes/uva2/message attachment/Given_example/D522.c)
+        - [D906.c](/home/alexander/codes/uva2/message attachment/Given_example/D906.c)
+      - final_project
+        - bin
+          - Debug
+              - [final_project.exe](/home/alexander/codes/uva2/message attachment/Given_example/final_project/bin/Debug/final_project.exe)
+              - [final_project.rar](/home/alexander/codes/uva2/message attachment/Given_example/final_project/bin/Debug/final_project.rar)
+              - [maze.txt](/home/alexander/codes/uva2/message attachment/Given_example/final_project/bin/Debug/maze.txt)
+          - [board.cpp](/home/alexander/codes/uva2/message attachment/Given_example/final_project/board.cpp)
+          - [board.h](/home/alexander/codes/uva2/message attachment/Given_example/final_project/board.h)
+          - [final_project.cbp](/home/alexander/codes/uva2/message attachment/Given_example/final_project/final_project.cbp)
+          - [final_project.depend](/home/alexander/codes/uva2/message attachment/Given_example/final_project/final_project.depend)
+          - [final_project.exe](/home/alexander/codes/uva2/message attachment/Given_example/final_project/final_project.exe)
+          - [final_project.layout](/home/alexander/codes/uva2/message attachment/Given_example/final_project/final_project.layout)
+          - [final_project.rar](/home/alexander/codes/uva2/message attachment/Given_example/final_project/final_project.rar)
+          - [final_project_v4.1.rar](/home/alexander/codes/uva2/message attachment/Given_example/final_project/final_project_v4.1.rar)
+          - [heap.cpp](/home/alexander/codes/uva2/message attachment/Given_example/final_project/heap.cpp)
+          - [heap.h](/home/alexander/codes/uva2/message attachment/Given_example/final_project/heap.h)
+          - [main.cpp](/home/alexander/codes/uva2/message attachment/Given_example/final_project/main.cpp)
+          - [maze.txt](/home/alexander/codes/uva2/message attachment/Given_example/final_project/maze.txt)
+          - [node.cpp](/home/alexander/codes/uva2/message attachment/Given_example/final_project/node.cpp)
+          - [node.h](/home/alexander/codes/uva2/message attachment/Given_example/final_project/node.h)
+        - obj
+          - Debug
+              - [board.o](/home/alexander/codes/uva2/message attachment/Given_example/final_project/obj/Debug/board.o)
+              - [heap.o](/home/alexander/codes/uva2/message attachment/Given_example/final_project/obj/Debug/heap.o)
+              - [main.o](/home/alexander/codes/uva2/message attachment/Given_example/final_project/obj/Debug/main.o)
+              - [node.o](/home/alexander/codes/uva2/message attachment/Given_example/final_project/obj/Debug/node.o)
+        - [新文字文件.txt](/home/alexander/codes/uva2/message attachment/Given_example/新文字文件.txt)
+    - Given_leopan
+        - [next_permutation.cpp](/home/alexander/codes/uva2/message attachment/Given_leopan/next_permutation.cpp)
+    - Given_liouzhou_101
+        - [liouzhou_101_code1.txt](/home/alexander/codes/uva2/message attachment/Given_liouzhou_101/liouzhou_101_code1.txt)
+    - Given_Netsphere
+      - scramble
+        - bin
+          - Debug
+              - [scramble.exe](/home/alexander/codes/uva2/message attachment/Given_Netsphere/scramble/bin/Debug/scramble.exe)
+          - [main.cpp](/home/alexander/codes/uva2/message attachment/Given_Netsphere/scramble/main.cpp)
+          - [main.o](/home/alexander/codes/uva2/message attachment/Given_Netsphere/scramble/main.o)
+        - obj
+          - Debug
+              - [main.o](/home/alexander/codes/uva2/message attachment/Given_Netsphere/scramble/obj/Debug/main.o)
+          - [scramble.cbp](/home/alexander/codes/uva2/message attachment/Given_Netsphere/scramble/scramble.cbp)
+          - [scramble.depend](/home/alexander/codes/uva2/message attachment/Given_Netsphere/scramble/scramble.depend)
+          - [scramble.layout](/home/alexander/codes/uva2/message attachment/Given_Netsphere/scramble/scramble.layout)
+  - my-problem
+    - allpair
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/allpair/brute.cpp)
+        - [morris_sol.cpp](/home/alexander/codes/uva2/my-problem/allpair/morris_sol.cpp)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/allpair/testdata_generate.cpp)
+    - 中國餘數
+        - [b431.cpp](/home/alexander/codes/uva2/my-problem/中國餘數/b431.cpp)
+        - [b431[v2].cpp](/home/alexander/codes/uva2/my-problem/中國餘數/b431[v2].cpp)
+        - [b431. 中國餘數[faster].cpp](/home/alexander/codes/uva2/my-problem/中國餘數/b431. 中國餘數[faster].cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/中國餘數/pin.cpp)
+    - 中間相遇法
+        - [b433[arr].cpp](/home/alexander/codes/uva2/my-problem/中間相遇法/b433[arr].cpp)
+        - [b433.cpp](/home/alexander/codes/uva2/my-problem/中間相遇法/b433.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/中間相遇法/pin.cpp)
+        - [SimpleEncrypt.cpp](/home/alexander/codes/uva2/my-problem/中間相遇法/SimpleEncrypt.cpp)
+    - 二元搜尋樹快速鍵造
+        - [sol.cpp](/home/alexander/codes/uva2/my-problem/二元搜尋樹快速鍵造/sol.cpp)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/二元搜尋樹快速鍵造/testdata_generate.cpp)
+    - 人格分裂
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/人格分裂/brute.cpp)
+        - [morris.ggb](/home/alexander/codes/uva2/my-problem/人格分裂/morris.ggb)
+        - [morris_sol.cpp](/home/alexander/codes/uva2/my-problem/人格分裂/morris_sol.cpp)
+        - [split2.ggb](/home/alexander/codes/uva2/my-problem/人格分裂/split2.ggb)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/人格分裂/testdata_generate.cpp)
+    - 優勢產品
+        - [kdom_brute.cpp](/home/alexander/codes/uva2/my-problem/優勢產品/kdom_brute.cpp)
+        - [kdominate2.cpp](/home/alexander/codes/uva2/my-problem/優勢產品/kdominate2.cpp)
+        - [kdominate.cpp](/home/alexander/codes/uva2/my-problem/優勢產品/kdominate.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/優勢產品/pin.cpp)
+    - 八成真物
+        - [b418.cpp](/home/alexander/codes/uva2/my-problem/八成真物/b418.cpp)
+        - [b418[test].cpp](/home/alexander/codes/uva2/my-problem/八成真物/b418[test].cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/八成真物/pin.cpp)
+    - 凱薩加密
+        - [b428.cpp](/home/alexander/codes/uva2/my-problem/凱薩加密/b428.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/凱薩加密/pin.cpp)
+    - 加速策略 圈出角點
+        - [b449_crazy2.cpp](/home/alexander/codes/uva2/my-problem/加速策略 圈出角點/b449_crazy2.cpp)
+        - [b449_crazy3.cpp](/home/alexander/codes/uva2/my-problem/加速策略 圈出角點/b449_crazy3.cpp)
+        - [b449_crazy.cpp](/home/alexander/codes/uva2/my-problem/加速策略 圈出角點/b449_crazy.cpp)
+        - [b449. 加速策略 圈出角點[faster].cpp](/home/alexander/codes/uva2/my-problem/加速策略 圈出角點/b449. 加速策略 圈出角點[faster].cpp)
+        - [b449. 加速策略 圈出角點[v3].cpp](/home/alexander/codes/uva2/my-problem/加速策略 圈出角點/b449. 加速策略 圈出角點[v3].cpp)
+        - [b449. 角點偵測.cpp](/home/alexander/codes/uva2/my-problem/加速策略 圈出角點/b449. 角點偵測.cpp)
+      - hash 設計
+          - [b449. 加速策略 圈出角點[v2].cpp](/home/alexander/codes/uva2/my-problem/加速策略 圈出角點/hash 設計/b449. 加速策略 圈出角點[v2].cpp)
+          - [b449 產生器.cpp](/home/alexander/codes/uva2/my-problem/加速策略 圈出角點/hash 設計/b449 產生器.cpp)
+          - [hash 比較版.cpp](/home/alexander/codes/uva2/my-problem/加速策略 圈出角點/hash 設計/hash 比較版.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/加速策略 圈出角點/pin.cpp)
+    - 動態前綴
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/動態前綴/brute.cpp)
+        - [lcp2.cpp](/home/alexander/codes/uva2/my-problem/動態前綴/lcp2.cpp)
+        - [lcp.cpp](/home/alexander/codes/uva2/my-problem/動態前綴/lcp.cpp)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/動態前綴/testdata_generate.cpp)
+    - 區間眾數
+        - [b417.cpp](/home/alexander/codes/uva2/my-problem/區間眾數/b417.cpp)
+        - [b417[heavy_pre].cpp](/home/alexander/codes/uva2/my-problem/區間眾數/b417[heavy_pre].cpp)
+        - [b417[online_query].cpp](/home/alexander/codes/uva2/my-problem/區間眾數/b417[online_query].cpp)
+        - [b417[test].cpp](/home/alexander/codes/uva2/my-problem/區間眾數/b417[test].cpp)
+    - 史蒂芙的修羅道
+        - [b494_morris_traversal.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的修羅道/b494_morris_traversal.cpp)
+        - [b494_selfstack.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的修羅道/b494_selfstack.cpp)
+        - [b494. 史蒂芙的修羅道[less].cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的修羅道/b494. 史蒂芙的修羅道[less].cpp)
+        - [d539.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的修羅道/d539.cpp)
+        - [d539_test.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的修羅道/d539_test.cpp)
+        - [d539_test_zkw.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的修羅道/d539_test_zkw.cpp)
+        - [empty.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的修羅道/empty.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的修羅道/pin.cpp)
+        - [problem_desc.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的修羅道/problem_desc.cpp)
+    - 史蒂芙的單詞統計
+        - [ACmachine.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的單詞統計/ACmachine.cpp)
+        - [ACmachinev2.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的單詞統計/ACmachinev2.cpp)
+        - [ACmachinev3.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的單詞統計/ACmachinev3.cpp)
+        - [DA_ACmachine.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的單詞統計/DA_ACmachine.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的單詞統計/pin.cpp)
+    - 史蒂芙的外交夥伴
+        - [b493_offline.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交夥伴/b493_offline.cpp)
+        - [b493_online_builtin.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交夥伴/b493_online_builtin.cpp)
+        - [b493_online_builtin_rev.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交夥伴/b493_online_builtin_rev.cpp)
+        - [b493_online.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交夥伴/b493_online.cpp)
+        - [b493_online_garbage_recycle.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交夥伴/b493_online_garbage_recycle.cpp)
+        - [b493_online_lct.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交夥伴/b493_online_lct.cpp)
+        - [b493_online_v2.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交夥伴/b493_online_v2.cpp)
+        - [b493_online_v3.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交夥伴/b493_online_v3.cpp)
+        - [b493_online_v4.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交夥伴/b493_online_v4.cpp)
+        - [b493_online_v5.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交夥伴/b493_online_v5.cpp)
+        - [b493_test.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交夥伴/b493_test.cpp)
+        - [b493. 史蒂芙的外交夥伴[pre].cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交夥伴/b493. 史蒂芙的外交夥伴[pre].cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交夥伴/pin.cpp)
+    - 史蒂芙的外交序列
+        - [b492.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交序列/b492.cpp)
+        - [b492_test.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交序列/b492_test.cpp)
+        - [b492. 史蒂芙的外交序列v2.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交序列/b492. 史蒂芙的外交序列v2.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的外交序列/pin.cpp)
+    - 史蒂芙的政務工作
+        - [b491_less.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的政務工作/b491_less.cpp)
+        - [b491_test.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的政務工作/b491_test.cpp)
+        - [b491. 史蒂芙的政務工作.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的政務工作/b491. 史蒂芙的政務工作.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的政務工作/pin.cpp)
+    - 史蒂芙的觀察日記
+        - [b483. 史蒂芙的觀察日記.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的觀察日記/b483. 史蒂芙的觀察日記.cpp)
+        - [MST_test.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的觀察日記/MST_test.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/史蒂芙的觀察日記/pin.cpp)
+    - 單調測試
+        - [monotone.cpp](/home/alexander/codes/uva2/my-problem/單調測試/monotone.cpp)
+    - 圖片匹配
+        - [b451_brute.cpp](/home/alexander/codes/uva2/my-problem/圖片匹配/b451_brute.cpp)
+        - [b451_FFT2.cpp](/home/alexander/codes/uva2/my-problem/圖片匹配/b451_FFT2.cpp)
+        - [b451_FFT.cpp](/home/alexander/codes/uva2/my-problem/圖片匹配/b451_FFT.cpp)
+        - [b451_NTT.cpp](/home/alexander/codes/uva2/my-problem/圖片匹配/b451_NTT.cpp)
+        - [b451_NTT_CRT.cpp](/home/alexander/codes/uva2/my-problem/圖片匹配/b451_NTT_CRT.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/圖片匹配/pin.cpp)
+      - py
+          - [find2.jpg](/home/alexander/codes/uva2/my-problem/圖片匹配/py/find2.jpg)
+          - [find3.jpg](/home/alexander/codes/uva2/my-problem/圖片匹配/py/find3.jpg)
+          - [find5.jpg](/home/alexander/codes/uva2/my-problem/圖片匹配/py/find5.jpg)
+          - [find6.jpg](/home/alexander/codes/uva2/my-problem/圖片匹配/py/find6.jpg)
+          - [find7.jpg](/home/alexander/codes/uva2/my-problem/圖片匹配/py/find7.jpg)
+          - [find.jpg](/home/alexander/codes/uva2/my-problem/圖片匹配/py/find.jpg)
+          - [img2txt.py](/home/alexander/codes/uva2/my-problem/圖片匹配/py/img2txt.py)
+          - [picture2.jpg](/home/alexander/codes/uva2/my-problem/圖片匹配/py/picture2.jpg)
+          - [picture3.jpg](/home/alexander/codes/uva2/my-problem/圖片匹配/py/picture3.jpg)
+          - [picture5.jpg](/home/alexander/codes/uva2/my-problem/圖片匹配/py/picture5.jpg)
+          - [picture6.jpg](/home/alexander/codes/uva2/my-problem/圖片匹配/py/picture6.jpg)
+          - [picture7.jpg](/home/alexander/codes/uva2/my-problem/圖片匹配/py/picture7.jpg)
+          - [picture.jpg](/home/alexander/codes/uva2/my-problem/圖片匹配/py/picture.jpg)
+          - [README.md](/home/alexander/codes/uva2/my-problem/圖片匹配/py/README.md)
+    - 多維範圍詢問
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/多維範圍詢問/brute.cpp)
+        - [rangetree.cpp](/home/alexander/codes/uva2/my-problem/多維範圍詢問/rangetree.cpp)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/多維範圍詢問/testdata_generate.cpp)
+    - 妮可密碼
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/妮可密碼/brute.cpp)
+        - [inker.cpp](/home/alexander/codes/uva2/my-problem/妮可密碼/inker.cpp)
+        - [in.txt](/home/alexander/codes/uva2/my-problem/妮可密碼/in.txt)
+        - [out.txt](/home/alexander/codes/uva2/my-problem/妮可密碼/out.txt)
+        - [password.txt](/home/alexander/codes/uva2/my-problem/妮可密碼/password.txt)
+        - [sol.cpp](/home/alexander/codes/uva2/my-problem/妮可密碼/sol.cpp)
+        - [sol_inker.cpp](/home/alexander/codes/uva2/my-problem/妮可密碼/sol_inker.cpp)
+        - [sol_morris.cpp](/home/alexander/codes/uva2/my-problem/妮可密碼/sol_morris.cpp)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/妮可密碼/testdata_generate.cpp)
+    - 妮可工作
+        - [nick2.cpp](/home/alexander/codes/uva2/my-problem/妮可工作/nick2.cpp)
+        - [nick.cpp](/home/alexander/codes/uva2/my-problem/妮可工作/nick.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/妮可工作/pin.cpp)
+    - 子字串集合
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/子字串集合/pin.cpp)
+        - [子字串排序.cpp](/home/alexander/codes/uva2/my-problem/子字串集合/子字串排序.cpp)
+        - [子字串排序v2.cpp](/home/alexander/codes/uva2/my-problem/子字串集合/子字串排序v2.cpp)
+        - [子字串排序v3.cpp](/home/alexander/codes/uva2/my-problem/子字串集合/子字串排序v3.cpp)
+        - [子字串排序v4.cpp](/home/alexander/codes/uva2/my-problem/子字串集合/子字串排序v4.cpp)
+        - [子字串集合v5.cpp](/home/alexander/codes/uva2/my-problem/子字串集合/子字串集合v5.cpp)
+    - 學姊日談
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/學姊日談/brute.cpp)
+        - [flere2.md](/home/alexander/codes/uva2/my-problem/學姊日談/flere2.md)
+        - [morris_sol.cpp](/home/alexander/codes/uva2/my-problem/學姊日談/morris_sol.cpp)
+        - [problem.aux](/home/alexander/codes/uva2/my-problem/學姊日談/problem.aux)
+        - [problem.log](/home/alexander/codes/uva2/my-problem/學姊日談/problem.log)
+        - [problem.pdf](/home/alexander/codes/uva2/my-problem/學姊日談/problem.pdf)
+        - [problem.synctex.gz](/home/alexander/codes/uva2/my-problem/學姊日談/problem.synctex.gz)
+        - [problem.tex](/home/alexander/codes/uva2/my-problem/學姊日談/problem.tex)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/學姊日談/testdata_generate.cpp)
+    - 少女與戰車
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/少女與戰車/brute.cpp)
+      - tank
+          - [pp10.jpg](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/pp10.jpg)
+          - [pp11.png](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/pp11.png)
+          - [pp1.png](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/pp1.png)
+          - [pp2.png](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/pp2.png)
+          - [pp3.jpg](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/pp3.jpg)
+          - [pp4.jpg](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/pp4.jpg)
+          - [pp5.png](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/pp5.png)
+          - [pp6.png](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/pp6.png)
+          - [pp7.jpg](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/pp7.jpg)
+          - [pp8.png](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/pp8.png)
+          - [pp9.jpg](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/pp9.jpg)
+          - [snowbackground.jpg](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/snowbackground.jpg)
+          - [snow.png](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/snow.png)
+          - [test.html](/home/alexander/codes/uva2/my-problem/少女與戰車/tank/test.html)
+        - [tank.cpp](/home/alexander/codes/uva2/my-problem/少女與戰車/tank.cpp)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/少女與戰車/testdata_generate.cpp)
+    - 平面最小生成樹
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/平面最小生成樹/brute.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/平面最小生成樹/pin.cpp)
+        - [平面最小生成樹.cpp](/home/alexander/codes/uva2/my-problem/平面最小生成樹/平面最小生成樹.cpp)
+    - 快取實驗 矩陣乘法
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/快取實驗 矩陣乘法/pin.cpp)
+        - [prob.cpp](/home/alexander/codes/uva2/my-problem/快取實驗 矩陣乘法/prob.cpp)
+        - [QQ圖片20150709192224.png](/home/alexander/codes/uva2/my-problem/快取實驗 矩陣乘法/QQ圖片20150709192224.png)
+        - [solve.cpp](/home/alexander/codes/uva2/my-problem/快取實驗 矩陣乘法/solve.cpp)
+        - [test.PNG](/home/alexander/codes/uva2/my-problem/快取實驗 矩陣乘法/test.PNG)
+    - 快取置換機制
+        - [b439.cpp](/home/alexander/codes/uva2/my-problem/快取置換機制/b439.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/快取置換機制/pin.cpp)
+    - 找出最長共同子序列
+        - [LCS.cpp](/home/alexander/codes/uva2/my-problem/找出最長共同子序列/LCS.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/找出最長共同子序列/pin.cpp)
+    - 搜索美學 史蒂芙的煩惱
+        - [b446[CDQ].cpp](/home/alexander/codes/uva2/my-problem/搜索美學 史蒂芙的煩惱/b446[CDQ].cpp)
+        - [b446.cpp](/home/alexander/codes/uva2/my-problem/搜索美學 史蒂芙的煩惱/b446.cpp)
+        - [b446[test].cpp](/home/alexander/codes/uva2/my-problem/搜索美學 史蒂芙的煩惱/b446[test].cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/搜索美學 史蒂芙的煩惱/pin.cpp)
+    - 攻城掠地
+        - [2Drangetree.cpp](/home/alexander/codes/uva2/my-problem/攻城掠地/2Drangetree.cpp)
+        - [brute_solution1.cpp](/home/alexander/codes/uva2/my-problem/攻城掠地/brute_solution1.cpp)
+        - [brute_solution2.cpp](/home/alexander/codes/uva2/my-problem/攻城掠地/brute_solution2.cpp)
+        - [brute_solution3.cpp](/home/alexander/codes/uva2/my-problem/攻城掠地/brute_solution3.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/攻城掠地/pin.cpp)
+        - [quadtree_solution.cpp](/home/alexander/codes/uva2/my-problem/攻城掠地/quadtree_solution.cpp)
+        - [strip_solution.cpp](/home/alexander/codes/uva2/my-problem/攻城掠地/strip_solution.cpp)
+    - 最近餐館
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/最近餐館/brute.cpp)
+        - [sol.cpp](/home/alexander/codes/uva2/my-problem/最近餐館/sol.cpp)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/最近餐館/testdata_generate.cpp)
+    - 期望試驗 快速冪次
+        - [cheat.cpp](/home/alexander/codes/uva2/my-problem/期望試驗 快速冪次/cheat.cpp)
+        - [L2R2.cpp](/home/alexander/codes/uva2/my-problem/期望試驗 快速冪次/L2R2.cpp)
+        - [L2RS.cpp](/home/alexander/codes/uva2/my-problem/期望試驗 快速冪次/L2RS.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/期望試驗 快速冪次/pin.cpp)
+        - [R2L.cpp](/home/alexander/codes/uva2/my-problem/期望試驗 快速冪次/R2L.cpp)
+        - [test.cpp](/home/alexander/codes/uva2/my-problem/期望試驗 快速冪次/test.cpp)
+    - 樹形鎖頭
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/樹形鎖頭/brute.cpp)
+        - [morris_sol.cpp](/home/alexander/codes/uva2/my-problem/樹形鎖頭/morris_sol.cpp)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/樹形鎖頭/testdata_generate.cpp)
+        - [tree.pptx](/home/alexander/codes/uva2/my-problem/樹形鎖頭/tree.pptx)
+    - 河道分界
+        - [in.txt](/home/alexander/codes/uva2/my-problem/河道分界/in.txt)
+        - [out.txt](/home/alexander/codes/uva2/my-problem/河道分界/out.txt)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/河道分界/pin.cpp)
+        - [river.ggb](/home/alexander/codes/uva2/my-problem/河道分界/river.ggb)
+        - [test.cpp](/home/alexander/codes/uva2/my-problem/河道分界/test.cpp)
+    - 災難再臨
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/災難再臨/brute.cpp)
+        - [image.PNG](/home/alexander/codes/uva2/my-problem/災難再臨/image.PNG)
+        - [morris_sol.cpp](/home/alexander/codes/uva2/my-problem/災難再臨/morris_sol.cpp)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/災難再臨/testdata_generate.cpp)
+        - [投影片10.JPG](/home/alexander/codes/uva2/my-problem/災難再臨/投影片10.JPG)
+        - [投影片11.JPG](/home/alexander/codes/uva2/my-problem/災難再臨/投影片11.JPG)
+        - [投影片12.JPG](/home/alexander/codes/uva2/my-problem/災難再臨/投影片12.JPG)
+        - [投影片13.JPG](/home/alexander/codes/uva2/my-problem/災難再臨/投影片13.JPG)
+        - [投影片1.JPG](/home/alexander/codes/uva2/my-problem/災難再臨/投影片1.JPG)
+        - [投影片2.JPG](/home/alexander/codes/uva2/my-problem/災難再臨/投影片2.JPG)
+        - [投影片3.JPG](/home/alexander/codes/uva2/my-problem/災難再臨/投影片3.JPG)
+        - [投影片4.JPG](/home/alexander/codes/uva2/my-problem/災難再臨/投影片4.JPG)
+        - [投影片5.JPG](/home/alexander/codes/uva2/my-problem/災難再臨/投影片5.JPG)
+        - [投影片6.JPG](/home/alexander/codes/uva2/my-problem/災難再臨/投影片6.JPG)
+        - [投影片7.JPG](/home/alexander/codes/uva2/my-problem/災難再臨/投影片7.JPG)
+        - [投影片8.JPG](/home/alexander/codes/uva2/my-problem/災難再臨/投影片8.JPG)
+        - [投影片9.JPG](/home/alexander/codes/uva2/my-problem/災難再臨/投影片9.JPG)
+    - 神魔之塔
+        - [inker2.cpp](/home/alexander/codes/uva2/my-problem/神魔之塔/inker2.cpp)
+        - [inker.md](/home/alexander/codes/uva2/my-problem/神魔之塔/inker.md)
+    - 竹馬不敵天降
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/竹馬不敵天降/brute.cpp)
+        - [solution.cpp](/home/alexander/codes/uva2/my-problem/竹馬不敵天降/solution.cpp)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/竹馬不敵天降/testdata_generate.cpp)
+    - 等高線
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/等高線/brute.cpp)
+        - [rect.cpp](/home/alexander/codes/uva2/my-problem/等高線/rect.cpp)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/等高線/testdata_generate.cpp)
+    - 簡單乘法
+        - [b430.cpp](/home/alexander/codes/uva2/my-problem/簡單乘法/b430.cpp)
+        - [b430. 簡單乘法[cheat].cpp](/home/alexander/codes/uva2/my-problem/簡單乘法/b430. 簡單乘法[cheat].cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/簡單乘法/pin.cpp)
+    - 虛擬女友
+        - [b413.cpp](/home/alexander/codes/uva2/my-problem/虛擬女友/b413.cpp)
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/虛擬女友/brute.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/虛擬女友/pin.cpp)
+        - [虛擬女友.html](/home/alexander/codes/uva2/my-problem/虛擬女友/虛擬女友.html)
+        - [虛擬女友.md](/home/alexander/codes/uva2/my-problem/虛擬女友/虛擬女友.md)
+    - 計畫巧遇
+        - [brute.cpp](/home/alexander/codes/uva2/my-problem/計畫巧遇/brute.cpp)
+        - [flere.md](/home/alexander/codes/uva2/my-problem/計畫巧遇/flere.md)
+        - [in.txt](/home/alexander/codes/uva2/my-problem/計畫巧遇/in.txt)
+        - [morris_sol.cpp](/home/alexander/codes/uva2/my-problem/計畫巧遇/morris_sol.cpp)
+        - [out1.txt](/home/alexander/codes/uva2/my-problem/計畫巧遇/out1.txt)
+        - [problem.aux](/home/alexander/codes/uva2/my-problem/計畫巧遇/problem.aux)
+        - [problem.log](/home/alexander/codes/uva2/my-problem/計畫巧遇/problem.log)
+        - [problem.pdf](/home/alexander/codes/uva2/my-problem/計畫巧遇/problem.pdf)
+        - [problem.synctex.gz](/home/alexander/codes/uva2/my-problem/計畫巧遇/problem.synctex.gz)
+        - [problem.tex](/home/alexander/codes/uva2/my-problem/計畫巧遇/problem.tex)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/計畫巧遇/testdata_generate.cpp)
+    - 誤會妹子序列
+        - [b416[bit].cpp](/home/alexander/codes/uva2/my-problem/誤會妹子序列/b416[bit].cpp)
+        - [b416[kd-tree][tle].cpp](/home/alexander/codes/uva2/my-problem/誤會妹子序列/b416[kd-tree][tle].cpp)
+        - [b416[mo].cpp](/home/alexander/codes/uva2/my-problem/誤會妹子序列/b416[mo].cpp)
+        - [b416[segtree].cpp](/home/alexander/codes/uva2/my-problem/誤會妹子序列/b416[segtree].cpp)
+    - 變態史考古
+        - [b486_double.cpp](/home/alexander/codes/uva2/my-problem/變態史考古/b486_double.cpp)
+        - [b486_test.cpp](/home/alexander/codes/uva2/my-problem/變態史考古/b486_test.cpp)
+        - [b486. 變態史考古2.cpp](/home/alexander/codes/uva2/my-problem/變態史考古/b486. 變態史考古2.cpp)
+        - [b486. 變態史考古.cpp](/home/alexander/codes/uva2/my-problem/變態史考古/b486. 變態史考古.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/變態史考古/pin.cpp)
+    - 變態史考古 錯誤報導篇
+        - [b487_less.cpp](/home/alexander/codes/uva2/my-problem/變態史考古 錯誤報導篇/b487_less.cpp)
+        - [b487_test.cpp](/home/alexander/codes/uva2/my-problem/變態史考古 錯誤報導篇/b487_test.cpp)
+        - [b487. 變態史考古 錯誤報導篇.cpp](/home/alexander/codes/uva2/my-problem/變態史考古 錯誤報導篇/b487. 變態史考古 錯誤報導篇.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/變態史考古 錯誤報導篇/pin.cpp)
+    - 趣味加分
+        - [11715957_1002362819776927_590049764_n.jpg](/home/alexander/codes/uva2/my-problem/趣味加分/11715957_1002362819776927_590049764_n.jpg)
+        - [b432[brute].cpp](/home/alexander/codes/uva2/my-problem/趣味加分/b432[brute].cpp)
+        - [b432.cpp](/home/alexander/codes/uva2/my-problem/趣味加分/b432.cpp)
+        - [b432[v2].cpp](/home/alexander/codes/uva2/my-problem/趣味加分/b432[v2].cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/趣味加分/pin.cpp)
+    - 輸出優化練習
+        - [b415.cpp](/home/alexander/codes/uva2/my-problem/輸出優化練習/b415.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/輸出優化練習/pin.cpp)
+    - 障礙物轉換
+        - [demo2.ggb](/home/alexander/codes/uva2/my-problem/障礙物轉換/demo2.ggb)
+        - [demo2.png](/home/alexander/codes/uva2/my-problem/障礙物轉換/demo2.png)
+        - [demo.ggb](/home/alexander/codes/uva2/my-problem/障礙物轉換/demo.ggb)
+        - [demo.png](/home/alexander/codes/uva2/my-problem/障礙物轉換/demo.png)
+        - [minkowskiSum2.cpp](/home/alexander/codes/uva2/my-problem/障礙物轉換/minkowskiSum2.cpp)
+        - [minkowskiSum.cpp](/home/alexander/codes/uva2/my-problem/障礙物轉換/minkowskiSum.cpp)
+        - [pin2.cpp](/home/alexander/codes/uva2/my-problem/障礙物轉換/pin2.cpp)
+        - [螢幕快照 2015-06-03 下午12.50.17.png](/home/alexander/codes/uva2/my-problem/障礙物轉換/螢幕快照 2015-06-03 下午12.50.17.png)
+        - [螢幕快照 2015-06-03 下午3.18.05.png](/home/alexander/codes/uva2/my-problem/障礙物轉換/螢幕快照 2015-06-03 下午3.18.05.png)
+    - 離散對數
+        - [b429.cpp](/home/alexander/codes/uva2/my-problem/離散對數/b429.cpp)
+        - [pin.cpp](/home/alexander/codes/uva2/my-problem/離散對數/pin.cpp)
+    - 順來逆受
+        - [sol.cpp](/home/alexander/codes/uva2/my-problem/順來逆受/sol.cpp)
+        - [testdata_generate.cpp](/home/alexander/codes/uva2/my-problem/順來逆受/testdata_generate.cpp)
+  - OnlineJudge
+    - BZOJ
+        - [BZOJ 1036 - ZJOI2008 Count.cpp](/home/alexander/codes/uva2/OnlineJudge/BZOJ/BZOJ 1036 - ZJOI2008 Count.cpp)
+        - [BZOJ 1047 - [HAOI2007]理想的正方形.cpp](/home/alexander/codes/uva2/OnlineJudge/BZOJ/BZOJ 1047 - [HAOI2007]理想的正方形.cpp)
+        - [BZOJ - 2038.cpp](/home/alexander/codes/uva2/OnlineJudge/BZOJ/BZOJ - 2038.cpp)
+        - [BZOJ 2049 - 洞穴.cpp](/home/alexander/codes/uva2/OnlineJudge/BZOJ/BZOJ 2049 - 洞穴.cpp)
+        - [BZOJ - 2555 SubString.cpp](/home/alexander/codes/uva2/OnlineJudge/BZOJ/BZOJ - 2555 SubString.cpp)
+        - [BZOJ 2631 - tree.cpp](/home/alexander/codes/uva2/OnlineJudge/BZOJ/BZOJ 2631 - tree.cpp)
+        - [BZOJ 2759 - 一個動態樹好題.cpp](/home/alexander/codes/uva2/OnlineJudge/BZOJ/BZOJ 2759 - 一個動態樹好題.cpp)
+        - [BZOJ - 3065.cpp](/home/alexander/codes/uva2/OnlineJudge/BZOJ/BZOJ - 3065.cpp)
+        - [BZOJ - 3685.cpp](/home/alexander/codes/uva2/OnlineJudge/BZOJ/BZOJ - 3685.cpp)
+    - HackerRank
+      - SQL
+          - [Basic Select - Higher Than 75 Marks.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Higher Than 75 Marks.sql)
+          - [Basic Select - Japanese Cities' Detail.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Japanese Cities' Detail.sql)
+          - [Basic Select - Japanese Cities' Name.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Japanese Cities' Name.sql)
+          - [Basic Select - Select by ID.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Select by ID.sql)
+          - [Basic Select - Weather Observation Station 10.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Weather Observation Station 10.sql)
+          - [Basic Select - Weather Observation Station 11.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Weather Observation Station 11.sql)
+          - [Basic Select - Weather Observation Station 12.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Weather Observation Station 12.sql)
+          - [Basic Select - Weather Observation Station 1.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Weather Observation Station 1.sql)
+          - [Basic Select - Weather Observation Station 3.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Weather Observation Station 3.sql)
+          - [Basic Select - Weather Observation Station 4.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Weather Observation Station 4.sql)
+          - [Basic Select - Weather Observation Station 5.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Weather Observation Station 5.sql)
+          - [Basic Select - Weather Observation Station 6.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Weather Observation Station 6.sql)
+          - [Basic Select - Weather Observation Station 7.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Weather Observation Station 7.sql)
+          - [Basic Select - Weather Observation Station 8.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Weather Observation Station 8.sql)
+          - [Basic Select - Weather Observation Station 9.sql](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SQL/Basic Select - Weather Observation Station 9.sql)
+      - SUST IUPC Selection Contest for IIUCians
+          - [Query-Problem.cpp](/home/alexander/codes/uva2/OnlineJudge/HackerRank/SUST IUPC Selection Contest for IIUCians/Query-Problem.cpp)
+    - HDU OJ
+        - [4288 Coder.cpp](/home/alexander/codes/uva2/OnlineJudge/HDU OJ/4288 Coder.cpp)
+        - [4289 Control.cpp](/home/alexander/codes/uva2/OnlineJudge/HDU OJ/4289 Control.cpp)
+        - [4291 A Short problem.cpp](/home/alexander/codes/uva2/OnlineJudge/HDU OJ/4291 A Short problem.cpp)
+        - [4296 Buildings.cpp](/home/alexander/codes/uva2/OnlineJudge/HDU OJ/4296 Buildings.cpp)
+        - [4454 Stealing a Cake.cpp](/home/alexander/codes/uva2/OnlineJudge/HDU OJ/4454 Stealing a Cake.cpp)
+        - [4455 Substring.cpp](/home/alexander/codes/uva2/OnlineJudge/HDU OJ/4455 Substring.cpp)
+        - [4460 Friend Chains.cpp](/home/alexander/codes/uva2/OnlineJudge/HDU OJ/4460 Friend Chains.cpp)
+        - [4461 The Power of Xiangqi.cpp](/home/alexander/codes/uva2/OnlineJudge/HDU OJ/4461 The Power of Xiangqi.cpp)
+        - [4462 Scaring the Birds.cpp](/home/alexander/codes/uva2/OnlineJudge/HDU OJ/4462 Scaring the Birds.cpp)
+        - [4463 Outlets.cpp](/home/alexander/codes/uva2/OnlineJudge/HDU OJ/4463 Outlets.cpp)
+        - [HDU - 5307.cpp](/home/alexander/codes/uva2/OnlineJudge/HDU OJ/HDU - 5307.cpp)
+        - [HDU - 5307[FFT].cpp](/home/alexander/codes/uva2/OnlineJudge/HDU OJ/HDU - 5307[FFT].cpp)
+        - [HDU - 5307[NTT].CPP](/home/alexander/codes/uva2/OnlineJudge/HDU OJ/HDU - 5307[NTT].CPP)
+    - JudgeGirl
+        - [10017. Fast Dynamic Nearest Neighbors Search.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10017. Fast Dynamic Nearest Neighbors Search.c)
+        - [10019 - String Trim.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10019 - String Trim.cpp)
+        - [10020. Tricky Quadratic Function.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10020. Tricky Quadratic Function.c)
+      - 10025. Fast Image Match
+          - [brute.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10025. Fast Image Match/brute.c)
+          - [brute_parallel2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10025. Fast Image Match/brute_parallel2.c)
+          - [brute_parallel3.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10025. Fast Image Match/brute_parallel3.c)
+          - [brute_parallel.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10025. Fast Image Match/brute_parallel.c)
+          - [FFT.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10025. Fast Image Match/FFT.c)
+      - 10026. Fast N-Queen
+          - [10026. Fast N-Queen-omp-balanced.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10026. Fast N-Queen/10026. Fast N-Queen-omp-balanced.cpp)
+          - [brute.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10026. Fast N-Queen/brute.cpp)
+          - [brute_parallel.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10026. Fast N-Queen/brute_parallel.c)
+        - collapse
+            - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10026. Fast N-Queen/collapse/main.c)
+            - [README.md](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10026. Fast N-Queen/collapse/README.md)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10026. Fast N-Queen/pin.cpp)
+          - [testdata.bat](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10026. Fast N-Queen/testdata.bat)
+      - 10027. Fast Sudoku
+          - [10027. Fast Sudoku_bfs.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10027. Fast Sudoku/10027. Fast Sudoku_bfs.c)
+          - [BFS-DFS-parallel.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10027. Fast Sudoku/BFS-DFS-parallel.c)
+          - [BFS-DFS-parallel-opt.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10027. Fast Sudoku/BFS-DFS-parallel-opt.cpp)
+          - [BFS-DFS-parallel-task.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10027. Fast Sudoku/BFS-DFS-parallel-task.c)
+          - [dlx.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10027. Fast Sudoku/dlx.c)
+          - [DLX-optimize.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10027. Fast Sudoku/DLX-optimize.c)
+          - [DLX-parallel.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10027. Fast Sudoku/DLX-parallel.c)
+          - [README.md](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10027. Fast Sudoku/README.md)
+          - [testdata.bat](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10027. Fast Sudoku/testdata.bat)
+      - 10028. Fast Page Rank
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10028. Fast Page Rank/main.c)
+          - [main_parallel.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10028. Fast Page Rank/main_parallel.c)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10028. Fast Page Rank/pin.cpp)
+          - [test.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10028. Fast Page Rank/test.c)
+          - [testdata2.bat](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10028. Fast Page Rank/testdata2.bat)
+          - [testdata.bat](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10028. Fast Page Rank/testdata.bat)
+        - [10030. Real Fake Thing.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10030. Real Fake Thing.c)
+        - [10031. Fast 64-bits Modular Arithmetic.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10031. Fast 64-bits Modular Arithmetic.c)
+        - [10032. String Subset.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10032. String Subset.c)
+      - 10038. Fast Covering Problem
+          - [10038. Fast Covering Problem-DLX.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10038. Fast Covering Problem/10038. Fast Covering Problem-DLX.c)
+          - [DLX-reduce.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10038. Fast Covering Problem/DLX-reduce.c)
+        - [10039. Baby Boos.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10039. Baby Boos.c)
+        - [10040. Dictionary & Substring.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10040. Dictionary & Substring.c)
+      - 10066. Gal Game II (Monte Carlo method)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10066. Gal Game II (Monte Carlo method)/pin.cpp)
+          - [sampling.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10066. Gal Game II (Monte Carlo method)/sampling.c)
+          - [sampling_std.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10066. Gal Game II (Monte Carlo method)/sampling_std.c)
+      - 10067. Median from Hard Disk
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10067. Median from Hard Disk/main.c)
+          - [median_2pass.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10067. Median from Hard Disk/median_2pass.c)
+          - [median_binary_search.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10067. Median from Hard Disk/median_binary_search.c)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10067. Median from Hard Disk/pin.cpp)
+      - 10068. Sort from Hard Disk
+          - [main2.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10068. Sort from Hard Disk/main2.cpp)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10068. Sort from Hard Disk/pin.cpp)
+          - [sort2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10068. Sort from Hard Disk/sort2.c)
+          - [sort.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10068. Sort from Hard Disk/sort.c)
+      - 10069. Build a Binary Search Tree (Simple Object System Ver.)
+          - [basic_node.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10069. Build a Binary Search Tree (Simple Object System Ver.)/basic_node.c)
+          - [bst_node2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10069. Build a Binary Search Tree (Simple Object System Ver.)/bst_node2.c)
+          - [bst_node.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10069. Build a Binary Search Tree (Simple Object System Ver.)/bst_node.c)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10069. Build a Binary Search Tree (Simple Object System Ver.)/main.c)
+          - [node.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10069. Build a Binary Search Tree (Simple Object System Ver.)/node.h)
+          - [object.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10069. Build a Binary Search Tree (Simple Object System Ver.)/object.c)
+          - [object.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10069. Build a Binary Search Tree (Simple Object System Ver.)/object.h)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10069. Build a Binary Search Tree (Simple Object System Ver.)/pin.cpp)
+      - 10078. Matryoshka Doll
+          - [1.in](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10078. Matryoshka Doll/1.in)
+          - [1.out](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10078. Matryoshka Doll/1.out)
+          - [doll.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10078. Matryoshka Doll/doll.c)
+          - [doll.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10078. Matryoshka Doll/doll.h)
+          - [judge](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10078. Matryoshka Doll/judge)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10078. Matryoshka Doll/main.c)
+          - [send.lst](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10078. Matryoshka Doll/send.lst)
+          - [source.lst](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10078. Matryoshka Doll/source.lst)
+          - [special](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10078. Matryoshka Doll/special)
+          - [subtasks.py](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10078. Matryoshka Doll/subtasks.py)
+      - 10079. Tiny Command Tool
+          - [1.in](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10079. Tiny Command Tool/1.in)
+          - [1.out](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10079. Tiny Command Tool/1.out)
+          - [judge](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10079. Tiny Command Tool/judge)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10079. Tiny Command Tool/main.c)
+          - [send.lst](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10079. Tiny Command Tool/send.lst)
+          - [source.lst](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10079. Tiny Command Tool/source.lst)
+          - [special](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10079. Tiny Command Tool/special)
+          - [subtasks.py](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10079. Tiny Command Tool/subtasks.py)
+          - [tct.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10079. Tiny Command Tool/tct.c)
+          - [tct.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10079. Tiny Command Tool/tct.h)
+      - 10080. Fast Matrix Multiplication (pthread)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10080. Fast Matrix Multiplication (pthread)/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10080. Fast Matrix Multiplication (pthread)/Makefile)
+          - [matrix.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10080. Fast Matrix Multiplication (pthread)/matrix.c)
+          - [matrix.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10080. Fast Matrix Multiplication (pthread)/matrix.h)
+          - [special](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10080. Fast Matrix Multiplication (pthread)/special)
+          - [subtasks.py](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10080. Fast Matrix Multiplication (pthread)/subtasks.py)
+      - 10081. Fast Game of Life
+          - [10081. Fast Game of Life-bit.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10081. Fast Game of Life/10081. Fast Game of Life-bit.c)
+          - [10081. Fast Game of Life.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10081. Fast Game of Life/10081. Fast Game of Life.cpp)
+          - [10081. Fast Game of Life-unloop-balance.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10081. Fast Game of Life/10081. Fast Game of Life-unloop-balance.c)
+          - [10081. Fast Game of Life-unloop.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10081. Fast Game of Life/10081. Fast Game of Life-unloop.cpp)
+          - [life.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10081. Fast Game of Life/life.c)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10081. Fast Game of Life/pin.cpp)
+          - [testdata.bat](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10081. Fast Game of Life/testdata.bat)
+      - 10082. Fast Find Prime Number
+          - [10082. Fast Find Prime Number.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10082. Fast Find Prime Number/10082. Fast Find Prime Number.c)
+          - [10082. Fast Find Prime Number-cheat.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10082. Fast Find Prime Number/10082. Fast Find Prime Number-cheat.c)
+          - [10082. Fast Find Prime Number-cheat-improve.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10082. Fast Find Prime Number/10082. Fast Find Prime Number-cheat-improve.c)
+          - [10082. Fast Find Prime Number-cheat-omp.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10082. Fast Find Prime Number/10082. Fast Find Prime Number-cheat-omp.c)
+          - [10082. Fast Find Prime Number-omp-improve.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10082. Fast Find Prime Number/10082. Fast Find Prime Number-omp-improve.c)
+          - [basic.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10082. Fast Find Prime Number/basic.c)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10082. Fast Find Prime Number/pin.cpp)
+          - [prime-squence.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10082. Fast Find Prime Number/prime-squence.c)
+      - 10083. Line Word Count
+          - [judge](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10083. Line Word Count/judge)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10083. Line Word Count/main.c)
+          - [partition.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10083. Line Word Count/partition.cpp)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10083. Line Word Count/pin.cpp)
+          - [send.lst](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10083. Line Word Count/send.lst)
+          - [special](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10083. Line Word Count/special)
+          - [subtasks.py](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10083. Line Word Count/subtasks.py)
+          - [test.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10083. Line Word Count/test.c)
+      - 10084. Prefix Sum
+          - [judge](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10084. Prefix Sum/judge)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10084. Prefix Sum/Makefile)
+          - [pin](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10084. Prefix Sum/pin)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10084. Prefix Sum/pin.cpp)
+          - [presum-pthread.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10084. Prefix Sum/presum-pthread.c)
+          - [presum-seq.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10084. Prefix Sum/presum-seq.c)
+          - [secret2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10084. Prefix Sum/secret2.c)
+          - [secret.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10084. Prefix Sum/secret.c)
+          - [send.lst](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10084. Prefix Sum/send.lst)
+          - [source.lst](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10084. Prefix Sum/source.lst)
+          - [special](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10084. Prefix Sum/special)
+          - [subtasks.py](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10084. Prefix Sum/subtasks.py)
+          - [utils.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10084. Prefix Sum/utils.h)
+      - 10085. Parallel Count
+          - [job2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10085. Parallel Count/job2.c)
+          - [job.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10085. Parallel Count/job.c)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10085. Parallel Count/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10085. Parallel Count/Makefile)
+          - [sum.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10085. Parallel Count/sum.c)
+          - [utils.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10085. Parallel Count/utils.h)
+      - 10086. RedBlue Computation
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10086. RedBlue Computation/main.c)
+          - [main-grid.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10086. RedBlue Computation/main-grid.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10086. RedBlue Computation/Makefile)
+          - [pin.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10086. RedBlue Computation/pin.c)
+      - 10087. Sparse Matrix Multiplication
+          - [README.md](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10087. Sparse Matrix Multiplication/README.md)
+          - [SpMV-26.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10087. Sparse Matrix Multiplication/SpMV-26.cpp)
+          - [SpMV-26-SOA.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10087. Sparse Matrix Multiplication/SpMV-26-SOA.cpp)
+          - [SpMV-26-SOA-opt.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10087. Sparse Matrix Multiplication/SpMV-26-SOA-opt.cpp)
+          - [SpMV.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10087. Sparse Matrix Multiplication/SpMV.cpp)
+          - [SpMV-SOA.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10087. Sparse Matrix Multiplication/SpMV-SOA.cpp)
+      - 10088. Prefix Sum (OpenMP)
+          - [judge](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10088. Prefix Sum (OpenMP)/judge)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10088. Prefix Sum (OpenMP)/Makefile)
+          - [prefixsum-openmp.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10088. Prefix Sum (OpenMP)/prefixsum-openmp.c)
+          - [prefixsum-openmp.s](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10088. Prefix Sum (OpenMP)/prefixsum-openmp.s)
+          - [prefixsum-pthread.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10088. Prefix Sum (OpenMP)/prefixsum-pthread.c)
+          - [secret.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10088. Prefix Sum (OpenMP)/secret.c)
+          - [secret.s](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10088. Prefix Sum (OpenMP)/secret.s)
+          - [send.lst](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10088. Prefix Sum (OpenMP)/send.lst)
+          - [source.lst](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10088. Prefix Sum (OpenMP)/source.lst)
+          - [special](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10088. Prefix Sum (OpenMP)/special)
+          - [subtasks.py](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10088. Prefix Sum (OpenMP)/subtasks.py)
+          - [utils.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10088. Prefix Sum (OpenMP)/utils.h)
+      - 10089. Print Platform Information (OpenCL)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10089. Print Platform Information (OpenCL)/main.c)
+        - [10089. Print Platform Information (OpenCL).cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10089. Print Platform Information (OpenCL).cpp)
+      - 10090. Dot Product (OpenCL)
+          - [main2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10090. Dot Product (OpenCL)/main2.c)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10090. Dot Product (OpenCL)/main.c)
+        - opt-allOnGPU
+            - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10090. Dot Product (OpenCL)/opt-allOnGPU/main.c)
+            - [vecdot.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10090. Dot Product (OpenCL)/opt-allOnGPU/vecdot.cl)
+        - opt-clEnqueueWriteBuffer
+            - [main2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10090. Dot Product (OpenCL)/opt-clEnqueueWriteBuffer/main2.c)
+            - [vecdot.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10090. Dot Product (OpenCL)/opt-clEnqueueWriteBuffer/vecdot.cl)
+        - opt-kernel
+            - [main2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10090. Dot Product (OpenCL)/opt-kernel/main2.c)
+            - [vecdot.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10090. Dot Product (OpenCL)/opt-kernel/vecdot.cl)
+          - [vecdot.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10090. Dot Product (OpenCL)/vecdot.cl)
+      - 10091. Fast Matrix Multiplication (OpenCL)
+          - [foo.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10091. Fast Matrix Multiplication (OpenCL)/foo.cl)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10091. Fast Matrix Multiplication (OpenCL)/main.c)
+          - [nvprof.sh](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10091. Fast Matrix Multiplication (OpenCL)/nvprof.sh)
+          - [nvvp.cfg](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10091. Fast Matrix Multiplication (OpenCL)/nvvp.cfg)
+        - opt-group
+            - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10091. Fast Matrix Multiplication (OpenCL)/opt-group/main.c)
+            - [matrixmul.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10091. Fast Matrix Multiplication (OpenCL)/opt-group/matrixmul.cl)
+      - 10092. OpenCL Build Program Debug
+          - [main2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10092. OpenCL Build Program Debug/main2.c)
+      - 10093. Fast Matrix Chain Multiplication (OpenMP)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10093. Fast Matrix Chain Multiplication (OpenMP)/main.c)
+      - 10094. Fast 01 Knapsack Problem
+        - meet-in-middle
+            - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10094. Fast 01 Knapsack Problem/meet-in-middle/main.c)
+        - single-parallel
+            - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10094. Fast 01 Knapsack Problem/single-parallel/main.c)
+        - SPMD
+            - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10094. Fast 01 Knapsack Problem/SPMD/main.c)
+            - [README.md](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10094. Fast 01 Knapsack Problem/SPMD/README.md)
+      - 10095. Matrix Calculator (OpenCL)
+        - 2-device-indep
+            - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10095. Matrix Calculator (OpenCL)/2-device-indep/main.c)
+            - [matrix-lib.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10095. Matrix Calculator (OpenCL)/2-device-indep/matrix-lib.cl)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10095. Matrix Calculator (OpenCL)/main.c)
+          - [matrix-lib.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10095. Matrix Calculator (OpenCL)/matrix-lib.cl)
+      - 10096. Fast Game of Life (OpenCL)
+        - full-local-mem
+            - [game-of-life.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10096. Fast Game of Life (OpenCL)/full-local-mem/game-of-life.cl)
+            - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10096. Fast Game of Life (OpenCL)/full-local-mem/main.c)
+        - part-local-mem
+            - [game-of-life.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10096. Fast Game of Life (OpenCL)/part-local-mem/game-of-life.cl)
+            - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10096. Fast Game of Life (OpenCL)/part-local-mem/main.c)
+        - warp-opt
+            - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10096. Fast Game of Life (OpenCL)/warp-opt/main.c)
+      - 100. Snake Order
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/100. Snake Order/main.c)
+          - [snake.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/100. Snake Order/snake.c)
+          - [snake.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/100. Snake Order/snake.h)
+      - 10110. Longest Common Subsequence (OpenMP)
+          - [main-3-array.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10110. Longest Common Subsequence (OpenMP)/main-3-array.cpp)
+          - [main-sequence.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10110. Longest Common Subsequence (OpenMP)/main-sequence.cpp)
+          - [main-ya-2-array.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10110. Longest Common Subsequence (OpenMP)/main-ya-2-array.c)
+          - [main-ya-2-array-omp.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10110. Longest Common Subsequence (OpenMP)/main-ya-2-array-omp.c)
+          - [main-ya-2-array-omp-opt.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10110. Longest Common Subsequence (OpenMP)/main-ya-2-array-omp-opt.c)
+      - 10111. Longest Common Subsequence II (OpenMP)
+          - [main-3-array-omp.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10111. Longest Common Subsequence II (OpenMP)/main-3-array-omp.cpp)
+          - [main-ya-2-array-omp.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10111. Longest Common Subsequence II (OpenMP)/main-ya-2-array-omp.c)
+          - [main-ya-2-array-omp-shared-opt.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10111. Longest Common Subsequence II (OpenMP)/main-ya-2-array-omp-shared-opt.c)
+      - 10112. Longest Common Subsequence (CUDA)
+          - [main-full-gpu.cu](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10112. Longest Common Subsequence (CUDA)/main-full-gpu.cu)
+          - [main-gpu-cpu.cu](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10112. Longest Common Subsequence (CUDA)/main-gpu-cpu.cu)
+      - 10113. Longest Common Subsequence II (CUDA)
+          - [main-gpu-cpu-adaptive-opt.cu](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10113. Longest Common Subsequence II (CUDA)/main-gpu-cpu-adaptive-opt.cu)
+          - [main-gpu-cpu.cu](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10113. Longest Common Subsequence II (CUDA)/main-gpu-cpu.cu)
+        - [10120. Hello, MIC testing.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10120. Hello, MIC testing.c)
+      - 10121. Fast Matrix Multiplication (MIC)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10121. Fast Matrix Multiplication (MIC)/main.c)
+          - [matrix.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10121. Fast Matrix Multiplication (MIC)/matrix.c)
+          - [matrix.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10121. Fast Matrix Multiplication (MIC)/matrix.h)
+        - [10122. Sparse Matrix Multiplication (MIC).cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10122. Sparse Matrix Multiplication (MIC).cpp)
+        - [10123. Fast Game of Life (MIC).cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10123. Fast Game of Life (MIC).cpp)
+        - [10124. Longest Common Subsequence (MIC).cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10124. Longest Common Subsequence (MIC).cpp)
+        - [10125. Longest Common Subsequence II (MIC).cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10125. Longest Common Subsequence II (MIC).cpp)
+        - [10126. Fast Dynamic Programming Computing I (MIC).cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10126. Fast Dynamic Programming Computing I (MIC).cpp)
+        - [10127. Fast Dynamic Programming Computing II (MIC).cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10127. Fast Dynamic Programming Computing II (MIC).cpp)
+      - 10164. Fast 01 Knapsack Problem on PC
+        - data-par
+            - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10164. Fast 01 Knapsack Problem on PC/data-par/main.c)
+          - [README.md](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10164. Fast 01 Knapsack Problem on PC/README.md)
+        - task-par
+            - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10164. Fast 01 Knapsack Problem on PC/task-par/main.c)
+      - 10165. Kuku Clique
+          - [brute.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10165. Kuku Clique/brute.cpp)
+          - [brute-opt.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10165. Kuku Clique/brute-opt.cpp)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10165. Kuku Clique/Makefile)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10165. Kuku Clique/pin.cpp)
+          - [rtree.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10165. Kuku Clique/rtree.cpp)
+        - [103. Triangular Matrix Solver.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/103. Triangular Matrix Solver.cpp)
+        - [104. Material Composition.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/104. Material Composition.c)
+        - [106. Divisible.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/106. Divisible.cpp)
+      - 109. Tree Path Printing
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/109. Tree Path Printing/main.c)
+          - [node.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/109. Tree Path Printing/node.c)
+          - [node.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/109. Tree Path Printing/node.h)
+        - [10. Power.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/10. Power.c)
+      - 128. City Roads
+          - [intersection.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/128. City Roads/intersection.cpp)
+          - [intersection.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/128. City Roads/intersection.h)
+          - [main.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/128. City Roads/main.cpp)
+      - 129. A Zig Zag Array
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/129. A Zig Zag Array/main.c)
+          - [prepare_array.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/129. A Zig Zag Array/prepare_array.c)
+          - [prepare_array.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/129. A Zig Zag Array/prepare_array.h)
+        - [12. Up and Down.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/12. Up and Down.cpp)
+        - [130. Similar Strings.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/130. Similar Strings.cpp)
+        - [132. Color Countries.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/132. Color Countries.c)
+      - 133. Word Count with Struct
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/133. Word Count with Struct/main.c)
+          - [source.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/133. Word Count with Struct/source.c)
+        - [134. Reconstruct A Binary Tree.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/134. Reconstruct A Binary Tree.c)
+        - [136. Convert a Binary Grade File to HTML.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/136. Convert a Binary Grade File to HTML.c)
+        - [137. Student Grades.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/137. Student Grades.c)
+        - [13. Print a Repeated Pattern.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/13. Print a Repeated Pattern.cpp)
+        - [14. Print the Sequence Backward.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/14. Print the Sequence Backward.cpp)
+        - [15. Print Backward to 1.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/15. Print Backward to 1.cpp)
+        - [16. Even and Odd.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/16. Even and Odd.cpp)
+        - [17. Column Average.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/17. Column Average.cpp)
+        - [18. Larger than Neighbors.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/18. Larger than Neighbors.cpp)
+      - 190. Function Evaluation
+          - [evaluate_f.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/190. Function Evaluation/evaluate_f.c)
+          - [evaluate_f.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/190. Function Evaluation/evaluate_f.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/190. Function Evaluation/main.c)
+      - 191. Characters, Words, and Tokens
+          - [count.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/191. Characters, Words, and Tokens/count.c)
+          - [count.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/191. Characters, Words, and Tokens/count.h)
+        - [195. Tic-Tac-Toe.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/195. Tic-Tac-Toe.cpp)
+      - 20000. Longest Common Subsequence (Design Strategies for Computer Algorithms)
+          - [LCS.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20000. Longest Common Subsequence (Design Strategies for Computer Algorithms)/LCS.cpp)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20000. Longest Common Subsequence (Design Strategies for Computer Algorithms)/Makefile)
+      - 20001. 2-Dimensional Linear Programming (Design Strategies for Computer Algorithms)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20001. 2-Dimensional Linear Programming (Design Strategies for Computer Algorithms)/main.c)
+      - 20005. 01 Knapsack Problem (Design Strategies for Computer Algorithms)
+          - [main.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20005. 01 Knapsack Problem (Design Strategies for Computer Algorithms)/main.cpp)
+          - [main-opt.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20005. 01 Knapsack Problem (Design Strategies for Computer Algorithms)/main-opt.cpp)
+          - [README.md](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20005. 01 Knapsack Problem (Design Strategies for Computer Algorithms)/README.md)
+        - [20006. 2-Dimensional Closest Pair Problem (Design Strategies for Computer Algorithms).cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20006. 2-Dimensional Closest Pair Problem (Design Strategies for Computer Algorithms).cpp)
+        - [20006. 2-Dimensional Closest Pair Problem[KD].cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20006. 2-Dimensional Closest Pair Problem[KD].cpp)
+      - 20007. Fast Travelling Salesman Problem
+          - [main.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20007. Fast Travelling Salesman Problem/main.cpp)
+          - [main-opt.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20007. Fast Travelling Salesman Problem/main-opt.cpp)
+          - [main-opt-dir.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20007. Fast Travelling Salesman Problem/main-opt-dir.cpp)
+          - [README.md](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20007. Fast Travelling Salesman Problem/README.md)
+      - 20008. Fast Multiple Knapsack Problem
+          - [main-NW.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20008. Fast Multiple Knapsack Problem/main-NW.cpp)
+          - [main-NWlogC.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20008. Fast Multiple Knapsack Problem/main-NWlogC.cpp)
+          - [main-NW-opt-cache.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20008. Fast Multiple Knapsack Problem/main-NW-opt-cache.cpp)
+          - [main-NW-opt-cache-queue.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20008. Fast Multiple Knapsack Problem/main-NW-opt-cache-queue.cpp)
+      - 20014. Department Store
+          - [main2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20014. Department Store/main2.c)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20014. Department Store/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20014. Department Store/Makefile)
+        - [20015. Range Sum Absolute Value Query.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20015. Range Sum Absolute Value Query.cpp)
+      - 20016. Labeling String (CUDA)
+          - [labeling.cu](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20016. Labeling String (CUDA)/labeling.cu)
+          - [labeling.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20016. Labeling String (CUDA)/labeling.h)
+          - [labeling-own.cu](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20016. Labeling String (CUDA)/labeling-own.cu)
+          - [labeling-test.cu](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20016. Labeling String (CUDA)/labeling-test.cu)
+          - [main.cu](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20016. Labeling String (CUDA)/main.cu)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20016. Labeling String (CUDA)/Makefile)
+      - 20017. Very Fast Dot Product (OpenCL)
+          - [main2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20017. Very Fast Dot Product (OpenCL)/main2.c)
+          - [main3.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20017. Very Fast Dot Product (OpenCL)/main3.c)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20017. Very Fast Dot Product (OpenCL)/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20017. Very Fast Dot Product (OpenCL)/Makefile)
+          - [utils.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20017. Very Fast Dot Product (OpenCL)/utils.h)
+          - [vecdot.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20017. Very Fast Dot Product (OpenCL)/vecdot.cl)
+          - [vecdot.cl-main2](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20017. Very Fast Dot Product (OpenCL)/vecdot.cl-main2)
+          - [vecdot-main2.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20017. Very Fast Dot Product (OpenCL)/vecdot-main2.cl)
+      - 20018. Square Root of Vector Elements (SIMD)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20018. Square Root of Vector Elements (SIMD)/main.c)
+          - [main-perf.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20018. Square Root of Vector Elements (SIMD)/main-perf.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20018. Square Root of Vector Elements (SIMD)/Makefile)
+          - [VSQRT.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20018. Square Root of Vector Elements (SIMD)/VSQRT.c)
+          - [VSQRT.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20018. Square Root of Vector Elements (SIMD)/VSQRT.h)
+      - 20019. CooperativeSeparate Dot Product
+          - [main2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20019. CooperativeSeparate Dot Product/main2.c)
+          - [main3.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20019. CooperativeSeparate Dot Product/main3.c)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20019. CooperativeSeparate Dot Product/main.c)
+          - [main-task.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20019. CooperativeSeparate Dot Product/main-task.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20019. CooperativeSeparate Dot Product/Makefile)
+          - [utils.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20019. CooperativeSeparate Dot Product/utils.h)
+          - [vecdot.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20019. CooperativeSeparate Dot Product/vecdot.cl)
+          - [vecdot.cl-main2](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20019. CooperativeSeparate Dot Product/vecdot.cl-main2)
+          - [vecdot-main2.cl](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20019. CooperativeSeparate Dot Product/vecdot-main2.cl)
+      - 20020. Dot Product (SIMD)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20020. Dot Product (SIMD)/Makefile)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20020. Dot Product (SIMD)/pin.cpp)
+          - [test-avx.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20020. Dot Product (SIMD)/test-avx.c)
+          - [test.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20020. Dot Product (SIMD)/test.c)
+          - [test-sse.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20020. Dot Product (SIMD)/test-sse.c)
+      - 20021. Dynamic Range Sum (SIMD)
+          - [DRS.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20021. Dynamic Range Sum (SIMD)/DRS.c)
+          - [DRS.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20021. Dynamic Range Sum (SIMD)/DRS.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20021. Dynamic Range Sum (SIMD)/main.c)
+          - [main-perf.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20021. Dynamic Range Sum (SIMD)/main-perf.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20021. Dynamic Range Sum (SIMD)/Makefile)
+        - [20023.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20023.c)
+      - 20026. Segment Intersections
+          - [brute.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20026. Segment Intersections/brute.cpp)
+          - [dc-project-fast.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20026. Segment Intersections/dc-project-fast.cpp)
+          - [sweep-project-fast.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20026. Segment Intersections/sweep-project-fast.cpp)
+      - 20027. SubString
+          - [brute.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20027. SubString/brute.cpp)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20027. SubString/pin.cpp)
+          - [rabin-karp.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20027. SubString/rabin-karp.cpp)
+          - [sam.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20027. SubString/sam.cpp)
+          - [sam-kmp.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20027. SubString/sam-kmp.cpp)
+      - 20028. Counting Distinct Odd-SubArray
+          - [brute.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20028. Counting Distinct Odd-SubArray/brute.cpp)
+          - [gen.sh](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20028. Counting Distinct Odd-SubArray/gen.sh)
+          - [main2.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20028. Counting Distinct Odd-SubArray/main2.cpp)
+          - [main3.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20028. Counting Distinct Odd-SubArray/main3.cpp)
+          - [main.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20028. Counting Distinct Odd-SubArray/main.cpp)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20028. Counting Distinct Odd-SubArray/pin.cpp)
+          - [ptt.py](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/20028. Counting Distinct Odd-SubArray/ptt.py)
+        - [202. Mixed Fractions.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/202. Mixed Fractions.c)
+        - [203. Bouncing Balls.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/203. Bouncing Balls.cpp)
+        - [204. Homework 4.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/204. Homework 4.cpp)
+      - 206. Card Shuffling
+          - [card.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/206. Card Shuffling/card.c)
+          - [card.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/206. Card Shuffling/card.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/206. Card Shuffling/main.c)
+        - [208. Print a Bitmap.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/208. Print a Bitmap.c)
+        - [210. SQL Database.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/210. SQL Database.c)
+        - [210. SQL Database_v2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/210. SQL Database_v2.c)
+        - [215. Chicken, Rabbit and Crab.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/215. Chicken, Rabbit and Crab.cpp)
+        - [218. Sum of Selections.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/218. Sum of Selections.cpp)
+      - 21. Maximum in Matrix
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/21. Maximum in Matrix/main.c)
+          - [max.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/21. Maximum in Matrix/max.c)
+          - [max.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/21. Maximum in Matrix/max.h)
+        - [220. Sentence Count.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/220. Sentence Count.cpp)
+        - [221. Typesetting.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/221. Typesetting.cpp)
+        - [222. Bookshelf.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/222. Bookshelf.c)
+        - [222. Bookshelf_v2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/222. Bookshelf_v2.c)
+        - [223. Tiles.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/223. Tiles.c)
+      - 224. Supervisors and Subordinates
+          - [employee.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/224. Supervisors and Subordinates/employee.c)
+          - [employee.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/224. Supervisors and Subordinates/employee.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/224. Supervisors and Subordinates/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/224. Supervisors and Subordinates/Makefile)
+        - [225. Friends.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/225. Friends.c)
+        - [225. Friends_fast.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/225. Friends_fast.c)
+        - [225. Friends_simple.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/225. Friends_simple.c)
+      - 22. Negative and Positive
+          - [main.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/22. Negative and Positive/main.cpp)
+          - [posneg.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/22. Negative and Positive/posneg.c)
+          - [posneg.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/22. Negative and Positive/posneg.h)
+        - [230. The Knapsack.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/230. The Knapsack.c)
+        - [232. What day is Today.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/232. What day is Today.cpp)
+        - [234. Factorization.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/234. Factorization.cpp)
+        - [235. Pachingo.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/235. Pachingo.cpp)
+        - [236. Least Common Multiplier.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/236. Least Common Multiplier.c)
+        - [236. Least Common Multiplier.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/236. Least Common Multiplier.cpp)
+        - [238. Subset Sum.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/238. Subset Sum.c)
+        - [239. Daily Expense.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/239. Daily Expense.c)
+      - 23. Maximum in Pointer Array
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/23. Maximum in Pointer Array/main.c)
+          - [max.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/23. Maximum in Pointer Array/max.c)
+          - [max.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/23. Maximum in Pointer Array/max.h)
+        - [240. Square, Diamond, and Rectangle.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/240. Square, Diamond, and Rectangle.c)
+        - [241. Origin in Quadrilateral.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/241. Origin in Quadrilateral.c)
+        - [242. Three Circles.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/242. Three Circles.cpp)
+        - [243. House of Mirrors.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/243. House of Mirrors.cpp)
+        - [244. Lottery.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/244. Lottery.cpp)
+        - [248. Mine Field.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/248. Mine Field.c)
+        - [249. Company.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/249. Company.c)
+        - [24. Vowel, Consonant, and Digit.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/24. Vowel, Consonant, and Digit.cpp)
+      - 251. Company, Again
+          - [employee.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/251. Company, Again/employee.c)
+          - [employee.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/251. Company, Again/employee.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/251. Company, Again/main.c)
+      - 253. Time Object
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/253. Time Object/main.c)
+          - [time.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/253. Time Object/time.c)
+          - [time.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/253. Time Object/time.h)
+        - [256. One Count Sorting.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/256. One Count Sorting.c)
+        - [260. String Fusion.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/260. String Fusion.cpp)
+        - [261. Puzzle Equation.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/261. Puzzle Equation.c)
+        - [262. Maximum Number of Consecutive 1's.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/262. Maximum Number of Consecutive 1's.cpp)
+        - [262. Maximum Number of Consecutive 1's_v2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/262. Maximum Number of Consecutive 1's_v2.c)
+        - [264. Byte Frequency Count.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/264. Byte Frequency Count.c)
+        - [265. Minimum Containing Box.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/265. Minimum Containing Box.cpp)
+        - [266. Edit Eistance.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/266. Edit Eistance.c)
+        - [267. Traveling Distance.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/267. Traveling Distance.c)
+      - 269. Memory Allocation
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/269. Memory Allocation/main.c)
+          - [memory.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/269. Memory Allocation/memory.c)
+          - [memory.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/269. Memory Allocation/memory.h)
+        - [270. A Simple BASIC Interpreter.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/270. A Simple BASIC Interpreter.cpp)
+        - [271. Multiply Polynomials.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/271. Multiply Polynomials.cpp)
+      - 275. Set
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/275. Set/main.c)
+          - [set.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/275. Set/set.c)
+          - [set.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/275. Set/set.h)
+        - [276. Abbreviation.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/276. Abbreviation.cpp)
+        - [277. Digits.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/277. Digits.cpp)
+        - [27. Surface Area and Volume of a Box.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/27. Surface Area and Volume of a Box.cpp)
+        - [281. Number of 1s.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/281. Number of 1s.cpp)
+        - [282. Maximum number of 1s for long long.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/282. Maximum number of 1s for long long.c)
+        - [283. Chicken, Rabbit, and Crab in a Cage.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/283. Chicken, Rabbit, and Crab in a Cage.cpp)
+        - [28. Sum of Squares with Recursion.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/28. Sum of Squares with Recursion.cpp)
+        - [29. From One Corner to Another.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/29. From One Corner to Another.c)
+        - [30. From One Corner to Another with Obstacles.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/30. From One Corner to Another with Obstacles.cpp)
+        - [32. Longest Double Palindrome.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/32. Longest Double Palindrome.c)
+        - [33. Intersections.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/33. Intersections.cpp)
+        - [36. Calender.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/36. Calender.cpp)
+      - 37. Metal value
+          - [main.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/37. Metal value/main.cpp)
+          - [value.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/37. Metal value/value.c)
+          - [value.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/37. Metal value/value.h)
+        - [38. Witchcraft.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/38. Witchcraft.c)
+        - [3. Print Two Numbers.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/3. Print Two Numbers.cpp)
+      - 44. Library Fine
+          - [book.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/44. Library Fine/book.h)
+          - [date.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/44. Library Fine/date.h)
+          - [library.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/44. Library Fine/library.c)
+          - [main2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/44. Library Fine/main2.c)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/44. Library Fine/main.c)
+        - [46. Play with Words.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/46. Play with Words.c)
+        - [46. Play with Words.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/46. Play with Words.cpp)
+        - [46. Play with Words_v2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/46. Play with Words_v2.c)
+        - [46. Play with Words_v3.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/46. Play with Words_v3.c)
+        - [47. Play with Words, Too.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/47. Play with Words, Too.c)
+        - [47. Play with Words Too_v2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/47. Play with Words Too_v2.c)
+        - [47. Play with Words Too_v4.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/47. Play with Words Too_v4.c)
+        - [49. Sum, Maximum and Minimum.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/49. Sum, Maximum and Minimum.cpp)
+        - [4. Add Three Numbers.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/4. Add Three Numbers.cpp)
+        - [50000. Alternating Sequence.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50000. Alternating Sequence.c)
+        - [50001. Vehicle.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50001. Vehicle.c)
+        - [50002. Game of Life.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50002. Game of Life.cpp)
+        - [50003. Turtle Graphics.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50003. Turtle Graphics.cpp)
+        - [50004. 15 - puzzle.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50004. 15 - puzzle.cpp)
+        - [50005. Pattern Recognotion.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50005. Pattern Recognotion.c)
+      - 50006. Expression
+          - [eval.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50006. Expression/eval.c)
+          - [eval.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50006. Expression/eval.h)
+          - [gen.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50006. Expression/gen.cpp)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50006. Expression/main.c)
+      - 50007. Yard, Foot, and Inch
+          - [length.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50007. Yard, Foot, and Inch/length.c)
+          - [length.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50007. Yard, Foot, and Inch/length.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50007. Yard, Foot, and Inch/main.c)
+      - 50008. Pointer Chasing
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50008. Pointer Chasing/main.c)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50008. Pointer Chasing/pin.cpp)
+          - [setmatrix.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50008. Pointer Chasing/setmatrix.c)
+          - [setmatrix.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50008. Pointer Chasing/setmatrix.h)
+      - 50009. Snake Order
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50009. Snake Order/main.c)
+          - [snake.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50009. Snake Order/snake.c)
+          - [snake.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50009. Snake Order/snake.h)
+        - [50010. Word Editor_brute.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50010. Word Editor_brute.c)
+        - [50010. Word Editor_online.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50010. Word Editor_online.c)
+        - [50010. Word Editor_online_compress.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50010. Word Editor_online_compress.c)
+        - [50011. Spell Checker_brute.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50011. Spell Checker_brute.c)
+        - [50011. Spell Checker_da_trie.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50011. Spell Checker_da_trie.c)
+        - [50011. Spell Checker_trie.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50011. Spell Checker_trie.c)
+      - 50012. Block Mover
+          - [blockmover2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50012. Block Mover/blockmover2.c)
+          - [blockmover3.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50012. Block Mover/blockmover3.c)
+          - [blockmover4.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50012. Block Mover/blockmover4.c)
+          - [blockmover.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50012. Block Mover/blockmover.c)
+          - [blockmover.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50012. Block Mover/blockmover.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50012. Block Mover/main.c)
+      - 50013. Bingo
+          - [bingo2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50013. Bingo/bingo2.c)
+          - [bingo3.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50013. Bingo/bingo3.c)
+          - [bingo.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50013. Bingo/bingo.c)
+          - [bingo.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50013. Bingo/bingo.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50013. Bingo/main.c)
+      - 50014. Selection
+          - [50014.-Selection.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50014. Selection/50014.-Selection.c)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50014. Selection/main.c)
+          - [subset.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50014. Selection/subset.c)
+          - [subset.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50014. Selection/subset.h)
+          - [subsetv2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50014. Selection/subsetv2.c)
+          - [subsetv3.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50014. Selection/subsetv3.c)
+      - 50015. Words
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50015. Words/main.c)
+          - [main_fast2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50015. Words/main_fast2.c)
+          - [main_fast.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50015. Words/main_fast.c)
+          - [main_v2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50015. Words/main_v2.c)
+      - 50016. 15-Puzzle
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50016. 15-Puzzle/main.c)
+          - [main_origin2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50016. 15-Puzzle/main_origin2.c)
+          - [main_origin3.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50016. 15-Puzzle/main_origin3.c)
+          - [main_origin.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50016. 15-Puzzle/main_origin.c)
+      - 50017. Expression
+          - [expression2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50017. Expression/expression2.c)
+          - [expression.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50017. Expression/expression.c)
+          - [expression.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50017. Expression/expression.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50017. Expression/main.c)
+      - 50018. Map
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50018. Map/main.c)
+          - [maintest.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50018. Map/maintest.c)
+          - [map.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50018. Map/map.c)
+          - [map.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50018. Map/map.h)
+      - 50019. Medicine
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50019. Medicine/main.c)
+          - [maintest.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50019. Medicine/maintest.c)
+          - [medicine.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50019. Medicine/medicine.c)
+          - [medicine.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50019. Medicine/medicine.h)
+      - 50020. Generic Index Array
+          - [array.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50020. Generic Index Array/array.c)
+          - [array.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50020. Generic Index Array/array.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50020. Generic Index Array/main.c)
+          - [main_test.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50020. Generic Index Array/main_test.cpp)
+      - 50021. Polynomial
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50021. Polynomial/main.c)
+          - [maintest.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50021. Polynomial/maintest.c)
+          - [polynomial2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50021. Polynomial/polynomial2.c)
+          - [polynomial.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50021. Polynomial/polynomial.c)
+          - [polynomial.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50021. Polynomial/polynomial.h)
+      - 50022. Matrix
+          - [main2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50022. Matrix/main2.c)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50022. Matrix/main.c)
+          - [special.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50022. Matrix/special.c)
+      - 50023. Combination Lock
+          - [locker.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50023. Combination Lock/locker.c)
+          - [locker.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50023. Combination Lock/locker.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50023. Combination Lock/main.c)
+          - [maintest.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50023. Combination Lock/maintest.c)
+      - 50024. Grade
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50024. Grade/main.c)
+      - 50025. Independent People
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50025. Independent People/main.c)
+          - [special.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50025. Independent People/special.c)
+      - 50026. A Better Word Count
+          - [50026. A Better Word Count.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50026. A Better Word Count/50026. A Better Word Count.c)
+          - [50026. A Better Word Count_v2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50026. A Better Word Count/50026. A Better Word Count_v2.c)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50026. A Better Word Count/main.c)
+      - 50027. File Sorter
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50027. File Sorter/main.c)
+          - [main_strcpy.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50027. File Sorter/main_strcpy.c)
+      - 50034. See-saw
+          - [main-advanced.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50034. See-saw/main-advanced.cpp)
+          - [main-basic.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50034. See-saw/main-basic.cpp)
+        - [50036. Pick up Numbers.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50036. Pick up Numbers.c)
+        - [50039. Inner Product and Outer Product.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50039. Inner Product and Outer Product.cpp)
+        - [50040. Magic Number.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50040. Magic Number.cpp)
+        - [50041. Mountains.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50041. Mountains.c)
+        - [50042. Highest Mountain.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50042. Highest Mountain.c)
+        - [50043. Mosaics.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50043. Mosaics.c)
+      - 50044. Caterpillar in Panic
+          - [50044. Caterpillar in Panic_bit.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50044. Caterpillar in Panic/50044. Caterpillar in Panic_bit.c)
+          - [50044. Caterpillar in Panic.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50044. Caterpillar in Panic/50044. Caterpillar in Panic.c)
+          - [50044. Caterpillar in Panic_char.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50044. Caterpillar in Panic/50044. Caterpillar in Panic_char.c)
+          - [50044. Caterpillar in Panic_char_io.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50044. Caterpillar in Panic/50044. Caterpillar in Panic_char_io.c)
+          - [50044. Caterpillar in Panic_dd.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50044. Caterpillar in Panic/50044. Caterpillar in Panic_dd.c)
+        - [50045. Mines and Black Holes.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50045. Mines and Black Holes.c)
+      - 50047. Game of Cell
+          - [game_of_cell.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50047. Game of Cell/game_of_cell.c)
+          - [game_of_cell.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50047. Game of Cell/game_of_cell.h)
+          - [game_of_cell_unloop.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50047. Game of Cell/game_of_cell_unloop.c)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50047. Game of Cell/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50047. Game of Cell/Makefile)
+      - 50049. Matrix Multiplication
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50049. Matrix Multiplication/main.c)
+          - [matrix_multiplication.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50049. Matrix Multiplication/matrix_multiplication.c)
+          - [matrix_multiplication.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50049. Matrix Multiplication/matrix_multiplication.h)
+        - [50051. Valid License Plates.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50051. Valid License Plates.c)
+        - [50052. K-means Algorithm.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50052. K-means Algorithm.c)
+        - [50053. The Most Popular Author.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50053. The Most Popular Author.c)
+        - [50054. A Hash Table.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50054. A Hash Table.c)
+        - [50055. Waiting Time at Supermarket.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50055. Waiting Time at Supermarket.c)
+        - [50056. How Much Money Can You Make.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50056. How Much Money Can You Make.c)
+        - [50057. Consecutive 0's and 1's.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50057. Consecutive 0's and 1's.cpp)
+      - 50058. Word Selection
+          - [0.in](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50058. Word Selection/0.in)
+          - [0.out](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50058. Word Selection/0.out)
+          - [gen.sh](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50058. Word Selection/gen.sh)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50058. Word Selection/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50058. Word Selection/Makefile)
+        - [50059. Binary Representation.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50059. Binary Representation.cpp)
+        - [50060. Traveling Salesman_dp.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50060. Traveling Salesman_dp.c)
+        - [50061. Donation.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50061. Donation.c)
+      - 50062. Merge Book Information
+          - [0.in](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50062. Merge Book Information/0.in)
+          - [0.out](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50062. Merge Book Information/0.out)
+          - [book.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50062. Merge Book Information/book.c)
+          - [book.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50062. Merge Book Information/book.h)
+          - [gen.sh](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50062. Merge Book Information/gen.sh)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50062. Merge Book Information/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50062. Merge Book Information/Makefile)
+      - 50063. Friend Distance
+          - [main-linked-list-bitwise.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50063. Friend Distance/main-linked-list-bitwise.c)
+          - [main-linked-list.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50063. Friend Distance/main-linked-list.c)
+          - [README.md](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50063. Friend Distance/README.md)
+      - 50064. Merge Sort
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50064. Merge Sort/main.c)
+          - [main-opt.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50064. Merge Sort/main-opt.c)
+      - 50065. Move the Car
+          - [car.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50065. Move the Car/car.c)
+          - [car.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50065. Move the Car/car.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50065. Move the Car/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50065. Move the Car/Makefile)
+      - 50066. Hotel Manager
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50066. Hotel Manager/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50066. Hotel Manager/Makefile)
+          - [reservation.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50066. Hotel Manager/reservation.c)
+          - [reservation.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50066. Hotel Manager/reservation.h)
+        - [50067. Walk in a File.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50067. Walk in a File.c)
+      - 50068. Tree Traversal
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50068. Tree Traversal/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50068. Tree Traversal/Makefile)
+          - [tree.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50068. Tree Traversal/tree.c)
+          - [tree.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50068. Tree Traversal/tree.h)
+      - 50069. Hangman
+          - [hangman.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50069. Hangman/hangman.c)
+          - [hangman.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50069. Hangman/hangman.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50069. Hangman/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50069. Hangman/Makefile)
+          - [ta_hangman.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50069. Hangman/ta_hangman.c)
+          - [ta_main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50069. Hangman/ta_main.c)
+      - 50070. Elevator
+          - [elevator.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50070. Elevator/elevator.c)
+          - [elevator.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50070. Elevator/elevator.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50070. Elevator/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50070. Elevator/Makefile)
+          - [ta_elevator.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50070. Elevator/ta_elevator.c)
+          - [ta_main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50070. Elevator/ta_main.c)
+      - 50071. Attraction Order
+          - [attraction.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50071. Attraction Order/attraction.h)
+          - [main.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50071. Attraction Order/main.cpp)
+      - 50072. City Grids
+          - [City_Grid.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50072. City Grids/City_Grid.c)
+          - [City_Grid.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50072. City Grids/City_Grid.h)
+        - [50073. Wealth Histogram.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50073. Wealth Histogram.cpp)
+      - 50074. Tree Statistics
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50074. Tree Statistics/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50074. Tree Statistics/Makefile)
+          - [trace.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50074. Tree Statistics/trace.c)
+          - [trace.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50074. Tree Statistics/trace.h)
+        - [50078. Parallelogram.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50078. Parallelogram.c)
+        - [50079. Apple Pile.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50079. Apple Pile.cpp)
+        - [50080. Scan The Blocks.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50080. Scan The Blocks.cpp)
+        - [50081. Robot Simulation.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50081. Robot Simulation.c)
+        - [50082. Two Machines.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50082. Two Machines.c)
+        - [50083. Buckets and Balls.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50083. Buckets and Balls.c)
+        - [50084. Machines and Jobs.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50084. Machines and Jobs.cpp)
+        - [50085. Tank Simulation.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50085. Tank Simulation.cpp)
+        - [50086. Students and Party.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50086. Students and Party.c)
+        - [50087. See-Saw.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50087. See-Saw.c)
+      - 50088. Mountain Travelers
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50088. Mountain Travelers/main.c)
+          - [travel.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50088. Mountain Travelers/travel.c)
+          - [travel.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50088. Mountain Travelers/travel.h)
+      - 50089. Buckets and Balls, Again
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50089. Buckets and Balls, Again/main.c)
+          - [placement.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50089. Buckets and Balls, Again/placement.c)
+          - [placement.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50089. Buckets and Balls, Again/placement.h)
+      - 50090. Count Pointers
+          - [count.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50090. Count Pointers/count.c)
+          - [count.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50090. Count Pointers/count.h)
+          - [main2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50090. Count Pointers/main2.c)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50090. Count Pointers/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50090. Count Pointers/Makefile)
+      - 50091. Two-level Table
+          - [constructTable.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50091. Two-level Table/constructTable.c)
+          - [constructTable.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50091. Two-level Table/constructTable.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50091. Two-level Table/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50091. Two-level Table/Makefile)
+      - 50092. Pointer Chasing
+          - [0.in](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50092. Pointer Chasing/0.in)
+          - [chasing.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50092. Pointer Chasing/chasing.c)
+          - [chasing.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50092. Pointer Chasing/chasing.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50092. Pointer Chasing/main.c)
+        - [50093. String Substitution.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50093. String Substitution.c)
+        - [50094. Word Learning.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50094. Word Learning.c)
+        - [50095. Lines of Words.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50095. Lines of Words.c)
+        - [50096. Hamming Distance.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50096. Hamming Distance.c)
+      - 50097. Conveyor Belt
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50097. Conveyor Belt/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50097. Conveyor Belt/Makefile)
+          - [transmission.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50097. Conveyor Belt/transmission.c)
+          - [transmission.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50097. Conveyor Belt/transmission.h)
+        - [50098. Disjoint Clubs.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50098. Disjoint Clubs.c)
+        - [50099. Seesaw Chandelier.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50099. Seesaw Chandelier.cpp)
+      - 50100. Impact Factor
+          - [compute.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50100. Impact Factor/compute.c)
+          - [compute.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50100. Impact Factor/compute.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50100. Impact Factor/main.c)
+      - 50101. Component and Parts
+          - [componentPart.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50101. Component and Parts/componentPart.c)
+          - [componentPart.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50101. Component and Parts/componentPart.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50101. Component and Parts/main.c)
+        - [50102. File Addition.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50102. File Addition.c)
+        - [50103. File Mirroring and Shifting.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50103. File Mirroring and Shifting.c)
+        - [50104. Students and Clubs.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50104. Students and Clubs.c)
+      - 50105. Seesaw Chandelier Tree
+          - [construct.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50105. Seesaw Chandelier Tree/construct.c)
+          - [construct.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50105. Seesaw Chandelier Tree/construct.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50105. Seesaw Chandelier Tree/main.c)
+      - 50106. Construct a Binary Search Tree
+          - [construct.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50106. Construct a Binary Search Tree/construct.c)
+          - [construct.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50106. Construct a Binary Search Tree/construct.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50106. Construct a Binary Search Tree/main.c)
+        - [50107. Height and Weight.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50107. Height and Weight.cpp)
+      - 50108. Sequence to Binary Tree
+          - [construct.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50108. Sequence to Binary Tree/construct.c)
+          - [construct.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50108. Sequence to Binary Tree/construct.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50108. Sequence to Binary Tree/main.c)
+        - [50109. H-index.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50109. H-index.c)
+      - 50110. Tree Operations
+          - [main1.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50110. Tree Operations/main1.c)
+          - [main2.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50110. Tree Operations/main2.c)
+          - [main3.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50110. Tree Operations/main3.c)
+          - [operations.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50110. Tree Operations/operations.c)
+          - [operations.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50110. Tree Operations/operations.h)
+        - [50111. Hamiltonian Cycle.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50111. Hamiltonian Cycle.cpp)
+        - [50112. Apartments and Friends.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50112. Apartments and Friends.c)
+      - 50113. Ternary Search Tree
+          - [construct.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50113. Ternary Search Tree/construct.c)
+          - [construct.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50113. Ternary Search Tree/construct.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50113. Ternary Search Tree/main.c)
+        - [50114. Simple Polygon.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50114. Simple Polygon.cpp)
+        - [50115. Depth of Water.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50115. Depth of Water.cpp)
+        - [50116. Play with digits.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50116. Play with digits.cpp)
+        - [50117. Divide a number.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50117. Divide a number.cpp)
+        - [50118. Connect Integers.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50118. Connect Integers.cpp)
+        - [50119. Paper Scissors Stone.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50119. Paper Scissors Stone.cpp)
+        - [50120. Consecutive 1's.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50120. Consecutive 1's.cpp)
+        - [50121. Push Stones.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50121. Push Stones.cpp)
+        - [50122. Knights' Tour.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50122. Knights' Tour.cpp)
+        - [50123. Magic Square.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50123. Magic Square.cpp)
+      - 50124. Knights Tour with Functions
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50124. Knights Tour with Functions/main.c)
+          - [main_nextMove.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50124. Knights Tour with Functions/main_nextMove.c)
+          - [main_validMoveNum.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50124. Knights Tour with Functions/main_validMoveNum.c)
+          - [nextMove.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50124. Knights Tour with Functions/nextMove.c)
+          - [nextMove.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50124. Knights Tour with Functions/nextMove.h)
+          - [validMoveNum.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50124. Knights Tour with Functions/validMoveNum.c)
+          - [validMoveNum.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50124. Knights Tour with Functions/validMoveNum.h)
+      - 50125. Consecutive 1s with Function
+          - [findLength.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50125. Consecutive 1s with Function/findLength.c)
+          - [findLength.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50125. Consecutive 1s with Function/findLength.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50125. Consecutive 1s with Function/main.c)
+          - [main_test.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50125. Consecutive 1s with Function/main_test.c)
+      - 50126. Line Up Numbers
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50126. Line Up Numbers/main.c)
+          - [merge.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50126. Line Up Numbers/merge.c)
+      - 50127. Connect the Numbers
+          - [constructPointerArray.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50127. Connect the Numbers/constructPointerArray.c)
+          - [constructPointerArray.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50127. Connect the Numbers/constructPointerArray.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50127. Connect the Numbers/main.c)
+      - 50128. Split a List
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50128. Split a List/main.c)
+          - [split.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50128. Split a List/split.c)
+          - [split.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50128. Split a List/split.h)
+        - [50. Overlap Area.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/50. Overlap Area.cpp)
+        - [53. Permutation.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/53. Permutation.c)
+        - [54. Number of Appearance.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/54. Number of Appearance.cpp)
+        - [55. The Robots.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/55. The Robots.cpp)
+        - [58. Lakes.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/58. Lakes.c)
+        - [5. Surface Area and Volume.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/5. Surface Area and Volume.cpp)
+        - [65. Expression Tree.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/65. Expression Tree.c)
+        - [6. Print Three Digits.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/6. Print Three Digits.cpp)
+      - 72. Fill the Array
+          - [fill_array.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/72. Fill the Array/fill_array.c)
+          - [fill_array.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/72. Fill the Array/fill_array.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/72. Fill the Array/main.c)
+        - [73. 3n, 3n + 1, and 3n + 2.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/73. 3n, 3n + 1, and 3n + 2.cpp)
+        - [7. 3, 5, and 7.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/7. 3, 5, and 7.cpp)
+        - [74. Mn, Mn + 1, ... Mn + M - 1.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/74. Mn, Mn + 1, ... Mn + M - 1.cpp)
+        - [75. Count Letters.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/75. Count Letters.cpp)
+        - [76. Strings.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/76. Strings.c)
+      - 77. Get the i-th Element in a List
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/77. Get the i-th Element in a List/main.c)
+          - [node.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/77. Get the i-th Element in a List/node.c)
+          - [node.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/77. Get the i-th Element in a List/node.h)
+        - [80. Triangle.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/80. Triangle.c)
+        - [85. Sort Dates.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/85. Sort Dates.c)
+      - 87. Merge Lists
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/87. Merge Lists/main.c)
+          - [node.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/87. Merge Lists/node.c)
+          - [node.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/87. Merge Lists/node.h)
+        - [88. AB Numbers.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/88. AB Numbers.cpp)
+        - [89. File Encoding.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/89. File Encoding.c)
+        - [8. Triangle Length.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/8. Triangle Length.cpp)
+      - 93. Heap
+          - [heap.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/93. Heap/heap.c)
+          - [heap.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/93. Heap/heap.h)
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/93. Heap/main.c)
+        - [94. Tree Traversal.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/94. Tree Traversal.c)
+        - [96. Cow and House.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/96. Cow and House.cpp)
+        - [97. Bicycle and Parking Lot.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/97. Bicycle and Parking Lot.cpp)
+        - [98. Food Ingredients in Common.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/98. Food Ingredients in Common.cpp)
+        - [99. Bingo.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/99. Bingo.cpp)
+        - [9. Score of an Integer.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/9. Score of an Integer.c)
+      - fastgdb
+          - [main.c](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/fastgdb/main.c)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/fastgdb/Makefile)
+          - [test.in](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/fastgdb/test.in)
+      - GPGPU-Programming
+          - [0.in](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/0.in)
+          - [main.cu](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/main.cu)
+          - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/Makefile)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/pin.cpp)
+        - PoissonImage
+          - lab3
+              - [diff-img.py](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/PoissonImage/lab3/diff-img.py)
+              - [lab3.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/PoissonImage/lab3/lab3.h)
+              - [lab3.pdf](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/PoissonImage/lab3/lab3.pdf)
+              - [lab3_test.zip](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/PoissonImage/lab3/lab3_test.zip)
+              - [main.cu](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/PoissonImage/lab3/main.cu)
+              - [Makefile](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/PoissonImage/lab3/Makefile)
+              - [ouput.jpg](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/PoissonImage/lab3/ouput.jpg)
+              - [pgm.cpp](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/PoissonImage/lab3/pgm.cpp)
+              - [pgm.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/PoissonImage/lab3/pgm.h)
+              - [ppm2jpg.py](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/PoissonImage/lab3/ppm2jpg.py)
+          - utils
+              - [SyncedMemory.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/PoissonImage/utils/SyncedMemory.h)
+              - [Timer.h](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/PoissonImage/utils/Timer.h)
+          - [README.md](/home/alexander/codes/uva2/OnlineJudge/JudgeGirl/GPGPU-Programming/README.md)
+    - KHCode
+        - [README.md](/home/alexander/codes/uva2/OnlineJudge/KHCode/README.md)
+        - [第四題 瘦身遊戲.cpp](/home/alexander/codes/uva2/OnlineJudge/KHCode/第四題 瘦身遊戲.cpp)
+    - LeetCodeOJ
+      - 101 - Symmetric Tree
+          - [LeetCode - Symmetric Tree.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/101 - Symmetric Tree/LeetCode - Symmetric Tree.cpp)
+        - [102 - Binary Tree Level Order Traversal.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/102 - Binary Tree Level Order Traversal.cpp)
+        - [103. Binary Tree Zigzag Level Order Traversal.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/103. Binary Tree Zigzag Level Order Traversal.cpp)
+        - [105. Construct Binary Tree from Preorder and Inorder Traversal.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/105. Construct Binary Tree from Preorder and Inorder Traversal.cpp)
+        - [106. Construct Binary Tree from Inorder and Postorder Traversal.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/106. Construct Binary Tree from Inorder and Postorder Traversal.cpp)
+      - 107 - Binary Tree Level Order Traversal II
+          - [Binary Tree Level Order Traversal II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/107 - Binary Tree Level Order Traversal II/Binary Tree Level Order Traversal II.cpp)
+        - [108. Convert Sorted Array to Binary Search Tree.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/108. Convert Sorted Array to Binary Search Tree.cpp)
+        - [109. Convert Sorted List to Binary Search Tree.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/109. Convert Sorted List to Binary Search Tree.cpp)
+      - 10 - Regular Expression Matching
+          - [10 - Regular Expression Matching.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/10 - Regular Expression Matching/10 - Regular Expression Matching.cpp)
+        - [110 - Balanced Binary Tree.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/110 - Balanced Binary Tree.cpp)
+        - [112. Path Sum.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/112. Path Sum.cpp)
+        - [113. Path Sum II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/113. Path Sum II.cpp)
+        - [114. Flatten Binary Tree to Linked List.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/114. Flatten Binary Tree to Linked List.cpp)
+        - [115 - Distinct Subsequences.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/115 - Distinct Subsequences.cpp)
+        - [117 - Populating Next Right Pointers in Each Node II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/117 - Populating Next Right Pointers in Each Node II.cpp)
+        - [118 - Pascal's Triangle.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/118 - Pascal's Triangle.cpp)
+        - [119. Pascal's Triangle II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/119. Pascal's Triangle II.cpp)
+      - 11 - Container With Most Water
+          - [11 - Container With Most Water.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/11 - Container With Most Water/11 - Container With Most Water.cpp)
+        - [120. Triangle.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/120. Triangle.cpp)
+        - [121 - Best Time to Buy and Sell Stock.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/121 - Best Time to Buy and Sell Stock.cpp)
+        - [122 - Best Time to Buy and Sell Stock II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/122 - Best Time to Buy and Sell Stock II.cpp)
+        - [123 - Best Time to Buy and Sell Stock III.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/123 - Best Time to Buy and Sell Stock III.cpp)
+        - [124 - Binary Tree Maximum Path Sum.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/124 - Binary Tree Maximum Path Sum.cpp)
+        - [125. Valid Palindrome.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/125. Valid Palindrome.cpp)
+        - [126 - Word Ladder II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/126 - Word Ladder II.cpp)
+        - [127. Word Ladder.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/127. Word Ladder.cpp)
+        - [129. Sum Root to Leaf Numbers.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/129. Sum Root to Leaf Numbers.cpp)
+      - 12 - Integer to Roman
+          - [12 - Integer to Roman.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/12 - Integer to Roman/12 - Integer to Roman.cpp)
+        - [130. Surrounded Regions.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/130. Surrounded Regions.cpp)
+        - [131. Palindrome Partitioning.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/131. Palindrome Partitioning.cpp)
+        - [132. Palindrome Partitioning II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/132. Palindrome Partitioning II.cpp)
+        - [133. Clone Graph.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/133. Clone Graph.cpp)
+      - 134 - Gas Station
+          - [Gas Station Total.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/134 - Gas Station/Gas Station Total.cpp)
+        - [137. Single Number II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/137. Single Number II.cpp)
+        - [138. Copy List with Random Pointer.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/138. Copy List with Random Pointer.cpp)
+      - 13 - Roman to Integer
+          - [13 - Roman to Integer.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/13 - Roman to Integer/13 - Roman to Integer.cpp)
+      - 141 - Linked List Cycle
+          - [LeetCode - Linked List Cycle.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/141 - Linked List Cycle/LeetCode - Linked List Cycle.cpp)
+      - 142 - Linked List Cycle II
+          - [LeetCode - Linked List Cycle II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/142 - Linked List Cycle II/LeetCode - Linked List Cycle II.cpp)
+        - [143. Reorder List.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/143. Reorder List.cpp)
+        - [144. Binary Tree Preorder Traversal.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/144. Binary Tree Preorder Traversal.cpp)
+        - [145. Binary Tree Postorder Traversal.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/145. Binary Tree Postorder Traversal.cpp)
+        - [146 - LRU Cache.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/146 - LRU Cache.cpp)
+        - [147. Insertion Sort List.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/147. Insertion Sort List.cpp)
+        - [148. Sort List.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/148. Sort List.cpp)
+      - 14 - Longest Common Prefix
+          - [14 - Longest Common Prefix.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/14 - Longest Common Prefix/14 - Longest Common Prefix.cpp)
+        - [150. Evaluate Reverse Polish Notation.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/150. Evaluate Reverse Polish Notation.cpp)
+        - [151. Reverse Words in a String.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/151. Reverse Words in a String.cpp)
+      - 15 - 3Sum
+          - [15 - 3Sum.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/15 - 3Sum/15 - 3Sum.cpp)
+        - [155. Min Stack.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/155. Min Stack.cpp)
+        - [160. Intersection of Two Linked Lists.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/160. Intersection of Two Linked Lists.cpp)
+        - [162. Find Peak Element.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/162. Find Peak Element.cpp)
+      - 16 - 3Sum Closest
+          - [16 - 3Sum Closest.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/16 - 3Sum Closest/16 - 3Sum Closest.cpp)
+        - [165. Compare Version Numbers.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/165. Compare Version Numbers.cpp)
+        - [166. Fraction to Recurring Decimal.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/166. Fraction to Recurring Decimal.cpp)
+        - [167. Two Sum II - Input array is sorted.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/167. Two Sum II - Input array is sorted.cpp)
+        - [168. Excel Sheet Column Title.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/168. Excel Sheet Column Title.cpp)
+      - 169 - Majority Element
+          - [Majority Element.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/169 - Majority Element/Majority Element.cpp)
+        - [171 - Excel Sheet Column Number.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/171 - Excel Sheet Column Number.cpp)
+        - [172. Factorial Trailing Zeroes.c](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/172. Factorial Trailing Zeroes.c)
+        - [173. Binary Search Tree Iterator.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/173. Binary Search Tree Iterator.cpp)
+        - [175. Combine Two Tables.sql](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/175. Combine Two Tables.sql)
+        - [176. Second Highest Salary.sql](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/176. Second Highest Salary.sql)
+      - 17 - Letter Combinations of a Phone Number
+          - [17 - Letter Combinations of a Phone Number.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/17 - Letter Combinations of a Phone Number/17 - Letter Combinations of a Phone Number.cpp)
+      - 18 - 4Sum
+          - [18 - 4Sum.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/18 - 4Sum/18 - 4Sum.cpp)
+      - 187 - Repeated DNA Sequences
+          - [Repeated DNA Sequences.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/187 - Repeated DNA Sequences/Repeated DNA Sequences.cpp)
+        - [189. Rotate Array.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/189. Rotate Array.cpp)
+        - [190. Reverse Bits.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/190. Reverse Bits.cpp)
+        - [191 - Number of 1 Bits.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/191 - Number of 1 Bits.cpp)
+        - [192. Word Frequency.sh](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/192. Word Frequency.sh)
+        - [193. Valid Phone Numbers.sh](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/193. Valid Phone Numbers.sh)
+        - [194. Transpose File.bash](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/194. Transpose File.bash)
+        - [195. Tenth Line.bash](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/195. Tenth Line.bash)
+        - [198 - House Robber.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/198 - House Robber.cpp)
+        - [199. Binary Tree Right Side View.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/199. Binary Tree Right Side View.cpp)
+      - 19 - Remove Nth Node From End of List
+          - [19 - Remove Nth Node From End of List.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/19 - Remove Nth Node From End of List/19 - Remove Nth Node From End of List.cpp)
+      - 1 - Two Sum
+          - [1 - Two Sum.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/1 - Two Sum/1 - Two Sum.cpp)
+        - [200. Number of Islands.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/200. Number of Islands.cpp)
+        - [201. Bitwise AND of Numbers Range.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/201. Bitwise AND of Numbers Range.cpp)
+        - [203. Remove Linked List Elements.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/203. Remove Linked List Elements.cpp)
+      - 204 - Count Primes
+          - [Count Primes.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/204 - Count Primes/Count Primes.cpp)
+          - [Count Primes.py](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/204 - Count Primes/Count Primes.py)
+      - 205 - Isomorphic Strings
+          - [Isomorphic Strings.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/205 - Isomorphic Strings/Isomorphic Strings.cpp)
+          - [Isomorphic Strings.py](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/205 - Isomorphic Strings/Isomorphic Strings.py)
+      - 206 - Reverse Linked List
+          - [Reverse Linked List.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/206 - Reverse Linked List/Reverse Linked List.cpp)
+          - [Reverse Linked List.py](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/206 - Reverse Linked List/Reverse Linked List.py)
+        - [207. Course Schedule.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/207. Course Schedule.cpp)
+        - [208. Implement Trie (Prefix Tree).cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/208. Implement Trie (Prefix Tree).cpp)
+        - [209. Minimum Size Subarray Sum.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/209. Minimum Size Subarray Sum.cpp)
+      - 20 - Valid Parentheses
+          - [20 - Valid Parentheses.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/20 - Valid Parentheses/20 - Valid Parentheses.cpp)
+        - [210. Course Schedule II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/210. Course Schedule II.cpp)
+        - [211. Add and Search Word - Data structure design.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/211. Add and Search Word - Data structure design.cpp)
+        - [212. Word Search II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/212. Word Search II.cpp)
+        - [213. House Robber II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/213. House Robber II.cpp)
+        - [214 - Shortest Palindrome.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/214 - Shortest Palindrome.cpp)
+      - 217 - Contains Duplicate
+          - [Contains Duplicate.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/217 - Contains Duplicate/Contains Duplicate.cpp)
+          - [Contains Duplicate.py](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/217 - Contains Duplicate/Contains Duplicate.py)
+        - [218 - The Skyline Problem.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/218 - The Skyline Problem.cpp)
+        - [219 - Contains Duplicate II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/219 - Contains Duplicate II.cpp)
+        - [21 - Merge Two Sorted Lists.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/21 - Merge Two Sorted Lists.cpp)
+        - [220 - Contains Duplicate III.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/220 - Contains Duplicate III.cpp)
+        - [222 - Count Complete Tree Nodes.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/222 - Count Complete Tree Nodes.cpp)
+        - [223 - Rectangle Area.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/223 - Rectangle Area.cpp)
+        - [224. Basic Calculator.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/224. Basic Calculator.cpp)
+      - 225. Implement Stack using Queues
+          - [MyStack.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/225. Implement Stack using Queues/MyStack.java)
+        - opt
+            - [MyStack.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/225. Implement Stack using Queues/opt/MyStack.java)
+        - [227. Basic Calculator II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/227. Basic Calculator II.cpp)
+        - [ 228. Summary Ranges.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/ 228. Summary Ranges.cpp)
+        - [229. Majority Element II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/229. Majority Element II.cpp)
+        - [22 - Generate Parentheses.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/22 - Generate Parentheses.cpp)
+        - [230. Kth Smallest Element in a BST.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/230. Kth Smallest Element in a BST.cpp)
+        - [231 - Power of Two.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/231 - Power of Two.cpp)
+        - [232. Implement Queue using Stacks.js](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/232. Implement Queue using Stacks.js)
+        - [233 -  Number of Digit One.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/233 -  Number of Digit One.cpp)
+      - 234. Palindrome Linked List
+          - [Solution.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/234. Palindrome Linked List/Solution.java)
+        - [236. Lowest Common Ancestor of a Binary Tree.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/236. Lowest Common Ancestor of a Binary Tree.cpp)
+        - [237 - Delete Node in a Linked List.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/237 - Delete Node in a Linked List.cpp)
+        - [238. Product of Array Except Self.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/238. Product of Array Except Self.cpp)
+        - [239 - Sliding Window Maximum.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/239 - Sliding Window Maximum.cpp)
+        - [23 - Merge k Sorted Lists.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/23 - Merge k Sorted Lists.cpp)
+        - [240. Search a 2D Matrix II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/240. Search a 2D Matrix II.cpp)
+        - [241. Different Ways to Add Parentheses.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/241. Different Ways to Add Parentheses.cpp)
+        - [242 - Valid Anagram.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/242 - Valid Anagram.cpp)
+        - [24 - Swap Nodes in Pairs.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/24 - Swap Nodes in Pairs.cpp)
+        - [257. Binary Tree Paths.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/257. Binary Tree Paths.cpp)
+        - [25 - Reverse Nodes in k-Group.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/25 - Reverse Nodes in k-Group.cpp)
+        - [260. Single Number III.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/260. Single Number III.cpp)
+        - [263 - Ugly Number.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/263 - Ugly Number.cpp)
+        - [264. Ugly Number II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/264. Ugly Number II.cpp)
+        - [268. Missing Number.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/268. Missing Number.cpp)
+        - [26 - Remove Duplicates from Sorted Array.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/26 - Remove Duplicates from Sorted Array.cpp)
+        - [278 - First Bad Version.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/278 - First Bad Version.cpp)
+        - [279 - Perfect Squares.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/279 - Perfect Squares.cpp)
+        - [27 - Remove Element.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/27 - Remove Element.cpp)
+        - [28 - Implement strStr().cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/28 - Implement strStr().cpp)
+      - 290. Word Pattern
+          - [Solution.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/290. Word Pattern/Solution.java)
+        - [292 - Nim Game.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/292 - Nim Game.cpp)
+        - [297 - Serialize and Deserialize Binary Tree.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/297 - Serialize and Deserialize Binary Tree.cpp)
+      - 299. Bulls and Cows
+          - [Solution.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/299. Bulls and Cows/Solution.java)
+        - [29 - Divide Two Integers.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/29 - Divide Two Integers.cpp)
+      - 2 - Add Two Numbers
+          - [2 - Add Two Numbers.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/2 - Add Two Numbers/2 - Add Two Numbers.cpp)
+        - [301 - Remove Invalid Parentheses.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/301 - Remove Invalid Parentheses.cpp)
+        - [30 - Substring with Concatenation of All Words.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/30 - Substring with Concatenation of All Words.cpp)
+        - [315 - Count of Smaller Numbers After Self.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/315 - Count of Smaller Numbers After Self.cpp)
+        - [31 - Next Permutation.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/31 - Next Permutation.cpp)
+        - [321. Create Maximum Number.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/321. Create Maximum Number.cpp)
+        - [326 - Power of Three.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/326 - Power of Three.cpp)
+        - [327. Count of Range Sum.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/327. Count of Range Sum.cpp)
+        - [327. Count of Range Sum-v2.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/327. Count of Range Sum-v2.cpp)
+      - 329. Longest Increasing Path in a Matrix
+          - [Solution.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/329. Longest Increasing Path in a Matrix/Solution.java)
+        - [32 - Longest Valid Parentheses.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/32 - Longest Valid Parentheses.cpp)
+        - [330 - Patching Array.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/330 - Patching Array.cpp)
+        - [334 - Reverse String.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/334 - Reverse String.cpp)
+        - [335. Self Crossing.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/335. Self Crossing.cpp)
+        - [336. Palindrome Pairs.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/336. Palindrome Pairs.cpp)
+        - [338. Counting Bits.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/338. Counting Bits.cpp)
+        - [33 - Search in Rotated Sorted Array.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/33 - Search in Rotated Sorted Array.cpp)
+        - [342 - Power of Four.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/342 - Power of Four.cpp)
+        - [345 - Reverse Vowels of a String.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/345 - Reverse Vowels of a String.cpp)
+        - [347. Top K Frequent Elements.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/347. Top K Frequent Elements.cpp)
+        - [349 - Intersection of Two Arrays.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/349 - Intersection of Two Arrays.cpp)
+        - [34 - Search for a Range.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/34 - Search for a Range.cpp)
+        - [350 - Intersection of Two Arrays II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/350 - Intersection of Two Arrays II.cpp)
+        - [352. Data Stream as Disjoint Intervals.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/352. Data Stream as Disjoint Intervals.cpp)
+        - [354 - Russian Doll Envelopes.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/354 - Russian Doll Envelopes.cpp)
+        - [357. Count Numbers with Unique Digits.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/357. Count Numbers with Unique Digits.cpp)
+        - [35 - Search Insert Position.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/35 - Search Insert Position.cpp)
+        - [363 - Max Sum of Rectangle No Larger Than K.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/363 - Max Sum of Rectangle No Larger Than K.cpp)
+        - [365. Water and Jug Problem.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/365. Water and Jug Problem.cpp)
+        - [367. Valid Perfect Square.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/367. Valid Perfect Square.cpp)
+        - [36 - Valid Sudoku.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/36 - Valid Sudoku.cpp)
+        - [371 - Sum of Two Integers.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/371 - Sum of Two Integers.cpp)
+        - [374. Guess Number Higher or Lower.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/374. Guess Number Higher or Lower.cpp)
+        - [37 - Sudoku Solver.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/37 - Sudoku Solver.cpp)
+        - [380. Insert Delete GetRandom O(1).cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/380. Insert Delete GetRandom O(1).cpp)
+        - [383 - Ransom Note.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/383 - Ransom Note.cpp)
+        - [387 - First Unique Character in a String.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/387 - First Unique Character in a String.cpp)
+        - [389 - Find the Difference.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/389 - Find the Difference.cpp)
+        - [38 - Count and Say.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/38 - Count and Say.cpp)
+        - [391 - Perfect Rectangle.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/391 - Perfect Rectangle.cpp)
+        - [396. Rotate Function.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/396. Rotate Function.cpp)
+        - [397. Integer Replacement.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/397. Integer Replacement.cpp)
+        - [39 - Combination Sum.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/39 - Combination Sum.cpp)
+      - 3 - Longest Substring Without Repeating Characters
+          - [3 - Longest Substring Without Repeating Characters.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/3 - Longest Substring Without Repeating Characters/3 - Longest Substring Without Repeating Characters.cpp)
+      - 401. Binary Watch
+          - [Solution.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/401. Binary Watch/Solution.java)
+        - [403. Frog Jump.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/403. Frog Jump.cpp)
+      - 404. Sum of Left Leaves
+          - [Solution.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/404. Sum of Left Leaves/Solution.java)
+      - 405. Convert a Number to Hexadecimal
+          - [Solution.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/405. Convert a Number to Hexadecimal/Solution.java)
+        - [407. Trapping Rain Water II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/407. Trapping Rain Water II.cpp)
+      - 409. Longest Palindrome
+          - [Solution.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/409. Longest Palindrome/Solution.java)
+        - [40 - Combination Sum II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/40 - Combination Sum II.cpp)
+        - [41 - First Missing Positive.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/41 - First Missing Positive.cpp)
+        - [42 - Trapping Rain Water.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/42 - Trapping Rain Water.cpp)
+        - [432. All Oone Data Structure.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/432. All Oone Data Structure.cpp)
+        - [43 - Multiply Strings.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/43 - Multiply Strings.cpp)
+        - [43 - Multiply Strings[v2].cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/43 - Multiply Strings[v2].cpp)
+        - [442. Find All Duplicates in an Array.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/442. Find All Duplicates in an Array.cpp)
+        - [44 - Wildcard Matching.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/44 - Wildcard Matching.cpp)
+        - [45 - Jump Game II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/45 - Jump Game II.cpp)
+        - [460. LFU Cache.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/460. LFU Cache.cpp)
+        - [461. Hamming Distance.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/461. Hamming Distance.cpp)
+        - [462. Minimum Moves to Equal Array Elements II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/462. Minimum Moves to Equal Array Elements II.cpp)
+        - [463. Island Perimeter.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/463. Island Perimeter.cpp)
+        - [464. Can I Win.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/464. Can I Win.cpp)
+        - [465. Optimal Account Balancing.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/465. Optimal Account Balancing.cpp)
+        - [46 - Permutations.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/46 - Permutations.cpp)
+        - [475. Heaters.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/475. Heaters.cpp)
+        - [47 - Permutations II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/47 - Permutations II.cpp)
+        - [47 - Permutations II[v2].cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/47 - Permutations II[v2].cpp)
+        - [483. Smallest Good Base.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/483. Smallest Good Base.cpp)
+        - [48 - Rotate Image.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/48 - Rotate Image.cpp)
+        - [493. Reverse Pairs.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/493. Reverse Pairs.cpp)
+        - [49 - Anagrams.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/49 - Anagrams.cpp)
+      - 4 - Median of Two Sorted Arrays
+          - [Median of Two Sorted Arrays.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/4 - Median of Two Sorted Arrays/Median of Two Sorted Arrays.cpp)
+        - [504. Base 7.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/504. Base 7.cpp)
+        - [506. Relative Ranks.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/506. Relative Ranks.cpp)
+        - [50 - Pow(x, n).cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/50 - Pow(x, n).cpp)
+        - [513. Find Bottom Left Tree Value.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/513. Find Bottom Left Tree Value.cpp)
+        - [517. Super Washing Machines.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/517. Super Washing Machines.cpp)
+        - [51 - N-Queens.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/51 - N-Queens.cpp)
+        - [52 - N-Queens II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/52 - N-Queens II.cpp)
+        - [530. Minimum Absolute Difference in BST.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/530. Minimum Absolute Difference in BST.cpp)
+        - [532. K-diff Pairs in an Array.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/532. K-diff Pairs in an Array.cpp)
+        - [537. Complex Number Multiplication.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/537. Complex Number Multiplication.cpp)
+        - [538. Convert BST to Greater Tree.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/538. Convert BST to Greater Tree.cpp)
+        - [539. Minimum Time Difference.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/539. Minimum Time Difference.cpp)
+        - [53 - Maximum Subarray.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/53 - Maximum Subarray.cpp)
+        - [541. Reverse String II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/541. Reverse String II.cpp)
+        - [542. 01 Matrix.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/542. 01 Matrix.cpp)
+        - [543. Diameter of Binary Tree.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/543. Diameter of Binary Tree.cpp)
+        - [54 - Spiral Matrix.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/54 - Spiral Matrix.cpp)
+        - [55 - Jump Game.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/55 - Jump Game.cpp)
+        - [563. Binary Tree Tilt.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/563. Binary Tree Tilt.cpp)
+        - [564. Find the Closest Palindrome.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/564. Find the Closest Palindrome.cpp)
+        - [57 - Insert Interval.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/57 - Insert Interval.cpp)
+        - [58 - Length of Last Word.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/58 - Length of Last Word.cpp)
+        - [593. Valid Square.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/593. Valid Square.java)
+        - [594. Longest Harmonious Subsequence.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/594. Longest Harmonious Subsequence.cpp)
+        - [598. Range Addition II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/598. Range Addition II.cpp)
+        - [599. Minimum Index Sum of Two Lists.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/599. Minimum Index Sum of Two Lists.cpp)
+        - [59 - Spiral Matrix II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/59 - Spiral Matrix II.cpp)
+      - 5 - Longest Palindromic Substring
+          - [5 - Longest Palindromic Substring.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/5 - Longest Palindromic Substring/5 - Longest Palindromic Substring.cpp)
+        - [600. Non-negative Integers without Consecutive Ones.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/600. Non-negative Integers without Consecutive Ones.cpp)
+        - [601. Human Traffic of Stadium.sql](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/601. Human Traffic of Stadium.sql)
+        - [605. Can Place Flowers.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/605. Can Place Flowers.cpp)
+        - [606. Construct String from Binary Tree.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/606. Construct String from Binary Tree.cpp)
+        - [609. Find Duplicate File in System.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/609. Find Duplicate File in System.cpp)
+        - [60 - Permutation Sequence.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/60 - Permutation Sequence.cpp)
+        - [611. Valid Triangle Number.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/611. Valid Triangle Number.cpp)
+        - [617. Merge Two Binary Trees.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/617. Merge Two Binary Trees.cpp)
+        - [61 - Rotate List.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/61 - Rotate List.cpp)
+        - [621. Task Scheduler.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/621. Task Scheduler.cpp)
+        - [623. Add One Row to Tree.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/623. Add One Row to Tree.cpp)
+        - [624. Maximum Distance in Arrays.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/624. Maximum Distance in Arrays.cpp)
+        - [625. Minimum Factorization.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/625. Minimum Factorization.cpp)
+        - [628. Maximum Product of Three Numbers.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/628. Maximum Product of Three Numbers.cpp)
+        - [629. K Inverse Pairs Array.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/629. K Inverse Pairs Array.cpp)
+        - [62 - Unique Paths.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/62 - Unique Paths.cpp)
+        - [630. Course Schedule III.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/630. Course Schedule III.cpp)
+        - [632. Smallest Range.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/632. Smallest Range.cpp)
+        - [639. Decode Ways II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/639. Decode Ways II.cpp)
+        - [63 - Unique Paths II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/63 - Unique Paths II.cpp)
+        - [640. Solve the Equation.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/640. Solve the Equation.java)
+        - [643. Maximum Average Subarray I.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/643. Maximum Average Subarray I.java)
+        - [644. Maximum Average Subarray II.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/644. Maximum Average Subarray II.java)
+        - [64 - Minimum Path Sum.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/64 - Minimum Path Sum.cpp)
+        - [65 - Valid Number.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/65 - Valid Number.cpp)
+        - [663. Equal Tree Partition.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/663. Equal Tree Partition.cpp)
+        - [66 - Plus One.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/66 - Plus One.cpp)
+        - [67 - Add Binary.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/67 - Add Binary.cpp)
+        - [682. Baseball Game.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/682. Baseball Game.cpp)
+        - [686. Repeated String Match.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/686. Repeated String Match.cpp)
+        - [687. Longest Univalue Path.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/687. Longest Univalue Path.cpp)
+        - [688. Knight Probability in Chessboard.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/688. Knight Probability in Chessboard.cpp)
+        - [689. Maximum Sum of 3 Non-Overlapping Subarrays.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/689. Maximum Sum of 3 Non-Overlapping Subarrays.cpp)
+        - [68 - Text Justification.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/68 - Text Justification.cpp)
+        - [690. Employee Importance.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/690. Employee Importance.cpp)
+        - [691. Stickers to Spell Word.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/691. Stickers to Spell Word.cpp)
+        - [693. Binary Number with Alternating Bits.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/693. Binary Number with Alternating Bits.java)
+        - [695. Max Area of Island.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/695. Max Area of Island.java)
+        - [69 - Sqrt(x).cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/69 - Sqrt(x).cpp)
+      - 6 - ZigZag Conversion
+          - [6 - ZigZag Conversion.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/6 - ZigZag Conversion/6 - ZigZag Conversion.cpp)
+        - [70 - Climbing Stairs.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/70 - Climbing Stairs.cpp)
+        - [71. Simplify Path.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/71. Simplify Path.cpp)
+        - [72 - Edit Distance.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/72 - Edit Distance.cpp)
+        - [73. Set Matrix Zeroes.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/73. Set Matrix Zeroes.cpp)
+        - [75. Sort Colors.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/75. Sort Colors.cpp)
+        - [761 - Special Binary String.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/761 - Special Binary String.cpp)
+        - [76 - Minimum Window Substring.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/76 - Minimum Window Substring.cpp)
+        - [778. Swim in Rising Water.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/778. Swim in Rising Water.cpp)
+        - [78. Subsets.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/78. Subsets.cpp)
+        - [79. Word Search.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/79. Word Search.cpp)
+      - 7 - Reverse Integer
+          - [7 - Reverse Integer.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/7 - Reverse Integer/7 - Reverse Integer.cpp)
+        - [80. Remove Duplicates from Sorted Array II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/80. Remove Duplicates from Sorted Array II.cpp)
+        - [81. Search in Rotated Sorted Array II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/81. Search in Rotated Sorted Array II.cpp)
+        - [82. Remove Duplicates from Sorted List II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/82. Remove Duplicates from Sorted List II.cpp)
+        - [83 - Remove Duplicates from Sorted List.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/83 - Remove Duplicates from Sorted List.cpp)
+        - [84 - Largest Rectangle in Histogram.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/84 - Largest Rectangle in Histogram.cpp)
+        - [85 - Maximal Rectangle.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/85 - Maximal Rectangle.cpp)
+        - [86. Partition List.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/86. Partition List.cpp)
+        - [87 - Scramble String.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/87 - Scramble String.cpp)
+      - 88. Merge Sorted Array
+          - [Solution.java](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/88. Merge Sorted Array/Solution.java)
+        - [89. Gray Code.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/89. Gray Code.cpp)
+      - 8 - String to Integer (atoi)
+          - [8 - String to Integer (atoi).cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/8 - String to Integer (atoi)/8 - String to Integer (atoi).cpp)
+        - [90. Subsets II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/90. Subsets II.cpp)
+        - [91. Decode Ways.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/91. Decode Ways.cpp)
+        - [92. Reverse Linked List II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/92. Reverse Linked List II.cpp)
+        - [93. Restore IP Addresses.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/93. Restore IP Addresses.cpp)
+        - [94. Binary Tree Inorder Traversal.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/94. Binary Tree Inorder Traversal.cpp)
+        - [95. Unique Binary Search Trees II.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/95. Unique Binary Search Trees II.cpp)
+        - [96. Unique Binary Search Trees.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/96. Unique Binary Search Trees.cpp)
+        - [97 - Interleaving String.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/97 - Interleaving String.cpp)
+      - 99 - Recover Binary Search Tree
+          - [Recover Binary Search Tree.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/99 - Recover Binary Search Tree/Recover Binary Search Tree.cpp)
+      - 9 - Palindrome Number
+          - [9 - Palindrome Number.cpp](/home/alexander/codes/uva2/OnlineJudge/LeetCodeOJ/9 - Palindrome Number/9 - Palindrome Number.cpp)
+    - Paiza
+        - [paiza- D030 都市名は何.cpp](/home/alexander/codes/uva2/OnlineJudge/Paiza/paiza- D030 都市名は何.cpp)
+        - [paiza- D031 分から秒へ.cpp](/home/alexander/codes/uva2/OnlineJudge/Paiza/paiza- D031 分から秒へ.cpp)
+        - [paiza- Vol.7「水着」ゲットチャレンジ.cpp](/home/alexander/codes/uva2/OnlineJudge/Paiza/paiza- Vol.7「水着」ゲットチャレンジ.cpp)
+        - [paiza - メイド服セット.cpp](/home/alexander/codes/uva2/OnlineJudge/Paiza/paiza - メイド服セット.cpp)
+        - [paiza - 猫セット.cpp](/home/alexander/codes/uva2/OnlineJudge/Paiza/paiza - 猫セット.cpp)
+        - [paiza - 「猫耳セット」ゲットチャレンジ！.cpp](/home/alexander/codes/uva2/OnlineJudge/Paiza/paiza - 「猫耳セット」ゲットチャレンジ！.cpp)
+        - [README.md](/home/alexander/codes/uva2/OnlineJudge/Paiza/README.md)
+    - POJ
+        - [POJ 1002 - 487-3279.cpp](/home/alexander/codes/uva2/OnlineJudge/POJ/POJ 1002 - 487-3279.cpp)
+        - [POJ 1151 - Atlantis.cpp](/home/alexander/codes/uva2/OnlineJudge/POJ/POJ 1151 - Atlantis.cpp)
+        - [POJ - 1160.cpp](/home/alexander/codes/uva2/OnlineJudge/POJ/POJ - 1160.cpp)
+        - [POJ - 1160-opt.cpp](/home/alexander/codes/uva2/OnlineJudge/POJ/POJ - 1160-opt.cpp)
+        - [POJ 1166.cpp](/home/alexander/codes/uva2/OnlineJudge/POJ/POJ 1166.cpp)
+        - [POJ - 1785 Binary Search Heap Construction.cpp](/home/alexander/codes/uva2/OnlineJudge/POJ/POJ - 1785 Binary Search Heap Construction.cpp)
+        - [[POJ] 2489 - Line Segments.cpp](/home/alexander/codes/uva2/OnlineJudge/POJ/[POJ] 2489 - Line Segments.cpp)
+        - [POJ 3225 - Help with Intervals.cpp](/home/alexander/codes/uva2/OnlineJudge/POJ/POJ 3225 - Help with Intervals.cpp)
+    - SPOJ
+        - [SPOJ - DSUBSEQ - Distinct Subsequences.cpp](/home/alexander/codes/uva2/OnlineJudge/SPOJ/SPOJ - DSUBSEQ - Distinct Subsequences.cpp)
+        - [SPOJ - DYNALCA - Dynamic LCA.cpp](/home/alexander/codes/uva2/OnlineJudge/SPOJ/SPOJ - DYNALCA - Dynamic LCA.cpp)
+        - [SPOJ - LCS2 - Longest Common Substring II.cpp](/home/alexander/codes/uva2/OnlineJudge/SPOJ/SPOJ - LCS2 - Longest Common Substring II.cpp)
+        - [SPOJ - QTREE6 - Query on a tree VI[component_LCT_clear].cpp](/home/alexander/codes/uva2/OnlineJudge/SPOJ/SPOJ - QTREE6 - Query on a tree VI[component_LCT_clear].cpp)
+        - [SPOJ - QTREE6 - Query on a tree VI.cpp](/home/alexander/codes/uva2/OnlineJudge/SPOJ/SPOJ - QTREE6 - Query on a tree VI.cpp)
+        - [SPOJ - QTREE6 - Query on a tree VI[LCT_clear].cpp](/home/alexander/codes/uva2/OnlineJudge/SPOJ/SPOJ - QTREE6 - Query on a tree VI[LCT_clear].cpp)
+        - [SPOJ - QTREE7 - Query on a tree VII.cpp](/home/alexander/codes/uva2/OnlineJudge/SPOJ/SPOJ - QTREE7 - Query on a tree VII.cpp)
+    - TIOJ
+        - [TIOJ - 1475.cpp](/home/alexander/codes/uva2/OnlineJudge/TIOJ/TIOJ - 1475.cpp)
+    - Toph
+      - SUSTInterUPC2017
+          - [Toph - Counting Triplets.c](/home/alexander/codes/uva2/OnlineJudge/Toph/SUSTInterUPC2017/Toph - Counting Triplets.c)
+    - ZEROJUDGE
+        - [a007.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a007.cpp)
+        - [a048. 函數增減性.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a048. 函數增減性.cpp)
+        - [a054. 電話客服中心.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a054. 電話客服中心.cpp)
+        - [a055. POJ 2182 Lost Cows.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a055. POJ 2182 Lost Cows.cpp)
+        - [a056. NOI1999 Day1.2.釘子和小球.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a056. NOI1999 Day1.2.釘子和小球.cpp)
+        - [a058. MOD3.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a058. MOD3.cpp)
+        - [a059. 完全平方和.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a059. 完全平方和.cpp)
+        - [a063.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a063.cpp)
+        - [a063. SGU 187. Twist and whirl - want to cheat[splay_tree].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a063. SGU 187. Twist and whirl - want to cheat[splay_tree].cpp)
+        - [a064. SPOJ 4580.ABCDEF.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a064. SPOJ 4580.ABCDEF.cpp)
+        - [a065. 提款卡密碼.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a065. 提款卡密碼.cpp)
+        - [a066. HNOI2002 營業額統計.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a066. HNOI2002 營業額統計.cpp)
+        - [a067. NOI1999 Day1.3.生日蛋糕.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a067. NOI1999 Day1.3.生日蛋糕.cpp)
+        - [a068. E. 看動畫 加強版.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a068. E. 看動畫 加強版.cpp)
+        - [a069. NOI1999 Day2.1.棋盤分割.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a069. NOI1999 Day2.1.棋盤分割.cpp)
+        - [a070. NOI1999 Day2.2.最優連通子集.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a070. NOI1999 Day2.2.最優連通子集.cpp)
+        - [a071. NOI1999 Day2.3. 內存分配.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a071. NOI1999 Day2.3. 內存分配.cpp)
+        - [a072. NOI2010 Day1.2. 超級鋼琴.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a072. NOI2010 Day1.2. 超級鋼琴.cpp)
+        - [a073. POJ2832 How Many Pairs.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a073. POJ2832 How Many Pairs.cpp)
+        - [a074. TOI2011 第五題 畫作問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a074. TOI2011 第五題 畫作問題.cpp)
+        - [a077. NOI2000 Day1.1.瓷片項鍊.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a077. NOI2000 Day1.1.瓷片項鍊.cpp)
+        - [a080. NOI2000 Day2.1.單詞查找樹.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a080. NOI2000 Day2.1.單詞查找樹.cpp)
+        - [a081. NOI2000 Day2.2.青蛙過河.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a081. NOI2000 Day2.2.青蛙過河.cpp)
+        - [a083. NOI2001 Day1.1.食物鏈.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a083. NOI2001 Day1.1.食物鏈.cpp)
+        - [a084. NOI2001 Day1.2.反正切函數的應用.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a084. NOI2001 Day1.2.反正切函數的應用.cpp)
+        - [a094. NOI2003 Day1.1.木棒遊戲.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a094. NOI2003 Day1.1.木棒遊戲.cpp)
+        - [a097. PARKET.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a097. PARKET.cpp)
+        - [a104. 排序.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a104. 排序.cpp)
+        - [a111. 12149 - Feynman.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a111. 12149 - Feynman.cpp)
+        - [a121. 質數又來囉.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a121. 質數又來囉.cpp)
+        - [a126.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a126.cpp)
+        - [a128. Sharing Chocolate.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a128. Sharing Chocolate.cpp)
+        - [a128. Sharing ChocolateII.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a128. Sharing ChocolateII.cpp)
+        - [a130. 12015 - Google is Feeling Lucky.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a130. 12015 - Google is Feeling Lucky.cpp)
+        - [a131. 739 - Soundex Indexing.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a131. 739 - Soundex Indexing.cpp)
+        - [a132 10931 - Parity.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a132 10931 - Parity.cpp)
+        - [a133. 10066 - The Twin Towers.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a133. 10066 - The Twin Towers.cpp)
+        - [a134. 948 - Fibonaccimal Base.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a134. 948 - Fibonaccimal Base.cpp)
+        - [a135. 12250 - Language Detection.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a135. 12250 - Language Detection.cpp)
+        - [a141. 柏森想要學妹!!!.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a141. 柏森想要學妹!!!.cpp)
+        - [a144. 整數分拆.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a144. 整數分拆.cpp)
+        - [a146. Sliding Window.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a146. Sliding Window.cpp)
+        - [a147. Print it all.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a147. Print it all.cpp)
+        - [a148. You Cannot Pass.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a148. You Cannot Pass.cpp)
+        - [a149. 乘乘樂.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a149. 乘乘樂.cpp)
+        - [a158. 11827 - Maximum GCD.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a158. 11827 - Maximum GCD.cpp)
+        - [a159. 11743 - Credit Check.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a159. 11743 - Credit Check.cpp)
+        - [a160. 柏森想要下棋!!!.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a160. 柏森想要下棋!!!.cpp)
+        - [a164. 區間最大連續和.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a164. 區間最大連續和.cpp)
+        - [a165. Magic number.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a165. Magic number.cpp)
+        - [a168. 3901 - Editor.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a168. 3901 - Editor.cpp)
+        - [a169 POJ 3225 Help with Intervals.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a169 POJ 3225 Help with Intervals.cpp)
+        - [a170. 天才的小明.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a170. 天才的小明.cpp)
+        - [a171. 打印樹.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a171. 打印樹.cpp)
+        - [A174.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/A174.c)
+        - [a174. 上帝玩不玩骰子？.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a174. 上帝玩不玩骰子？.cpp)
+        - [a175. 撒旦玩不玩骰子？(AVL).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a175. 撒旦玩不玩骰子？(AVL).cpp)
+        - [a175. 撒旦玩不玩骰子？.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a175. 撒旦玩不玩骰子？.cpp)
+        - [a176. Battle!.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a176. Battle!.cpp)
+        - [a181. 逆逆向思考[DAtrie].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a181. 逆逆向思考[DAtrie].cpp)
+        - [a186. Three-Heap Wythoff's Game.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a186. Three-Heap Wythoff's Game.cpp)
+        - [a190. 公元2317. 手觸之役.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a190. 公元2317. 手觸之役.cpp)
+        - [a191. 在世界遙遠的彼方.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a191. 在世界遙遠的彼方.cpp)
+        - [a191. 在世界遙遠的彼方(test).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a191. 在世界遙遠的彼方(test).cpp)
+        - [a192. 接線問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a192. 接線問題.cpp)
+        - [a194. 死亡 FLAG2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a194. 死亡 FLAG2.cpp)
+        - [a194. 死亡 FLAG.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a194. 死亡 FLAG.cpp)
+        - [a206. 學長的鬼腳圖 (二).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a206. 學長的鬼腳圖 (二).cpp)
+        - [a207.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a207.cpp)
+        - [a207 Exact cover.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a207 Exact cover.cpp)
+        - [a207.Exact cover(DL).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a207.Exact cover(DL).cpp)
+        - [a209. 街友的寒冷夜晚.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a209. 街友的寒冷夜晚.cpp)
+        - [a215. 明明愛數數.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a215. 明明愛數數.cpp)
+        - [a216. 數數愛明明.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a216. 數數愛明明.cpp)
+        - [a217. caps lock的災難.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a217. caps lock的災難.cpp)
+        - [a218. 連猴子都會的小case.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a218. 連猴子都會的小case.cpp)
+        - [a219. 限制排列.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a219. 限制排列.cpp)
+        - [a223. 10298 - Power Strings.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a223. 10298 - Power Strings.cpp)
+        - [a224. 明明愛明明.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a224. 明明愛明明.cpp)
+        - [a225. 明明愛排列.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a225. 明明愛排列.cpp)
+        - [a227. 三龍杯 - 河內之塔.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a227. 三龍杯 - 河內之塔.cpp)
+        - [a228. 就少一個插座用很不方便.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a228. 就少一個插座用很不方便.cpp)
+        - [a229. 括號匹配問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a229. 括號匹配問題.cpp)
+        - [a233. 排序法~~~ 挑戰極限.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a233. 排序法~~~ 挑戰極限.cpp)
+        - [a240. 第一題. 1  17 小數第 n 位.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a240. 第一題. 1  17 小數第 n 位.cpp)
+        - [a241. 第二題 1  x 是有限小數.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a241. 第二題 1  x 是有限小數.cpp)
+        - [a242. 第三題. 絕對值總和的最小值.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a242. 第三題. 絕對值總和的最小值.cpp)
+        - [a243. 第四題. 點燈遊戲.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a243. 第四題. 點燈遊戲.cpp)
+        - [a245. 王老師愛兩條線.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a245. 王老師愛兩條線.cpp)
+        - [a247. Fermat vs. Pythagoras.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a247. Fermat vs. Pythagoras.cpp)
+        - [a248. 新手訓練 ~ 陣列應用.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a248. 新手訓練 ~ 陣列應用.cpp)
+        - [a249. Q679. Dropping Balls.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a249. Q679. Dropping Balls.cpp)
+        - [a251. 假費波那契數.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a251. 假費波那契數.cpp)
+        - [a252. Another LCS.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a252. Another LCS.cpp)
+        - [a253. 王老先生的磨菇田.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a253. 王老先生的磨菇田.cpp)
+        - [a254. 畢氏‧三角‧製造.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a254. 畢氏‧三角‧製造.cpp)
+        - [a259. Q10917. A Walk Through the Forest.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a259. Q10917. A Walk Through the Forest.cpp)
+        - [a263. 日期差幾天.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a263. 日期差幾天.c)
+        - [a263. 日期差幾天.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a263. 日期差幾天.cpp)
+        - [a264. 骰子疊疊樂.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a264. 骰子疊疊樂.cpp)
+        - [a265. 紅黑樹.pp.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a265. 紅黑樹.pp.c)
+        - [a266. 校內賽.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a266. 校內賽.cpp)
+        - [a267. 太空梭的油箱.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a267. 太空梭的油箱.cpp)
+        - [a270. 爬樓梯有益身心健康.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a270. 爬樓梯有益身心健康.cpp)
+        - [a271. 彩色蘿蔔.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a271. 彩色蘿蔔.cpp)
+        - [a272. 猥瑣罐頭下樓梯.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a272. 猥瑣罐頭下樓梯.cpp)
+        - [a273. 小朋友下樓梯.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a273. 小朋友下樓梯.cpp)
+        - [a274. 友誼的數字.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a274. 友誼的數字.cpp)
+        - [a275. 字串變變變.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a275. 字串變變變.cpp)
+        - [a276. 又分糖果囉.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a276. 又分糖果囉.cpp)
+        - [a277. 高手寂寞.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a277. 高手寂寞.cpp)
+        - [a279. 分糖果囉.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a279. 分糖果囉.cpp)
+        - [a280. 小朋友上樓梯.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a280. 小朋友上樓梯.cpp)
+        - [a281.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a281.cpp)
+        - [a282. 認真念書.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a282. 認真念書.cpp)
+        - [a285. 女兒國婚友社.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a285. 女兒國婚友社.cpp)
+        - [a286. 難道這就是命中注定.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a286. 難道這就是命中注定.cpp)
+        - [a290. 新手訓練系列 ~ 圖論.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a290. 新手訓練系列 ~ 圖論.cpp)
+        - [a291. nAnB problem.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a291. nAnB problem.cpp)
+        - [a293 A 百年國慶.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a293 A 百年國慶.cpp)
+        - [a299. NOIP2011 Day1.1.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a299. NOIP2011 Day1.1.cpp)
+        - [a300.NOIP2011 Day1.2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a300.NOIP2011 Day1.2.cpp)
+        - [a302. NOIP2011 Day2.1.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a302. NOIP2011 Day2.1.cpp)
+        - [a307.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a307.cpp)
+        - [a308. NOIP2011 2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a308. NOIP2011 2.cpp)
+        - [a310. NOIP2011 3.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a310. NOIP2011 3.cpp)
+        - [a311. NOIP2011 4.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a311. NOIP2011 4.cpp)
+        - [a311. NOIP2011 4[no_recursion].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a311. NOIP2011 4[no_recursion].cpp)
+        - [a313 B 街道國.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a313 B 街道國.cpp)
+        - [a314. C 導覽型機器人.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a314. C 導覽型機器人.cpp)
+        - [a315 D 滿州國皇帝之璽.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a315 D 滿州國皇帝之璽.cpp)
+        - [a316 E 守塔新武器.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a316 E 守塔新武器.cpp)
+        - [a317.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a317.cpp)
+        - [a322.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a322.cpp)
+        - [a329. 貪婪的Tony.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a329. 貪婪的Tony.cpp)
+        - [a331. K-th Number.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a331. K-th Number.cpp)
+        - [a331[v3].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a331[v3].cpp)
+        - [a348. 1. 貪食蛇.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a348. 1. 貪食蛇.cpp)
+        - [a349. 2. 指令解譯器.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a349. 2. 指令解譯器.cpp)
+        - [a350. 3. 緞帶的購買問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a350. 3. 緞帶的購買問題.cpp)
+        - [a361. A. 賓果遊戲.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a361. A. 賓果遊戲.cpp)
+        - [a362. 1. 搬雕像.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a362. 1. 搬雕像.cpp)
+        - [a363. B. 分組競賽.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a363. B. 分組競賽.c)
+        - [a364. 2. 神秘的進位問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a364. 2. 神秘的進位問題.cpp)
+        - [a365. 3. 新井字遊戲.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a365. 3. 新井字遊戲.cpp)
+        - [a367. C. 圈圈國.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a367. C. 圈圈國.cpp)
+        - [a370.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a370.cpp)
+        - [a373. 賽車.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a373. 賽車.cpp)
+        - [a374. 5. 股票趨勢[2DRMQ].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a374. 5. 股票趨勢[2DRMQ].cpp)
+        - [a392 NOI2011 Day2.1.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a392 NOI2011 Day2.1.cpp)
+        - [a410. 解方程.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a410. 解方程.c)
+        - [a414. 位元運算之進位篇.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a414. 位元運算之進位篇.cpp)
+        - [a415. 4.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a415. 4.cpp)
+        - [a415. 4. 捷運路線.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a415. 4. 捷運路線.cpp)
+        - [a416. 6.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a416. 6.cpp)
+        - [a416. 6. 城市馬拉松.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a416. 6. 城市馬拉松.cpp)
+        - [a417. 螺旋矩陣.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a417. 螺旋矩陣.c)
+        - [a433. A. 三角形金磚.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a433. A. 三角形金磚.c)
+        - [a443. 10720 - Graph Construction.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a443. 10720 - Graph Construction.cpp)
+        - [a445. 新手訓練系列- 我的朋友很少.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a445. 新手訓練系列- 我的朋友很少.c)
+        - [a449. 國王烏龜的接駁車.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a449. 國王烏龜的接駁車.c)
+        - [a450. 棒棒糖比身高.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a450. 棒棒糖比身高.cpp)
+        - [a453. TOI2010 第一題.一元二次方程式.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a453. TOI2010 第一題.一元二次方程式.c)
+        - [a454. TOI2010 第二題.專案時程.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a454. TOI2010 第二題.專案時程.cpp)
+        - [a455. TOI2010 第四題商品特賣問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a455. TOI2010 第四題商品特賣問題.cpp)
+        - [a456. 子集合.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a456. 子集合.c)
+        - [a457.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a457.cpp)
+        - [a457 TOI2010 第五題餐廳評鑑.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a457 TOI2010 第五題餐廳評鑑.cpp)
+        - [a458. Beats of the Angel 加強版.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a458. Beats of the Angel 加強版.cpp)
+        - [a458.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a458.cpp)
+        - [a459. An Easy Language.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a459. An Easy Language.cpp)
+        - [a462. Beats of the Angel.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a462. Beats of the Angel.cpp)
+        - [a471. givesum~連續整數的固定和.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a471. givesum~連續整數的固定和.cpp)
+        - [a473. 外援計畫.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a473. 外援計畫.c)
+        - [a480. 導彈攔截系統.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a480. 導彈攔截系統.cpp)
+        - [a481. 樹的維護.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a481. 樹的維護.cpp)
+        - [a484. 美麗風景遞增之路2.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a484. 美麗風景遞增之路2.c)
+        - [a484. 美麗風景遞增之路3.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a484. 美麗風景遞增之路3.c)
+        - [a484. 美麗風景遞增之路.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a484. 美麗風景遞增之路.c)
+        - [a484. 美麗風景遞增之路.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a484. 美麗風景遞增之路.cpp)
+        - [a505 B. T-primes.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a505 B. T-primes.cpp)
+        - [a506. 走投無路的國王.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a506. 走投無路的國王.cpp)
+        - [a513. 最大值.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a513. 最大值.cpp)
+        - [a517. Freak大危機!!!.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a517. Freak大危機!!!.cpp)
+        - [a521. 12414 - Calculating Yuan Fen.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a521. 12414 - Calculating Yuan Fen.cpp)
+        - [a524. 手機之謎.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a524. 手機之謎.cpp)
+        - [a528. 大數排序.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a528. 大數排序.cpp)
+        - [a532 MathSol.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a532 MathSol.cpp)
+        - [a532. 奇特的數列.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a532. 奇特的數列.cpp)
+        - [a533. IOI2004 Day1.1.阿特米斯.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a533. IOI2004 Day1.1.阿特米斯.cpp)
+        - [a534.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a534.cpp)
+        - [a534. IOI2008 Day2.1.花園問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a534. IOI2008 Day2.1.花園問題.cpp)
+        - [a541. 字典.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a541. 字典.cpp)
+        - [a541 字典[Trie].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a541 字典[Trie].cpp)
+        - [a542. 行列式det(A).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a542. 行列式det(A).cpp)
+        - [a545. Stressful.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a545. Stressful.cpp)
+        - [a546. A - Perfect Permutation.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a546. A - Perfect Permutation.cpp)
+        - [a552. 模型.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a552. 模型.cpp)
+        - [a561. 內存不足.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a561. 內存不足.cpp)
+        - [a562.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a562.cpp)
+        - [a563_dfs_test.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a563_dfs_test.cpp)
+        - [a564.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a564.cpp)
+        - [a565.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a565.cpp)
+        - [a567. 死線排程.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a567. 死線排程.cpp)
+        - [a568. ISSC 2012- problem B.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a568. ISSC 2012- problem B.cpp)
+        - [a569. 2-絕對遞增的質數子數列.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a569. 2-絕對遞增的質數子數列.cpp)
+        - [a570.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a570.cpp)
+        - [a571. 海港碼頭.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a571. 海港碼頭.cpp)
+        - [a572 IS&MS.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a572 IS&MS.cpp)
+        - [a576.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a576.cpp)
+        - [a576. No Cheating.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a576. No Cheating.cpp)
+        - [a577.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a577.cpp)
+        - [a577-opt.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a577-opt.cpp)
+        - [a580. 輻射擴散.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a580. 輻射擴散.cpp)
+        - [a583. 1. 座位距離計算問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a583. 1. 座位距離計算問題.cpp)
+        - [a584. 2. 親等關係.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a584. 2. 親等關係.cpp)
+        - [a586. 4. 捷運計價問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a586. 4. 捷運計價問題.cpp)
+        - [a588 A. 神秘的地圖.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a588 A. 神秘的地圖.cpp)
+        - [a589. B. 老蚯的寶物.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a589. B. 老蚯的寶物.cpp)
+        - [a590.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a590.cpp)
+        - [a594 G. 電梯向上.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a594 G. 電梯向上.cpp)
+        - [a605. 交錯和.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a605. 交錯和.cpp)
+        - [a621 1. Powers of Two.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a621 1. Powers of Two.cpp)
+        - [a622 2. Vertical Printing.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a622 2. Vertical Printing.cpp)
+        - [a623 3. Combination.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a623 3. Combination.cpp)
+        - [a624 4. Password Analyzer.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a624 4. Password Analyzer.cpp)
+        - [a625 5. Overhanging Cards.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a625 5. Overhanging Cards.cpp)
+        - [a626 6. Prime Directive.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a626 6. Prime Directive.cpp)
+        - [a627 7. RAID Sizer.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a627 7. RAID Sizer.cpp)
+        - [a628 8. Number Spiral.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a628 8. Number Spiral.cpp)
+        - [a629 9. Musical Intervals.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a629 9. Musical Intervals.cpp)
+        - [a630 10. New Math.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a630 10. New Math.cpp)
+        - [a631 11. LED Decoder.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a631 11. LED Decoder.cpp)
+        - [a632 12. Domino Rally.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a632 12. Domino Rally.cpp)
+        - [a633 13. Not Quite OCR.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a633 13. Not Quite OCR.c)
+        - [a633 13. Not Quite OCR.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a633 13. Not Quite OCR.cpp)
+        - [a634 14. Knights Path.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a634 14. Knights Path.cpp)
+        - [a638 Closest-pair problem.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a638 Closest-pair problem.cpp)
+        - [a638. Closest-pair problem.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a638. Closest-pair problem.cpp)
+        - [a639. DNA Density.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a639. DNA Density.cpp)
+        - [a640.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a640.cpp)
+        - [a641.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a641.cpp)
+        - [a646.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a646.cpp)
+        - [a646. 小民買糖果.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a646. 小民買糖果.cpp)
+        - [a647. 投資專家.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a647. 投資專家.cpp)
+        - [a648 A - Red Areas2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a648 A - Red Areas2.cpp)
+        - [a648. A - Red Areas3.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a648. A - Red Areas3.cpp)
+        - [a648 A - Red Areas.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a648 A - Red Areas.cpp)
+        - [a651.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a651.cpp)
+        - [a656.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a656.cpp)
+        - [a666.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a666.cpp)
+        - [a666[v2].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a666[v2].cpp)
+        - [a686. 蝸牛往上爬.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a686. 蝸牛往上爬.cpp)
+        - [a687. 軍方密碼.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a687. 軍方密碼.cpp)
+        - [a695. [NOIP 2012 普及組] 1.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a695. [NOIP 2012 普及組] 1.cpp)
+        - [a696. [NOIP 2012 普及組] 2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a696. [NOIP 2012 普及組] 2.cpp)
+        - [a697. [NOIP 2012 普及組] 3.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a697. [NOIP 2012 普及組] 3.cpp)
+        - [a698. [NOIP 2012 普及組] 4.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a698. [NOIP 2012 普及組] 4.cpp)
+        - [a699. 1. 國王的煩惱.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a699. 1. 國王的煩惱.cpp)
+        - [a700. 2. 國王的麥子.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a700. 2. 國王的麥子.cpp)
+        - [a739. 道路架設.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a739. 道路架設.cpp)
+        - [a742. 福州地鐵.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a742. 福州地鐵.cpp)
+        - [a760. 四、世界末日預言.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a760. 四、世界末日預言.cpp)
+        - [a761. 罐頭的記憶體.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a761. 罐頭的記憶體.cpp)
+        - [a761. 罐頭的記憶體[v2].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a761. 罐頭的記憶體[v2].cpp)
+        - [a761. 罐頭的記憶體[v3].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a761. 罐頭的記憶體[v3].cpp)
+        - [a780. 2. Magnificent Views.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a780. 2. Magnificent Views.cpp)
+        - [a781. 3. Checkerboard.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a781. 3. Checkerboard.cpp)
+        - [a782. 4. Redundant Acronym Syndrome Syndrome.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a782. 4. Redundant Acronym Syndrome Syndrome.cpp)
+        - [a783. 5. Houston Skyline.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a783. 5. Houston Skyline.cpp)
+        - [a784. 6. PERLs Before Swine.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a784. 6. PERLs Before Swine.cpp)
+        - [a785. 7. It's All Greek To Me.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a785. 7. It's All Greek To Me.cpp)
+        - [a786. 8. 1337 XL8T0RZ.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a786. 8. 1337 XL8T0RZ.cpp)
+        - [a787. 9. Mirror to the Stars.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a787. 9. Mirror to the Stars.cpp)
+        - [a788. 10. uPhone Two-Point Zoom.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a788. 10. uPhone Two-Point Zoom.cpp)
+        - [a789. 11. Diffusion Limited Aggregation.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a789. 11. Diffusion Limited Aggregation.cpp)
+        - [a791. 13. Least Recently Used.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a791. 13. Least Recently Used.cpp)
+        - [a792. 14. Six Degrees of Kevin Bacon.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a792. 14. Six Degrees of Kevin Bacon.cpp)
+        - [a796. F.房布的地圖.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a796. F.房布的地圖.cpp)
+        - [a797. A.房布回台北.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a797. A.房布回台北.cpp)
+        - [a814. 2013高雄市能力競賽高中組 5. 卡片遊戲.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a814. 2013高雄市能力競賽高中組 5. 卡片遊戲.cpp)
+        - [a815. 2013高雄市能力競賽高中組 6. 蜜蜂飛行.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a815. 2013高雄市能力競賽高中組 6. 蜜蜂飛行.cpp)
+        - [a817. 1.圈叉連線數問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a817. 1.圈叉連線數問題.cpp)
+        - [a818. 101學年度桃竹苗區資訊學科能力競賽 1.解碼問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a818. 101學年度桃竹苗區資訊學科能力競賽 1.解碼問題.cpp)
+        - [a819. 101學年度桃竹苗區資訊學科能力競賽 2.小三資優數學.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a819. 101學年度桃竹苗區資訊學科能力競賽 2.小三資優數學.cpp)
+        - [a820. 101學年度桃竹苗區資訊學科能力競賽 3.小精靈吃數字.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a820. 101學年度桃竹苗區資訊學科能力競賽 3.小精靈吃數字.cpp)
+        - [a821. 101學年度桃竹苗區資訊學科能力競賽 4.王者之路.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a821. 101學年度桃竹苗區資訊學科能力競賽 4.王者之路.cpp)
+        - [a824. 100學年度桃竹苗區資訊學科能力競賽 2.藏寶問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a824. 100學年度桃竹苗區資訊學科能力競賽 2.藏寶問題.cpp)
+        - [a825. 100學年度桃竹苗區資訊學科能力競賽 3.小四數學.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a825. 100學年度桃竹苗區資訊學科能力競賽 3.小四數學.cpp)
+        - [a828. 間隔數 number.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a828. 間隔數 number.cpp)
+        - [a829. 主機排程 schedule.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a829. 主機排程 schedule.cpp)
+        - [a830. 超級細菌 bacteria.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a830. 超級細菌 bacteria.cpp)
+        - [a831. 地磚擺放.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a831. 地磚擺放.cpp)
+        - [a832. 數列變換.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a832. 數列變換.cpp)
+        - [a833. 沙漠旅行.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a833. 沙漠旅行.cpp)
+        - [a834. 卡牌遊戲.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a834. 卡牌遊戲.cpp)
+        - [a845. B.奶罐小馬買東西.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a845. B.奶罐小馬買東西.cpp)
+        - [a861. 1. Secure the Perimeter.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a861. 1. Secure the Perimeter.cpp)
+        - [a862. 2. My Dear Friend VIR.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a862. 2. My Dear Friend VIR.cpp)
+        - [a863. 3. Happy Numbers.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a863. 3. Happy Numbers.cpp)
+        - [a864. 4. Stellar Classification.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a864. 4. Stellar Classification.cpp)
+        - [a865. 5. Greek Numerals.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a865. 5. Greek Numerals.cpp)
+        - [a866. 6. Product Review Site.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a866. 6. Product Review Site.cpp)
+        - [a867. 7. Minelayer.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a867. 7. Minelayer.cpp)
+        - [a868. 8. St. Ives.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a868. 8. St. Ives.cpp)
+        - [a869. 9. Letter Scramble.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a869. 9. Letter Scramble.cpp)
+        - [a870. 10. List Maker.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a870. 10. List Maker.cpp)
+        - [a871. 11. Museum Area.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a871. 11. Museum Area.cpp)
+        - [a872. 12. Abbreviation Expansion.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a872. 12. Abbreviation Expansion.cpp)
+        - [a873. 13. Tetra Square.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a873. 13. Tetra Square.cpp)
+        - [a874. 14. Trace Route.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a874. 14. Trace Route.cpp)
+        - [a875. 15. Asteroid Mining Robot.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a875. 15. Asteroid Mining Robot.cpp)
+        - [a876. 16. Ken-igma.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a876. 16. Ken-igma.cpp)
+        - [a879. A.君不見 黃色小鴨水上漂.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a879. A.君不見 黃色小鴨水上漂.cpp)
+        - [a881. C.什麼？油漆有毒？.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a881. C.什麼？油漆有毒？.cpp)
+        - [a882. B. 我灰灰的橡皮鴨是個恐怖的危機.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a882. B. 我灰灰的橡皮鴨是個恐怖的危機.cpp)
+        - [a883. D.好忙好忙.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a883. D.好忙好忙.cpp)
+        - [a915.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a915.cpp)
+        - [a962. 新專輯.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a962. 新專輯.cpp)
+        - [a981.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a981.cpp)
+        - [a982.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a982.cpp)
+      - a982. 迷宮問題#1
+          - [Main.java](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a982. 迷宮問題#1/Main.java)
+        - [a994. 10325 - The Lottery[ver_builtin].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/a994. 10325 - The Lottery[ver_builtin].cpp)
+        - [b016. D. Mitlab.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b016. D. Mitlab.cpp)
+        - [b018. F. 營地.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b018. F. 營地.cpp)
+        - [b021. C. 畢業演奏.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b021. C. 畢業演奏.cpp)
+        - [b043. B. 踩地雷回來了.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b043. B. 踩地雷回來了.cpp)
+        - [b046. E. 智慧型單字查詢.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b046. E. 智慧型單字查詢.cpp)
+        - [b054. 第五題：浮點數的表示式.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b054. 第五題：浮點數的表示式.cpp)
+        - [b058. 3. 關鍵邏輯閘.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b058. 3. 關鍵邏輯閘.cpp)
+        - [b060. 5. 快遞服務.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b060. 5. 快遞服務.cpp)
+        - [b061. 6. 糊塗情報員.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b061. 6. 糊塗情報員.cpp)
+        - [b064. 3.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b064. 3.cpp)
+        - [b064. 3. 下界函數.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b064. 3. 下界函數.cpp)
+        - [b065. 4. 滿漢全席.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b065. 4. 滿漢全席.cpp)
+        - [b066. 5. 六芒星棋遊戲：先還是後比較有利？.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b066. 5. 六芒星棋遊戲：先還是後比較有利？.cpp)
+        - [b067. 6. 下棋問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b067. 6. 下棋問題.cpp)
+        - [b069. A. 千里傳情.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b069. A. 千里傳情.cpp)
+        - [b071. C. 排水系統.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b071. C. 排水系統.cpp)
+        - [b090. D. 正直DE.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b090. D. 正直DE.cpp)
+        - [b091 E. 核心字串.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b091 E. 核心字串.cpp)
+        - [b094. H. 數字拼盤.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b094. H. 數字拼盤.cpp)
+        - [b099. E. 聯立多元一次方程式.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b099. E. 聯立多元一次方程式.cpp)
+        - [b109. 2. IC 板檢測.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b109. 2. IC 板檢測.cpp)
+        - [b113. 6. 線性系統求解.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b113. 6. 線性系統求解.cpp)
+        - [b125. 積木的拼疊問題Bricks.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b125. 積木的拼疊問題Bricks.cpp)
+        - [b134. NOIP2006 1.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b134. NOIP2006 1.cpp)
+        - [b134. NOIP2006 1.能量项链.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b134. NOIP2006 1.能量项链.cpp)
+        - [b135. NOIP2006 2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b135. NOIP2006 2.cpp)
+        - [b143. NOIP2005 2..cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b143. NOIP2005 2..cpp)
+        - [b144. NOIP2005 3.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b144. NOIP2005 3.cpp)
+        - [b145. NOIP2005_4.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b145. NOIP2005_4.cpp)
+        - [b147. NOIP2004 2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b147. NOIP2004 2.cpp)
+        - [b149. NOIP2004 4.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b149. NOIP2004 4.cpp)
+        - [b153 NOIP.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b153 NOIP.cpp)
+        - [b163. NOIP2007 2.字符串的展開.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b163. NOIP2007 2.字符串的展開.cpp)
+        - [b164. NOIP2007 3.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b164. NOIP2007 3.cpp)
+        - [b165. NOIP2007 4.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b165. NOIP2007 4.cpp)
+        - [b173.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b173.cpp)
+        - [b174.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b174.cpp)
+        - [b174. 旅遊規則.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b174. 旅遊規則.cpp)
+        - [b177. 山景 Skyline.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b177. 山景 Skyline.cpp)
+        - [b178. 遊輪 Boat.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b178. 遊輪 Boat.cpp)
+        - [b180. 1. 遊園接駁車.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b180. 1. 遊園接駁車.cpp)
+        - [b190. 97七區資訊學科5(改編).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b190. 97七區資訊學科5(改編).cpp)
+        - [b199.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b199.cpp)
+        - [b199. D. 郵輪.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b199. D. 郵輪.cpp)
+        - [b200. E. 幼稚的災難.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b200. E. 幼稚的災難.cpp)
+        - [b201. F. 國家.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b201. F. 國家.cpp)
+        - [b207. F. 世界盃.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b207. F. 世界盃.cpp)
+        - [b208 A. 蜜蜂的約會.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b208 A. 蜜蜂的約會.cpp)
+        - [b212. E. 不景氣的年代.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b212. E. 不景氣的年代.cpp)
+        - [b213. F. 數列.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b213. F. 數列.cpp)
+        - [b215. H. 幼稚國王的行程.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b215. H. 幼稚國王的行程.cpp)
+        - [b217. 2. 系統.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b217. 2. 系統.cpp)
+        - [b220. 5. 蛋糕師傅的煩惱.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b220. 5. 蛋糕師傅的煩惱.cpp)
+        - [b221. 6. 耕者有其田.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b221. 6. 耕者有其田.cpp)
+        - [b237. CSAPC09 迷宮任務.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b237. CSAPC09 迷宮任務.cpp)
+        - [b238. A. 腹黑、傲嬌.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b238. A. 腹黑、傲嬌.cpp)
+        - [b239. B. 電腦出租公司.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b239. B. 電腦出租公司.cpp)
+        - [b240. C. 瘋狂博士的小型圖書館.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b240. C. 瘋狂博士的小型圖書館.cpp)
+        - [b242. E. 檸檬汽水傳說.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b242. E. 檸檬汽水傳說.cpp)
+        - [b245. A. 草地上的松鼠.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b245. A. 草地上的松鼠.cpp)
+        - [b254. C. 矢量星球.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b254. C. 矢量星球.cpp)
+        - [b255. D. 跑跑卡丁車.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b255. D. 跑跑卡丁車.cpp)
+        - [b256 E. 大風吹.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b256 E. 大風吹.cpp)
+        - [b256. E. 大風吹[kd].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b256. E. 大風吹[kd].cpp)
+        - [b258. G. 愛有等差.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b258. G. 愛有等差.cpp)
+        - [b259. H. 補習班的報名熱.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b259. H. 補習班的報名熱.cpp)
+        - [b275. 數三角形.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b275. 數三角形.cpp)
+        - [b278.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b278.cpp)
+        - [b288.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b288.cpp)
+        - [b291.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b291.cpp)
+        - [b297.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b297.cpp)
+        - [b298.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b298.cpp)
+        - [b299.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b299.cpp)
+        - [b300.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b300.cpp)
+        - [b301.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b301.cpp)
+        - [b302.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b302.cpp)
+        - [b305.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b305.cpp)
+        - [b306.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b306.cpp)
+        - [b307.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b307.cpp)
+        - [b308.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b308.cpp)
+        - [b309.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b309.cpp)
+        - [b310.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b310.cpp)
+        - [b311.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b311.cpp)
+        - [b312.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b312.cpp)
+        - [b314.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b314.cpp)
+        - [b315.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b315.cpp)
+        - [b316.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b316.cpp)
+        - [b317.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b317.cpp)
+        - [b325. 人格分裂.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b325. 人格分裂.cpp)
+        - [b325. 人格分裂[DC].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b325. 人格分裂[DC].cpp)
+        - [b330. NOIP2013 1.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b330. NOIP2013 1.cpp)
+        - [b331. NOIP2013 2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b331. NOIP2013 2.cpp)
+        - [b332. NOIP2013 3.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b332. NOIP2013 3.cpp)
+        - [b333. NOIP2013 4.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b333. NOIP2013 4.cpp)
+        - [b345. NOIP2013 Day1.2.火柴排隊.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b345. NOIP2013 Day1.2.火柴排隊.cpp)
+        - [b352. 相似.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b352. 相似.cpp)
+        - [b354. 藥水.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b354. 藥水.cpp)
+        - [b367. 翻轉世界.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b367. 翻轉世界.cpp)
+        - [b369. 福州19中.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b369. 福州19中.cpp)
+        - [b373. 福州19中.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b373. 福州19中.cpp)
+        - [b374. 福州19中.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b374. 福州19中.cpp)
+      - b405
+          - [b405[v2].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b405/b405[v2].cpp)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b405/pin.cpp)
+          - [temp.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b405/temp.cpp)
+          - [test2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b405/test2.cpp)
+          - [test.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b405/test.cpp)
+      - b411
+          - [b411.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b411/b411.cpp)
+          - [b411[test].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b411/b411[test].cpp)
+          - [b411[v2].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b411/b411[v2].cpp)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b411/pin.cpp)
+        - [b412.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b412.cpp)
+        - [b414.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b414.cpp)
+        - [b415.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b415.cpp)
+        - [b419. 公平的硬幣 .cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b419. 公平的硬幣 .cpp)
+        - [b419. 公平的硬幣[integral].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b419. 公平的硬幣[integral].cpp)
+        - [b422. Colorful Life and Monochromatic Life.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b422. Colorful Life and Monochromatic Life.cpp)
+        - [b423. 魔術橡皮擦.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b423. 魔術橡皮擦.cpp)
+        - [b424. 圖片縮放.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b424. 圖片縮放.cpp)
+        - [b425. 抽菸動作 請勿模仿.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b425. 抽菸動作 請勿模仿.cpp)
+        - [b426. 宇宙光明體.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b426. 宇宙光明體.cpp)
+        - [b427. 漸層色彩.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b427. 漸層色彩.cpp)
+        - [b434. 圖片的梯度.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b434. 圖片的梯度.cpp)
+        - [b436. 圖片的梯度再進化.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b436. 圖片的梯度再進化.cpp)
+        - [b448. 哈哈鏡.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b448. 哈哈鏡.cpp)
+        - [b452. 傻傻地幫人數錢錢.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b452. 傻傻地幫人數錢錢.cpp)
+        - [b455. 請輸出這張圖片的RGB數值 簡易.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b455. 請輸出這張圖片的RGB數值 簡易.cpp)
+      - b456 影像壓縮 困難
+          - [b456_base64.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b456 影像壓縮 困難/b456_base64.cpp)
+          - [b456_base64v2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b456 影像壓縮 困難/b456_base64v2.cpp)
+          - [b456_generate.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b456 影像壓縮 困難/b456_generate.cpp)
+          - [b456.png](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b456 影像壓縮 困難/b456.png)
+          - [img2txt.py](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b456 影像壓縮 困難/img2txt.py)
+          - [in.txt](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b456 影像壓縮 困難/in.txt)
+        - [b458. 非黑即白.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b458. 非黑即白.cpp)
+        - [b459. 圖片的直方圖.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b459. 圖片的直方圖.cpp)
+        - [b460. 判若黑白.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b460. 判若黑白.cpp)
+        - [b461. Fibonacci 之夢.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b461. Fibonacci 之夢.cpp)
+        - [b461. Fibonacci 之夢[unstable].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b461. Fibonacci 之夢[unstable].cpp)
+        - [b462. 圖片亮度調整原理深度剖析.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b462. 圖片亮度調整原理深度剖析.cpp)
+        - [b463. 輕輕鬆鬆學會用曲線調整色彩.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b463. 輕輕鬆鬆學會用曲線調整色彩.cpp)
+        - [b464. 聲音時間長度.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b464. 聲音時間長度.cpp)
+        - [b465. Sine Wave.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b465. Sine Wave.cpp)
+        - [b466. 簡譜演奏程式.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b466. 簡譜演奏程式.cpp)
+        - [b467. NOIP2013 Day1.1.轉圈遊戲.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b467. NOIP2013 Day1.1.轉圈遊戲.cpp)
+        - [b468. NOIP2013 Day1.3.貨車運輸.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b468. NOIP2013 Day1.3.貨車運輸.cpp)
+        - [b469. NOIP2013 Day2.1.積木大賽.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b469. NOIP2013 Day2.1.積木大賽.cpp)
+        - [b470. NOIP2013 Day2.2.花匠.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b470. NOIP2013 Day2.2.花匠.cpp)
+        - [b470. NOIP2013 Day2.2.花匠v2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b470. NOIP2013 Day2.2.花匠v2.cpp)
+        - [b476. NOIP2014 Day2.2.尋找道路.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b476. NOIP2014 Day2.2.尋找道路.cpp)
+        - [b478. 有限間距最長共同子序列.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b478. 有限間距最長共同子序列.cpp)
+        - [b479. 音名.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b479. 音名.cpp)
+        - [b480. 合聲.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b480. 合聲.cpp)
+        - [b481. 音色（一）.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b481. 音色（一）.cpp)
+        - [b482. 音色（二）.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b482. 音色（二）.cpp)
+        - [b483. 史蒂芙的觀察日記[less].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b483. 史蒂芙的觀察日記[less].cpp)
+        - [b484. 音色（三）.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b484. 音色（三）.cpp)
+        - [b485. 音高.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b485. 音高.cpp)
+        - [b485. 音高v2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b485. 音高v2.cpp)
+        - [b486. 變態史考古.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b486. 變態史考古.cpp)
+        - [b488. Clipped Sine Wave.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b488. Clipped Sine Wave.cpp)
+        - [b489. NOIP2000 1.進制轉換.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b489. NOIP2000 1.進制轉換.cpp)
+        - [b490. NOIP2000 4.方格取數.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b490. NOIP2000 4.方格取數.cpp)
+        - [b513. 判斷質數-商競103.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b513. 判斷質數-商競103.cpp)
+        - [b514- 解二元一次聯立方程式之根-商競103.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b514- 解二元一次聯立方程式之根-商競103.cpp)
+        - [b515. 摩斯電碼-商競103.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b515. 摩斯電碼-商競103.cpp)
+        - [b516. 凱撒密碼-商競103.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b516. 凱撒密碼-商競103.cpp)
+        - [b519. 撲克牌遊戲-商競103.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b519. 撲克牌遊戲-商競103.cpp)
+        - [b520. 樂透-商競103.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b520. 樂透-商競103.cpp)
+        - [b523. 先別管這個了，你聽過安麗嗎.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b523. 先別管這個了，你聽過安麗嗎.cpp)
+        - [b524. 先別管這個了，你聽過yee嗎.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b524. 先別管這個了，你聽過yee嗎.cpp)
+        - [b525. 先別管這個了，你聽過turtlebee嗎.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b525. 先別管這個了，你聽過turtlebee嗎.cpp)
+        - [b526. 先別管這個了，你聽過微鼓勵嗎.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b526. 先別管這個了，你聽過微鼓勵嗎.cpp)
+        - [b537. 分數運算-1.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b537. 分數運算-1.cpp)
+        - [b538. 分數運算-2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b538. 分數運算-2.cpp)
+        - [b557. 直角三角形.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b557. 直角三角形.cpp)
+        - [b558. 求數列第 n 項.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b558. 求數列第 n 項.cpp)
+        - [b572. 忘了東西的小傑.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b572. 忘了東西的小傑.cpp)
+        - [b578. 一個角.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b578. 一個角.cpp)
+        - [b580. 一條蛇.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b580. 一條蛇.cpp)
+        - [b581. 一串加.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b581. 一串加.cpp)
+        - [b582. 一個窩.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b582. 一個窩.cpp)
+        - [b583. 一個環.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b583. 一個環.cpp)
+        - [b584. 過橋問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b584. 過橋問題.cpp)
+        - [b585. 來開派對唷.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b585. 來開派對唷.cpp)
+        - [b586. 文章壓縮.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b586. 文章壓縮.cpp)
+        - [b588. 撿石頭遊戲.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b588. 撿石頭遊戲.cpp)
+        - [b589. 超級馬拉松賽.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b589. 超級馬拉松賽.cpp)
+        - [b681.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b681.cpp)
+        - [b682.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b682.cpp)
+        - [b683. 高中組第三題-環形偵測.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b683. 高中組第三題-環形偵測.cpp)
+        - [b684. 高中組第四題-狗狗遊戲.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b684. 高中組第四題-狗狗遊戲.cpp)
+        - [b685. 高中組第五題-課堂抽籤.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b685. 高中組第五題-課堂抽籤.cpp)
+        - [b841. 104北二5.骨牌遊戲.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b841. 104北二5.骨牌遊戲.cpp)
+        - [b855. 一封信.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b855. 一封信.cpp)
+        - [b858. 橘子.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b858. 橘子.c)
+        - [b960.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b960.cpp)
+        - [b992.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/b992.cpp)
+        - [BST(Descartes).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/BST(Descartes).cpp)
+        - [c073. The Blocks Problem.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c073. The Blocks Problem.cpp)
+        - [c082. Mutant Flatworld Expolrers.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c082. Mutant Flatworld Expolrers.cpp)
+        - [c083. Roman Roulette.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c083. Roman Roulette.cpp)
+        - [c093. Counterfeit Dollar.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c093. Counterfeit Dollar.cpp)
+        - [c095. False coin.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c095. False coin.cpp)
+        - [c099. Climbing Trees.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c099. Climbing Trees.cpp)
+        - [c100. Unidirectional TSP.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c100. Unidirectional TSP.cpp)
+        - [c102. Software CRC.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c102. Software CRC.cpp)
+        - [c103. The Psychic Poker Player.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c103. The Psychic Poker Player.cpp)
+        - [c108. Joseph.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c108. Joseph.cpp)
+        - [c109. Cipher.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c109. Cipher.cpp)
+        - [c110. Packets.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c110. Packets.cpp)
+        - [c112. Optimal Array Multiplication Sequence.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c112. Optimal Array Multiplication Sequence.cpp)
+        - [c125. Frogger.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c125. Frogger.cpp)
+        - [c173. 快速最長共同子字串.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c173. 快速最長共同子字串.cpp)
+        - [c176. TYVJ1681. 中中暴RP.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/c176. TYVJ1681. 中中暴RP.cpp)
+        - [d042. 11420 - Chest of Drawers.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d042. 11420 - Chest of Drawers.cpp)
+        - [d088. 127 - Accordian Patience.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d088. 127 - Accordian Patience.cpp)
+        - [d089. 145 - Gondwanaland Telecom.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d089. 145 - Gondwanaland Telecom.cpp)
+        - [d094. 478 - Points in Figures. Rectangles and Circles, and Triangles.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d094. 478 - Points in Figures. Rectangles and Circles, and Triangles.cpp)
+        - [d104. NOIP 2008 2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d104. NOIP 2008 2.cpp)
+        - [d105. NOIP 2008 3.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d105. NOIP 2008 3.cpp)
+        - [d110. NOIP 2008 4.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d110. NOIP 2008 4.cpp)
+        - [d196. 11341 - Term Strategy.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d196. 11341 - Term Strategy.cpp)
+        - [d210. 老問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d210. 老問題.cpp)
+        - [d222. Q11127 Triple-Free Binary Strings.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d222. Q11127 Triple-Free Binary Strings.cpp)
+        - [d223. Q10137 The Trip.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d223. Q10137 The Trip.cpp)
+        - [d228. kill man.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d228. kill man.cpp)
+        - [d232. 97北縣賽-3-資料統計問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d232. 97北縣賽-3-資料統計問題.cpp)
+        - [d242. Q481. What Goes Up.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d242. Q481. What Goes Up.cpp)
+        - [d244. 一堆石頭.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d244. 一堆石頭.cpp)
+        - [d246 Stone Game.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d246 Stone Game.cpp)
+        - [d249. 94北縣賽-1-心意相通的指數(Match).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d249. 94北縣賽-1-心意相通的指數(Match).cpp)
+        - [d252. 94北縣賽-4-字串處理問題 (String).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d252. 94北縣賽-4-字串處理問題 (String).cpp)
+        - [d268. 11578 - Situp Benches.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d268. 11578 - Situp Benches.cpp)
+        - [d270. 11581 - Grid Successors.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d270. 11581 - Grid Successors.cpp)
+        - [d271. 11582 - Colossal Fibonacci Numbers!.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d271. 11582 - Colossal Fibonacci Numbers!.cpp)
+        - [d272. 11583 - Alien DNA.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d272. 11583 - Alien DNA.cpp)
+        - [d273. 11584 - Partitioning by Palindromes.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d273. 11584 - Partitioning by Palindromes.cpp)
+        - [d285. 727 Postfix Expression.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d285. 727 Postfix Expression.cpp)
+        - [d287. 古怪的數學家.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d287. 古怪的數學家.cpp)
+        - [d297. 算算算....Lunatic.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d297. 算算算....Lunatic.cpp)
+        - [d313.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d313.cpp)
+        - [d315. sigma sinkx.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d315. sigma sinkx.cpp)
+        - [d316. Quadrangle！.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d316. Quadrangle！.cpp)
+        - [d343. 10578 - The Game of 31.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d343. 10578 - The Game of 31.cpp)
+        - [d347. 847 - A Multiplication Game.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d347. 847 - A Multiplication Game.cpp)
+        - [d367. 我要最小值——.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d367. 我要最小值——.cpp)
+        - [d367. 我要最小值——加強版.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d367. 我要最小值——加強版.cpp)
+        - [d368. 10196 - Check the Check.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d368. 10196 - Check the Check.cpp)
+        - [d370. 2. 盤中飧.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d370. 2. 盤中飧.cpp)
+        - [d371. 3. Huffman 編碼中的編碼效能問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d371. 3. Huffman 編碼中的編碼效能問題.cpp)
+        - [d372. 4. 合法執行路徑問題2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d372. 4. 合法執行路徑問題2.cpp)
+        - [d372. 4. 合法執行路徑問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d372. 4. 合法執行路徑問題.cpp)
+        - [d374. 6. X^2 ≡ 1 (mod M).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d374. 6. X^2 ≡ 1 (mod M).cpp)
+        - [d374. 6. X^2 ≡ 1 (mod M),cpp.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d374. 6. X^2 ≡ 1 (mod M),cpp.c)
+        - [d411. 算了好久.......cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d411. 算了好久.......cpp)
+        - [d416. 投影最大值.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d416. 投影最大值.cpp)
+        - [d429. 第一題. 社團分組 (club).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d429. 第一題. 社團分組 (club).cpp)
+        - [d430. 第二題. 計算字數 (count).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d430. 第二題. 計算字數 (count).cpp)
+        - [d449. 垃圾信件.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d449. 垃圾信件.cpp)
+        - [d451. 科學記號.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d451. 科學記號.cpp)
+        - [d454.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d454.cpp)
+        - [d476.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d476.cpp)
+        - [d476. 區間查詢.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d476. 區間查詢.cpp)
+        - [d476[整體二分].cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d476[整體二分].cpp)
+        - [d477.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d477.cpp)
+        - [d481. 矩陣乘法.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d481. 矩陣乘法.cpp)
+        - [d485. 我愛偶數.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d485. 我愛偶數.cpp)
+        - [d522. 走棋盤.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d522. 走棋盤.cpp)
+        - [d524. Q10599 - Robots(II).c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d524. Q10599 - Robots(II).c)
+        - [d524. Q10599 - Robots(II).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d524. Q10599 - Robots(II).cpp)
+        - [d526. Binary Search Tree (BST).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d526. Binary Search Tree (BST).cpp)
+        - [d537. 第四題.染色遊戲.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d537. 第四題.染色遊戲.cpp)
+        - [d546 3. 剪多邊形（molding）.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d546 3. 剪多邊形（molding）.cpp)
+        - [d547. 4. 秘密(secrets).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d547. 4. 秘密(secrets).cpp)
+        - [d548. 5. 購物網站（web）.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d548. 5. 購物網站（web）.cpp)
+        - [d552 Asphalt's Problem.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d552 Asphalt's Problem.cpp)
+        - [d578. 小涵的積木.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d578. 小涵的積木.cpp)
+        - [d589. B. 水之國的奇幻冒險.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d589. B. 水之國的奇幻冒險.cpp)
+        - [d598. 3. 尋寶問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d598. 3. 尋寶問題.cpp)
+        - [d598. 3. 尋寶問題(DP).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d598. 3. 尋寶問題(DP).cpp)
+        - [d609. Necklace.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d609. Necklace.cpp)
+        - [d618. 有限狀態自動機（Finite State Machine）.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d618. 有限狀態自動機（Finite State Machine）.cpp)
+        - [d624. 燈泡問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d624. 燈泡問題.cpp)
+        - [d627. 我.我.我...這麼弱 -跨年倒數.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d627. 我.我.我...這麼弱 -跨年倒數.cpp)
+        - [d632. C and S.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d632. C and S.cpp)
+        - [d633. 幼稚王國的麥田圖騰.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d633. 幼稚王國的麥田圖騰.cpp)
+        - [d639. 企鵝村三兄弟penguin.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d639. 企鵝村三兄弟penguin.cpp)
+        - [d643. 勞動的符咒.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d643. 勞動的符咒.cpp)
+        - [d644. 壞脾氣小小皮.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d644. 壞脾氣小小皮.cpp)
+        - [d645. 輪下亡魂.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d645. 輪下亡魂.cpp)
+        - [d646. I2A的陰謀.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d646. I2A的陰謀.cpp)
+        - [d650 好多骰子.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d650 好多骰子.cpp)
+        - [d652. 貪婪之糊.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d652. 貪婪之糊.cpp)
+        - [d655. 許胖公仔.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d655. 許胖公仔.cpp)
+        - [d664. 11725 - Colorful Board.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d664. 11725 - Colorful Board.cpp)
+        - [d667. 820 - Internet Bandwidth.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d667. 820 - Internet Bandwidth.cpp)
+        - [d681. BinaryCount.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d681. BinaryCount.cpp)
+        - [d686. Q10003. Cutting Sticks.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d686. Q10003. Cutting Sticks.cpp)
+        - [d692. 矢量星球 - 快速版本.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d692. 矢量星球 - 快速版本.cpp)
+        - [d705. 判斷質數(二).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d705. 判斷質數(二).cpp)
+        - [d717. 好多因子.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d717. 好多因子.cpp)
+        - [d718. Waiting In Line.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d718. Waiting In Line.cpp)
+        - [d729. 10593 - Kites.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d729. 10593 - Kites.cpp)
+        - [d730. 升旗典禮 ——加強版.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d730. 升旗典禮 ——加強版.cpp)
+        - [d731. 11039 - Building designing.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d731. 11039 - Building designing.cpp)
+        - [d733. 11329 - Curious Fleas.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d733. 11329 - Curious Fleas.cpp)
+        - [d739. 最少路徑.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d739. 最少路徑.cpp)
+        - [d750. 11321 - Sort! Sort!! and Sort!!!.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d750. 11321 - Sort! Sort!! and Sort!!!.cpp)
+        - [d751. Q10049-Self-describing Sequence.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d751. Q10049-Self-describing Sequence.cpp)
+        - [d757. 11195 - Another n-Queen Problem.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d757. 11195 - Another n-Queen Problem.cpp)
+        - [d760. 10330 - Power Transmission.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d760. 10330 - Power Transmission.cpp)
+        - [d766. 11149 - Power of Matrix.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d766. 11149 - Power of Matrix.cpp)
+        - [d767. 血緣關係.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d767. 血緣關係.cpp)
+        - [d776. NOIP2009 4.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d776. NOIP2009 4.cpp)
+        - [d780. NOIP2009 4.靶形數獨cpp.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d780. NOIP2009 4.靶形數獨cpp.c)
+        - [d781. 195 - Anagram.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d781. 195 - Anagram.cpp)
+        - [d798.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d798.c)
+        - [d798 區域MAX.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d798 區域MAX.cpp)
+        - [d799. 區間求和.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d799. 區間求和.cpp)
+        - [d799. 區間求和 (樹狀數組).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d799. 區間求和 (樹狀數組).cpp)
+        - [d800.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d800.cpp)
+        - [d801.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d801.cpp)
+        - [d806. 水火不容.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d806. 水火不容.cpp)
+        - [d807. 方方.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d807. 方方.cpp)
+        - [d808. 黑暗部落.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d808. 黑暗部落.cpp)
+        - [d809. 黑暗土地.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d809. 黑暗土地.cpp)
+        - [d810. 大朋友下樓梯.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d810. 大朋友下樓梯.cpp)
+        - [d814. 187. Twist and whirl - want to cheat.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d814. 187. Twist and whirl - want to cheat.cpp)
+        - [d815. 水火不容II.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d815. 水火不容II.cpp)
+        - [d816. 不要再晃啦！.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d816. 不要再晃啦！.cpp)
+        - [d825. 隔熱紙.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d825. 隔熱紙.cpp)
+        - [d826. 暗門.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d826. 暗門.cpp)
+        - [d827. 買鉛筆.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d827. 買鉛筆.cpp)
+        - [d828. Pascal's triangle's secret (II).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d828. Pascal's triangle's secret (II).cpp)
+        - [d830. 暗門2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d830. 暗門2.cpp)
+        - [d831. 畢業旅行.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d831. 畢業旅行.cpp)
+        - [d832. 遊樂場.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d832. 遊樂場.cpp)
+        - [d832. 遊樂場 DP.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d832. 遊樂場 DP.cpp)
+        - [d832. 遊樂場DP.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d832. 遊樂場DP.cpp)
+        - [d835. NOIP2003 1.乒乓球.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d835. NOIP2003 1.乒乓球.cpp)
+        - [d836. NOIP2003 2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d836. NOIP2003 2.cpp)
+        - [d837. NOIP2003 3.棧.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d837. NOIP2003 3.棧.cpp)
+        - [d838. NOIP2003 4.麥森數.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d838. NOIP2003 4.麥森數.cpp)
+        - [d841. NOIP2003 3.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d841. NOIP2003 3.cpp)
+        - [d842. NOIP2003 4.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d842. NOIP2003 4.cpp)
+        - [d844 NOIP2002 3.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d844 NOIP2002 3.cpp)
+        - [d849 NOIP2002 4.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d849 NOIP2002 4.cpp)
+        - [d850. NOIP2002 1.均分紙牌.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d850. NOIP2002 1.均分紙牌.cpp)
+        - [d851. NOIP2002 2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d851. NOIP2002 2.cpp)
+        - [d854. NOIP2001 1.一元三次方程求解.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d854. NOIP2001 1.一元三次方程求解.cpp)
+        - [d855. NOIP2001 2.數的劃分.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d855. NOIP2001 2.數的劃分.cpp)
+        - [d856. NOIP2001 3.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d856. NOIP2001 3.cpp)
+        - [d858. NOIP2001 4.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d858. NOIP2001 4.cpp)
+        - [d859. NOIP2001 1.數的計算.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d859. NOIP2001 1.數的計算.cpp)
+        - [d860. NOIP2001 2.最大公約數與最小公倍數問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d860. NOIP2001 2.最大公約數與最小公倍數問題.cpp)
+        - [d861. NOIP2001 3.求先序排列.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d861. NOIP2001 3.求先序排列.cpp)
+        - [d862. NOIP2001 4.裝箱問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d862. NOIP2001 4.裝箱問題.cpp)
+        - [d868. NOIP2000 1.計算器的改良.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d868. NOIP2000 1.計算器的改良.cpp)
+        - [d870 NOIP2000 3.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d870 NOIP2000 3.cpp)
+        - [d870 NOIP2000 3.乘积最大.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d870 NOIP2000 3.乘积最大.cpp)
+        - [d871. NOIP2000 4.單詞接龍.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d871. NOIP2000 4.單詞接龍.cpp)
+        - [d872. 過橋問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d872. 過橋問題.cpp)
+        - [d873. Q465. Overflow.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d873. Q465. Overflow.cpp)
+        - [d875. 4. 窮舉的階梯問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d875. 4. 窮舉的階梯問題.cpp)
+        - [d879. Q10911. Forming Quiz teams.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d879. Q10911. Forming Quiz teams.cpp)
+        - [d881. 作業苦多.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d881. 作業苦多.cpp)
+        - [d885. NOIP2007 1.統計數字 番外篇.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d885. NOIP2007 1.統計數字 番外篇.cpp)
+        - [d887. 1.山脈種類(chain).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d887. 1.山脈種類(chain).cpp)
+        - [d889. 2.黑傑克(jack).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d889. 2.黑傑克(jack).cpp)
+        - [d890. 3.禮物分配(gift).cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d890. 3.禮物分配(gift).cpp)
+        - [d892. NOIP2010 1.機器翻譯.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d892. NOIP2010 1.機器翻譯.cpp)
+        - [d893. NOIP2010 2.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d893. NOIP2010 2.cpp)
+        - [d898. Q10128 Queue.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d898. Q10128 Queue.cpp)
+        - [d899. NOIP2010 1.數字統計.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d899. NOIP2010 1.數字統計.cpp)
+        - [d903. 數學達人.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d903. 數學達人.cpp)
+        - [d904. 換零錢.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d904. 換零錢.cpp)
+        - [d906. 2. 排座位問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d906. 2. 排座位問題.cpp)
+        - [d907. 3. 城市走法計數.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d907. 3. 城市走法計數.cpp)
+        - [d908. 4. 最佳路徑.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d908. 4. 最佳路徑.cpp)
+        - [d913. 1. 彈珠配置.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d913. 1. 彈珠配置.cpp)
+        - [d914. 2. 圍棋資料庫比對.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d914. 2. 圍棋資料庫比對.cpp)
+        - [d915. 3. 洗街車路線問題.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d915. 3. 洗街車路線問題.cpp)
+        - [d916. 4. 高空煙火時間限制.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d916. 4. 高空煙火時間限制.cpp)
+        - [d917. 5. 貼磁磚.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d917. 5. 貼磁磚.cpp)
+        - [d918. 6. 雨量趨勢.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d918. 6. 雨量趨勢.cpp)
+        - [d919. 最大面積.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d919. 最大面積.cpp)
+        - [d920. 智慧盤.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d920. 智慧盤.cpp)
+        - [d923. 規律.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d923. 規律.cpp)
+        - [d925. 平均高度.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d925. 平均高度.cpp)
+        - [d929. A. 迴文.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d929. A. 迴文.cpp)
+        - [d930. B. 薑餅部落的危機.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d930. B. 薑餅部落的危機.cpp)
+        - [d931. C. 幽靈特務報到.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d931. C. 幽靈特務報到.cpp)
+        - [d932. D. 流水不腐.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d932. D. 流水不腐.cpp)
+        - [d933. E. 傘兵.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d933. E. 傘兵.cpp)
+        - [d934. F. Lisa 的圍巾.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d934. F. Lisa 的圍巾.cpp)
+        - [d944. B. 卡卡跑丁車.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d944. B. 卡卡跑丁車.cpp)
+        - [d946. D. 阿克圖洛斯‧蒙斯克的煩惱.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d946. D. 阿克圖洛斯‧蒙斯克的煩惱.cpp)
+        - [d950. A. 帕斯卡三角形.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d950. A. 帕斯卡三角形.cpp)
+        - [d951. B. 好吃的麵包.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d951. B. 好吃的麵包.cpp)
+        - [d954. E. 得分.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d954. E. 得分.cpp)
+        - [d956. G. 失落的維京戰機.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d956. G. 失落的維京戰機.cpp)
+        - [d961. A. 耶誕老人到你家.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d961. A. 耶誕老人到你家.cpp)
+        - [d963. C. 小丹尼與英文單字.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d963. C. 小丹尼與英文單字.cpp)
+        - [d965. E. 阿達的冒險.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d965. E. 阿達的冒險.cpp)
+        - [d978. 最長回文字串.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d978. 最長回文字串.cpp)
+        - [d980. 11479 - Is this the easiest problem.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d980. 11479 - Is this the easiest problem.cpp)
+        - [d984. 棄保效應.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d984. 棄保效應.cpp)
+        - [d985. Gran Turismo 5.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/d985. Gran Turismo 5.cpp)
+      - e003. 樹形避難所 I
+          - [main-brute.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e003. 樹形避難所 I/main-brute.cpp)
+          - [main.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e003. 樹形避難所 I/main.cpp)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e003. 樹形避難所 I/pin.cpp)
+          - [pin-large.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e003. 樹形避難所 I/pin-large.cpp)
+      - e004. 樹形避難所 II
+          - [main-brute.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e004. 樹形避難所 II/main-brute.cpp)
+          - [main.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e004. 樹形避難所 II/main.cpp)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e004. 樹形避難所 II/pin.cpp)
+      - e021. 史蒂芙的泡泡
+          - [brute-complete.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/brute-complete.cpp)
+          - [brute-partial.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/brute-partial.cpp)
+          - [main.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/main.cpp)
+          - [main-loc.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/main-loc.cpp)
+          - [main-pbds.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/main-pbds.cpp)
+          - [main-pbds-rope.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/main-pbds-rope.cpp)
+          - [main-rec.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/main-rec.cpp)
+          - [main-short.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/main-short.cpp)
+          - [main-splay.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/main-splay.cpp)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/pin.cpp)
+          - [pin-explosion.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/pin-explosion.cpp)
+          - [pin-explosion-dyn.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/pin-explosion-dyn.cpp)
+          - [pin-snowflake.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/pin-snowflake.cpp)
+          - [polygon.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e021. 史蒂芙的泡泡/polygon.c)
+      - e861
+          - [brute.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e861/brute.cpp)
+          - [e861.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e861/e861.cpp)
+          - [e861_gc.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e861/e861_gc.cpp)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e861/pin.cpp)
+      - e863
+          - [brute.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e863/brute.cpp)
+          - [e863.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e863/e863.cpp)
+          - [e863_gc.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e863/e863_gc.cpp)
+          - [e863_opt.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e863/e863_opt.cpp)
+          - [pin.cpp](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/e863/pin.cpp)
+        - [f315. 4. 低地距離.c](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/f315. 4. 低地距離.c)
+        - [submit.py](/home/alexander/codes/uva2/OnlineJudge/ZEROJUDGE/submit.py)
+    - ZOJ
+        - [ZJOI 2012 DAY2 災難.cpp](/home/alexander/codes/uva2/OnlineJudge/ZOJ/ZJOI 2012 DAY2 災難.cpp)
+  - practice
+    - MOCC
+        - [[MOCC][week6]A.cpp](/home/alexander/codes/uva2/practice/MOCC/[MOCC][week6]A.cpp)
+        - [[MOCC][week9]A.cpp](/home/alexander/codes/uva2/practice/MOCC/[MOCC][week9]A.cpp)
+        - [[MOCC][week9]B.cpp](/home/alexander/codes/uva2/practice/MOCC/[MOCC][week9]B.cpp)
+        - [[MOCC][week9]C.cpp](/home/alexander/codes/uva2/practice/MOCC/[MOCC][week9]C.cpp)
+        - [[MOCC][week9]D.cpp](/home/alexander/codes/uva2/practice/MOCC/[MOCC][week9]D.cpp)
+        - [[MOCC][week9]E.cpp](/home/alexander/codes/uva2/practice/MOCC/[MOCC][week9]E.cpp)
+        - [[MOCC][week9]X.cpp](/home/alexander/codes/uva2/practice/MOCC/[MOCC][week9]X.cpp)
+    - python
+        - [Absolute sorting.py](/home/alexander/codes/uva2/practice/python/Absolute sorting.py)
+        - [Binary count.py](/home/alexander/codes/uva2/practice/python/Binary count.py)
+        - [Boolean Algebra.py](/home/alexander/codes/uva2/practice/python/Boolean Algebra.py)
+        - [Building Base.py](/home/alexander/codes/uva2/practice/python/Building Base.py)
+        - [Common Words.py](/home/alexander/codes/uva2/practice/python/Common Words.py)
+        - [Count Inversions[BIT].py](/home/alexander/codes/uva2/practice/python/Count Inversions[BIT].py)
+        - [Days Between.py](/home/alexander/codes/uva2/practice/python/Days Between.py)
+        - [Digits Multiplication.py](/home/alexander/codes/uva2/practice/python/Digits Multiplication.py)
+        - [Even the last.py](/home/alexander/codes/uva2/practice/python/Even the last.py)
+        - [Fizz Buzz.py](/home/alexander/codes/uva2/practice/python/Fizz Buzz.py)
+        - [Friends.py](/home/alexander/codes/uva2/practice/python/Friends.py)
+        - [Index Power.py](/home/alexander/codes/uva2/practice/python/Index Power.py)
+        - [Median.py](/home/alexander/codes/uva2/practice/python/Median.py)
+        - [Monkey Typing.py](/home/alexander/codes/uva2/practice/python/Monkey Typing.py)
+        - [Monkey Typing[v2].py](/home/alexander/codes/uva2/practice/python/Monkey Typing[v2].py)
+        - [Number Base.py](/home/alexander/codes/uva2/practice/python/Number Base.py)
+        - [Number Base[v2].py](/home/alexander/codes/uva2/practice/python/Number Base[v2].py)
+        - [Pangram.py](/home/alexander/codes/uva2/practice/python/Pangram.py)
+        - [README.md](/home/alexander/codes/uva2/practice/python/README.md)
+        - [Right to Left.py](/home/alexander/codes/uva2/practice/python/Right to Left.py)
+        - [The end of other.py](/home/alexander/codes/uva2/practice/python/The end of other.py)
+        - [The Most Numbers.py](/home/alexander/codes/uva2/practice/python/The Most Numbers.py)
+        - [Three words.py](/home/alexander/codes/uva2/practice/python/Three words.py)
+    - unknown
+        - [18豆.cpp](/home/alexander/codes/uva2/practice/unknown/18豆.cpp)
+        - [2013CCPC[ProblemSet].pdf](/home/alexander/codes/uva2/practice/unknown/2013CCPC[ProblemSet].pdf)
+        - [2013.cpp](/home/alexander/codes/uva2/practice/unknown/2013.cpp)
+        - [2038 - Strategic game.cpp](/home/alexander/codes/uva2/practice/unknown/2038 - Strategic game.cpp)
+        - [2048sim.cpp](/home/alexander/codes/uva2/practice/unknown/2048sim.cpp)
+        - [2048sim[v2].cpp](/home/alexander/codes/uva2/practice/unknown/2048sim[v2].cpp)
+        - [addressAddTest.cpp](/home/alexander/codes/uva2/practice/unknown/addressAddTest.cpp)
+        - [algorithmhw.c](/home/alexander/codes/uva2/practice/unknown/algorithmhw.c)
+        - [ArrayInitTest.cpp](/home/alexander/codes/uva2/practice/unknown/ArrayInitTest.cpp)
+        - [A-Star K短.cpp](/home/alexander/codes/uva2/practice/unknown/A-Star K短.cpp)
+        - [bee.cpp](/home/alexander/codes/uva2/practice/unknown/bee.cpp)
+      - bignumber
+          - [Bignumber.cpp](/home/alexander/codes/uva2/practice/unknown/bignumber/Bignumber.cpp)
+          - [Bignumber_sin.cpp](/home/alexander/codes/uva2/practice/unknown/bignumber/Bignumber_sin.cpp)
+        - [Big Number of Teams will Solve This ~.cpp](/home/alexander/codes/uva2/practice/unknown/Big Number of Teams will Solve This ~.cpp)
+        - [bitfield.cpp](/home/alexander/codes/uva2/practice/unknown/bitfield.cpp)
+        - [brainfuckG.c](/home/alexander/codes/uva2/practice/unknown/brainfuckG.c)
+        - [cmdUse.c](/home/alexander/codes/uva2/practice/unknown/cmdUse.c)
+        - [COLOR執行.jpg](/home/alexander/codes/uva2/practice/unknown/COLOR執行.jpg)
+        - [complierHW3.cpp](/home/alexander/codes/uva2/practice/unknown/complierHW3.cpp)
+        - [C++ use dir.cpp](/home/alexander/codes/uva2/practice/unknown/C++ use dir.cpp)
+        - [dancinglink.cpp](/home/alexander/codes/uva2/practice/unknown/dancinglink.cpp)
+        - [DDD2.cpp](/home/alexander/codes/uva2/practice/unknown/DDD2.cpp)
+        - [definetest.cpp](/home/alexander/codes/uva2/practice/unknown/definetest.cpp)
+        - [det.cpp](/home/alexander/codes/uva2/practice/unknown/det.cpp)
+        - [det_org.cpp](/home/alexander/codes/uva2/practice/unknown/det_org.cpp)
+        - [Digital 顯示.cpp](/home/alexander/codes/uva2/practice/unknown/Digital 顯示.cpp)
+        - [DLS.cpp](/home/alexander/codes/uva2/practice/unknown/DLS.cpp)
+        - [dp2-slides.pdf](/home/alexander/codes/uva2/practice/unknown/dp2-slides.pdf)
+        - [DP.txt](/home/alexander/codes/uva2/practice/unknown/DP.txt)
+        - [DS-6.cpp](/home/alexander/codes/uva2/practice/unknown/DS-6.cpp)
+        - [DSE.cpp](/home/alexander/codes/uva2/practice/unknown/DSE.cpp)
+        - [E7.java](/home/alexander/codes/uva2/practice/unknown/E7.java)
+        - [easy1.cpp](/home/alexander/codes/uva2/practice/unknown/easy1.cpp)
+        - [EllysXors.cpp](/home/alexander/codes/uva2/practice/unknown/EllysXors.cpp)
+        - [Empty.cpp](/home/alexander/codes/uva2/practice/unknown/Empty.cpp)
+        - [Exp.cpp](/home/alexander/codes/uva2/practice/unknown/Exp.cpp)
+        - [Force.cpp](/home/alexander/codes/uva2/practice/unknown/Force.cpp)
+        - [Gray.cpp](/home/alexander/codes/uva2/practice/unknown/Gray.cpp)
+        - [guw6@.jpg](/home/alexander/codes/uva2/practice/unknown/guw6@.jpg)
+        - [Hackup1.cpp](/home/alexander/codes/uva2/practice/unknown/Hackup1.cpp)
+      - HASH
+          - [HASH.cpp](/home/alexander/codes/uva2/practice/unknown/HASH/HASH.cpp)
+          - [HASH.dev](/home/alexander/codes/uva2/practice/unknown/HASH/HASH.dev)
+          - [HASH.h](/home/alexander/codes/uva2/practice/unknown/HASH/HASH.h)
+          - [main.cpp](/home/alexander/codes/uva2/practice/unknown/HASH/main.cpp)
+          - [Makefile.win](/home/alexander/codes/uva2/practice/unknown/HASH/Makefile.win)
+        - [hw1p2.c](/home/alexander/codes/uva2/practice/unknown/hw1p2.c)
+        - [HW5 huffmancode.cpp](/home/alexander/codes/uva2/practice/unknown/HW5 huffmancode.cpp)
+        - [ICOCCC.c](/home/alexander/codes/uva2/practice/unknown/ICOCCC.c)
+        - [ITSAP2.cpp](/home/alexander/codes/uva2/practice/unknown/ITSAP2.cpp)
+        - [itself.cpp](/home/alexander/codes/uva2/practice/unknown/itself.cpp)
+        - [know_SA.cpp](/home/alexander/codes/uva2/practice/unknown/know_SA.cpp)
+        - [LCA.cpp](/home/alexander/codes/uva2/practice/unknown/LCA.cpp)
+        - [LCAoffline.cpp](/home/alexander/codes/uva2/practice/unknown/LCAoffline.cpp)
+        - [LineSE.cpp](/home/alexander/codes/uva2/practice/unknown/LineSE.cpp)
+        - [linked list.cpp](/home/alexander/codes/uva2/practice/unknown/linked list.cpp)
+        - [link list AVL.cpp](/home/alexander/codes/uva2/practice/unknown/link list AVL.cpp)
+        - [liouzhou_101_code.cpp](/home/alexander/codes/uva2/practice/unknown/liouzhou_101_code.cpp)
+        - [MakeMaze.cpp](/home/alexander/codes/uva2/practice/unknown/MakeMaze.cpp)
+        - [Math.cpp](/home/alexander/codes/uva2/practice/unknown/Math.cpp)
+      - MD5
+          - [Hash_1.0.4_XiaZaiBa.exe](/home/alexander/codes/uva2/practice/unknown/MD5/Hash_1.0.4_XiaZaiBa.exe)
+          - [MD5.cpp](/home/alexander/codes/uva2/practice/unknown/MD5/MD5.cpp)
+          - [MD5.exe](/home/alexander/codes/uva2/practice/unknown/MD5/MD5.exe)
+          - [MD5修正.cpp](/home/alexander/codes/uva2/practice/unknown/MD5/MD5修正.cpp)
+          - [MD5修正.exe](/home/alexander/codes/uva2/practice/unknown/MD5/MD5修正.exe)
+          - [網路MD5.cpp](/home/alexander/codes/uva2/practice/unknown/MD5/網路MD5.cpp)
+          - [網路MD5.exe](/home/alexander/codes/uva2/practice/unknown/MD5/網路MD5.exe)
+        - [MinCostMaxFlow.cpp](/home/alexander/codes/uva2/practice/unknown/MinCostMaxFlow.cpp)
+        - [minCoverCircle.cpp](/home/alexander/codes/uva2/practice/unknown/minCoverCircle.cpp)
+        - [MinExp.cpp](/home/alexander/codes/uva2/practice/unknown/MinExp.cpp)
+        - [Modular multiplicative inverse.cpp](/home/alexander/codes/uva2/practice/unknown/Modular multiplicative inverse.cpp)
+        - [NCPC2011 ProblemH.cpp](/home/alexander/codes/uva2/practice/unknown/NCPC2011 ProblemH.cpp)
+        - [NFA2DFA.cpp](/home/alexander/codes/uva2/practice/unknown/NFA2DFA.cpp)
+        - [NFA2DFA[v2].cpp](/home/alexander/codes/uva2/practice/unknown/NFA2DFA[v2].cpp)
+        - [NFAtoDFS.cpp](/home/alexander/codes/uva2/practice/unknown/NFAtoDFS.cpp)
+        - [onefor.cpp](/home/alexander/codes/uva2/practice/unknown/onefor.cpp)
+      - PHP作業
+          - [lesson9.php](/home/alexander/codes/uva2/practice/unknown/PHP作業/lesson9.php)
+          - [phphw3.jpg](/home/alexander/codes/uva2/practice/unknown/PHP作業/phphw3.jpg)
+          - [phphw4.PNG](/home/alexander/codes/uva2/practice/unknown/PHP作業/phphw4.PNG)
+          - [php_session2.php](/home/alexander/codes/uva2/practice/unknown/PHP作業/php_session2.php)
+          - [第八章 日期時間的應用.ppt](/home/alexander/codes/uva2/practice/unknown/PHP作業/第八章 日期時間的應用.ppt)
+          - [第六章 陣列的使用.ppt](/home/alexander/codes/uva2/practice/unknown/PHP作業/第六章 陣列的使用.ppt)
+          - [第十一章_物件導向簡述.ppt](/home/alexander/codes/uva2/practice/unknown/PHP作業/第十一章_物件導向簡述.ppt)
+        - [pout.cpp](/home/alexander/codes/uva2/practice/unknown/pout.cpp)
+        - [printitself.cpp](/home/alexander/codes/uva2/practice/unknown/printitself.cpp)
+        - [Problem 1. code.cpp](/home/alexander/codes/uva2/practice/unknown/Problem 1. code.cpp)
+        - [Problem1.cpp](/home/alexander/codes/uva2/practice/unknown/Problem1.cpp)
+        - [Problem 2. Statistics.cpp](/home/alexander/codes/uva2/practice/unknown/Problem 2. Statistics.cpp)
+        - [Problem3.cpp](/home/alexander/codes/uva2/practice/unknown/Problem3.cpp)
+        - [Problem 3. Path of Certain Length.cpp](/home/alexander/codes/uva2/practice/unknown/Problem 3. Path of Certain Length.cpp)
+        - [Problem4.cpp](/home/alexander/codes/uva2/practice/unknown/Problem4.cpp)
+        - [Problem 4. Partitioning a ladder.cpp](/home/alexander/codes/uva2/practice/unknown/Problem 4. Partitioning a ladder.cpp)
+        - [Problem F.docx](/home/alexander/codes/uva2/practice/unknown/Problem F.docx)
+        - [Problem H.docx](/home/alexander/codes/uva2/practice/unknown/Problem H.docx)
+        - [Problem H - Tree.cpp](/home/alexander/codes/uva2/practice/unknown/Problem H - Tree.cpp)
+        - [Pro_Con.c](/home/alexander/codes/uva2/practice/unknown/Pro_Con.c)
+        - [PrombleF.cpp](/home/alexander/codes/uva2/practice/unknown/PrombleF.cpp)
+        - [PrombleK.cpp](/home/alexander/codes/uva2/practice/unknown/PrombleK.cpp)
+        - [[PTC][11.12] E - Kingdom Tour.cpp](/home/alexander/codes/uva2/practice/unknown/[PTC][11.12] E - Kingdom Tour.cpp)
+        - [RaceCon.c](/home/alexander/codes/uva2/practice/unknown/RaceCon.c)
+        - [rand_not_array.cpp](/home/alexander/codes/uva2/practice/unknown/rand_not_array.cpp)
+        - [RegexToNFA[simple].cpp](/home/alexander/codes/uva2/practice/unknown/RegexToNFA[simple].cpp)
+        - [RegexToNFA[simple][v2].cpp](/home/alexander/codes/uva2/practice/unknown/RegexToNFA[simple][v2].cpp)
+        - [RegexToNFA[simple][v3].cpp](/home/alexander/codes/uva2/practice/unknown/RegexToNFA[simple][v3].cpp)
+        - [runDFA.cpp](/home/alexander/codes/uva2/practice/unknown/runDFA.cpp)
+        - [runTeam.cpp](/home/alexander/codes/uva2/practice/unknown/runTeam.cpp)
+        - [SA.c](/home/alexander/codes/uva2/practice/unknown/SA.c)
+        - [Sagit's 計分程式.cpp](/home/alexander/codes/uva2/practice/unknown/Sagit's 計分程式.cpp)
+        - [SegmentTree(2D).cpp](/home/alexander/codes/uva2/practice/unknown/SegmentTree(2D).cpp)
+        - [SipPatLa.cpp](/home/alexander/codes/uva2/practice/unknown/SipPatLa.cpp)
+      - sort ALL
+          - [A153(1).c](/home/alexander/codes/uva2/practice/unknown/sort ALL/A153(1).c)
+          - [A153(2).c](/home/alexander/codes/uva2/practice/unknown/sort ALL/A153(2).c)
+          - [A153(3).c](/home/alexander/codes/uva2/practice/unknown/sort ALL/A153(3).c)
+          - [A153.c](/home/alexander/codes/uva2/practice/unknown/sort ALL/A153.c)
+          - [AVL tree.cpp](/home/alexander/codes/uva2/practice/unknown/sort ALL/AVL tree.cpp)
+          - [Heap sort.cpp](/home/alexander/codes/uva2/practice/unknown/sort ALL/Heap sort.cpp)
+          - [QuickSort.cpp](/home/alexander/codes/uva2/practice/unknown/sort ALL/QuickSort.cpp)
+          - [Splay sort.cpp](/home/alexander/codes/uva2/practice/unknown/sort ALL/Splay sort.cpp)
+          - [分堆插入.cpp](/home/alexander/codes/uva2/practice/unknown/sort ALL/分堆插入.cpp)
+          - [新文件2.cpp](/home/alexander/codes/uva2/practice/unknown/sort ALL/新文件2.cpp)
+        - [srm553_250pt.cpp](/home/alexander/codes/uva2/practice/unknown/srm553_250pt.cpp)
+        - [srm553_500pt.cpp](/home/alexander/codes/uva2/practice/unknown/srm553_500pt.cpp)
+        - [stack_maze.cpp](/home/alexander/codes/uva2/practice/unknown/stack_maze.cpp)
+        - [SuffixArray(rewrite).c](/home/alexander/codes/uva2/practice/unknown/SuffixArray(rewrite).c)
+        - [SuffixArray(rewrite).cpp](/home/alexander/codes/uva2/practice/unknown/SuffixArray(rewrite).cpp)
+        - [TC模版.c](/home/alexander/codes/uva2/practice/unknown/TC模版.c)
+        - [templateForIO.cpp](/home/alexander/codes/uva2/practice/unknown/templateForIO.cpp)
+        - [testCout.cpp](/home/alexander/codes/uva2/practice/unknown/testCout.cpp)
+        - [test.cpp](/home/alexander/codes/uva2/practice/unknown/test.cpp)
+        - [testForArrayAddress.cpp](/home/alexander/codes/uva2/practice/unknown/testForArrayAddress.cpp)
+        - [testForTemplate.cpp](/home/alexander/codes/uva2/practice/unknown/testForTemplate.cpp)
+        - [textAnimatin.c](/home/alexander/codes/uva2/practice/unknown/textAnimatin.c)
+        - [threadsample.cpp](/home/alexander/codes/uva2/practice/unknown/threadsample.cpp)
+        - [Trie.cpp](/home/alexander/codes/uva2/practice/unknown/Trie.cpp)
+        - [Trie[非遞迴].cpp](/home/alexander/codes/uva2/practice/unknown/Trie[非遞迴].cpp)
+        - [union.cpp](/home/alexander/codes/uva2/practice/unknown/union.cpp)
+        - [unrarAll.cpp](/home/alexander/codes/uva2/practice/unknown/unrarAll.cpp)
+        - [virtualMethodText.cpp](/home/alexander/codes/uva2/practice/unknown/virtualMethodText.cpp)
+        - [W3-100502205-楊翔雲.docx](/home/alexander/codes/uva2/practice/unknown/W3-100502205-楊翔雲.docx)
+        - [傳統排列.cpp](/home/alexander/codes/uva2/practice/unknown/傳統排列.cpp)
+        - [內件排序.cpp](/home/alexander/codes/uva2/practice/unknown/內件排序.cpp)
+        - [區間MAX.cpp](/home/alexander/codes/uva2/practice/unknown/區間MAX.cpp)
+        - [反矩陣.cpp](/home/alexander/codes/uva2/practice/unknown/反矩陣.cpp)
+        - [圓交.cpp](/home/alexander/codes/uva2/practice/unknown/圓交.cpp)
+        - [基數排序.cpp](/home/alexander/codes/uva2/practice/unknown/基數排序.cpp)
+        - [好多因子.cpp](/home/alexander/codes/uva2/practice/unknown/好多因子.cpp)
+      - 學長委託
+          - [cmd.exe.lnk](/home/alexander/codes/uva2/practice/unknown/學長委託/cmd.exe.lnk)
+          - [[HW5-4] A Simple Channel Router.cpp](/home/alexander/codes/uva2/practice/unknown/學長委託/[HW5-4] A Simple Channel Router.cpp)
+          - [[HW5-4] A Simple Channel Router.exe](/home/alexander/codes/uva2/practice/unknown/學長委託/[HW5-4] A Simple Channel Router.exe)
+          - [[HW5-4] A Simple Channel Router.o](/home/alexander/codes/uva2/practice/unknown/學長委託/[HW5-4] A Simple Channel Router.o)
+          - [input.txt](/home/alexander/codes/uva2/practice/unknown/學長委託/input.txt)
+          - [prog5_4.pdf](/home/alexander/codes/uva2/practice/unknown/學長委託/prog5_4.pdf)
+        - [快速排列.cpp](/home/alexander/codes/uva2/practice/unknown/快速排列.cpp)
+        - [接線.png](/home/alexander/codes/uva2/practice/unknown/接線.png)
+        - [數獨求姊.cpp](/home/alexander/codes/uva2/practice/unknown/數獨求姊.cpp)
+        - [最小生成樹.cpp](/home/alexander/codes/uva2/practice/unknown/最小生成樹.cpp)
+        - [正式模仿.cpp](/home/alexander/codes/uva2/practice/unknown/正式模仿.cpp)
+        - [正式模仿.exe](/home/alexander/codes/uva2/practice/unknown/正式模仿.exe)
+        - [跑關.cpp](/home/alexander/codes/uva2/practice/unknown/跑關.cpp)
+        - [重疊區間個數[force].cpp](/home/alexander/codes/uva2/practice/unknown/重疊區間個數[force].cpp)
+        - [重疊區間個數[nlogn].cpp](/home/alexander/codes/uva2/practice/unknown/重疊區間個數[nlogn].cpp)
+        - [電話客服中心.cpp](/home/alexander/codes/uva2/practice/unknown/電話客服中心.cpp)
+    - [README.md](/home/alexander/codes/uva2/README.md)
+  - temp
+      - [10366 - Faucet Flow.cpp](/home/alexander/codes/uva2/temp/10366 - Faucet Flow.cpp)
+      - [10384 - The Wall Pushers.cpp](/home/alexander/codes/uva2/temp/10384 - The Wall Pushers.cpp)
+      - [10561 - Treblecross.cpp](/home/alexander/codes/uva2/temp/10561 - Treblecross.cpp)
+      - [10618 - Tango Tango Insurrection.cpp](/home/alexander/codes/uva2/temp/10618 - Tango Tango Insurrection.cpp)
+      - [10641 - Barisal Stadium.cpp](/home/alexander/codes/uva2/temp/10641 - Barisal Stadium.cpp)
+      - [10663 - Non-Powerful Subsets.cpp](/home/alexander/codes/uva2/temp/10663 - Non-Powerful Subsets.cpp)
+      - [10824 - Regular Polygon.cpp](/home/alexander/codes/uva2/temp/10824 - Regular Polygon.cpp)
+      - [10837 - A Research Problem.cpp](/home/alexander/codes/uva2/temp/10837 - A Research Problem.cpp)
+      - [10868 - Bungee Jumping.cpp](/home/alexander/codes/uva2/temp/10868 - Bungee Jumping.cpp)
+      - [10886 - Standard Deviation.cpp](/home/alexander/codes/uva2/temp/10886 - Standard Deviation.cpp)
+      - [10989 - Bomb, Divide and Conquer.cpp](/home/alexander/codes/uva2/temp/10989 - Bomb, Divide and Conquer.cpp)
+      - [11013 - Get Straight.cpp](/home/alexander/codes/uva2/temp/11013 - Get Straight.cpp)
+      - [11082 - Matrix Decompressing.cpp](/home/alexander/codes/uva2/temp/11082 - Matrix Decompressing.cpp)
+      - [11117 - Little Quilt.cpp](/home/alexander/codes/uva2/temp/11117 - Little Quilt.cpp)
+      - [1120 - No Change.cpp](/home/alexander/codes/uva2/temp/1120 - No Change.cpp)
+      - [11256 - Repetitive Multiple.cpp](/home/alexander/codes/uva2/temp/11256 - Repetitive Multiple.cpp)
+      - [11277 - Cyclic Polygons.cpp](/home/alexander/codes/uva2/temp/11277 - Cyclic Polygons.cpp)
+      - [11440 - Help Tomisu.cpp](/home/alexander/codes/uva2/temp/11440 - Help Tomisu.cpp)
+      - [11465 - Count the Polygons.cpp](/home/alexander/codes/uva2/temp/11465 - Count the Polygons.cpp)
+      - [11468 - Substring.cpp](/home/alexander/codes/uva2/temp/11468 - Substring.cpp)
+      - [11490 - Just Another Problem.cpp](/home/alexander/codes/uva2/temp/11490 - Just Another Problem.cpp)
+      - [11522 - Pyramid Number.cpp](/home/alexander/codes/uva2/temp/11522 - Pyramid Number.cpp)
+      - [11534 - Say Goodbye to Tic-Tac-Toe.cpp](/home/alexander/codes/uva2/temp/11534 - Say Goodbye to Tic-Tac-Toe.cpp)
+      - [11665 - Chinese Ink.cpp](/home/alexander/codes/uva2/temp/11665 - Chinese Ink.cpp)
+      - [11681 - Tower for Cellular Telephony.cpp](/home/alexander/codes/uva2/temp/11681 - Tower for Cellular Telephony.cpp)
+      - [11694 - Gokigen Naname.cpp](/home/alexander/codes/uva2/temp/11694 - Gokigen Naname.cpp)
+      - [1175 - Ladies' Choice.cpp](/home/alexander/codes/uva2/temp/1175 - Ladies' Choice.cpp)
+      - [11779 - Lost File.cpp](/home/alexander/codes/uva2/temp/11779 - Lost File.cpp)
+      - [11809 - Floating-Point Numbers.cpp](/home/alexander/codes/uva2/temp/11809 - Floating-Point Numbers.cpp)
+      - [11840 - Tic-tac-toe.cpp](/home/alexander/codes/uva2/temp/11840 - Tic-tac-toe.cpp)
+      - [11846 - Finding Seats Again.cpp](/home/alexander/codes/uva2/temp/11846 - Finding Seats Again.cpp)
+      - [11853 - Paintball.cpp](/home/alexander/codes/uva2/temp/11853 - Paintball.cpp)
+      - [11904 - One Unit Machine.cpp](/home/alexander/codes/uva2/temp/11904 - One Unit Machine.cpp)
+      - [11927 - Games Are Important.cpp](/home/alexander/codes/uva2/temp/11927 - Games Are Important.cpp)
+      - [11982 - Fantasy Cricket.cpp](/home/alexander/codes/uva2/temp/11982 - Fantasy Cricket.cpp)
+      - [12061 - Overlaying Maps.cpp](/home/alexander/codes/uva2/temp/12061 - Overlaying Maps.cpp)
+      - [12093 - Protecting Zonk.cpp](/home/alexander/codes/uva2/temp/12093 - Protecting Zonk.cpp)
+      - [12099 - The Bookcase.cpp](/home/alexander/codes/uva2/temp/12099 - The Bookcase.cpp)
+      - [12107 - Digit Puzzle[BFS][TLE].cpp](/home/alexander/codes/uva2/temp/12107 - Digit Puzzle[BFS][TLE].cpp)
+      - [12107 - Digit Puzzle.cpp](/home/alexander/codes/uva2/temp/12107 - Digit Puzzle.cpp)
+      - [12130 - Summits.cpp](/home/alexander/codes/uva2/temp/12130 - Summits.cpp)
+      - [12170 - Easy Climb.cpp](/home/alexander/codes/uva2/temp/12170 - Easy Climb.cpp)
+      - [12171 - Sculpture.cpp](/home/alexander/codes/uva2/temp/12171 - Sculpture.cpp)
+      - [12214 - Traffic Jam.cpp](/home/alexander/codes/uva2/temp/12214 - Traffic Jam.cpp)
+      - [12222 - Mountain Road.cpp](/home/alexander/codes/uva2/temp/12222 - Mountain Road.cpp)
+      - [12227 - Wormholes.cpp](/home/alexander/codes/uva2/temp/12227 - Wormholes.cpp)
+      - [12253 - Simple Encryption.cpp](/home/alexander/codes/uva2/temp/12253 - Simple Encryption.cpp)
+      - [12285 - Knockout Tournaments.cpp](/home/alexander/codes/uva2/temp/12285 - Knockout Tournaments.cpp)
+      - [12296 - Pieces and Discs.cpp](/home/alexander/codes/uva2/temp/12296 - Pieces and Discs.cpp)
+      - [12308 - Smallest Enclosing Box.cpp](/home/alexander/codes/uva2/temp/12308 - Smallest Enclosing Box.cpp)
+      - [12323 - Inspecting Radars.cpp](/home/alexander/codes/uva2/temp/12323 - Inspecting Radars.cpp)
+      - [12367 - Binary Matrix.cpp](/home/alexander/codes/uva2/temp/12367 - Binary Matrix.cpp)
+      - [12369 - Cards.cpp](/home/alexander/codes/uva2/temp/12369 - Cards.cpp)
+      - [12400 - 3, 2, 1, 0.cpp](/home/alexander/codes/uva2/temp/12400 - 3, 2, 1, 0.cpp)
+      - [12415 - Digit Patterns[RE].cpp](/home/alexander/codes/uva2/temp/12415 - Digit Patterns[RE].cpp)
+      - [12451 - Let's call SPaDe a SPaDe.cpp](/home/alexander/codes/uva2/temp/12451 - Let's call SPaDe a SPaDe.cpp)
+      - [12472 - Binary Substring.cpp](/home/alexander/codes/uva2/temp/12472 - Binary Substring.cpp)
+      - [12492 - Rubik Cycle.cpp](/home/alexander/codes/uva2/temp/12492 - Rubik Cycle.cpp)
+      - [12528 - Environment Protection.cpp](/home/alexander/codes/uva2/temp/12528 - Environment Protection.cpp)
+      - [12528 - Environment Protection[simpson].cpp](/home/alexander/codes/uva2/temp/12528 - Environment Protection[simpson].cpp)
+      - [12549 - Sentry Robots.cpp](/home/alexander/codes/uva2/temp/12549 - Sentry Robots.cpp)
+      - [12558 - Egyptian Fractions (HARD version)[TLE].cpp](/home/alexander/codes/uva2/temp/12558 - Egyptian Fractions (HARD version)[TLE].cpp)
+      - [12559 - Finding Black Circles.cpp](/home/alexander/codes/uva2/temp/12559 - Finding Black Circles.cpp)
+      - [12559 - Finding Black Circles[FFT][TLE].cpp](/home/alexander/codes/uva2/temp/12559 - Finding Black Circles[FFT][TLE].cpp)
+      - [12563 - Jin Ge Jin Qu hao.cpp](/home/alexander/codes/uva2/temp/12563 - Jin Ge Jin Qu hao.cpp)
+      - [12569 - Planning mobile robot on Tree (EASY Version).cpp](/home/alexander/codes/uva2/temp/12569 - Planning mobile robot on Tree (EASY Version).cpp)
+      - [12580 - Yell Classico.cpp](/home/alexander/codes/uva2/temp/12580 - Yell Classico.cpp)
+      - [12664 - Interesting Calculator.cpp](/home/alexander/codes/uva2/temp/12664 - Interesting Calculator.cpp)
+      - [12668 - Attacking rooks.cpp](/home/alexander/codes/uva2/temp/12668 - Attacking rooks.cpp)
+      - [12699 - See Emily Play.cpp](/home/alexander/codes/uva2/temp/12699 - See Emily Play.cpp)
+      - [12787 - Looking-Glass House.cpp](/home/alexander/codes/uva2/temp/12787 - Looking-Glass House.cpp)
+      - [12789 - Space Invaders.cpp](/home/alexander/codes/uva2/temp/12789 - Space Invaders.cpp)
+      - [1303 - Wall.cpp](/home/alexander/codes/uva2/temp/1303 - Wall.cpp)
+      - [1304 - Art Gallery.cpp](/home/alexander/codes/uva2/temp/1304 - Art Gallery.cpp)
+      - [1351 - String Compression.cpp](/home/alexander/codes/uva2/temp/1351 - String Compression.cpp)
+      - [1351 - String Compression[v2].cpp](/home/alexander/codes/uva2/temp/1351 - String Compression[v2].cpp)
+      - [1380 - A Scheduling Problem.cpp](/home/alexander/codes/uva2/temp/1380 - A Scheduling Problem.cpp)
+      - [1393 - Highways.cpp](/home/alexander/codes/uva2/temp/1393 - Highways.cpp)
+      - [1398 - Meteor.cpp](/home/alexander/codes/uva2/temp/1398 - Meteor.cpp)
+      - [1407 - Caves.cpp](/home/alexander/codes/uva2/temp/1407 - Caves.cpp)
+      - [1412 - Fund Management.cpp](/home/alexander/codes/uva2/temp/1412 - Fund Management.cpp)
+      - [1416 - Warfare And Logistics.cpp](/home/alexander/codes/uva2/temp/1416 - Warfare And Logistics.cpp)
+      - [1418 - WonderTeam.cpp](/home/alexander/codes/uva2/temp/1418 - WonderTeam.cpp)
+      - [1420 - Priest John's Busiest Day.cpp](/home/alexander/codes/uva2/temp/1420 - Priest John's Busiest Day.cpp)
+      - [1424 - Salesmen.cpp](/home/alexander/codes/uva2/temp/1424 - Salesmen.cpp)
+      - [1434 - YAPTCHA.cpp](/home/alexander/codes/uva2/temp/1434 - YAPTCHA.cpp)
+      - [1436 - Counting heaps.cpp](/home/alexander/codes/uva2/temp/1436 - Counting heaps.cpp)
+      - [1437 - String painter.cpp](/home/alexander/codes/uva2/temp/1437 - String painter.cpp)
+      - [1439 - Exclusive Access 2.cpp](/home/alexander/codes/uva2/temp/1439 - Exclusive Access 2.cpp)
+      - [1442 - Cav.cpp](/home/alexander/codes/uva2/temp/1442 - Cav.cpp)
+      - [1443 - Garlands.cpp](/home/alexander/codes/uva2/temp/1443 - Garlands.cpp)
+      - [1445 - Cubist Artwork.cpp](/home/alexander/codes/uva2/temp/1445 - Cubist Artwork.cpp)
+      - [1455 - Kingdom.cpp](/home/alexander/codes/uva2/temp/1455 - Kingdom.cpp)
+      - [1471 - Defense Lines.cpp](/home/alexander/codes/uva2/temp/1471 - Defense Lines.cpp)
+      - [1473 - Dome of Circus.cpp](/home/alexander/codes/uva2/temp/1473 - Dome of Circus.cpp)
+      - [1474 - Evacuation Plan.cpp](/home/alexander/codes/uva2/temp/1474 - Evacuation Plan.cpp)
+      - [1476 - Error Curves.cpp](/home/alexander/codes/uva2/temp/1476 - Error Curves.cpp)
+      - [1478 - Delta Wave.cpp](/home/alexander/codes/uva2/temp/1478 - Delta Wave.cpp)
+      - [1478 - Delta Wave[v2].cpp](/home/alexander/codes/uva2/temp/1478 - Delta Wave[v2].cpp)
+      - [1481 - Genome Evolution.cpp](/home/alexander/codes/uva2/temp/1481 - Genome Evolution.cpp)
+      - [1484 - Alice and Bob's Trip.cpp](/home/alexander/codes/uva2/temp/1484 - Alice and Bob's Trip.cpp)
+      - [1485 - Permutation Counting.cpp](/home/alexander/codes/uva2/temp/1485 - Permutation Counting.cpp)
+      - [1486 - Transportation[v2].cpp](/home/alexander/codes/uva2/temp/1486 - Transportation[v2].cpp)
+      - [1515 - Pool construction.cpp](/home/alexander/codes/uva2/temp/1515 - Pool construction.cpp)
+      - [1521 - GCD Guessing Game.cpp](/home/alexander/codes/uva2/temp/1521 - GCD Guessing Game.cpp)
+      - [1533 - Moving Pegs.cpp](/home/alexander/codes/uva2/temp/1533 - Moving Pegs.cpp)
+      - [1543 - Telescope.cpp](/home/alexander/codes/uva2/temp/1543 - Telescope.cpp)
+      - [1580 - Pirate Chest.cpp](/home/alexander/codes/uva2/temp/1580 - Pirate Chest.cpp)
+      - [1589 - Xiangqi.cpp](/home/alexander/codes/uva2/temp/1589 - Xiangqi.cpp)
+      - [1591 - Data Mining.cpp](/home/alexander/codes/uva2/temp/1591 - Data Mining.cpp)
+      - [1593 - Alignment of Code.cpp](/home/alexander/codes/uva2/temp/1593 - Alignment of Code.cpp)
+      - [1596 - Bug Hunt.cpp](/home/alexander/codes/uva2/temp/1596 - Bug Hunt.cpp)
+      - [1597 - Searching the Web.cpp](/home/alexander/codes/uva2/temp/1597 - Searching the Web.cpp)
+      - [1598 - Exchange.cpp](/home/alexander/codes/uva2/temp/1598 - Exchange.cpp)
+      - [1599 - Ideal Path.cpp](/home/alexander/codes/uva2/temp/1599 - Ideal Path.cpp)
+      - [1601 - The Morning after Halloween[bfs].cpp](/home/alexander/codes/uva2/temp/1601 - The Morning after Halloween[bfs].cpp)
+      - [1601 - The Morning after Halloween[DoubleBfs].cpp](/home/alexander/codes/uva2/temp/1601 - The Morning after Halloween[DoubleBfs].cpp)
+      - [1602 - Lattice Animals.cpp](/home/alexander/codes/uva2/temp/1602 - Lattice Animals.cpp)
+      - [1603 - Square Destroyer.cpp](/home/alexander/codes/uva2/temp/1603 - Square Destroyer.cpp)
+      - [1604 - Cubic Eight-Puzzle[BFS].cpp](/home/alexander/codes/uva2/temp/1604 - Cubic Eight-Puzzle[BFS].cpp)
+      - [1606 - Amphiphilic Carbon Molecules.cpp](/home/alexander/codes/uva2/temp/1606 - Amphiphilic Carbon Molecules.cpp)
+      - [1607 - Gates.cpp](/home/alexander/codes/uva2/temp/1607 - Gates.cpp)
+      - [1609 - Foul Play.cpp](/home/alexander/codes/uva2/temp/1609 - Foul Play.cpp)
+      - [1611 - Crane.cpp](/home/alexander/codes/uva2/temp/1611 - Crane.cpp)
+      - [1612 - Guess.cpp](/home/alexander/codes/uva2/temp/1612 - Guess.cpp)
+      - [1613 - K-Graph Oddity.cpp](/home/alexander/codes/uva2/temp/1613 - K-Graph Oddity.cpp)
+      - [1615 - Highway.cpp](/home/alexander/codes/uva2/temp/1615 - Highway.cpp)
+      - [1616 - Caravan Robbers.cpp](/home/alexander/codes/uva2/temp/1616 - Caravan Robbers.cpp)
+      - [1617 - Laptop.cpp](/home/alexander/codes/uva2/temp/1617 - Laptop.cpp)
+      - [1618 - Weak Key.cpp](/home/alexander/codes/uva2/temp/1618 - Weak Key.cpp)
+      - [1619 - Feel Good.cpp](/home/alexander/codes/uva2/temp/1619 - Feel Good.cpp)
+      - [1620 - Lazy Susan.cpp](/home/alexander/codes/uva2/temp/1620 - Lazy Susan.cpp)
+      - [1623 - Enter The Dragon.cpp](/home/alexander/codes/uva2/temp/1623 - Enter The Dragon.cpp)
+      - [1624 - Knots.cpp](/home/alexander/codes/uva2/temp/1624 - Knots.cpp)
+      - [1628 - Pizza Delivery.cpp](/home/alexander/codes/uva2/temp/1628 - Pizza Delivery.cpp)
+      - [1630 - Folding.cpp](/home/alexander/codes/uva2/temp/1630 - Folding.cpp)
+      - [1631 - Locker.cpp](/home/alexander/codes/uva2/temp/1631 - Locker.cpp)
+      - [1633 - Dyslexic Gollum.cpp](/home/alexander/codes/uva2/temp/1633 - Dyslexic Gollum.cpp)
+      - [1634 - The Picnic.cpp](/home/alexander/codes/uva2/temp/1634 - The Picnic.cpp)
+      - [1637 - Double Patience.cpp](/home/alexander/codes/uva2/temp/1637 - Double Patience.cpp)
+      - [1639 - Candy.cpp](/home/alexander/codes/uva2/temp/1639 - Candy.cpp)
+      - [1643 - Angle and Squares.cpp](/home/alexander/codes/uva2/temp/1643 - Angle and Squares.cpp)
+      - [1648 - Business Center.cpp](/home/alexander/codes/uva2/temp/1648 - Business Center.cpp)
+      - [1650 - Number String.cpp](/home/alexander/codes/uva2/temp/1650 - Number String.cpp)
+      - [1653 - Yet Another Multiple Problem.cpp](/home/alexander/codes/uva2/temp/1653 - Yet Another Multiple Problem.cpp)
+      - [1654 - Pairs of integers.cpp](/home/alexander/codes/uva2/temp/1654 - Pairs of integers.cpp)
+      - [1658 - Admiral.cpp](/home/alexander/codes/uva2/temp/1658 - Admiral.cpp)
+      - [1660 - Cable TV Network.cpp](/home/alexander/codes/uva2/temp/1660 - Cable TV Network.cpp)
+      - [1661 - Equation.cpp](/home/alexander/codes/uva2/temp/1661 - Equation.cpp)
+      - [1662 - Brackets Removal.cpp](/home/alexander/codes/uva2/temp/1662 - Brackets Removal.cpp)
+      - [1663 - Purifying Machine.cpp](/home/alexander/codes/uva2/temp/1663 - Purifying Machine.cpp)
+      - [1664 - Conquer a New Region.cpp](/home/alexander/codes/uva2/temp/1664 - Conquer a New Region.cpp)
+      - [1666 - Walk.cpp](/home/alexander/codes/uva2/temp/1666 - Walk.cpp)
+      - [1667 - Network Mess.cpp](/home/alexander/codes/uva2/temp/1667 - Network Mess.cpp)
+      - [1668 - Let's Go Green.cpp](/home/alexander/codes/uva2/temp/1668 - Let's Go Green.cpp)
+      - [1669 - Holiday's Accommodatio.cpp](/home/alexander/codes/uva2/temp/1669 - Holiday's Accommodatio.cpp)
+      - [1670 - Kingdom Roadmap.cpp](/home/alexander/codes/uva2/temp/1670 - Kingdom Roadmap.cpp)
+      - [1671 - History of Languages.cpp](/home/alexander/codes/uva2/temp/1671 - History of Languages.cpp)
+      - [1672 - Disjoint Regular Expressions.cpp](/home/alexander/codes/uva2/temp/1672 - Disjoint Regular Expressions.cpp)
+      - [1684 - Escape Plan.cpp](/home/alexander/codes/uva2/temp/1684 - Escape Plan.cpp)
+      - [1687 - Slicing Tree[fixed].cpp](/home/alexander/codes/uva2/temp/1687 - Slicing Tree[fixed].cpp)
+      - [1692 - Labyrinth of the Minotaur.cpp](/home/alexander/codes/uva2/temp/1692 - Labyrinth of the Minotaur.cpp)
+      - [303 - Pipe.cpp](/home/alexander/codes/uva2/temp/303 - Pipe.cpp)
+      - [a822. 101學年度桃竹苗區資訊學科能力競賽 5.滾球遊戲.cpp](/home/alexander/codes/uva2/temp/a822. 101學年度桃竹苗區資訊學科能力競賽 5.滾球遊戲.cpp)
+      - [b122. 用餐地點 (Lunch).cpp](/home/alexander/codes/uva2/temp/b122. 用餐地點 (Lunch).cpp)
+      - [b256. E. 大風吹.cpp](/home/alexander/codes/uva2/temp/b256. E. 大風吹.cpp)
+      - [b298[ANSI C].c](/home/alexander/codes/uva2/temp/b298[ANSI C].c)
+      - [b327.cpp](/home/alexander/codes/uva2/temp/b327.cpp)
+      - [b348. 最近餐館.cpp](/home/alexander/codes/uva2/temp/b348. 最近餐館.cpp)
+      - [d739.cpp](/home/alexander/codes/uva2/temp/d739.cpp)
+      - [d739[maxflow].cpp](/home/alexander/codes/uva2/temp/d739[maxflow].cpp)
+      - [prob_solve1298.cpp](/home/alexander/codes/uva2/temp/prob_solve1298.cpp)
+      - [SGU 383 - Caravans.cpp](/home/alexander/codes/uva2/temp/SGU 383 - Caravans.cpp)
+      - [SGU - 383 Caravans[v2].cpp](/home/alexander/codes/uva2/temp/SGU - 383 Caravans[v2].cpp)
+      - [test.cpp](/home/alexander/codes/uva2/temp/test.cpp)
+    - UVaDate
+        - [10011 - Where Can You Hide.cpp](/home/alexander/codes/uva2/temp/UVaDate/10011 - Where Can You Hide.cpp)
+        - [10021 - Cube in the labirint.cpp](/home/alexander/codes/uva2/temp/UVaDate/10021 - Cube in the labirint.cpp)
+        - [10027 - Language Cardinality.cpp](/home/alexander/codes/uva2/temp/UVaDate/10027 - Language Cardinality.cpp)
+        - [10068 - The Treasure Hunt.cpp](/home/alexander/codes/uva2/temp/UVaDate/10068 - The Treasure Hunt.cpp)
+        - [10134 - AutoFish.cpp](/home/alexander/codes/uva2/temp/UVaDate/10134 - AutoFish.cpp)
+        - [10225 - Discrete Logging.cpp](/home/alexander/codes/uva2/temp/UVaDate/10225 - Discrete Logging.cpp)
+        - [1032 - Intersecting Dates.cpp](/home/alexander/codes/uva2/temp/UVaDate/1032 - Intersecting Dates.cpp)
+        - [10390 - Bean Counting.cpp](/home/alexander/codes/uva2/temp/UVaDate/10390 - Bean Counting.cpp)
+        - [10514 - River Crossing.cpp](/home/alexander/codes/uva2/temp/UVaDate/10514 - River Crossing.cpp)
+        - [10575 - Polylops.cpp](/home/alexander/codes/uva2/temp/UVaDate/10575 - Polylops.cpp)
+        - [10711 - Stitching.cpp](/home/alexander/codes/uva2/temp/UVaDate/10711 - Stitching.cpp)
+        - [1075 - Painter.cpp](/home/alexander/codes/uva2/temp/UVaDate/1075 - Painter.cpp)
+        - [1075 - Painter[simple].cpp](/home/alexander/codes/uva2/temp/UVaDate/1075 - Painter[simple].cpp)
+        - [1077 - The Sky is the Limit.cpp](/home/alexander/codes/uva2/temp/UVaDate/1077 - The Sky is the Limit.cpp)
+        - [1077 - The Sky is the Limit[v2].cpp](/home/alexander/codes/uva2/temp/UVaDate/1077 - The Sky is the Limit[v2].cpp)
+        - [1077 - The Sky is the Limit[v3].cpp](/home/alexander/codes/uva2/temp/UVaDate/1077 - The Sky is the Limit[v3].cpp)
+        - [10942 - Can of Beans.cpp](/home/alexander/codes/uva2/temp/UVaDate/10942 - Can of Beans.cpp)
+        - [11284 - Shopping Trip.cpp](/home/alexander/codes/uva2/temp/UVaDate/11284 - Shopping Trip.cpp)
+        - [11562 - Hard Evidence.cpp](/home/alexander/codes/uva2/temp/UVaDate/11562 - Hard Evidence.cpp)
+        - [11619 - SPAM! (or not).cpp](/home/alexander/codes/uva2/temp/UVaDate/11619 - SPAM! (or not).cpp)
+        - [11856 - Ferry Loading V.cpp](/home/alexander/codes/uva2/temp/UVaDate/11856 - Ferry Loading V.cpp)
+        - [11916 - Emoogle Grid.cpp](/home/alexander/codes/uva2/temp/UVaDate/11916 - Emoogle Grid.cpp)
+        - [12139 - Clicking Checkboxes.cpp](/home/alexander/codes/uva2/temp/UVaDate/12139 - Clicking Checkboxes.cpp)
+        - [12140 - Magic Rings.cpp](/home/alexander/codes/uva2/temp/UVaDate/12140 - Magic Rings.cpp)
+        - [12140 - Magic Rings[v2].cpp](/home/alexander/codes/uva2/temp/UVaDate/12140 - Magic Rings[v2].cpp)
+        - [12178 - Postal Charges.cpp](/home/alexander/codes/uva2/temp/UVaDate/12178 - Postal Charges.cpp)
+        - [12185 - Wizards.cpp](/home/alexander/codes/uva2/temp/UVaDate/12185 - Wizards.cpp)
+        - [12213 - Camera in the Museum.cpp](/home/alexander/codes/uva2/temp/UVaDate/12213 - Camera in the Museum.cpp)
+        - [12223 - Moving to Nuremberg.cpp](/home/alexander/codes/uva2/temp/UVaDate/12223 - Moving to Nuremberg.cpp)
+        - [12244 - Growing Strings.cpp](/home/alexander/codes/uva2/temp/UVaDate/12244 - Growing Strings.cpp)
+        - [12264 - Risk.cpp](/home/alexander/codes/uva2/temp/UVaDate/12264 - Risk.cpp)
+        - [12311 - All-Pair Farthest Points[AC].cpp](/home/alexander/codes/uva2/temp/UVaDate/12311 - All-Pair Farthest Points[AC].cpp)
+        - [12358 - Candy's Candy.cpp](/home/alexander/codes/uva2/temp/UVaDate/12358 - Candy's Candy.cpp)
+        - [12361 - File Retrieval.cpp](/home/alexander/codes/uva2/temp/UVaDate/12361 - File Retrieval.cpp)
+        - [12361 - File Retrieval[hash].cpp](/home/alexander/codes/uva2/temp/UVaDate/12361 - File Retrieval[hash].cpp)
+        - [12373 - Pair of Touching Circles.cpp](/home/alexander/codes/uva2/temp/UVaDate/12373 - Pair of Touching Circles.cpp)
+        - [12378 - Ball Blasting Game.cpp](/home/alexander/codes/uva2/temp/UVaDate/12378 - Ball Blasting Game.cpp)
+        - [12409 - Kisu Pari Na - 1.cpp](/home/alexander/codes/uva2/temp/UVaDate/12409 - Kisu Pari Na - 1.cpp)
+        - [12430 - Grand Wedding.cpp](/home/alexander/codes/uva2/temp/UVaDate/12430 - Grand Wedding.cpp)
+        - [12430 - Grand Wedding[v2].cpp](/home/alexander/codes/uva2/temp/UVaDate/12430 - Grand Wedding[v2].cpp)
+        - [12437 - Kisu Pari Na 2.cpp](/home/alexander/codes/uva2/temp/UVaDate/12437 - Kisu Pari Na 2.cpp)
+        - [12499 - I am Dumb 3.cpp](/home/alexander/codes/uva2/temp/UVaDate/12499 - I am Dumb 3.cpp)
+        - [12522 - The Imperial Problem.cpp](/home/alexander/codes/uva2/temp/UVaDate/12522 - The Imperial Problem.cpp)
+        - [12533 - Joining Couples.cpp](/home/alexander/codes/uva2/temp/UVaDate/12533 - Joining Couples.cpp)
+        - [12574 - VOID.cpp](/home/alexander/codes/uva2/temp/UVaDate/12574 - VOID.cpp)
+        - [12585 - Poker End Games.cpp](/home/alexander/codes/uva2/temp/UVaDate/12585 - Poker End Games.cpp)
+        - [12605 - Ripple Effect.cpp](/home/alexander/codes/uva2/temp/UVaDate/12605 - Ripple Effect.cpp)
+        - [12616 - Gymman vs Fila.cpp](/home/alexander/codes/uva2/temp/UVaDate/12616 - Gymman vs Fila.cpp)
+        - [12647 - Balloon.cpp](/home/alexander/codes/uva2/temp/UVaDate/12647 - Balloon.cpp)
+        - [12647 - Balloon[v2].cpp](/home/alexander/codes/uva2/temp/UVaDate/12647 - Balloon[v2].cpp)
+        - [12647 - Balloon[v3].cpp](/home/alexander/codes/uva2/temp/UVaDate/12647 - Balloon[v3].cpp)
+        - [12676 - Inverting Huffman.cpp](/home/alexander/codes/uva2/temp/UVaDate/12676 - Inverting Huffman.cpp)
+        - [12688 - Spanning trees in a secure lock pattern.cpp](/home/alexander/codes/uva2/temp/UVaDate/12688 - Spanning trees in a secure lock pattern.cpp)
+        - [12901 - Refraction.cpp](/home/alexander/codes/uva2/temp/UVaDate/12901 - Refraction.cpp)
+        - [12906 - Maximum Score.cpp](/home/alexander/codes/uva2/temp/UVaDate/12906 - Maximum Score.cpp)
+        - [12907 - Toby the adventurer.cpp](/home/alexander/codes/uva2/temp/UVaDate/12907 - Toby the adventurer.cpp)
+        - [12908 - The book thief.cpp](/home/alexander/codes/uva2/temp/UVaDate/12908 - The book thief.cpp)
+        - [12909 - Numeric Center.cpp](/home/alexander/codes/uva2/temp/UVaDate/12909 - Numeric Center.cpp)
+        - [12910 - Snakes and Ladders.cpp](/home/alexander/codes/uva2/temp/UVaDate/12910 - Snakes and Ladders.cpp)
+        - [12911 - Subset sum.cpp](/home/alexander/codes/uva2/temp/UVaDate/12911 - Subset sum.cpp)
+        - [12911 - Subset sum[hash2].cpp](/home/alexander/codes/uva2/temp/UVaDate/12911 - Subset sum[hash2].cpp)
+        - [12911 - Subset sum[hash].cpp](/home/alexander/codes/uva2/temp/UVaDate/12911 - Subset sum[hash].cpp)
+        - [12912 - Josephus lottery.cpp](/home/alexander/codes/uva2/temp/UVaDate/12912 - Josephus lottery.cpp)
+        - [12912 - Josephus lottery[nlogn].cpp](/home/alexander/codes/uva2/temp/UVaDate/12912 - Josephus lottery[nlogn].cpp)
+        - [12913 - Grounded.cpp](/home/alexander/codes/uva2/temp/UVaDate/12913 - Grounded.cpp)
+        - [12914 - Sum of all permutations.cpp](/home/alexander/codes/uva2/temp/UVaDate/12914 - Sum of all permutations.cpp)
+        - [12916 - Perfect Cyclic String.cpp](/home/alexander/codes/uva2/temp/UVaDate/12916 - Perfect Cyclic String.cpp)
+        - [12917 - Prop hunt!.cpp](/home/alexander/codes/uva2/temp/UVaDate/12917 - Prop hunt!.cpp)
+        - [12918 - Lucky Thief.cpp](/home/alexander/codes/uva2/temp/UVaDate/12918 - Lucky Thief.cpp)
+        - [12919 - Making some holes.pp.cpp](/home/alexander/codes/uva2/temp/UVaDate/12919 - Making some holes.pp.cpp)
+        - [12920 - Patty's Gift.cpp](/home/alexander/codes/uva2/temp/UVaDate/12920 - Patty's Gift.cpp)
+        - [12921 - Triple shot.cpp](/home/alexander/codes/uva2/temp/UVaDate/12921 - Triple shot.cpp)
+        - [12922 - Crossing the river.cpp](/home/alexander/codes/uva2/temp/UVaDate/12922 - Crossing the river.cpp)
+        - [12923 - The Island.cpp](/home/alexander/codes/uva2/temp/UVaDate/12923 - The Island.cpp)
+        - [12924 - Immortal Rabbits.cpp](/home/alexander/codes/uva2/temp/UVaDate/12924 - Immortal Rabbits.cpp)
+        - [12926 - Trouble in Terrorist Town.cpp](/home/alexander/codes/uva2/temp/UVaDate/12926 - Trouble in Terrorist Town.cpp)
+        - [12927 - Points Cover.cpp](/home/alexander/codes/uva2/temp/UVaDate/12927 - Points Cover.cpp)
+        - [12928 - Death Star.cpp](/home/alexander/codes/uva2/temp/UVaDate/12928 - Death Star.cpp)
+        - [1391 - Astronauts.cpp](/home/alexander/codes/uva2/temp/UVaDate/1391 - Astronauts.cpp)
+        - [1542 - BSP Trees.cpp](/home/alexander/codes/uva2/temp/UVaDate/1542 - BSP Trees.cpp)
+        - [1554 - Binary Search.cpp](/home/alexander/codes/uva2/temp/UVaDate/1554 - Binary Search.cpp)
+        - [1687 - Slicing Tree[fixed].cpp](/home/alexander/codes/uva2/temp/UVaDate/1687 - Slicing Tree[fixed].cpp)
+        - [1707 - Surveillance.cpp](/home/alexander/codes/uva2/temp/UVaDate/1707 - Surveillance.cpp)
+        - [335 - Processing MX Records.cpp](/home/alexander/codes/uva2/temp/UVaDate/335 - Processing MX Records.cpp)
+        - [395 - Board Silly.cpp](/home/alexander/codes/uva2/temp/UVaDate/395 - Board Silly.cpp)
+        - [405 - Message Routing.cpp](/home/alexander/codes/uva2/temp/UVaDate/405 - Message Routing.cpp)
+        - [603 - Parking Lot.cpp](/home/alexander/codes/uva2/temp/UVaDate/603 - Parking Lot.cpp)
+        - [656 - Optimal Programs.cpp](/home/alexander/codes/uva2/temp/UVaDate/656 - Optimal Programs.cpp)
+        - [659 - Reflections.cpp](/home/alexander/codes/uva2/temp/UVaDate/659 - Reflections.cpp)
+        - [ACM12647.cpp](/home/alexander/codes/uva2/temp/UVaDate/ACM12647.cpp)
+        - [DMST.cpp](/home/alexander/codes/uva2/temp/UVaDate/DMST.cpp)
+        - [flere201501I[dreamoon_hint2].cpp](/home/alexander/codes/uva2/temp/UVaDate/flere201501I[dreamoon_hint2].cpp)
+        - [flere201501I[dreamoon_hint].cpp](/home/alexander/codes/uva2/temp/UVaDate/flere201501I[dreamoon_hint].cpp)
+        - [flere201501I[v3].cpp](/home/alexander/codes/uva2/temp/UVaDate/flere201501I[v3].cpp)
+        - [GaloisField.cpp](/home/alexander/codes/uva2/temp/UVaDate/GaloisField.cpp)
+        - [gmon.out](/home/alexander/codes/uva2/temp/UVaDate/gmon.out)
+        - [HDU 5097 - Page Rank.cpp](/home/alexander/codes/uva2/temp/UVaDate/HDU 5097 - Page Rank.cpp)
+        - [Problem9.cpp](/home/alexander/codes/uva2/temp/UVaDate/Problem9.cpp)
+  - UVaTestData
+    - v1in
+        - [100.in](/home/alexander/codes/uva2/UVaTestData/v1in/100.in)
+        - [101.in](/home/alexander/codes/uva2/UVaTestData/v1in/101.in)
+        - [102.in](/home/alexander/codes/uva2/UVaTestData/v1in/102.in)
+        - [103.in](/home/alexander/codes/uva2/UVaTestData/v1in/103.in)
+        - [104.in](/home/alexander/codes/uva2/UVaTestData/v1in/104.in)
+        - [106.in](/home/alexander/codes/uva2/UVaTestData/v1in/106.in)
+        - [109.in](/home/alexander/codes/uva2/UVaTestData/v1in/109.in)
+        - [110.in](/home/alexander/codes/uva2/UVaTestData/v1in/110.in)
+        - [115.in](/home/alexander/codes/uva2/UVaTestData/v1in/115.in)
+        - [116.in](/home/alexander/codes/uva2/UVaTestData/v1in/116.in)
+        - [118.in](/home/alexander/codes/uva2/UVaTestData/v1in/118.in)
+        - [121.in](/home/alexander/codes/uva2/UVaTestData/v1in/121.in)
+        - [122.in](/home/alexander/codes/uva2/UVaTestData/v1in/122.in)
+        - [123.in](/home/alexander/codes/uva2/UVaTestData/v1in/123.in)
+        - [125.in](/home/alexander/codes/uva2/UVaTestData/v1in/125.in)
+        - [126.in](/home/alexander/codes/uva2/UVaTestData/v1in/126.in)
+        - [128.in](/home/alexander/codes/uva2/UVaTestData/v1in/128.in)
+        - [129.in](/home/alexander/codes/uva2/UVaTestData/v1in/129.in)
+        - [130.in](/home/alexander/codes/uva2/UVaTestData/v1in/130.in)
+        - [131.in](/home/alexander/codes/uva2/UVaTestData/v1in/131.in)
+        - [132.in](/home/alexander/codes/uva2/UVaTestData/v1in/132.in)
+        - [134.in](/home/alexander/codes/uva2/UVaTestData/v1in/134.in)
+        - [137.in](/home/alexander/codes/uva2/UVaTestData/v1in/137.in)
+        - [143.in](/home/alexander/codes/uva2/UVaTestData/v1in/143.in)
+        - [149.in](/home/alexander/codes/uva2/UVaTestData/v1in/149.in)
+        - [150.in](/home/alexander/codes/uva2/UVaTestData/v1in/150.in)
+        - [157.in](/home/alexander/codes/uva2/UVaTestData/v1in/157.in)
+        - [158.in](/home/alexander/codes/uva2/UVaTestData/v1in/158.in)
+        - [162.in](/home/alexander/codes/uva2/UVaTestData/v1in/162.in)
+        - [163.in](/home/alexander/codes/uva2/UVaTestData/v1in/163.in)
+        - [164.in](/home/alexander/codes/uva2/UVaTestData/v1in/164.in)
+        - [165.in](/home/alexander/codes/uva2/UVaTestData/v1in/165.in)
+        - [167.in](/home/alexander/codes/uva2/UVaTestData/v1in/167.in)
+        - [169.in](/home/alexander/codes/uva2/UVaTestData/v1in/169.in)
+        - [171.in](/home/alexander/codes/uva2/UVaTestData/v1in/171.in)
+        - [172.in](/home/alexander/codes/uva2/UVaTestData/v1in/172.in)
+        - [173.in](/home/alexander/codes/uva2/UVaTestData/v1in/173.in)
+        - [174.in](/home/alexander/codes/uva2/UVaTestData/v1in/174.in)
+        - [175.in](/home/alexander/codes/uva2/UVaTestData/v1in/175.in)
+        - [176.in](/home/alexander/codes/uva2/UVaTestData/v1in/176.in)
+        - [180.in](/home/alexander/codes/uva2/UVaTestData/v1in/180.in)
+        - [181.in](/home/alexander/codes/uva2/UVaTestData/v1in/181.in)
+        - [182.in](/home/alexander/codes/uva2/UVaTestData/v1in/182.in)
+        - [184.in](/home/alexander/codes/uva2/UVaTestData/v1in/184.in)
+        - [185.in](/home/alexander/codes/uva2/UVaTestData/v1in/185.in)
+        - [189.in](/home/alexander/codes/uva2/UVaTestData/v1in/189.in)
+        - [192.in](/home/alexander/codes/uva2/UVaTestData/v1in/192.in)
+        - [193.in](/home/alexander/codes/uva2/UVaTestData/v1in/193.in)
+        - [194.in](/home/alexander/codes/uva2/UVaTestData/v1in/194.in)
+        - [196.in](/home/alexander/codes/uva2/UVaTestData/v1in/196.in)
+        - [198.in](/home/alexander/codes/uva2/UVaTestData/v1in/198.in)
+        - [199.in](/home/alexander/codes/uva2/UVaTestData/v1in/199.in)
+    - v1out
+        - [100.out](/home/alexander/codes/uva2/UVaTestData/v1out/100.out)
+        - [101.out](/home/alexander/codes/uva2/UVaTestData/v1out/101.out)
+        - [102.out](/home/alexander/codes/uva2/UVaTestData/v1out/102.out)
+        - [103.out](/home/alexander/codes/uva2/UVaTestData/v1out/103.out)
+        - [104.out](/home/alexander/codes/uva2/UVaTestData/v1out/104.out)
+        - [105.out](/home/alexander/codes/uva2/UVaTestData/v1out/105.out)
+        - [106.out](/home/alexander/codes/uva2/UVaTestData/v1out/106.out)
+        - [107.out](/home/alexander/codes/uva2/UVaTestData/v1out/107.out)
+        - [108.out](/home/alexander/codes/uva2/UVaTestData/v1out/108.out)
+        - [109.out](/home/alexander/codes/uva2/UVaTestData/v1out/109.out)
+        - [110.out](/home/alexander/codes/uva2/UVaTestData/v1out/110.out)
+        - [111.out](/home/alexander/codes/uva2/UVaTestData/v1out/111.out)
+        - [112.out](/home/alexander/codes/uva2/UVaTestData/v1out/112.out)
+        - [113.out](/home/alexander/codes/uva2/UVaTestData/v1out/113.out)
+        - [114.out](/home/alexander/codes/uva2/UVaTestData/v1out/114.out)
+        - [115.out](/home/alexander/codes/uva2/UVaTestData/v1out/115.out)
+        - [116.out](/home/alexander/codes/uva2/UVaTestData/v1out/116.out)
+        - [117.out](/home/alexander/codes/uva2/UVaTestData/v1out/117.out)
+        - [118.out](/home/alexander/codes/uva2/UVaTestData/v1out/118.out)
+        - [119.out](/home/alexander/codes/uva2/UVaTestData/v1out/119.out)
+        - [120.out](/home/alexander/codes/uva2/UVaTestData/v1out/120.out)
+        - [121.out](/home/alexander/codes/uva2/UVaTestData/v1out/121.out)
+        - [122.out](/home/alexander/codes/uva2/UVaTestData/v1out/122.out)
+        - [123.out](/home/alexander/codes/uva2/UVaTestData/v1out/123.out)
+        - [124.out](/home/alexander/codes/uva2/UVaTestData/v1out/124.out)
+        - [125.out](/home/alexander/codes/uva2/UVaTestData/v1out/125.out)
+        - [126.out](/home/alexander/codes/uva2/UVaTestData/v1out/126.out)
+        - [127.out](/home/alexander/codes/uva2/UVaTestData/v1out/127.out)
+        - [128.out](/home/alexander/codes/uva2/UVaTestData/v1out/128.out)
+        - [129.out](/home/alexander/codes/uva2/UVaTestData/v1out/129.out)
+        - [130.out](/home/alexander/codes/uva2/UVaTestData/v1out/130.out)
+        - [131.out](/home/alexander/codes/uva2/UVaTestData/v1out/131.out)
+        - [132.out](/home/alexander/codes/uva2/UVaTestData/v1out/132.out)
+        - [133.out](/home/alexander/codes/uva2/UVaTestData/v1out/133.out)
+        - [134.out](/home/alexander/codes/uva2/UVaTestData/v1out/134.out)
+        - [135.out](/home/alexander/codes/uva2/UVaTestData/v1out/135.out)
+        - [136.out](/home/alexander/codes/uva2/UVaTestData/v1out/136.out)
+        - [137.out](/home/alexander/codes/uva2/UVaTestData/v1out/137.out)
+        - [138.out](/home/alexander/codes/uva2/UVaTestData/v1out/138.out)
+        - [139.out](/home/alexander/codes/uva2/UVaTestData/v1out/139.out)
+        - [140.out](/home/alexander/codes/uva2/UVaTestData/v1out/140.out)
+        - [141.out](/home/alexander/codes/uva2/UVaTestData/v1out/141.out)
+        - [142.out](/home/alexander/codes/uva2/UVaTestData/v1out/142.out)
+        - [143.out](/home/alexander/codes/uva2/UVaTestData/v1out/143.out)
+        - [144.out](/home/alexander/codes/uva2/UVaTestData/v1out/144.out)
+        - [145.out](/home/alexander/codes/uva2/UVaTestData/v1out/145.out)
+        - [146.out](/home/alexander/codes/uva2/UVaTestData/v1out/146.out)
+        - [147.out](/home/alexander/codes/uva2/UVaTestData/v1out/147.out)
+        - [148.out](/home/alexander/codes/uva2/UVaTestData/v1out/148.out)
+        - [149.out](/home/alexander/codes/uva2/UVaTestData/v1out/149.out)
+        - [150.out](/home/alexander/codes/uva2/UVaTestData/v1out/150.out)
+        - [151.out](/home/alexander/codes/uva2/UVaTestData/v1out/151.out)
+        - [152.out](/home/alexander/codes/uva2/UVaTestData/v1out/152.out)
+        - [153.out](/home/alexander/codes/uva2/UVaTestData/v1out/153.out)
+        - [154.out](/home/alexander/codes/uva2/UVaTestData/v1out/154.out)
+        - [155.out](/home/alexander/codes/uva2/UVaTestData/v1out/155.out)
+        - [156.out](/home/alexander/codes/uva2/UVaTestData/v1out/156.out)
+        - [157.out](/home/alexander/codes/uva2/UVaTestData/v1out/157.out)
+        - [158.out](/home/alexander/codes/uva2/UVaTestData/v1out/158.out)
+        - [159.out](/home/alexander/codes/uva2/UVaTestData/v1out/159.out)
+        - [160.out](/home/alexander/codes/uva2/UVaTestData/v1out/160.out)
+        - [161.out](/home/alexander/codes/uva2/UVaTestData/v1out/161.out)
+        - [162.out](/home/alexander/codes/uva2/UVaTestData/v1out/162.out)
+        - [163.out](/home/alexander/codes/uva2/UVaTestData/v1out/163.out)
+        - [164.out](/home/alexander/codes/uva2/UVaTestData/v1out/164.out)
+        - [165.out](/home/alexander/codes/uva2/UVaTestData/v1out/165.out)
+        - [166.out](/home/alexander/codes/uva2/UVaTestData/v1out/166.out)
+        - [167.out](/home/alexander/codes/uva2/UVaTestData/v1out/167.out)
+        - [168.out](/home/alexander/codes/uva2/UVaTestData/v1out/168.out)
+        - [169.out](/home/alexander/codes/uva2/UVaTestData/v1out/169.out)
+        - [170.out](/home/alexander/codes/uva2/UVaTestData/v1out/170.out)
+        - [171.out](/home/alexander/codes/uva2/UVaTestData/v1out/171.out)
+        - [172.out](/home/alexander/codes/uva2/UVaTestData/v1out/172.out)
+        - [173.out](/home/alexander/codes/uva2/UVaTestData/v1out/173.out)
+        - [174.out](/home/alexander/codes/uva2/UVaTestData/v1out/174.out)
+        - [175.out](/home/alexander/codes/uva2/UVaTestData/v1out/175.out)
+        - [176.out](/home/alexander/codes/uva2/UVaTestData/v1out/176.out)
+        - [177.out](/home/alexander/codes/uva2/UVaTestData/v1out/177.out)
+        - [178.out](/home/alexander/codes/uva2/UVaTestData/v1out/178.out)
+        - [179.out](/home/alexander/codes/uva2/UVaTestData/v1out/179.out)
+        - [180.out](/home/alexander/codes/uva2/UVaTestData/v1out/180.out)
+        - [181.out](/home/alexander/codes/uva2/UVaTestData/v1out/181.out)
+        - [182.out](/home/alexander/codes/uva2/UVaTestData/v1out/182.out)
+        - [183.out](/home/alexander/codes/uva2/UVaTestData/v1out/183.out)
+        - [184.out](/home/alexander/codes/uva2/UVaTestData/v1out/184.out)
+        - [185.out](/home/alexander/codes/uva2/UVaTestData/v1out/185.out)
+        - [186.out](/home/alexander/codes/uva2/UVaTestData/v1out/186.out)
+        - [187.out](/home/alexander/codes/uva2/UVaTestData/v1out/187.out)
+        - [188.out](/home/alexander/codes/uva2/UVaTestData/v1out/188.out)
+        - [189.out](/home/alexander/codes/uva2/UVaTestData/v1out/189.out)
+        - [190.out](/home/alexander/codes/uva2/UVaTestData/v1out/190.out)
+        - [191.out](/home/alexander/codes/uva2/UVaTestData/v1out/191.out)
+        - [192.out](/home/alexander/codes/uva2/UVaTestData/v1out/192.out)
+        - [194.out](/home/alexander/codes/uva2/UVaTestData/v1out/194.out)
+        - [195.out](/home/alexander/codes/uva2/UVaTestData/v1out/195.out)
+        - [196.out](/home/alexander/codes/uva2/UVaTestData/v1out/196.out)
+        - [197.out](/home/alexander/codes/uva2/UVaTestData/v1out/197.out)
+        - [198.out](/home/alexander/codes/uva2/UVaTestData/v1out/198.out)
+        - [199.out](/home/alexander/codes/uva2/UVaTestData/v1out/199.out)
+    - v2in
+        - [270.in](/home/alexander/codes/uva2/UVaTestData/v2in/270.in)
+        - [271.in](/home/alexander/codes/uva2/UVaTestData/v2in/271.in)
+        - [272.in](/home/alexander/codes/uva2/UVaTestData/v2in/272.in)
+        - [273.in](/home/alexander/codes/uva2/UVaTestData/v2in/273.in)
+        - [274.in](/home/alexander/codes/uva2/UVaTestData/v2in/274.in)
+        - [275.in](/home/alexander/codes/uva2/UVaTestData/v2in/275.in)
+        - [276.in](/home/alexander/codes/uva2/UVaTestData/v2in/276.in)
+        - [277.in](/home/alexander/codes/uva2/UVaTestData/v2in/277.in)
+    - v2out
+        - [270.out](/home/alexander/codes/uva2/UVaTestData/v2out/270.out)
+        - [271.out](/home/alexander/codes/uva2/UVaTestData/v2out/271.out)
+        - [272.out](/home/alexander/codes/uva2/UVaTestData/v2out/272.out)
+        - [273.out](/home/alexander/codes/uva2/UVaTestData/v2out/273.out)
+        - [274.out](/home/alexander/codes/uva2/UVaTestData/v2out/274.out)
+        - [275.out](/home/alexander/codes/uva2/UVaTestData/v2out/275.out)
+        - [276.out](/home/alexander/codes/uva2/UVaTestData/v2out/276.out)
+        - [277.out](/home/alexander/codes/uva2/UVaTestData/v2out/277.out)
+    - v3in
+        - [300.IN](/home/alexander/codes/uva2/UVaTestData/v3in/300.IN)
+        - [301.IN](/home/alexander/codes/uva2/UVaTestData/v3in/301.IN)
+        - [302.IN](/home/alexander/codes/uva2/UVaTestData/v3in/302.IN)
+        - [303.IN](/home/alexander/codes/uva2/UVaTestData/v3in/303.IN)
+        - [304.IN](/home/alexander/codes/uva2/UVaTestData/v3in/304.IN)
+        - [305.IN](/home/alexander/codes/uva2/UVaTestData/v3in/305.IN)
+        - [306.IN](/home/alexander/codes/uva2/UVaTestData/v3in/306.IN)
+        - [307.IN](/home/alexander/codes/uva2/UVaTestData/v3in/307.IN)
+        - [308.in](/home/alexander/codes/uva2/UVaTestData/v3in/308.in)
+        - [309.in](/home/alexander/codes/uva2/UVaTestData/v3in/309.in)
+        - [310.in](/home/alexander/codes/uva2/UVaTestData/v3in/310.in)
+        - [311.in](/home/alexander/codes/uva2/UVaTestData/v3in/311.in)
+        - [312.in](/home/alexander/codes/uva2/UVaTestData/v3in/312.in)
+        - [313.in](/home/alexander/codes/uva2/UVaTestData/v3in/313.in)
+        - [314.in](/home/alexander/codes/uva2/UVaTestData/v3in/314.in)
+        - [315.in](/home/alexander/codes/uva2/UVaTestData/v3in/315.in)
+        - [316.in](/home/alexander/codes/uva2/UVaTestData/v3in/316.in)
+        - [317.in](/home/alexander/codes/uva2/UVaTestData/v3in/317.in)
+        - [318.in](/home/alexander/codes/uva2/UVaTestData/v3in/318.in)
+        - [319.in](/home/alexander/codes/uva2/UVaTestData/v3in/319.in)
+        - [320.in](/home/alexander/codes/uva2/UVaTestData/v3in/320.in)
+        - [321.in](/home/alexander/codes/uva2/UVaTestData/v3in/321.in)
+        - [322.in](/home/alexander/codes/uva2/UVaTestData/v3in/322.in)
+        - [323.in](/home/alexander/codes/uva2/UVaTestData/v3in/323.in)
+        - [324.in](/home/alexander/codes/uva2/UVaTestData/v3in/324.in)
+        - [325.in](/home/alexander/codes/uva2/UVaTestData/v3in/325.in)
+        - [326.in](/home/alexander/codes/uva2/UVaTestData/v3in/326.in)
+        - [327.in](/home/alexander/codes/uva2/UVaTestData/v3in/327.in)
+        - [328.in](/home/alexander/codes/uva2/UVaTestData/v3in/328.in)
+        - [329.in](/home/alexander/codes/uva2/UVaTestData/v3in/329.in)
+        - [330.in](/home/alexander/codes/uva2/UVaTestData/v3in/330.in)
+        - [345.in](/home/alexander/codes/uva2/UVaTestData/v3in/345.in)
+        - [346.in](/home/alexander/codes/uva2/UVaTestData/v3in/346.in)
+        - [347.in](/home/alexander/codes/uva2/UVaTestData/v3in/347.in)
+        - [348.in](/home/alexander/codes/uva2/UVaTestData/v3in/348.in)
+        - [349.in](/home/alexander/codes/uva2/UVaTestData/v3in/349.in)
+        - [350.in](/home/alexander/codes/uva2/UVaTestData/v3in/350.in)
+        - [351.in](/home/alexander/codes/uva2/UVaTestData/v3in/351.in)
+        - [377.in](/home/alexander/codes/uva2/UVaTestData/v3in/377.in)
+        - [378.in](/home/alexander/codes/uva2/UVaTestData/v3in/378.in)
+        - [379.in](/home/alexander/codes/uva2/UVaTestData/v3in/379.in)
+        - [380.in](/home/alexander/codes/uva2/UVaTestData/v3in/380.in)
+        - [381.in](/home/alexander/codes/uva2/UVaTestData/v3in/381.in)
+        - [382.in](/home/alexander/codes/uva2/UVaTestData/v3in/382.in)
+        - [383.in](/home/alexander/codes/uva2/UVaTestData/v3in/383.in)
+        - [384.in](/home/alexander/codes/uva2/UVaTestData/v3in/384.in)
+        - [385.in](/home/alexander/codes/uva2/UVaTestData/v3in/385.in)
+        - [387.in](/home/alexander/codes/uva2/UVaTestData/v3in/387.in)
+        - [388.in](/home/alexander/codes/uva2/UVaTestData/v3in/388.in)
+        - [389.in](/home/alexander/codes/uva2/UVaTestData/v3in/389.in)
+        - [390.in](/home/alexander/codes/uva2/UVaTestData/v3in/390.in)
+        - [391.in](/home/alexander/codes/uva2/UVaTestData/v3in/391.in)
+        - [392.in](/home/alexander/codes/uva2/UVaTestData/v3in/392.in)
+        - [393.in](/home/alexander/codes/uva2/UVaTestData/v3in/393.in)
+        - [394.in](/home/alexander/codes/uva2/UVaTestData/v3in/394.in)
+        - [395.in](/home/alexander/codes/uva2/UVaTestData/v3in/395.in)
+        - [396.in](/home/alexander/codes/uva2/UVaTestData/v3in/396.in)
+        - [397.in](/home/alexander/codes/uva2/UVaTestData/v3in/397.in)
+        - [398.in](/home/alexander/codes/uva2/UVaTestData/v3in/398.in)
+        - [399.in](/home/alexander/codes/uva2/UVaTestData/v3in/399.in)
+    - v3out
+        - [300.OUT](/home/alexander/codes/uva2/UVaTestData/v3out/300.OUT)
+        - [301.OUT](/home/alexander/codes/uva2/UVaTestData/v3out/301.OUT)
+        - [302.OUT](/home/alexander/codes/uva2/UVaTestData/v3out/302.OUT)
+        - [303.OUT](/home/alexander/codes/uva2/UVaTestData/v3out/303.OUT)
+        - [304.OUT](/home/alexander/codes/uva2/UVaTestData/v3out/304.OUT)
+        - [305.OUT](/home/alexander/codes/uva2/UVaTestData/v3out/305.OUT)
+        - [306.OUT](/home/alexander/codes/uva2/UVaTestData/v3out/306.OUT)
+        - [307.OUT](/home/alexander/codes/uva2/UVaTestData/v3out/307.OUT)
+        - [308.out](/home/alexander/codes/uva2/UVaTestData/v3out/308.out)
+        - [309.out](/home/alexander/codes/uva2/UVaTestData/v3out/309.out)
+        - [310.out](/home/alexander/codes/uva2/UVaTestData/v3out/310.out)
+        - [311.out](/home/alexander/codes/uva2/UVaTestData/v3out/311.out)
+        - [312.out](/home/alexander/codes/uva2/UVaTestData/v3out/312.out)
+        - [313.out](/home/alexander/codes/uva2/UVaTestData/v3out/313.out)
+        - [314.out](/home/alexander/codes/uva2/UVaTestData/v3out/314.out)
+        - [315.out](/home/alexander/codes/uva2/UVaTestData/v3out/315.out)
+        - [316.out](/home/alexander/codes/uva2/UVaTestData/v3out/316.out)
+        - [317.out](/home/alexander/codes/uva2/UVaTestData/v3out/317.out)
+        - [318.out](/home/alexander/codes/uva2/UVaTestData/v3out/318.out)
+        - [319.out](/home/alexander/codes/uva2/UVaTestData/v3out/319.out)
+        - [320.out](/home/alexander/codes/uva2/UVaTestData/v3out/320.out)
+        - [321.out](/home/alexander/codes/uva2/UVaTestData/v3out/321.out)
+        - [322.out](/home/alexander/codes/uva2/UVaTestData/v3out/322.out)
+        - [323.out](/home/alexander/codes/uva2/UVaTestData/v3out/323.out)
+        - [324.out](/home/alexander/codes/uva2/UVaTestData/v3out/324.out)
+        - [325.out](/home/alexander/codes/uva2/UVaTestData/v3out/325.out)
+        - [326.out](/home/alexander/codes/uva2/UVaTestData/v3out/326.out)
+        - [327.out](/home/alexander/codes/uva2/UVaTestData/v3out/327.out)
+        - [328.out](/home/alexander/codes/uva2/UVaTestData/v3out/328.out)
+        - [329.out](/home/alexander/codes/uva2/UVaTestData/v3out/329.out)
+        - [330.out](/home/alexander/codes/uva2/UVaTestData/v3out/330.out)
+        - [345.out](/home/alexander/codes/uva2/UVaTestData/v3out/345.out)
+        - [346.out](/home/alexander/codes/uva2/UVaTestData/v3out/346.out)
+        - [347.out](/home/alexander/codes/uva2/UVaTestData/v3out/347.out)
+        - [348.out](/home/alexander/codes/uva2/UVaTestData/v3out/348.out)
+        - [349.out](/home/alexander/codes/uva2/UVaTestData/v3out/349.out)
+        - [350.out](/home/alexander/codes/uva2/UVaTestData/v3out/350.out)
+        - [377.out](/home/alexander/codes/uva2/UVaTestData/v3out/377.out)
+        - [378.out](/home/alexander/codes/uva2/UVaTestData/v3out/378.out)
+        - [379.out](/home/alexander/codes/uva2/UVaTestData/v3out/379.out)
+        - [380.out](/home/alexander/codes/uva2/UVaTestData/v3out/380.out)
+        - [381.out](/home/alexander/codes/uva2/UVaTestData/v3out/381.out)
+        - [382.out](/home/alexander/codes/uva2/UVaTestData/v3out/382.out)
+        - [383.out](/home/alexander/codes/uva2/UVaTestData/v3out/383.out)
+        - [384.out](/home/alexander/codes/uva2/UVaTestData/v3out/384.out)
+        - [385.out](/home/alexander/codes/uva2/UVaTestData/v3out/385.out)
+        - [386.out](/home/alexander/codes/uva2/UVaTestData/v3out/386.out)
+        - [387.out](/home/alexander/codes/uva2/UVaTestData/v3out/387.out)
+        - [388.out](/home/alexander/codes/uva2/UVaTestData/v3out/388.out)
+        - [389.out](/home/alexander/codes/uva2/UVaTestData/v3out/389.out)
+        - [390.out](/home/alexander/codes/uva2/UVaTestData/v3out/390.out)
+        - [391.out](/home/alexander/codes/uva2/UVaTestData/v3out/391.out)
+        - [392.out](/home/alexander/codes/uva2/UVaTestData/v3out/392.out)
+        - [393.out](/home/alexander/codes/uva2/UVaTestData/v3out/393.out)
+        - [394.out](/home/alexander/codes/uva2/UVaTestData/v3out/394.out)
+        - [395.out](/home/alexander/codes/uva2/UVaTestData/v3out/395.out)
+        - [396.out](/home/alexander/codes/uva2/UVaTestData/v3out/396.out)
+        - [397.out](/home/alexander/codes/uva2/UVaTestData/v3out/397.out)
+        - [398.out](/home/alexander/codes/uva2/UVaTestData/v3out/398.out)
+        - [399.out](/home/alexander/codes/uva2/UVaTestData/v3out/399.out)
+    - v4in
+        - [400.in](/home/alexander/codes/uva2/UVaTestData/v4in/400.in)
+        - [401.in](/home/alexander/codes/uva2/UVaTestData/v4in/401.in)
+        - [402.in](/home/alexander/codes/uva2/UVaTestData/v4in/402.in)
+        - [403.in](/home/alexander/codes/uva2/UVaTestData/v4in/403.in)
+        - [404.in](/home/alexander/codes/uva2/UVaTestData/v4in/404.in)
+        - [405.in](/home/alexander/codes/uva2/UVaTestData/v4in/405.in)
+        - [406.in](/home/alexander/codes/uva2/UVaTestData/v4in/406.in)
+        - [407.in](/home/alexander/codes/uva2/UVaTestData/v4in/407.in)
+        - [408.in](/home/alexander/codes/uva2/UVaTestData/v4in/408.in)
+        - [409.in](/home/alexander/codes/uva2/UVaTestData/v4in/409.in)
+        - [410.in](/home/alexander/codes/uva2/UVaTestData/v4in/410.in)
+        - [411.in](/home/alexander/codes/uva2/UVaTestData/v4in/411.in)
+        - [412.in](/home/alexander/codes/uva2/UVaTestData/v4in/412.in)
+        - [413.in](/home/alexander/codes/uva2/UVaTestData/v4in/413.in)
+        - [414.in](/home/alexander/codes/uva2/UVaTestData/v4in/414.in)
+        - [415.in](/home/alexander/codes/uva2/UVaTestData/v4in/415.in)
+        - [416.in](/home/alexander/codes/uva2/UVaTestData/v4in/416.in)
+        - [417.in](/home/alexander/codes/uva2/UVaTestData/v4in/417.in)
+        - [418.in](/home/alexander/codes/uva2/UVaTestData/v4in/418.in)
+        - [419.in](/home/alexander/codes/uva2/UVaTestData/v4in/419.in)
+        - [420.in](/home/alexander/codes/uva2/UVaTestData/v4in/420.in)
+        - [421.in](/home/alexander/codes/uva2/UVaTestData/v4in/421.in)
+        - [422.in](/home/alexander/codes/uva2/UVaTestData/v4in/422.in)
+        - [423.in](/home/alexander/codes/uva2/UVaTestData/v4in/423.in)
+        - [424.in](/home/alexander/codes/uva2/UVaTestData/v4in/424.in)
+        - [425.in](/home/alexander/codes/uva2/UVaTestData/v4in/425.in)
+        - [425pc.c](/home/alexander/codes/uva2/UVaTestData/v4in/425pc.c)
+        - [436.in](/home/alexander/codes/uva2/UVaTestData/v4in/436.in)
+        - [437.in](/home/alexander/codes/uva2/UVaTestData/v4in/437.in)
+        - [438.in](/home/alexander/codes/uva2/UVaTestData/v4in/438.in)
+        - [439.in](/home/alexander/codes/uva2/UVaTestData/v4in/439.in)
+        - [440.in](/home/alexander/codes/uva2/UVaTestData/v4in/440.in)
+        - [441.in](/home/alexander/codes/uva2/UVaTestData/v4in/441.in)
+        - [442.in](/home/alexander/codes/uva2/UVaTestData/v4in/442.in)
+        - [443.in](/home/alexander/codes/uva2/UVaTestData/v4in/443.in)
+    - v4out
+        - [400.out](/home/alexander/codes/uva2/UVaTestData/v4out/400.out)
+        - [401.out](/home/alexander/codes/uva2/UVaTestData/v4out/401.out)
+        - [402.out](/home/alexander/codes/uva2/UVaTestData/v4out/402.out)
+        - [403.out](/home/alexander/codes/uva2/UVaTestData/v4out/403.out)
+        - [404.out](/home/alexander/codes/uva2/UVaTestData/v4out/404.out)
+        - [405.out](/home/alexander/codes/uva2/UVaTestData/v4out/405.out)
+        - [406.out](/home/alexander/codes/uva2/UVaTestData/v4out/406.out)
+        - [407.out](/home/alexander/codes/uva2/UVaTestData/v4out/407.out)
+        - [408.out](/home/alexander/codes/uva2/UVaTestData/v4out/408.out)
+        - [409.out](/home/alexander/codes/uva2/UVaTestData/v4out/409.out)
+        - [410.out](/home/alexander/codes/uva2/UVaTestData/v4out/410.out)
+        - [411.out](/home/alexander/codes/uva2/UVaTestData/v4out/411.out)
+        - [412.out](/home/alexander/codes/uva2/UVaTestData/v4out/412.out)
+        - [413.out](/home/alexander/codes/uva2/UVaTestData/v4out/413.out)
+        - [414.out](/home/alexander/codes/uva2/UVaTestData/v4out/414.out)
+        - [415.out](/home/alexander/codes/uva2/UVaTestData/v4out/415.out)
+        - [416.out](/home/alexander/codes/uva2/UVaTestData/v4out/416.out)
+        - [417.out](/home/alexander/codes/uva2/UVaTestData/v4out/417.out)
+        - [418.out](/home/alexander/codes/uva2/UVaTestData/v4out/418.out)
+        - [419.out](/home/alexander/codes/uva2/UVaTestData/v4out/419.out)
+        - [420.out](/home/alexander/codes/uva2/UVaTestData/v4out/420.out)
+        - [421.out](/home/alexander/codes/uva2/UVaTestData/v4out/421.out)
+        - [422.out](/home/alexander/codes/uva2/UVaTestData/v4out/422.out)
+        - [423.out](/home/alexander/codes/uva2/UVaTestData/v4out/423.out)
+        - [424.out](/home/alexander/codes/uva2/UVaTestData/v4out/424.out)
+        - [425.out](/home/alexander/codes/uva2/UVaTestData/v4out/425.out)
+        - [436.out](/home/alexander/codes/uva2/UVaTestData/v4out/436.out)
+        - [437.out](/home/alexander/codes/uva2/UVaTestData/v4out/437.out)
+        - [438.out](/home/alexander/codes/uva2/UVaTestData/v4out/438.out)
+        - [439.out](/home/alexander/codes/uva2/UVaTestData/v4out/439.out)
+        - [440.out](/home/alexander/codes/uva2/UVaTestData/v4out/440.out)
+        - [441.out](/home/alexander/codes/uva2/UVaTestData/v4out/441.out)
+        - [442.out](/home/alexander/codes/uva2/UVaTestData/v4out/442.out)
+        - [443.out](/home/alexander/codes/uva2/UVaTestData/v4out/443.out)
+    - v5in
+        - [500.in](/home/alexander/codes/uva2/UVaTestData/v5in/500.in)
+        - [501.in](/home/alexander/codes/uva2/UVaTestData/v5in/501.in)
+        - [502.in](/home/alexander/codes/uva2/UVaTestData/v5in/502.in)
+        - [503.in](/home/alexander/codes/uva2/UVaTestData/v5in/503.in)
+        - [504.in](/home/alexander/codes/uva2/UVaTestData/v5in/504.in)
+        - [505.in](/home/alexander/codes/uva2/UVaTestData/v5in/505.in)
+        - [514.IN](/home/alexander/codes/uva2/UVaTestData/v5in/514.IN)
+        - [515.IN](/home/alexander/codes/uva2/UVaTestData/v5in/515.IN)
+        - [516.IN](/home/alexander/codes/uva2/UVaTestData/v5in/516.IN)
+        - [517.IN](/home/alexander/codes/uva2/UVaTestData/v5in/517.IN)
+        - [518.IN](/home/alexander/codes/uva2/UVaTestData/v5in/518.IN)
+        - [519.IN](/home/alexander/codes/uva2/UVaTestData/v5in/519.IN)
+        - [520.IN](/home/alexander/codes/uva2/UVaTestData/v5in/520.IN)
+        - [521.IN](/home/alexander/codes/uva2/UVaTestData/v5in/521.IN)
+        - [529.IN](/home/alexander/codes/uva2/UVaTestData/v5in/529.IN)
+        - [530.IN](/home/alexander/codes/uva2/UVaTestData/v5in/530.IN)
+        - [531.IN](/home/alexander/codes/uva2/UVaTestData/v5in/531.IN)
+        - [532.IN](/home/alexander/codes/uva2/UVaTestData/v5in/532.IN)
+        - [533.IN](/home/alexander/codes/uva2/UVaTestData/v5in/533.IN)
+        - [534.IN](/home/alexander/codes/uva2/UVaTestData/v5in/534.IN)
+        - [535.IN](/home/alexander/codes/uva2/UVaTestData/v5in/535.IN)
+        - [536.IN](/home/alexander/codes/uva2/UVaTestData/v5in/536.IN)
+        - [537.IN](/home/alexander/codes/uva2/UVaTestData/v5in/537.IN)
+        - [538.IN](/home/alexander/codes/uva2/UVaTestData/v5in/538.IN)
+        - [539.IN](/home/alexander/codes/uva2/UVaTestData/v5in/539.IN)
+        - [540.IN](/home/alexander/codes/uva2/UVaTestData/v5in/540.IN)
+        - [541.IN](/home/alexander/codes/uva2/UVaTestData/v5in/541.IN)
+        - [542.IN](/home/alexander/codes/uva2/UVaTestData/v5in/542.IN)
+        - [543.IN](/home/alexander/codes/uva2/UVaTestData/v5in/543.IN)
+        - [544.IN](/home/alexander/codes/uva2/UVaTestData/v5in/544.IN)
+        - [565.in](/home/alexander/codes/uva2/UVaTestData/v5in/565.in)
+        - [566.in](/home/alexander/codes/uva2/UVaTestData/v5in/566.in)
+        - [567.in](/home/alexander/codes/uva2/UVaTestData/v5in/567.in)
+        - [568.in](/home/alexander/codes/uva2/UVaTestData/v5in/568.in)
+        - [569.in](/home/alexander/codes/uva2/UVaTestData/v5in/569.in)
+        - [570.in](/home/alexander/codes/uva2/UVaTestData/v5in/570.in)
+        - [571.in](/home/alexander/codes/uva2/UVaTestData/v5in/571.in)
+        - [572.in](/home/alexander/codes/uva2/UVaTestData/v5in/572.in)
+        - [573.in](/home/alexander/codes/uva2/UVaTestData/v5in/573.in)
+        - [574.in](/home/alexander/codes/uva2/UVaTestData/v5in/574.in)
+        - [575.in](/home/alexander/codes/uva2/UVaTestData/v5in/575.in)
+        - [576.in](/home/alexander/codes/uva2/UVaTestData/v5in/576.in)
+        - [577.in](/home/alexander/codes/uva2/UVaTestData/v5in/577.in)
+        - [585.in](/home/alexander/codes/uva2/UVaTestData/v5in/585.in)
+        - [586.in](/home/alexander/codes/uva2/UVaTestData/v5in/586.in)
+        - [587.in](/home/alexander/codes/uva2/UVaTestData/v5in/587.in)
+        - [588.in](/home/alexander/codes/uva2/UVaTestData/v5in/588.in)
+        - [589.in](/home/alexander/codes/uva2/UVaTestData/v5in/589.in)
+        - [590.in](/home/alexander/codes/uva2/UVaTestData/v5in/590.in)
+        - [591.in](/home/alexander/codes/uva2/UVaTestData/v5in/591.in)
+        - [592.in](/home/alexander/codes/uva2/UVaTestData/v5in/592.in)
+        - [593.in](/home/alexander/codes/uva2/UVaTestData/v5in/593.in)
+    - v5out
+        - [500.out](/home/alexander/codes/uva2/UVaTestData/v5out/500.out)
+        - [501.out](/home/alexander/codes/uva2/UVaTestData/v5out/501.out)
+        - [502.out](/home/alexander/codes/uva2/UVaTestData/v5out/502.out)
+        - [503.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/503.OUT)
+        - [504.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/504.OUT)
+        - [505.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/505.OUT)
+        - [514.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/514.OUT)
+        - [515.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/515.OUT)
+        - [516.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/516.OUT)
+        - [517.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/517.OUT)
+        - [518.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/518.OUT)
+        - [519.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/519.OUT)
+        - [520.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/520.OUT)
+        - [521.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/521.OUT)
+        - [529.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/529.OUT)
+        - [530.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/530.OUT)
+        - [531.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/531.OUT)
+        - [532.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/532.OUT)
+        - [533.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/533.OUT)
+        - [534.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/534.OUT)
+        - [535.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/535.OUT)
+        - [536.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/536.OUT)
+        - [537.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/537.OUT)
+        - [538.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/538.OUT)
+        - [539.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/539.OUT)
+        - [540.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/540.OUT)
+        - [541.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/541.OUT)
+        - [542.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/542.OUT)
+        - [543.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/543.OUT)
+        - [544.OUT](/home/alexander/codes/uva2/UVaTestData/v5out/544.OUT)
+        - [565.out](/home/alexander/codes/uva2/UVaTestData/v5out/565.out)
+        - [566.out](/home/alexander/codes/uva2/UVaTestData/v5out/566.out)
+        - [567.out](/home/alexander/codes/uva2/UVaTestData/v5out/567.out)
+        - [568.out](/home/alexander/codes/uva2/UVaTestData/v5out/568.out)
+        - [569.out](/home/alexander/codes/uva2/UVaTestData/v5out/569.out)
+        - [570.out](/home/alexander/codes/uva2/UVaTestData/v5out/570.out)
+        - [571.out](/home/alexander/codes/uva2/UVaTestData/v5out/571.out)
+        - [572.out](/home/alexander/codes/uva2/UVaTestData/v5out/572.out)
+        - [573.out](/home/alexander/codes/uva2/UVaTestData/v5out/573.out)
+        - [574.out](/home/alexander/codes/uva2/UVaTestData/v5out/574.out)
+        - [575.out](/home/alexander/codes/uva2/UVaTestData/v5out/575.out)
+        - [576.out](/home/alexander/codes/uva2/UVaTestData/v5out/576.out)
+        - [577.out](/home/alexander/codes/uva2/UVaTestData/v5out/577.out)
+        - [585.out](/home/alexander/codes/uva2/UVaTestData/v5out/585.out)
+        - [586.out](/home/alexander/codes/uva2/UVaTestData/v5out/586.out)
+        - [587.out](/home/alexander/codes/uva2/UVaTestData/v5out/587.out)
+        - [588.out](/home/alexander/codes/uva2/UVaTestData/v5out/588.out)
+        - [589.out](/home/alexander/codes/uva2/UVaTestData/v5out/589.out)
+        - [590.out](/home/alexander/codes/uva2/UVaTestData/v5out/590.out)
+        - [591.out](/home/alexander/codes/uva2/UVaTestData/v5out/591.out)
+        - [592.out](/home/alexander/codes/uva2/UVaTestData/v5out/592.out)
+        - [593.out](/home/alexander/codes/uva2/UVaTestData/v5out/593.out)
+    - v6in
+        - [600.in](/home/alexander/codes/uva2/UVaTestData/v6in/600.in)
+        - [601.in](/home/alexander/codes/uva2/UVaTestData/v6in/601.in)
+        - [602.in](/home/alexander/codes/uva2/UVaTestData/v6in/602.in)
+        - [603.in](/home/alexander/codes/uva2/UVaTestData/v6in/603.in)
+        - [604.in](/home/alexander/codes/uva2/UVaTestData/v6in/604.in)
+        - [605.in](/home/alexander/codes/uva2/UVaTestData/v6in/605.in)
+        - [606.IN](/home/alexander/codes/uva2/UVaTestData/v6in/606.IN)
+        - [607.IN](/home/alexander/codes/uva2/UVaTestData/v6in/607.IN)
+        - [608.IN](/home/alexander/codes/uva2/UVaTestData/v6in/608.IN)
+        - [609.IN](/home/alexander/codes/uva2/UVaTestData/v6in/609.IN)
+        - [610.IN](/home/alexander/codes/uva2/UVaTestData/v6in/610.IN)
+        - [611.IN](/home/alexander/codes/uva2/UVaTestData/v6in/611.IN)
+        - [612.IN](/home/alexander/codes/uva2/UVaTestData/v6in/612.IN)
+        - [613.IN](/home/alexander/codes/uva2/UVaTestData/v6in/613.IN)
+        - [614.IN](/home/alexander/codes/uva2/UVaTestData/v6in/614.IN)
+        - [615.IN](/home/alexander/codes/uva2/UVaTestData/v6in/615.IN)
+        - [616.IN](/home/alexander/codes/uva2/UVaTestData/v6in/616.IN)
+        - [617.IN](/home/alexander/codes/uva2/UVaTestData/v6in/617.IN)
+        - [618.IN](/home/alexander/codes/uva2/UVaTestData/v6in/618.IN)
+        - [619.IN](/home/alexander/codes/uva2/UVaTestData/v6in/619.IN)
+        - [637.IN](/home/alexander/codes/uva2/UVaTestData/v6in/637.IN)
+        - [638.IN](/home/alexander/codes/uva2/UVaTestData/v6in/638.IN)
+        - [639.IN](/home/alexander/codes/uva2/UVaTestData/v6in/639.IN)
+        - [641.IN](/home/alexander/codes/uva2/UVaTestData/v6in/641.IN)
+        - [642.IN](/home/alexander/codes/uva2/UVaTestData/v6in/642.IN)
+        - [649.IN](/home/alexander/codes/uva2/UVaTestData/v6in/649.IN)
+        - [650.IN](/home/alexander/codes/uva2/UVaTestData/v6in/650.IN)
+        - [651.in](/home/alexander/codes/uva2/UVaTestData/v6in/651.in)
+        - [652.in](/home/alexander/codes/uva2/UVaTestData/v6in/652.in)
+        - [653.in](/home/alexander/codes/uva2/UVaTestData/v6in/653.in)
+        - [654.in](/home/alexander/codes/uva2/UVaTestData/v6in/654.in)
+        - [655.in](/home/alexander/codes/uva2/UVaTestData/v6in/655.in)
+        - [656.in](/home/alexander/codes/uva2/UVaTestData/v6in/656.in)
+        - [657.in](/home/alexander/codes/uva2/UVaTestData/v6in/657.in)
+        - [658.in](/home/alexander/codes/uva2/UVaTestData/v6in/658.in)
+        - [659.in](/home/alexander/codes/uva2/UVaTestData/v6in/659.in)
+        - [660.in](/home/alexander/codes/uva2/UVaTestData/v6in/660.in)
+        - [661.in](/home/alexander/codes/uva2/UVaTestData/v6in/661.in)
+        - [662.in](/home/alexander/codes/uva2/UVaTestData/v6in/662.in)
+        - [663.in](/home/alexander/codes/uva2/UVaTestData/v6in/663.in)
+        - [664.in](/home/alexander/codes/uva2/UVaTestData/v6in/664.in)
+        - [665.in](/home/alexander/codes/uva2/UVaTestData/v6in/665.in)
+        - [666.in](/home/alexander/codes/uva2/UVaTestData/v6in/666.in)
+        - [667.in](/home/alexander/codes/uva2/UVaTestData/v6in/667.in)
+        - [668.in](/home/alexander/codes/uva2/UVaTestData/v6in/668.in)
+        - [669.in](/home/alexander/codes/uva2/UVaTestData/v6in/669.in)
+        - [670.in](/home/alexander/codes/uva2/UVaTestData/v6in/670.in)
+        - [671.in](/home/alexander/codes/uva2/UVaTestData/v6in/671.in)
+        - [672.in](/home/alexander/codes/uva2/UVaTestData/v6in/672.in)
+        - [686.IN](/home/alexander/codes/uva2/UVaTestData/v6in/686.IN)
+        - [687.IN](/home/alexander/codes/uva2/UVaTestData/v6in/687.IN)
+        - [688.IN](/home/alexander/codes/uva2/UVaTestData/v6in/688.IN)
+        - [689.IN](/home/alexander/codes/uva2/UVaTestData/v6in/689.IN)
+        - [690.IN](/home/alexander/codes/uva2/UVaTestData/v6in/690.IN)
+        - [691.IN](/home/alexander/codes/uva2/UVaTestData/v6in/691.IN)
+        - [692.IN](/home/alexander/codes/uva2/UVaTestData/v6in/692.IN)
+        - [693.IN](/home/alexander/codes/uva2/UVaTestData/v6in/693.IN)
+    - v6out
+        - [600.out](/home/alexander/codes/uva2/UVaTestData/v6out/600.out)
+        - [601.out](/home/alexander/codes/uva2/UVaTestData/v6out/601.out)
+        - [602.out](/home/alexander/codes/uva2/UVaTestData/v6out/602.out)
+        - [603.out](/home/alexander/codes/uva2/UVaTestData/v6out/603.out)
+        - [604.out](/home/alexander/codes/uva2/UVaTestData/v6out/604.out)
+        - [605.out](/home/alexander/codes/uva2/UVaTestData/v6out/605.out)
+        - [606.out](/home/alexander/codes/uva2/UVaTestData/v6out/606.out)
+        - [607.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/607.OUT)
+        - [608.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/608.OUT)
+        - [609.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/609.OUT)
+        - [611.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/611.OUT)
+        - [612.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/612.OUT)
+        - [613.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/613.OUT)
+        - [614.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/614.OUT)
+        - [615.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/615.OUT)
+        - [616.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/616.OUT)
+        - [617.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/617.OUT)
+        - [618.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/618.OUT)
+        - [619.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/619.OUT)
+        - [637.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/637.OUT)
+        - [638.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/638.OUT)
+        - [639.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/639.OUT)
+        - [640.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/640.OUT)
+        - [641.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/641.OUT)
+        - [642.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/642.OUT)
+        - [649.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/649.OUT)
+        - [650.OUT](/home/alexander/codes/uva2/UVaTestData/v6out/650.OUT)
+        - [651.out](/home/alexander/codes/uva2/UVaTestData/v6out/651.out)
+        - [652.out](/home/alexander/codes/uva2/UVaTestData/v6out/652.out)
+        - [653.out](/home/alexander/codes/uva2/UVaTestData/v6out/653.out)
+        - [654.out](/home/alexander/codes/uva2/UVaTestData/v6out/654.out)
+        - [655.out](/home/alexander/codes/uva2/UVaTestData/v6out/655.out)
+        - [656.out](/home/alexander/codes/uva2/UVaTestData/v6out/656.out)
+        - [657.out](/home/alexander/codes/uva2/UVaTestData/v6out/657.out)
+        - [658.out](/home/alexander/codes/uva2/UVaTestData/v6out/658.out)
+        - [659.out](/home/alexander/codes/uva2/UVaTestData/v6out/659.out)
+        - [660.out](/home/alexander/codes/uva2/UVaTestData/v6out/660.out)
+        - [661.out](/home/alexander/codes/uva2/UVaTestData/v6out/661.out)
+        - [662.out](/home/alexander/codes/uva2/UVaTestData/v6out/662.out)
+        - [663.out](/home/alexander/codes/uva2/UVaTestData/v6out/663.out)
+        - [664.out](/home/alexander/codes/uva2/UVaTestData/v6out/664.out)
+        - [665.out](/home/alexander/codes/uva2/UVaTestData/v6out/665.out)
+        - [666.out](/home/alexander/codes/uva2/UVaTestData/v6out/666.out)
+        - [667.out](/home/alexander/codes/uva2/UVaTestData/v6out/667.out)
+        - [668.out](/home/alexander/codes/uva2/UVaTestData/v6out/668.out)
+        - [669.out](/home/alexander/codes/uva2/UVaTestData/v6out/669.out)
+        - [670.out](/home/alexander/codes/uva2/UVaTestData/v6out/670.out)
+        - [671.out](/home/alexander/codes/uva2/UVaTestData/v6out/671.out)
+        - [672.out](/home/alexander/codes/uva2/UVaTestData/v6out/672.out)
+    - v7in
+        - [700.in](/home/alexander/codes/uva2/UVaTestData/v7in/700.in)
+        - [705.in](/home/alexander/codes/uva2/UVaTestData/v7in/705.in)
+        - [706.in](/home/alexander/codes/uva2/UVaTestData/v7in/706.in)
+        - [707.in](/home/alexander/codes/uva2/UVaTestData/v7in/707.in)
+        - [708.in](/home/alexander/codes/uva2/UVaTestData/v7in/708.in)
+        - [709.in](/home/alexander/codes/uva2/UVaTestData/v7in/709.in)
+        - [710.in](/home/alexander/codes/uva2/UVaTestData/v7in/710.in)
+        - [711.in](/home/alexander/codes/uva2/UVaTestData/v7in/711.in)
+        - [712.in](/home/alexander/codes/uva2/UVaTestData/v7in/712.in)
+        - [728.IN](/home/alexander/codes/uva2/UVaTestData/v7in/728.IN)
+        - [730.IN](/home/alexander/codes/uva2/UVaTestData/v7in/730.IN)
+        - [733.in](/home/alexander/codes/uva2/UVaTestData/v7in/733.in)
+        - [734.IN](/home/alexander/codes/uva2/UVaTestData/v7in/734.IN)
+        - [735.IN](/home/alexander/codes/uva2/UVaTestData/v7in/735.IN)
+        - [736.IN](/home/alexander/codes/uva2/UVaTestData/v7in/736.IN)
+        - [737.IN](/home/alexander/codes/uva2/UVaTestData/v7in/737.IN)
+        - [738.IN](/home/alexander/codes/uva2/UVaTestData/v7in/738.IN)
+        - [739.IN](/home/alexander/codes/uva2/UVaTestData/v7in/739.IN)
+        - [751.IN](/home/alexander/codes/uva2/UVaTestData/v7in/751.IN)
+        - [752.in](/home/alexander/codes/uva2/UVaTestData/v7in/752.in)
+        - [753.in](/home/alexander/codes/uva2/UVaTestData/v7in/753.in)
+        - [754.in](/home/alexander/codes/uva2/UVaTestData/v7in/754.in)
+        - [756.IN](/home/alexander/codes/uva2/UVaTestData/v7in/756.IN)
+        - [757.IN](/home/alexander/codes/uva2/UVaTestData/v7in/757.IN)
+        - [758.in](/home/alexander/codes/uva2/UVaTestData/v7in/758.in)
+    - v7out
+        - [700.out](/home/alexander/codes/uva2/UVaTestData/v7out/700.out)
+        - [705.out](/home/alexander/codes/uva2/UVaTestData/v7out/705.out)
+        - [706.out](/home/alexander/codes/uva2/UVaTestData/v7out/706.out)
+        - [707.out](/home/alexander/codes/uva2/UVaTestData/v7out/707.out)
+        - [708.out](/home/alexander/codes/uva2/UVaTestData/v7out/708.out)
+        - [709.out](/home/alexander/codes/uva2/UVaTestData/v7out/709.out)
+        - [710.out](/home/alexander/codes/uva2/UVaTestData/v7out/710.out)
+        - [711.out](/home/alexander/codes/uva2/UVaTestData/v7out/711.out)
+        - [712.out](/home/alexander/codes/uva2/UVaTestData/v7out/712.out)
+        - [728.out](/home/alexander/codes/uva2/UVaTestData/v7out/728.out)
+        - [730.OUT](/home/alexander/codes/uva2/UVaTestData/v7out/730.OUT)
+        - [734.OUT](/home/alexander/codes/uva2/UVaTestData/v7out/734.OUT)
+        - [735.OUT](/home/alexander/codes/uva2/UVaTestData/v7out/735.OUT)
+        - [736.OUT](/home/alexander/codes/uva2/UVaTestData/v7out/736.OUT)
+        - [737.OUT](/home/alexander/codes/uva2/UVaTestData/v7out/737.OUT)
+        - [738.OUT](/home/alexander/codes/uva2/UVaTestData/v7out/738.OUT)
+        - [739.OUT](/home/alexander/codes/uva2/UVaTestData/v7out/739.OUT)
+        - [751.OUT](/home/alexander/codes/uva2/UVaTestData/v7out/751.OUT)
+        - [752.out](/home/alexander/codes/uva2/UVaTestData/v7out/752.out)
+        - [753.out](/home/alexander/codes/uva2/UVaTestData/v7out/753.out)
+        - [754.OUT](/home/alexander/codes/uva2/UVaTestData/v7out/754.OUT)
+        - [756.OUT](/home/alexander/codes/uva2/UVaTestData/v7out/756.OUT)
+        - [757.OUT](/home/alexander/codes/uva2/UVaTestData/v7out/757.OUT)
+        - [758.OUT](/home/alexander/codes/uva2/UVaTestData/v7out/758.OUT)
+  - volume001
+      - [100 - The 3n + 1 problem.cpp](/home/alexander/codes/uva2/volume001/100 - The 3n + 1 problem.cpp)
+      - [100 - The 3n + 1 problem[zkw].cpp](/home/alexander/codes/uva2/volume001/100 - The 3n + 1 problem[zkw].cpp)
+      - [102 - Ecological Bin Packing.cpp](/home/alexander/codes/uva2/volume001/102 - Ecological Bin Packing.cpp)
+      - [103 - Stacking Boxes.cpp](/home/alexander/codes/uva2/volume001/103 - Stacking Boxes.cpp)
+      - [104 - Arbitrage.cpp](/home/alexander/codes/uva2/volume001/104 - Arbitrage.cpp)
+      - [109 - SCUD Busters.cpp](/home/alexander/codes/uva2/volume001/109 - SCUD Busters.cpp)
+      - [110 - Meta-Loopless Sorts.c](/home/alexander/codes/uva2/volume001/110 - Meta-Loopless Sorts.c)
+      - [111 - History Grading.cpp](/home/alexander/codes/uva2/volume001/111 - History Grading.cpp)
+      - [112 - Tree Summing.cpp](/home/alexander/codes/uva2/volume001/112 - Tree Summing.cpp)
+      - [113 - Power of Cryptography.cpp](/home/alexander/codes/uva2/volume001/113 - Power of Cryptography.cpp)
+      - [117 - The Postal Worker Rings Once.cpp](/home/alexander/codes/uva2/volume001/117 - The Postal Worker Rings Once.cpp)
+      - [118 - Mutant Flatworld Explorers.c](/home/alexander/codes/uva2/volume001/118 - Mutant Flatworld Explorers.c)
+      - [119 - Greedy Gift Givers.cpp](/home/alexander/codes/uva2/volume001/119 - Greedy Gift Givers.cpp)
+      - [120 - Stacks of Flapjacks.cpp](/home/alexander/codes/uva2/volume001/120 - Stacks of Flapjacks.cpp)
+      - [121 - Pipe Fitters.cpp](/home/alexander/codes/uva2/volume001/121 - Pipe Fitters.cpp)
+      - [123 - Searching Quickly.cpp](/home/alexander/codes/uva2/volume001/123 - Searching Quickly.cpp)
+      - [124 - Following Orders.cpp](/home/alexander/codes/uva2/volume001/124 - Following Orders.cpp)
+      - [125 - Numbering Paths.cpp](/home/alexander/codes/uva2/volume001/125 - Numbering Paths.cpp)
+      - [128 - Software CRC.cpp](/home/alexander/codes/uva2/volume001/128 - Software CRC.cpp)
+      - [132 - Bumpy Objects.cpp](/home/alexander/codes/uva2/volume001/132 - Bumpy Objects.cpp)
+      - [133 - The Dole Queue.cpp](/home/alexander/codes/uva2/volume001/133 - The Dole Queue.cpp)
+      - [134 - Loglan-A Logical Language.cpp](/home/alexander/codes/uva2/volume001/134 - Loglan-A Logical Language.cpp)
+      - [135 - No Rectangles.cpp](/home/alexander/codes/uva2/volume001/135 - No Rectangles.cpp)
+      - [136 - Ugly Numbers.cpp](/home/alexander/codes/uva2/volume001/136 - Ugly Numbers.cpp)
+      - [139 - Telephone Tangles.cpp](/home/alexander/codes/uva2/volume001/139 - Telephone Tangles.cpp)
+      - [140 - Bandwidth.cpp](/home/alexander/codes/uva2/volume001/140 - Bandwidth.cpp)
+      - [141 - The Spot Game.cpp](/home/alexander/codes/uva2/volume001/141 - The Spot Game.cpp)
+      - [143 - Orchard Trees.cpp](/home/alexander/codes/uva2/volume001/143 - Orchard Trees.cpp)
+      - [144 - Student Grants.cpp](/home/alexander/codes/uva2/volume001/144 - Student Grants.cpp)
+      - [145 - Gondwanaland Telecom.cpp](/home/alexander/codes/uva2/volume001/145 - Gondwanaland Telecom.cpp)
+      - [146 - ID Codes.cpp](/home/alexander/codes/uva2/volume001/146 - ID Codes.cpp)
+      - [148 - Anagram checker.cpp](/home/alexander/codes/uva2/volume001/148 - Anagram checker.cpp)
+      - [149 - Forests.cpp](/home/alexander/codes/uva2/volume001/149 - Forests.cpp)
+      - [150 - Double Time.cpp](/home/alexander/codes/uva2/volume001/150 - Double Time.cpp)
+      - [151 - Power Crisis.cpp](/home/alexander/codes/uva2/volume001/151 - Power Crisis.cpp)
+      - [152 - Tree's a Crowd.cpp](/home/alexander/codes/uva2/volume001/152 - Tree's a Crowd.cpp)
+      - [153 - Permalex.cpp](/home/alexander/codes/uva2/volume001/153 - Permalex.cpp)
+      - [154 - Recycling.cpp](/home/alexander/codes/uva2/volume001/154 - Recycling.cpp)
+      - [155 - All Squares.cpp](/home/alexander/codes/uva2/volume001/155 - All Squares.cpp)
+      - [156 - Ananagrams.cpp](/home/alexander/codes/uva2/volume001/156 - Ananagrams.cpp)
+      - [157 - Route Finding.cpp](/home/alexander/codes/uva2/volume001/157 - Route Finding.cpp)
+      - [158 - Calendar.cpp](/home/alexander/codes/uva2/volume001/158 - Calendar.cpp)
+      - [160 - Factors and Factorials.cpp](/home/alexander/codes/uva2/volume001/160 - Factors and Factorials.cpp)
+      - [161 - Traffic Lights.cpp](/home/alexander/codes/uva2/volume001/161 - Traffic Lights.cpp)
+      - [163 - City Directions.cpp](/home/alexander/codes/uva2/volume001/163 - City Directions.cpp)
+      - [164 - String Computer.cpp](/home/alexander/codes/uva2/volume001/164 - String Computer.cpp)
+      - [165 - Stamps.cpp](/home/alexander/codes/uva2/volume001/165 - Stamps.cpp)
+      - [166 - Making Change.cpp](/home/alexander/codes/uva2/volume001/166 - Making Change.cpp)
+      - [167 - The Sultan's Successors.cpp](/home/alexander/codes/uva2/volume001/167 - The Sultan's Successors.cpp)
+      - [170 - Clock Patience.cpp](/home/alexander/codes/uva2/volume001/170 - Clock Patience.cpp)
+      - [171 - Car Trialling.cpp](/home/alexander/codes/uva2/volume001/171 - Car Trialling.cpp)
+      - [172 - Calculator Language.cpp](/home/alexander/codes/uva2/volume001/172 - Calculator Language.cpp)
+      - [172 - Calculator Language[v2].cpp](/home/alexander/codes/uva2/volume001/172 - Calculator Language[v2].cpp)
+      - [174 - Strategy.cpp](/home/alexander/codes/uva2/volume001/174 - Strategy.cpp)
+      - [177 - Paper Folding.cpp](/home/alexander/codes/uva2/volume001/177 - Paper Folding.cpp)
+      - [181 - Hearts.cpp](/home/alexander/codes/uva2/volume001/181 - Hearts.cpp)
+      - [184 - Laser Lines.cpp](/home/alexander/codes/uva2/volume001/184 - Laser Lines.cpp)
+      - [185 - Roman Numerals.cpp](/home/alexander/codes/uva2/volume001/185 - Roman Numerals.cpp)
+      - [187 - Transaction Processing.cpp](/home/alexander/codes/uva2/volume001/187 - Transaction Processing.cpp)
+      - [188 - Perfect Hash.cpp](/home/alexander/codes/uva2/volume001/188 - Perfect Hash.cpp)
+      - [190 - Circle Through Three Points.cpp](/home/alexander/codes/uva2/volume001/190 - Circle Through Three Points.cpp)
+      - [191 - Intersection.cpp](/home/alexander/codes/uva2/volume001/191 - Intersection.cpp)
+      - [193 - Graph Coloring.cpp](/home/alexander/codes/uva2/volume001/193 - Graph Coloring.cpp)
+      - [198 - Peter's Calculator.cpp](/home/alexander/codes/uva2/volume001/198 - Peter's Calculator.cpp)
+  - volume002
+      - [200 - Rare Order.cpp](/home/alexander/codes/uva2/volume002/200 - Rare Order.cpp)
+      - [201 - Squares.cpp](/home/alexander/codes/uva2/volume002/201 - Squares.cpp)
+      - [202 - Repeating Decimals.cpp](/home/alexander/codes/uva2/volume002/202 - Repeating Decimals.cpp)
+      - [206 - Meals on Wheels Routing System.cpp](/home/alexander/codes/uva2/volume002/206 - Meals on Wheels Routing System.cpp)
+      - [208 - Firetruck.cpp](/home/alexander/codes/uva2/volume002/208 - Firetruck.cpp)
+      - [209 - Triangular Vertices.cpp](/home/alexander/codes/uva2/volume002/209 - Triangular Vertices.cpp)
+      - [210 - Concurrency Simulator.cpp](/home/alexander/codes/uva2/volume002/210 - Concurrency Simulator.cpp)
+      - [212 - Use of Hospital Facilities.cpp](/home/alexander/codes/uva2/volume002/212 - Use of Hospital Facilities.cpp)
+      - [213 - Message Decoding.cpp](/home/alexander/codes/uva2/volume002/213 - Message Decoding.cpp)
+      - [214 - Code Generation.cpp](/home/alexander/codes/uva2/volume002/214 - Code Generation.cpp)
+      - [215 - Spreadsheet Calculator.cpp](/home/alexander/codes/uva2/volume002/215 - Spreadsheet Calculator.cpp)
+      - [216 - Getting in Line.cpp](/home/alexander/codes/uva2/volume002/216 - Getting in Line.cpp)
+      - [218 - Moth Eradication.cpp](/home/alexander/codes/uva2/volume002/218 - Moth Eradication.cpp)
+      - [220 - Othello.cpp](/home/alexander/codes/uva2/volume002/220 - Othello.cpp)
+      - [221 - Urban Elevations.cpp](/home/alexander/codes/uva2/volume002/221 - Urban Elevations.cpp)
+      - [222 - Budget Travel.c](/home/alexander/codes/uva2/volume002/222 - Budget Travel.c)
+      - [225 - Golygons.cpp](/home/alexander/codes/uva2/volume002/225 - Golygons.cpp)
+      - [227 - Puzzle.cpp](/home/alexander/codes/uva2/volume002/227 - Puzzle.cpp)
+      - [229 - Scanner.cpp](/home/alexander/codes/uva2/volume002/229 - Scanner.cpp)
+      - [231 - Testing the CATCHER.cpp](/home/alexander/codes/uva2/volume002/231 - Testing the CATCHER.cpp)
+      - [232 - Crossword Answers.cpp](/home/alexander/codes/uva2/volume002/232 - Crossword Answers.cpp)
+      - [233 - Package Pricing.cpp](/home/alexander/codes/uva2/volume002/233 - Package Pricing.cpp)
+      - [238 - Jill's Bike.cpp](/home/alexander/codes/uva2/volume002/238 - Jill's Bike.cpp)
+      - [239 - Tempus et mobilius. Time and motion.cpp](/home/alexander/codes/uva2/volume002/239 - Tempus et mobilius. Time and motion.cpp)
+      - [242 - Stamps and Envelope Size.cpp](/home/alexander/codes/uva2/volume002/242 - Stamps and Envelope Size.cpp)
+      - [245 - Uncompress.cpp](/home/alexander/codes/uva2/volume002/245 - Uncompress.cpp)
+      - [246 - 10-20-30.cpp](/home/alexander/codes/uva2/volume002/246 - 10-20-30.cpp)
+      - [247 - Calling Circles.cpp](/home/alexander/codes/uva2/volume002/247 - Calling Circles.cpp)
+      - [248 - Cutting Corners.cpp](/home/alexander/codes/uva2/volume002/248 - Cutting Corners.cpp)
+      - [250 - Pattern Matching Prelims.cpp](/home/alexander/codes/uva2/volume002/250 - Pattern Matching Prelims.cpp)
+      - [253 - Cube painting..c](/home/alexander/codes/uva2/volume002/253 - Cube painting..c)
+      - [254 - Towers of Hanoi.cpp](/home/alexander/codes/uva2/volume002/254 - Towers of Hanoi.cpp)
+      - [254 - Towers of Hanoi_sol.cpp](/home/alexander/codes/uva2/volume002/254 - Towers of Hanoi_sol.cpp)
+      - [255 - Correct Move.cpp](/home/alexander/codes/uva2/volume002/255 - Correct Move.cpp)
+      - [256 - Quirksome Squares.cpp](/home/alexander/codes/uva2/volume002/256 - Quirksome Squares.cpp)
+      - [257 - Palinwords.cpp](/home/alexander/codes/uva2/volume002/257 - Palinwords.cpp)
+      - [263 - Number Chains.cpp](/home/alexander/codes/uva2/volume002/263 - Number Chains.cpp)
+      - [264 - Count on Cantor.cpp](/home/alexander/codes/uva2/volume002/264 - Count on Cantor.cpp)
+      - [265 - Dining Diplomats.cpp](/home/alexander/codes/uva2/volume002/265 - Dining Diplomats.cpp)
+      - [268 - Double Trouble.cpp](/home/alexander/codes/uva2/volume002/268 - Double Trouble.cpp)
+      - [269 - Counting Patterns.cpp](/home/alexander/codes/uva2/volume002/269 - Counting Patterns.cpp)
+      - [270 - Lining Up.cpp](/home/alexander/codes/uva2/volume002/270 - Lining Up.cpp)
+      - [271 - Simply Syntax.cpp](/home/alexander/codes/uva2/volume002/271 - Simply Syntax.cpp)
+      - [272 - TEX Quotes.cpp](/home/alexander/codes/uva2/volume002/272 - TEX Quotes.cpp)
+      - [273 - Jack Straws.cpp](/home/alexander/codes/uva2/volume002/273 - Jack Straws.cpp)
+      - [276 - Egyptian Multiplication.cpp](/home/alexander/codes/uva2/volume002/276 - Egyptian Multiplication.cpp)
+      - [277 - Cabinets.cpp](/home/alexander/codes/uva2/volume002/277 - Cabinets.cpp)
+      - [280 - Vertex.cpp](/home/alexander/codes/uva2/volume002/280 - Vertex.cpp)
+      - [282 - Rename.cpp](/home/alexander/codes/uva2/volume002/282 - Rename.cpp)
+      - [290 - Palindroms --- smordnilaP.cpp](/home/alexander/codes/uva2/volume002/290 - Palindroms --- smordnilaP.cpp)
+      - [291 - The House Of Santa Claus.cpp](/home/alexander/codes/uva2/volume002/291 - The House Of Santa Claus.cpp)
+      - [292 - Presentation Error.cpp](/home/alexander/codes/uva2/volume002/292 - Presentation Error.cpp)
+      - [296 - Safebreaker.cpp](/home/alexander/codes/uva2/volume002/296 - Safebreaker.cpp)
+      - [297 - Quadtrees.c](/home/alexander/codes/uva2/volume002/297 - Quadtrees.c)
+      - [298 - Race Tracks.cpp](/home/alexander/codes/uva2/volume002/298 - Race Tracks.cpp)
+      - [299 - Train Swapping.cpp](/home/alexander/codes/uva2/volume002/299 - Train Swapping.cpp)
+  - volume003
+      - [300 - Maya Calendar.cpp](/home/alexander/codes/uva2/volume003/300 - Maya Calendar.cpp)
+      - [302 - John's trip.cpp](/home/alexander/codes/uva2/volume003/302 - John's trip.cpp)
+      - [307 - Sticks.cpp](/home/alexander/codes/uva2/volume003/307 - Sticks.cpp)
+      - [308 - Tin Cutter.cpp](/home/alexander/codes/uva2/volume003/308 - Tin Cutter.cpp)
+      - [313 - Intervals.cpp](/home/alexander/codes/uva2/volume003/313 - Intervals.cpp)
+      - [315 - Network.cpp](/home/alexander/codes/uva2/volume003/315 - Network.cpp)
+      - [320 - Border.cpp](/home/alexander/codes/uva2/volume003/320 - Border.cpp)
+      - [324 - Factorial Frequencies.cpp](/home/alexander/codes/uva2/volume003/324 - Factorial Frequencies.cpp)
+      - [325 - Identifying Legal Pascal Real Constants.cpp](/home/alexander/codes/uva2/volume003/325 - Identifying Legal Pascal Real Constants.cpp)
+      - [326 - Extrapolation Using a Difference Table.cpp](/home/alexander/codes/uva2/volume003/326 - Extrapolation Using a Difference Table.cpp)
+      - [327 - Evaluating Simple C Expressions.cpp](/home/alexander/codes/uva2/volume003/327 - Evaluating Simple C Expressions.cpp)
+      - [331 - Mapping the Swaps.cpp](/home/alexander/codes/uva2/volume003/331 - Mapping the Swaps.cpp)
+      - [333 - Recognizing Good ISBNs.cpp](/home/alexander/codes/uva2/volume003/333 - Recognizing Good ISBNs.cpp)
+      - [334 - Identifying Concurrent Events.cpp](/home/alexander/codes/uva2/volume003/334 - Identifying Concurrent Events.cpp)
+      - [336 - A Node Too Far.cpp](/home/alexander/codes/uva2/volume003/336 - A Node Too Far.cpp)
+      - [338 - Long Multiplication.cpp](/home/alexander/codes/uva2/volume003/338 - Long Multiplication.cpp)
+      - [341 - Non-Stop Travel.cpp](/home/alexander/codes/uva2/volume003/341 - Non-Stop Travel.cpp)
+      - [343 - What Base Is This.cpp](/home/alexander/codes/uva2/volume003/343 - What Base Is This.cpp)
+      - [344 - Roman Digititis.cpp](/home/alexander/codes/uva2/volume003/344 - Roman Digititis.cpp)
+      - [345 - It's Ir-Resist-Able.cpp](/home/alexander/codes/uva2/volume003/345 - It's Ir-Resist-Able.cpp)
+      - [347 - Run.cpp](/home/alexander/codes/uva2/volume003/347 - Run.cpp)
+      - [348 - Optimal Array Multiplication Sequence.cpp](/home/alexander/codes/uva2/volume003/348 - Optimal Array Multiplication Sequence.cpp)
+      - [349 - Transferable Voting (II).cpp](/home/alexander/codes/uva2/volume003/349 - Transferable Voting (II).cpp)
+      - [352 - The Seasonal War.cpp](/home/alexander/codes/uva2/volume003/352 - The Seasonal War.cpp)
+      - [353 - Pesky Palindromes.cpp](/home/alexander/codes/uva2/volume003/353 - Pesky Palindromes.cpp)
+      - [355 - The Bases Are Loaded.cpp](/home/alexander/codes/uva2/volume003/355 - The Bases Are Loaded.cpp)
+      - [356 - Square Pegs And Round Holes.cpp](/home/alexander/codes/uva2/volume003/356 - Square Pegs And Round Holes.cpp)
+      - [357 - Let Me Count The Ways.c](/home/alexander/codes/uva2/volume003/357 - Let Me Count The Ways.c)
+      - [358 - Don't Have A Cow.cpp](/home/alexander/codes/uva2/volume003/358 - Don't Have A Cow.cpp)
+      - [361 - Cops and Robbers.cpp](/home/alexander/codes/uva2/volume003/361 - Cops and Robbers.cpp)
+      - [362 - 18,000 Seconds Remaining.cpp](/home/alexander/codes/uva2/volume003/362 - 18,000 Seconds Remaining.cpp)
+      - [369 - Combinations.cpp](/home/alexander/codes/uva2/volume003/369 - Combinations.cpp)
+      - [372 - WhatFix Notation.cpp](/home/alexander/codes/uva2/volume003/372 - WhatFix Notation.cpp)
+      - [374 - Big Mod.cpp](/home/alexander/codes/uva2/volume003/374 - Big Mod.cpp)
+      - [375 - Inscribed Circles and Isosceles Triangles.cpp](/home/alexander/codes/uva2/volume003/375 - Inscribed Circles and Isosceles Triangles.cpp)
+      - [378 - Intersecting Lines.cpp](/home/alexander/codes/uva2/volume003/378 - Intersecting Lines.cpp)
+      - [381 - Making the Grade.cpp](/home/alexander/codes/uva2/volume003/381 - Making the Grade.cpp)
+      - [382 - Perfection.cpp](/home/alexander/codes/uva2/volume003/382 - Perfection.cpp)
+      - [384 - Slurpys.cpp](/home/alexander/codes/uva2/volume003/384 - Slurpys.cpp)
+      - [385 - DNA Translation.cpp](/home/alexander/codes/uva2/volume003/385 - DNA Translation.cpp)
+      - [387 - A Puzzling Problem.cpp](/home/alexander/codes/uva2/volume003/387 - A Puzzling Problem.cpp)
+      - [389 - Basically Speaking.cpp](/home/alexander/codes/uva2/volume003/389 - Basically Speaking.cpp)
+      - [391 - Mark-up.cpp](/home/alexander/codes/uva2/volume003/391 - Mark-up.cpp)
+      - [392 - Polynomial Showdown.cpp](/home/alexander/codes/uva2/volume003/392 - Polynomial Showdown.cpp)
+      - [397 - Equation Elation.cpp](/home/alexander/codes/uva2/volume003/397 - Equation Elation.cpp)
+  - volume004
+      - [400 - Unix ls.cpp](/home/alexander/codes/uva2/volume004/400 - Unix ls.cpp)
+      - [401 - Palindromes.cpp](/home/alexander/codes/uva2/volume004/401 - Palindromes.cpp)
+      - [402 - MASH.cpp](/home/alexander/codes/uva2/volume004/402 - MASH.cpp)
+      - [403 - Postscript.cpp](/home/alexander/codes/uva2/volume004/403 - Postscript.cpp)
+      - [406 - Prime Cuts.cpp](/home/alexander/codes/uva2/volume004/406 - Prime Cuts.cpp)
+      - [408 - Uniform Generator.cpp](/home/alexander/codes/uva2/volume004/408 - Uniform Generator.cpp)
+      - [409 - Excuses, Excuses.cpp](/home/alexander/codes/uva2/volume004/409 - Excuses, Excuses.cpp)
+      - [412 - Pi.cpp](/home/alexander/codes/uva2/volume004/412 - Pi.cpp)
+      - [412 - Pi[Neton].cpp](/home/alexander/codes/uva2/volume004/412 - Pi[Neton].cpp)
+      - [413 - Up and Down Sequences.c](/home/alexander/codes/uva2/volume004/413 - Up and Down Sequences.c)
+      - [414 - Machined Surfaces.cpp](/home/alexander/codes/uva2/volume004/414 - Machined Surfaces.cpp)
+      - [416 - LED Test.cpp](/home/alexander/codes/uva2/volume004/416 - LED Test.cpp)
+      - [417 - Word Index.cpp](/home/alexander/codes/uva2/volume004/417 - Word Index.cpp)
+      - [422 - Word-Search Wonder.cpp](/home/alexander/codes/uva2/volume004/422 - Word-Search Wonder.cpp)
+      - [423 - MPI Maelstrom.cpp](/home/alexander/codes/uva2/volume004/423 - MPI Maelstrom.cpp)
+      - [424 - Integer Inquiry.cpp](/home/alexander/codes/uva2/volume004/424 - Integer Inquiry.cpp)
+      - [427 - FlatLand Piano Movers.cpp](/home/alexander/codes/uva2/volume004/427 - FlatLand Piano Movers.cpp)
+      - [428 - Swamp County Roofs.cpp](/home/alexander/codes/uva2/volume004/428 - Swamp County Roofs.cpp)
+      - [429 - Word Transformation.cpp](/home/alexander/codes/uva2/volume004/429 - Word Transformation.cpp)
+      - [433 - Bank.cpp](/home/alexander/codes/uva2/volume004/433 - Bank.cpp)
+      - [435 - Block Voting.cpp](/home/alexander/codes/uva2/volume004/435 - Block Voting.cpp)
+      - [436 - Arbitrage (II).cpp](/home/alexander/codes/uva2/volume004/436 - Arbitrage (II).cpp)
+      - [437 - The Tower of Babylon.cpp](/home/alexander/codes/uva2/volume004/437 - The Tower of Babylon.cpp)
+      - [438 - The Circumference of the Circle.cpp](/home/alexander/codes/uva2/volume004/438 - The Circumference of the Circle.cpp)
+      - [440 - Eeny Meeny Moo.cpp](/home/alexander/codes/uva2/volume004/440 - Eeny Meeny Moo.cpp)
+      - [441 - Lotto.c](/home/alexander/codes/uva2/volume004/441 - Lotto.c)
+      - [442 - Matrix Chain Multiplication.cpp](/home/alexander/codes/uva2/volume004/442 - Matrix Chain Multiplication.cpp)
+      - [443 - Humble Numbers.cpp](/home/alexander/codes/uva2/volume004/443 - Humble Numbers.cpp)
+      - [444 - Encoder and Decoder.cpp](/home/alexander/codes/uva2/volume004/444 - Encoder and Decoder.cpp)
+      - [445 - Marvelous Mazes.c](/home/alexander/codes/uva2/volume004/445 - Marvelous Mazes.c)
+      - [447 - Population Explosion.cpp](/home/alexander/codes/uva2/volume004/447 - Population Explosion.cpp)
+      - [448 - OOPS.cpp](/home/alexander/codes/uva2/volume004/448 - OOPS.cpp)
+      - [450 - Little Black Book.cpp](/home/alexander/codes/uva2/volume004/450 - Little Black Book.cpp)
+      - [451 - Poker Solitaire Evaluator.cpp](/home/alexander/codes/uva2/volume004/451 - Poker Solitaire Evaluator.cpp)
+      - [452 - Project Scheduling.cpp](/home/alexander/codes/uva2/volume004/452 - Project Scheduling.cpp)
+      - [453 - Intersecting Circles.cpp](/home/alexander/codes/uva2/volume004/453 - Intersecting Circles.cpp)
+      - [454 - Anagrams.cpp](/home/alexander/codes/uva2/volume004/454 - Anagrams.cpp)
+      - [455 - Periodic Strings.cpp](/home/alexander/codes/uva2/volume004/455 - Periodic Strings.cpp)
+      - [456 - Robotic Stacker.cpp](/home/alexander/codes/uva2/volume004/456 - Robotic Stacker.cpp)
+      - [458 - The Decoder.cpp](/home/alexander/codes/uva2/volume004/458 - The Decoder.cpp)
+      - [459 - Graph Connectivity.cpp](/home/alexander/codes/uva2/volume004/459 - Graph Connectivity.cpp)
+      - [460 - Overlapping Rectangles.c](/home/alexander/codes/uva2/volume004/460 - Overlapping Rectangles.c)
+      - [464 - Sentence.Phrase Generator.cpp](/home/alexander/codes/uva2/volume004/464 - Sentence.Phrase Generator.cpp)
+      - [465 - Overflow.cpp](/home/alexander/codes/uva2/volume004/465 - Overflow.cpp)
+      - [466 - Mirror Mirror.cpp](/home/alexander/codes/uva2/volume004/466 - Mirror Mirror.cpp)
+      - [467 - Synching Signals.cpp](/home/alexander/codes/uva2/volume004/467 - Synching Signals.cpp)
+      - [468 - Key to Success.cpp](/home/alexander/codes/uva2/volume004/468 - Key to Success.cpp)
+      - [469 - Wetlands of Florida.cpp](/home/alexander/codes/uva2/volume004/469 - Wetlands of Florida.cpp)
+      - [471 - Magic Numbers.cpp](/home/alexander/codes/uva2/volume004/471 - Magic Numbers.cpp)
+      - [473 - Raucous Rockers.cpp](/home/alexander/codes/uva2/volume004/473 - Raucous Rockers.cpp)
+      - [474 - Heads _ Tails Probability.c](/home/alexander/codes/uva2/volume004/474 - Heads _ Tails Probability.c)
+      - [478 - Points in Figures Rectangles, Circles, Triangles.cpp](/home/alexander/codes/uva2/volume004/478 - Points in Figures Rectangles, Circles, Triangles.cpp)
+      - [482 - Permutation Arrays.cpp](/home/alexander/codes/uva2/volume004/482 - Permutation Arrays.cpp)
+      - [483 - Word Scramble.cpp](/home/alexander/codes/uva2/volume004/483 - Word Scramble.cpp)
+      - [484 - The Department of Redundancy Department.cpp](/home/alexander/codes/uva2/volume004/484 - The Department of Redundancy Department.cpp)
+      - [486 - English-Number Translator.cpp](/home/alexander/codes/uva2/volume004/486 - English-Number Translator.cpp)
+      - [487 - Boggle Blitz.cpp](/home/alexander/codes/uva2/volume004/487 - Boggle Blitz.cpp)
+      - [488 - Triangle Wave.cpp](/home/alexander/codes/uva2/volume004/488 - Triangle Wave.cpp)
+      - [490 - Rotating Sentences.c](/home/alexander/codes/uva2/volume004/490 - Rotating Sentences.c)
+      - [492 - Pig-Latin.cpp](/home/alexander/codes/uva2/volume004/492 - Pig-Latin.cpp)
+      - [493 - Rational Spiral.cpp](/home/alexander/codes/uva2/volume004/493 - Rational Spiral.cpp)
+      - [494 - Kindergarten Counting Game.cpp](/home/alexander/codes/uva2/volume004/494 - Kindergarten Counting Game.cpp)
+      - [496 - Simply Subsets.cpp](/home/alexander/codes/uva2/volume004/496 - Simply Subsets.cpp)
+      - [497 - Strategic Defense Initiative.cpp](/home/alexander/codes/uva2/volume004/497 - Strategic Defense Initiative.cpp)
+      - [498 - Polly the Polynomial.cpp](/home/alexander/codes/uva2/volume004/498 - Polly the Polynomial.cpp)
+      - [499 - What's The Frequency, Kenneth.c](/home/alexander/codes/uva2/volume004/499 - What's The Frequency, Kenneth.c)
+  - volume005
+      - [501 - Black Box.cpp](/home/alexander/codes/uva2/volume005/501 - Black Box.cpp)
+      - [503 - Parallelepiped walk.cpp](/home/alexander/codes/uva2/volume005/503 - Parallelepiped walk.cpp)
+      - [506 - System Dependencies.cpp](/home/alexander/codes/uva2/volume005/506 - System Dependencies.cpp)
+      - [507 - Jill Rides Again.cpp](/home/alexander/codes/uva2/volume005/507 - Jill Rides Again.cpp)
+      - [508 - Morse Mismatches.cpp](/home/alexander/codes/uva2/volume005/508 - Morse Mismatches.cpp)
+      - [509 - RAID!.cpp](/home/alexander/codes/uva2/volume005/509 - RAID!.cpp)
+      - [511 - Do You Know the Way to San Jose.cpp](/home/alexander/codes/uva2/volume005/511 - Do You Know the Way to San Jose.cpp)
+      - [515 - King.cpp](/home/alexander/codes/uva2/volume005/515 - King.cpp)
+      - [516 - Prime Land.cpp](/home/alexander/codes/uva2/volume005/516 - Prime Land.cpp)
+      - [523 - Minimum Transport Cost.cpp](/home/alexander/codes/uva2/volume005/523 - Minimum Transport Cost.cpp)
+      - [526 - String Distance and Transform Process.cpp](/home/alexander/codes/uva2/volume005/526 - String Distance and Transform Process.cpp)
+      - [529 - Addition Chains.cpp](/home/alexander/codes/uva2/volume005/529 - Addition Chains.cpp)
+      - [531 - Compromise.cpp](/home/alexander/codes/uva2/volume005/531 - Compromise.cpp)
+      - [533 - Equation Solver.cpp](/home/alexander/codes/uva2/volume005/533 - Equation Solver.cpp)
+      - [535 - Globetrotter.cpp](/home/alexander/codes/uva2/volume005/535 - Globetrotter.cpp)
+      - [538 - Balancing Bank Accounts.cpp](/home/alexander/codes/uva2/volume005/538 - Balancing Bank Accounts.cpp)
+      - [539 - The Settlers of Catan.cpp](/home/alexander/codes/uva2/volume005/539 - The Settlers of Catan.cpp)
+      - [540 - Team Queue.cpp](/home/alexander/codes/uva2/volume005/540 - Team Queue.cpp)
+      - [541 - Error Correction.cpp](/home/alexander/codes/uva2/volume005/541 - Error Correction.cpp)
+      - [542 - France '98.cpp](/home/alexander/codes/uva2/volume005/542 - France '98.cpp)
+      - [543 - Goldbach's Conjecture.cpp](/home/alexander/codes/uva2/volume005/543 - Goldbach's Conjecture.cpp)
+      - [544 - Heavy Cargo.cpp](/home/alexander/codes/uva2/volume005/544 - Heavy Cargo.cpp)
+      - [545 - Heads.cpp](/home/alexander/codes/uva2/volume005/545 - Heads.cpp)
+      - [547 - DDF.cpp](/home/alexander/codes/uva2/volume005/547 - DDF.cpp)
+      - [548 - Tree.cpp](/home/alexander/codes/uva2/volume005/548 - Tree.cpp)
+      - [550 - Multiplying by Rotation.cpp](/home/alexander/codes/uva2/volume005/550 - Multiplying by Rotation.cpp)
+      - [551 - Nesting a Bunch of Brackets.cpp](/home/alexander/codes/uva2/volume005/551 - Nesting a Bunch of Brackets.cpp)
+      - [552 - Filling the Gaps.cpp](/home/alexander/codes/uva2/volume005/552 - Filling the Gaps.cpp)
+      - [554 - Caesar Cypher.cpp](/home/alexander/codes/uva2/volume005/554 - Caesar Cypher.cpp)
+      - [555 - Bridge Hands.cpp](/home/alexander/codes/uva2/volume005/555 - Bridge Hands.cpp)
+      - [558 - Wormholes2.cpp](/home/alexander/codes/uva2/volume005/558 - Wormholes2.cpp)
+      - [558 - Wormholes.cpp](/home/alexander/codes/uva2/volume005/558 - Wormholes.cpp)
+      - [560 - Magic.cpp](/home/alexander/codes/uva2/volume005/560 - Magic.cpp)
+      - [561 - Jackpot.cpp](/home/alexander/codes/uva2/volume005/561 - Jackpot.cpp)
+      - [563 - Crimewave.cpp](/home/alexander/codes/uva2/volume005/563 - Crimewave.cpp)
+      - [565 - Pizza Anyone.cpp](/home/alexander/codes/uva2/volume005/565 - Pizza Anyone.cpp)
+      - [567 - Risk.cpp](/home/alexander/codes/uva2/volume005/567 - Risk.cpp)
+      - [571 - Jugs.cpp](/home/alexander/codes/uva2/volume005/571 - Jugs.cpp)
+      - [572 - Oil Deposits.cpp](/home/alexander/codes/uva2/volume005/572 - Oil Deposits.cpp)
+      - [574 - Sum It Up.cpp](/home/alexander/codes/uva2/volume005/574 - Sum It Up.cpp)
+      - [575 - Skew Binary.cpp](/home/alexander/codes/uva2/volume005/575 - Skew Binary.cpp)
+      - [579 - ClockHands.cpp](/home/alexander/codes/uva2/volume005/579 - ClockHands.cpp)
+      - [583 - Prime Factors.cpp](/home/alexander/codes/uva2/volume005/583 - Prime Factors.cpp)
+      - [585 - Triangles.cpp](/home/alexander/codes/uva2/volume005/585 - Triangles.cpp)
+      - [587 - There's treasure everywhere.cpp](/home/alexander/codes/uva2/volume005/587 - There's treasure everywhere.cpp)
+      - [589 - Pushing Boxes.cpp](/home/alexander/codes/uva2/volume005/589 - Pushing Boxes.cpp)
+      - [590 - Always on the run.cpp](/home/alexander/codes/uva2/volume005/590 - Always on the run.cpp)
+      - [591 - Box of Bricks.cpp](/home/alexander/codes/uva2/volume005/591 - Box of Bricks.cpp)
+      - [592 - Island of Logic.cpp](/home/alexander/codes/uva2/volume005/592 - Island of Logic.cpp)
+      - [594 - One Little, Two Little, Three Little Endians.cpp](/home/alexander/codes/uva2/volume005/594 - One Little, Two Little, Three Little Endians.cpp)
+      - [599 - The Forrest for the Trees.cpp](/home/alexander/codes/uva2/volume005/599 - The Forrest for the Trees.cpp)
+  - volume006
+      - [601 - The PATH.cpp](/home/alexander/codes/uva2/volume006/601 - The PATH.cpp)
+      - [612 - DNA Sorting.cpp](/home/alexander/codes/uva2/volume006/612 - DNA Sorting.cpp)
+      - [614 - Mapping the Route.cpp](/home/alexander/codes/uva2/volume006/614 - Mapping the Route.cpp)
+      - [615 - Is It A Tree.cpp](/home/alexander/codes/uva2/volume006/615 - Is It A Tree.cpp)
+      - [616 - Coconuts, Revisited.cpp](/home/alexander/codes/uva2/volume006/616 - Coconuts, Revisited.cpp)
+      - [618 - Doing Windows.cpp](/home/alexander/codes/uva2/volume006/618 - Doing Windows.cpp)
+      - [620 - Cellular Structure.cpp](/home/alexander/codes/uva2/volume006/620 - Cellular Structure.cpp)
+      - [621 - Secret Research.cpp](/home/alexander/codes/uva2/volume006/621 - Secret Research.cpp)
+      - [622 - Grammar Evaluation.cpp](/home/alexander/codes/uva2/volume006/622 - Grammar Evaluation.cpp)
+      - [623 - 500!.cpp](/home/alexander/codes/uva2/volume006/623 - 500!.cpp)
+      - [624 - CD.cpp](/home/alexander/codes/uva2/volume006/624 - CD.cpp)
+      - [626 - Ecosystem.cpp](/home/alexander/codes/uva2/volume006/626 - Ecosystem.cpp)
+      - [627 - The Net.cpp](/home/alexander/codes/uva2/volume006/627 - The Net.cpp)
+      - [628 - Passwords.cpp](/home/alexander/codes/uva2/volume006/628 - Passwords.cpp)
+      - [630 - Anagrams (II).cpp](/home/alexander/codes/uva2/volume006/630 - Anagrams (II).cpp)
+      - [632 - Compression (II).cpp](/home/alexander/codes/uva2/volume006/632 - Compression (II).cpp)
+      - [634 - Polygon.cpp](/home/alexander/codes/uva2/volume006/634 - Polygon.cpp)
+      - [636 - Squares (III).cpp](/home/alexander/codes/uva2/volume006/636 - Squares (III).cpp)
+      - [638 - Finding Rectangles.cpp](/home/alexander/codes/uva2/volume006/638 - Finding Rectangles.cpp)
+      - [640 - Self Numbers.cpp](/home/alexander/codes/uva2/volume006/640 - Self Numbers.cpp)
+      - [640 - Self Numbers_v2.cpp](/home/alexander/codes/uva2/volume006/640 - Self Numbers_v2.cpp)
+      - [641 - Do the Untwist.cpp](/home/alexander/codes/uva2/volume006/641 - Do the Untwist.cpp)
+      - [642 - Word Amalgamation.cpp](/home/alexander/codes/uva2/volume006/642 - Word Amalgamation.cpp)
+      - [644 - Immediate Decodability.cpp](/home/alexander/codes/uva2/volume006/644 - Immediate Decodability.cpp)
+      - [652 - Eight.cpp](/home/alexander/codes/uva2/volume006/652 - Eight.cpp)
+      - [657 - The die is cast.cpp](/home/alexander/codes/uva2/volume006/657 - The die is cast.cpp)
+      - [662 - Fast Food.cpp](/home/alexander/codes/uva2/volume006/662 - Fast Food.cpp)
+      - [665 - False coin.cpp](/home/alexander/codes/uva2/volume006/665 - False coin.cpp)
+      - [669 - Defragment.cpp](/home/alexander/codes/uva2/volume006/669 - Defragment.cpp)
+      - [670 - The dog task.cpp](/home/alexander/codes/uva2/volume006/670 - The dog task.cpp)
+      - [671 - Spell checker.cpp](/home/alexander/codes/uva2/volume006/671 - Spell checker.cpp)
+      - [673 - Parentheses Balance.cpp](/home/alexander/codes/uva2/volume006/673 - Parentheses Balance.cpp)
+      - [674 - Coin Change.cpp](/home/alexander/codes/uva2/volume006/674 - Coin Change.cpp)
+      - [675 - Convex Hull of the Polygon.cpp](/home/alexander/codes/uva2/volume006/675 - Convex Hull of the Polygon.cpp)
+      - [677 - All Walks of length n from the first node.cpp](/home/alexander/codes/uva2/volume006/677 - All Walks of length n from the first node.cpp)
+      - [681 - Convex Hull Finding.cpp](/home/alexander/codes/uva2/volume006/681 - Convex Hull Finding.cpp)
+      - [684 - Integral Determinant.cpp](/home/alexander/codes/uva2/volume006/684 - Integral Determinant.cpp)
+      - [685 - Least Path Cost.cpp](/home/alexander/codes/uva2/volume006/685 - Least Path Cost.cpp)
+      - [686 - Goldbach's Conjecture (II).cpp](/home/alexander/codes/uva2/volume006/686 - Goldbach's Conjecture (II).cpp)
+      - [688 - Mobile Phone Coverage.cpp](/home/alexander/codes/uva2/volume006/688 - Mobile Phone Coverage.cpp)
+      - [694. Distinct Substrings.cpp](/home/alexander/codes/uva2/volume006/694. Distinct Substrings.cpp)
+      - [694 - The Collatz Sequence.cpp](/home/alexander/codes/uva2/volume006/694 - The Collatz Sequence.cpp)
+      - [698 - Index.cpp](/home/alexander/codes/uva2/volume006/698 - Index.cpp)
+      - [699 - The Falling Leaves.cpp](/home/alexander/codes/uva2/volume006/699 - The Falling Leaves.cpp)
+  - volume007
+      - [700 - Date Bugs.cpp](/home/alexander/codes/uva2/volume007/700 - Date Bugs.cpp)
+      - [701 - The Archeologists' Dilemma.cpp](/home/alexander/codes/uva2/volume007/701 - The Archeologists' Dilemma.cpp)
+      - [705 - Slash Maze.cpp](/home/alexander/codes/uva2/volume007/705 - Slash Maze.cpp)
+      - [706 - LCD Display.cpp](/home/alexander/codes/uva2/volume007/706 - LCD Display.cpp)
+      - [707 - Robbery.cpp](/home/alexander/codes/uva2/volume007/707 - Robbery.cpp)
+      - [708 - Dreisam Equations.cpp](/home/alexander/codes/uva2/volume007/708 - Dreisam Equations.cpp)
+      - [709 - Formatting Text.cpp](/home/alexander/codes/uva2/volume007/709 - Formatting Text.cpp)
+      - [711 - Dividing up.cpp](/home/alexander/codes/uva2/volume007/711 - Dividing up.cpp)
+      - [712 - S-Trees.cpp](/home/alexander/codes/uva2/volume007/712 - S-Trees.cpp)
+      - [713 - Adding Reversed Numbers.cpp](/home/alexander/codes/uva2/volume007/713 - Adding Reversed Numbers.cpp)
+      - [714 - Copying Books.cpp](/home/alexander/codes/uva2/volume007/714 - Copying Books.cpp)
+      - [715 - Substitution Cipher.cpp](/home/alexander/codes/uva2/volume007/715 - Substitution Cipher.cpp)
+      - [716 - Commedia dell' arte.cpp](/home/alexander/codes/uva2/volume007/716 - Commedia dell' arte.cpp)
+      - [718 - Skyscraper Floors.cpp](/home/alexander/codes/uva2/volume007/718 - Skyscraper Floors.cpp)
+      - [719 - Glass Beads.cpp](/home/alexander/codes/uva2/volume007/719 - Glass Beads.cpp)
+      - [721 - Invitation Cards.cpp](/home/alexander/codes/uva2/volume007/721 - Invitation Cards.cpp)
+      - [722 - Lakes.cpp](/home/alexander/codes/uva2/volume007/722 - Lakes.cpp)
+      - [725 - Division.cpp](/home/alexander/codes/uva2/volume007/725 - Division.cpp)
+      - [726 - Decode.cpp](/home/alexander/codes/uva2/volume007/726 - Decode.cpp)
+      - [729 - The Hamming Distance Problem.cpp](/home/alexander/codes/uva2/volume007/729 - The Hamming Distance Problem.cpp)
+      - [731 - Numerical Summation of a Series.cpp](/home/alexander/codes/uva2/volume007/731 - Numerical Summation of a Series.cpp)
+      - [732 - Anagrams by Stack.cpp](/home/alexander/codes/uva2/volume007/732 - Anagrams by Stack.cpp)
+      - [737 - Gleaming the Cubes.cpp](/home/alexander/codes/uva2/volume007/737 - Gleaming the Cubes.cpp)
+      - [738 - A Logical Problem .cpp](/home/alexander/codes/uva2/volume007/738 - A Logical Problem .cpp)
+      - [739 - Soundex Indexing.cpp](/home/alexander/codes/uva2/volume007/739 - Soundex Indexing.cpp)
+      - [740 - Baudot Data Communication Code.cpp](/home/alexander/codes/uva2/volume007/740 - Baudot Data Communication Code.cpp)
+      - [741 - Burrows Wheeler Decoder.cpp](/home/alexander/codes/uva2/volume007/741 - Burrows Wheeler Decoder.cpp)
+      - [745 - Numeric Puzzles Again.cpp](/home/alexander/codes/uva2/volume007/745 - Numeric Puzzles Again.cpp)
+      - [746 - Polygon Visibility.cpp](/home/alexander/codes/uva2/volume007/746 - Polygon Visibility.cpp)
+      - [750 - 8 Queens Chess Problem.cpp](/home/alexander/codes/uva2/volume007/750 - 8 Queens Chess Problem.cpp)
+      - [751 - Triangle War.cpp](/home/alexander/codes/uva2/volume007/751 - Triangle War.cpp)
+      - [752 - Unscrambling Images.pp.cpp](/home/alexander/codes/uva2/volume007/752 - Unscrambling Images.pp.cpp)
+      - [753 - A Plug for UNIX.cpp](/home/alexander/codes/uva2/volume007/753 - A Plug for UNIX.cpp)
+      - [754 - Treasure Hunt.cpp](/home/alexander/codes/uva2/volume007/754 - Treasure Hunt.cpp)
+      - [755 - 487--3279.cpp](/home/alexander/codes/uva2/volume007/755 - 487--3279.cpp)
+      - [756 - Biorhythms.cpp](/home/alexander/codes/uva2/volume007/756 - Biorhythms.cpp)
+      - [757 - Gone-Fishing.cpp](/home/alexander/codes/uva2/volume007/757 - Gone-Fishing.cpp)
+      - [758 - The Same Game.cpp](/home/alexander/codes/uva2/volume007/758 - The Same Game.cpp)
+      - [759 - The Return of the Roman Empire.cpp](/home/alexander/codes/uva2/volume007/759 - The Return of the Roman Empire.cpp)
+      - [760 - DNA Sequencing.cpp](/home/alexander/codes/uva2/volume007/760 - DNA Sequencing.cpp)
+      - [762 - We Ship Cheap.cpp](/home/alexander/codes/uva2/volume007/762 - We Ship Cheap.cpp)
+      - [763 - Fibinary Numbers.c](/home/alexander/codes/uva2/volume007/763 - Fibinary Numbers.c)
+      - [764 - Pentominos.cpp](/home/alexander/codes/uva2/volume007/764 - Pentominos.cpp)
+      - [766 - Sum of powers.cpp](/home/alexander/codes/uva2/volume007/766 - Sum of powers.cpp)
+      - [775 - Hamiltonian Cycle2.cpp](/home/alexander/codes/uva2/volume007/775 - Hamiltonian Cycle2.cpp)
+      - [775 - Hamiltonian Cycle.cpp](/home/alexander/codes/uva2/volume007/775 - Hamiltonian Cycle.cpp)
+      - [776 - Monkeys in a Regular Forest.cpp](/home/alexander/codes/uva2/volume007/776 - Monkeys in a Regular Forest.cpp)
+      - [777 - Codebreakers.cpp](/home/alexander/codes/uva2/volume007/777 - Codebreakers.cpp)
+      - [782 - Contour Painting.cpp](/home/alexander/codes/uva2/volume007/782 - Contour Painting.cpp)
+      - [783 - Trains.cpp](/home/alexander/codes/uva2/volume007/783 - Trains.cpp)
+      - [784 - Maze Exploration.cpp](/home/alexander/codes/uva2/volume007/784 - Maze Exploration.cpp)
+      - [785 - Grid Colouring.cpp](/home/alexander/codes/uva2/volume007/785 - Grid Colouring.cpp)
+      - [789 - Indexing.cpp](/home/alexander/codes/uva2/volume007/789 - Indexing.cpp)
+      - [793 - Network Connections.cpp](/home/alexander/codes/uva2/volume007/793 - Network Connections.cpp)
+      - [795 - Sandorf's Cipher.cpp](/home/alexander/codes/uva2/volume007/795 - Sandorf's Cipher.cpp)
+      - [796 - Critical Links.cpp](/home/alexander/codes/uva2/volume007/796 - Critical Links.cpp)
+      - [799 - Safari Holiday.cpp](/home/alexander/codes/uva2/volume007/799 - Safari Holiday.cpp)
+  - volume008
+      - [800 - Crystal Clear.cpp](/home/alexander/codes/uva2/volume008/800 - Crystal Clear.cpp)
+      - [801 - Flight Planning.cpp](/home/alexander/codes/uva2/volume008/801 - Flight Planning.cpp)
+      - [804 - Petri Net Simulation.cpp](/home/alexander/codes/uva2/volume008/804 - Petri Net Simulation.cpp)
+      - [805 - Polygon Intersections.cpp](/home/alexander/codes/uva2/volume008/805 - Polygon Intersections.cpp)
+      - [806 - Spatial Structures.cpp](/home/alexander/codes/uva2/volume008/806 - Spatial Structures.cpp)
+      - [807 - Towers of Powers.cpp](/home/alexander/codes/uva2/volume008/807 - Towers of Powers.cpp)
+      - [808 - Bee Breeding.cpp](/home/alexander/codes/uva2/volume008/808 - Bee Breeding.cpp)
+      - [810 - A Dicey Problem.cpp](/home/alexander/codes/uva2/volume008/810 - A Dicey Problem.cpp)
+      - [811 - The Fortified Forest.cpp](/home/alexander/codes/uva2/volume008/811 - The Fortified Forest.cpp)
+      - [814 - The Letter Carrier's Rounds.cpp](/home/alexander/codes/uva2/volume008/814 - The Letter Carrier's Rounds.cpp)
+      - [815 - Flooded.cpp](/home/alexander/codes/uva2/volume008/815 - Flooded.cpp)
+      - [816 - Abbott's Revenge.cpp](/home/alexander/codes/uva2/volume008/816 - Abbott's Revenge.cpp)
+      - [817 - According to Bartjens.cpp](/home/alexander/codes/uva2/volume008/817 - According to Bartjens.cpp)
+      - [818 - Cutting Chains.cpp](/home/alexander/codes/uva2/volume008/818 - Cutting Chains.cpp)
+      - [821 - Page Hopping.c](/home/alexander/codes/uva2/volume008/821 - Page Hopping.c)
+      - [822 - Queue and A.cpp](/home/alexander/codes/uva2/volume008/822 - Queue and A.cpp)
+      - [825 - Walking on the Safe Side.cpp](/home/alexander/codes/uva2/volume008/825 - Walking on the Safe Side.cpp)
+      - [828 - Deciphering Messages.cpp](/home/alexander/codes/uva2/volume008/828 - Deciphering Messages.cpp)
+      - [830 - Shark.cpp](/home/alexander/codes/uva2/volume008/830 - Shark.cpp)
+      - [833 - Water Falls.cpp](/home/alexander/codes/uva2/volume008/833 - Water Falls.cpp)
+      - [834 - Continued Fractions.cpp](/home/alexander/codes/uva2/volume008/834 - Continued Fractions.cpp)
+      - [835 - Square of Primes2.cpp](/home/alexander/codes/uva2/volume008/835 - Square of Primes2.cpp)
+      - [835 - Square of Primes (2).cpp](/home/alexander/codes/uva2/volume008/835 - Square of Primes (2).cpp)
+      - [835 - Square of Primes.cpp](/home/alexander/codes/uva2/volume008/835 - Square of Primes.cpp)
+      - [836 - Largest Submatrix.cpp](/home/alexander/codes/uva2/volume008/836 - Largest Submatrix.cpp)
+      - [837 - Light and Transparencies.cpp](/home/alexander/codes/uva2/volume008/837 - Light and Transparencies.cpp)
+      - [838 - Worm World[heap].cpp](/home/alexander/codes/uva2/volume008/838 - Worm World[heap].cpp)
+      - [839 - Not so Mobile.cpp](/home/alexander/codes/uva2/volume008/839 - Not so Mobile.cpp)
+      - [840 - Deadlock Detection.cpp](/home/alexander/codes/uva2/volume008/840 - Deadlock Detection.cpp)
+      - [843 - Crypt Kicker.cpp](/home/alexander/codes/uva2/volume008/843 - Crypt Kicker.cpp)
+      - [844 - Pousse.cpp](/home/alexander/codes/uva2/volume008/844 - Pousse.cpp)
+      - [846 - Steps.cpp](/home/alexander/codes/uva2/volume008/846 - Steps.cpp)
+      - [852 - Deciding victory in Go.cpp](/home/alexander/codes/uva2/volume008/852 - Deciding victory in Go.cpp)
+      - [855 - Lunch in Grid City.cpp](/home/alexander/codes/uva2/volume008/855 - Lunch in Grid City.cpp)
+      - [860 - Entropy Text Analyzer.cpp](/home/alexander/codes/uva2/volume008/860 - Entropy Text Analyzer.cpp)
+      - [861 - Little Bishops.cpp](/home/alexander/codes/uva2/volume008/861 - Little Bishops.cpp)
+      - [865 - Substitution Cypher.cpp](/home/alexander/codes/uva2/volume008/865 - Substitution Cypher.cpp)
+      - [866 - Intersecting Line Segments.cpp](/home/alexander/codes/uva2/volume008/866 - Intersecting Line Segments.cpp)
+      - [868 - Numerical Maze.cpp](/home/alexander/codes/uva2/volume008/868 - Numerical Maze.cpp)
+      - [869 - Airline Comparison.cpp](/home/alexander/codes/uva2/volume008/869 - Airline Comparison.cpp)
+      - [870 - Intersecting Rectangles.cpp](/home/alexander/codes/uva2/volume008/870 - Intersecting Rectangles.cpp)
+      - [871 - Counting Cells in a Blob.cpp](/home/alexander/codes/uva2/volume008/871 - Counting Cells in a Blob.cpp)
+      - [872 - Ordering.cpp](/home/alexander/codes/uva2/volume008/872 - Ordering.cpp)
+      - [877 - Offset Polygons.cpp](/home/alexander/codes/uva2/volume008/877 - Offset Polygons.cpp)
+      - [878 - Rotating Tetris Pieces.cpp](/home/alexander/codes/uva2/volume008/878 - Rotating Tetris Pieces.cpp)
+      - [879 - Circuit Nets.cpp](/home/alexander/codes/uva2/volume008/879 - Circuit Nets.cpp)
+      - [880 - Cantor Fractions.cpp](/home/alexander/codes/uva2/volume008/880 - Cantor Fractions.cpp)
+      - [881 - Points, Polygons and Containers.cpp](/home/alexander/codes/uva2/volume008/881 - Points, Polygons and Containers.cpp)
+      - [883 - Overlapping Rectangles.cpp](/home/alexander/codes/uva2/volume008/883 - Overlapping Rectangles.cpp)
+      - [889 - Islands.cpp](/home/alexander/codes/uva2/volume008/889 - Islands.cpp)
+      - [892 - Finding words.cpp](/home/alexander/codes/uva2/volume008/892 - Finding words.cpp)
+      - [895 - Word Problem.cpp](/home/alexander/codes/uva2/volume008/895 - Word Problem.cpp)
+      - [897 - Anagrammatic Primes.cpp](/home/alexander/codes/uva2/volume008/897 - Anagrammatic Primes.cpp)
+      - [898 - Hole Cutter.cpp](/home/alexander/codes/uva2/volume008/898 - Hole Cutter.cpp)
+  - volume009
+      - [902 - Password Search.cpp](/home/alexander/codes/uva2/volume009/902 - Password Search.cpp)
+      - [902 - Password Search[Trie].cpp](/home/alexander/codes/uva2/volume009/902 - Password Search[Trie].cpp)
+      - [904 - Overlapping Air Traffic Control Zones.cpp](/home/alexander/codes/uva2/volume009/904 - Overlapping Air Traffic Control Zones.cpp)
+      - [905 - Tacos Panchita.cpp](/home/alexander/codes/uva2/volume009/905 - Tacos Panchita.cpp)
+      - [906 - Rational Neighbor.cpp](/home/alexander/codes/uva2/volume009/906 - Rational Neighbor.cpp)
+      - [907 - Winterim Backpacking Trip.cpp](/home/alexander/codes/uva2/volume009/907 - Winterim Backpacking Trip.cpp)
+      - [908 - Re-connecting Computer Sites.cpp](/home/alexander/codes/uva2/volume009/908 - Re-connecting Computer Sites.cpp)
+      - [909 - The BitPack Data Compression Problem[v2].cpp](/home/alexander/codes/uva2/volume009/909 - The BitPack Data Compression Problem[v2].cpp)
+      - [914 - Jumping Champion.cpp](/home/alexander/codes/uva2/volume009/914 - Jumping Champion.cpp)
+      - [915 - Stack of Cylinders.cpp](/home/alexander/codes/uva2/volume009/915 - Stack of Cylinders.cpp)
+      - [918 - ASCII Mandelbrot.cpp](/home/alexander/codes/uva2/volume009/918 - ASCII Mandelbrot.cpp)
+      - [920 - Sunny Mountains.cpp](/home/alexander/codes/uva2/volume009/920 - Sunny Mountains.cpp)
+      - [921 - A Word Puzzle in the Sunny Mountains.cpp](/home/alexander/codes/uva2/volume009/921 - A Word Puzzle in the Sunny Mountains.cpp)
+      - [924 - Spreading The News.cpp](/home/alexander/codes/uva2/volume009/924 - Spreading The News.cpp)
+      - [926 - Walking Around Wisely.cpp](/home/alexander/codes/uva2/volume009/926 - Walking Around Wisely.cpp)
+      - [927 - Integer Sequences from Addition of Terms.cpp](/home/alexander/codes/uva2/volume009/927 - Integer Sequences from Addition of Terms.cpp)
+      - [930 - Polynomial Roots.cpp](/home/alexander/codes/uva2/volume009/930 - Polynomial Roots.cpp)
+      - [932 - Checking the N-Queens Problem.cpp](/home/alexander/codes/uva2/volume009/932 - Checking the N-Queens Problem.cpp)
+      - [933 - Water Flow.cpp](/home/alexander/codes/uva2/volume009/933 - Water Flow.cpp)
+      - [934 - Overlapping Areas.cpp](/home/alexander/codes/uva2/volume009/934 - Overlapping Areas.cpp)
+      - [938 - Gilix.cpp](/home/alexander/codes/uva2/volume009/938 - Gilix.cpp)
+      - [941 - Permutations.cpp](/home/alexander/codes/uva2/volume009/941 - Permutations.cpp)
+      - [941 - Permutations. cpp.c](/home/alexander/codes/uva2/volume009/941 - Permutations. cpp.c)
+      - [942 - Cyclic Numbers.cpp](/home/alexander/codes/uva2/volume009/942 - Cyclic Numbers.cpp)
+      - [943 - Number Format Translator.cpp](/home/alexander/codes/uva2/volume009/943 - Number Format Translator.cpp)
+      - [944 - Happy Numbers.cpp](/home/alexander/codes/uva2/volume009/944 - Happy Numbers.cpp)
+      - [945 - Loading a Cargo Ship.cpp](/home/alexander/codes/uva2/volume009/945 - Loading a Cargo Ship.cpp)
+      - [946 - A Pile of Boxes.cpp](/home/alexander/codes/uva2/volume009/946 - A Pile of Boxes.cpp)
+      - [947 - Master Mind Helper.cpp](/home/alexander/codes/uva2/volume009/947 - Master Mind Helper.cpp)
+      - [950 - Tweedle Numbers.cpp](/home/alexander/codes/uva2/volume009/950 - Tweedle Numbers.cpp)
+      - [953 - The Incredible Pile Machine.cpp](/home/alexander/codes/uva2/volume009/953 - The Incredible Pile Machine.cpp)
+      - [953 - The Incredible Pile Machine[v2].cpp](/home/alexander/codes/uva2/volume009/953 - The Incredible Pile Machine[v2].cpp)
+      - [959 - Car Rallying.cpp](/home/alexander/codes/uva2/volume009/959 - Car Rallying.cpp)
+      - [963 - Spelling Corrector.cpp](/home/alexander/codes/uva2/volume009/963 - Spelling Corrector.cpp)
+      - [964 - Custom Language.cpp](/home/alexander/codes/uva2/volume009/964 - Custom Language.cpp)
+      - [967 - Circular.cpp](/home/alexander/codes/uva2/volume009/967 - Circular.cpp)
+      - [969 - AlienAlgebra.cpp](/home/alexander/codes/uva2/volume009/969 - AlienAlgebra.cpp)
+      - [970 - Particles.cpp](/home/alexander/codes/uva2/volume009/970 - Particles.cpp)
+      - [972 - Horizon Line.cpp](/home/alexander/codes/uva2/volume009/972 - Horizon Line.cpp)
+      - [974 - Kaprekar Numbers.cpp](/home/alexander/codes/uva2/volume009/974 - Kaprekar Numbers.cpp)
+      - [979 - The Abominable Triangleman.cpp](/home/alexander/codes/uva2/volume009/979 - The Abominable Triangleman.cpp)
+      - [980 - X-Express.cpp](/home/alexander/codes/uva2/volume009/980 - X-Express.cpp)
+      - [982 - Cube.cpp](/home/alexander/codes/uva2/volume009/982 - Cube.cpp)
+      - [983 - Localized Summing for Blurring.cpp](/home/alexander/codes/uva2/volume009/983 - Localized Summing for Blurring.cpp)
+      - [988 - Many Paths, One Destination.cpp](/home/alexander/codes/uva2/volume009/988 - Many Paths, One Destination.cpp)
+      - [989 - Su Doku.c](/home/alexander/codes/uva2/volume009/989 - Su Doku.c)
+      - [990 - Diving for Gold.cpp](/home/alexander/codes/uva2/volume009/990 - Diving for Gold.cpp)
+      - [991 - Safe Salutations.c](/home/alexander/codes/uva2/volume009/991 - Safe Salutations.c)
+      - [995 - Super Divisible Numbers.cpp](/home/alexander/codes/uva2/volume009/995 - Super Divisible Numbers.cpp)
+      - [996 - Find the Sequence.cpp](/home/alexander/codes/uva2/volume009/996 - Find the Sequence.cpp)
+      - [997 - Show the Sequence.cpp](/home/alexander/codes/uva2/volume009/997 - Show the Sequence.cpp)
+      - [999 - Book signatures.cpp](/home/alexander/codes/uva2/volume009/999 - Book signatures.cpp)
+  - volume010
+      - [1000 - Airport Configuration.cpp](/home/alexander/codes/uva2/volume010/1000 - Airport Configuration.cpp)
+      - [1001 - Say Cheese.cpp](/home/alexander/codes/uva2/volume010/1001 - Say Cheese.cpp)
+      - [1006 - Fixed Partition Memory Management.cpp](/home/alexander/codes/uva2/volume010/1006 - Fixed Partition Memory Management.cpp)
+      - [1007 - Professor Monotonic's Networks.cpp](/home/alexander/codes/uva2/volume010/1007 - Professor Monotonic's Networks.cpp)
+      - [1008 - A Vexing Problem.cpp](/home/alexander/codes/uva2/volume010/1008 - A Vexing Problem.cpp)
+      - [1009 - Balloons in a Box.cpp](/home/alexander/codes/uva2/volume010/1009 - Balloons in a Box.cpp)
+      - [1011 - Crossing the Desert.cpp](/home/alexander/codes/uva2/volume010/1011 - Crossing the Desert.cpp)
+      - [1013 - Island Hopping.cpp](/home/alexander/codes/uva2/volume010/1013 - Island Hopping.cpp)
+      - [1018 - Building Bridges.cpp](/home/alexander/codes/uva2/volume010/1018 - Building Bridges.cpp)
+      - [1019 - Light Bulbs.cpp](/home/alexander/codes/uva2/volume010/1019 - Light Bulbs.cpp)
+      - [1021 - Eurodiffusion.cpp](/home/alexander/codes/uva2/volume010/1021 - Eurodiffusion.cpp)
+      - [1025 - A Spy in the Metro.cpp](/home/alexander/codes/uva2/volume010/1025 - A Spy in the Metro.cpp)
+      - [1026 - The Solar System.cpp](/home/alexander/codes/uva2/volume010/1026 - The Solar System.cpp)
+      - [1027 - Toll.cpp](/home/alexander/codes/uva2/volume010/1027 - Toll.cpp)
+      - [1029 - Heliport.cpp](/home/alexander/codes/uva2/volume010/1029 - Heliport.cpp)
+      - [1030 - Image Is Everything.cpp](/home/alexander/codes/uva2/volume010/1030 - Image Is Everything.cpp)
+      - [1031 - Insecure in Prague.cpp](/home/alexander/codes/uva2/volume010/1031 - Insecure in Prague.cpp)
+      - [1035 - Tree-Lined Streets.cpp](/home/alexander/codes/uva2/volume010/1035 - Tree-Lined Streets.cpp)
+      - [1042 - Lots of Sunlight.cpp](/home/alexander/codes/uva2/volume010/1042 - Lots of Sunlight.cpp)
+      - [1043 - Crossing Streets.cpp](/home/alexander/codes/uva2/volume010/1043 - Crossing Streets.cpp)
+      - [1045 - The Great Wall Game.cpp](/home/alexander/codes/uva2/volume010/1045 - The Great Wall Game.cpp)
+      - [1046 - Workshops.cpp](/home/alexander/codes/uva2/volume010/1046 - Workshops.cpp)
+      - [1048 - Low Cost Air Travel.cpp](/home/alexander/codes/uva2/volume010/1048 - Low Cost Air Travel.cpp)
+      - [1049 - Remember the A La Mode.cpp](/home/alexander/codes/uva2/volume010/1049 - Remember the A La Mode.cpp)
+      - [1051 - Bipartite Numbers[bfs2].cpp](/home/alexander/codes/uva2/volume010/1051 - Bipartite Numbers[bfs2].cpp)
+      - [1051 - Bipartite Numbers[fail].cpp](/home/alexander/codes/uva2/volume010/1051 - Bipartite Numbers[fail].cpp)
+      - [1054 - Pilgrimage.cpp](/home/alexander/codes/uva2/volume010/1054 - Pilgrimage.cpp)
+      - [1056 - Degrees of Separation.cpp](/home/alexander/codes/uva2/volume010/1056 - Degrees of Separation.cpp)
+      - [1058 - Grand Prix.cpp](/home/alexander/codes/uva2/volume010/1058 - Grand Prix.cpp)
+      - [1059 - Jacquard Circuits.cpp](/home/alexander/codes/uva2/volume010/1059 - Jacquard Circuits.cpp)
+      - [1063 - Marble Game.cpp](/home/alexander/codes/uva2/volume010/1063 - Marble Game.cpp)
+      - [1065 - Raising the Roof.cpp](/home/alexander/codes/uva2/volume010/1065 - Raising the Roof.cpp)
+      - [1067 - Tunnels.cpp](/home/alexander/codes/uva2/volume010/1067 - Tunnels.cpp)
+      - [1068 - Air Conditioning Machinery.cpp](/home/alexander/codes/uva2/volume010/1068 - Air Conditioning Machinery.cpp)
+      - [1069 - Always an integer.cpp](/home/alexander/codes/uva2/volume010/1069 - Always an integer.cpp)
+      - [1073 - Glenbow Museum.cpp](/home/alexander/codes/uva2/volume010/1073 - Glenbow Museum.cpp)
+      - [1074 - Net Loss.cpp](/home/alexander/codes/uva2/volume010/1074 - Net Loss.cpp)
+      - [1075 - Painter.cpp](/home/alexander/codes/uva2/volume010/1075 - Painter.cpp)
+      - [1076 - Password Suspects.cpp](/home/alexander/codes/uva2/volume010/1076 - Password Suspects.cpp)
+      - [1078 - Steam Roller.cpp](/home/alexander/codes/uva2/volume010/1078 - Steam Roller.cpp)
+      - [1080 - My Bad.cpp](/home/alexander/codes/uva2/volume010/1080 - My Bad.cpp)
+      - [1083 - Fare and Balanced.cpp](/home/alexander/codes/uva2/volume010/1083 - Fare and Balanced.cpp)
+      - [1084 - Deer-Proof Fence.cpp](/home/alexander/codes/uva2/volume010/1084 - Deer-Proof Fence.cpp)
+      - [1086 - The Ministers' Major Mess.cpp](/home/alexander/codes/uva2/volume010/1086 - The Ministers' Major Mess.cpp)
+      - [1089 - Suffix-Replacement Grammars.cpp](/home/alexander/codes/uva2/volume010/1089 - Suffix-Replacement Grammars.cpp)
+      - [1089 - Suffix-Replacement Grammars[dp].cpp](/home/alexander/codes/uva2/volume010/1089 - Suffix-Replacement Grammars[dp].cpp)
+      - [1091 - Barcodes.cpp](/home/alexander/codes/uva2/volume010/1091 - Barcodes.cpp)
+      - [1093 - Castles.cpp](/home/alexander/codes/uva2/volume010/1093 - Castles.cpp)
+      - [1099 - Sharing Chocolate.cpp](/home/alexander/codes/uva2/volume010/1099 - Sharing Chocolate.cpp)
+  - volume011
+      - [1100 - Paperweight.cpp](/home/alexander/codes/uva2/volume011/1100 - Paperweight.cpp)
+      - [1103 - Ancient Messages.cpp](/home/alexander/codes/uva2/volume011/1103 - Ancient Messages.cpp)
+      - [1104 - Chips Challenge.cpp](/home/alexander/codes/uva2/volume011/1104 - Chips Challenge.cpp)
+      - [1105 - Coffee Central.cpp](/home/alexander/codes/uva2/volume011/1105 - Coffee Central.cpp)
+    - 1106 - Machine Works
+        - [1106 - Machine Works.cpp](/home/alexander/codes/uva2/volume011/1106 - Machine Works/1106 - Machine Works.cpp)
+        - [1106 - Machine Works[opt-io].cpp](/home/alexander/codes/uva2/volume011/1106 - Machine Works/1106 - Machine Works[opt-io].cpp)
+        - [1106 - Machine Works[opt-io-mem].cpp](/home/alexander/codes/uva2/volume011/1106 - Machine Works/1106 - Machine Works[opt-io-mem].cpp)
+      - [1107 - Magic Sticks.cpp](/home/alexander/codes/uva2/volume011/1107 - Magic Sticks.cpp)
+      - [1108 - Mining Your Own Business.cpp](/home/alexander/codes/uva2/volume011/1108 - Mining Your Own Business.cpp)
+      - [1109 - Mummy Madness.cpp](/home/alexander/codes/uva2/volume011/1109 - Mummy Madness.cpp)
+      - [1110 - Pyramids.cpp](/home/alexander/codes/uva2/volume011/1110 - Pyramids.cpp)
+      - [1113 - Multiple Morse Matches.cpp](/home/alexander/codes/uva2/volume011/1113 - Multiple Morse Matches.cpp)
+      - [1115 - Water Shortage.cpp](/home/alexander/codes/uva2/volume011/1115 - Water Shortage.cpp)
+      - [1118 - Binary Stirling Numbers.cpp](/home/alexander/codes/uva2/volume011/1118 - Binary Stirling Numbers.cpp)
+      - [1119 - Project File Dependencies.cpp](/home/alexander/codes/uva2/volume011/1119 - Project File Dependencies.cpp)
+      - [1121 - Subsequence.cpp](/home/alexander/codes/uva2/volume011/1121 - Subsequence.cpp)
+      - [1123 - Crazy Search.cpp](/home/alexander/codes/uva2/volume011/1123 - Crazy Search.cpp)
+      - [1124 - Celebrity jeopardy.cpp](/home/alexander/codes/uva2/volume011/1124 - Celebrity jeopardy.cpp)
+      - [1125 - Sherlock Holmes.cpp](/home/alexander/codes/uva2/volume011/1125 - Sherlock Holmes.cpp)
+      - [1128 - Water Treatment Plants.py](/home/alexander/codes/uva2/volume011/1128 - Water Treatment Plants.py)
+      - [1130 - Men at work.cpp](/home/alexander/codes/uva2/volume011/1130 - Men at work.cpp)
+      - [1133 - Rent your airplane and make money.cpp](/home/alexander/codes/uva2/volume011/1133 - Rent your airplane and make money.cpp)
+      - [1137 - Phony primes.cpp](/home/alexander/codes/uva2/volume011/1137 - Phony primes.cpp)
+      - [1141 - Count wireless Links.cpp](/home/alexander/codes/uva2/volume011/1141 - Count wireless Links.cpp)
+      - [1142 - Fighting the Heat.cpp](/home/alexander/codes/uva2/volume011/1142 - Fighting the Heat.cpp)
+      - [1146 - Now or later.cpp](/home/alexander/codes/uva2/volume011/1146 - Now or later.cpp)
+      - [1147 - Crime.cpp](/home/alexander/codes/uva2/volume011/1147 - Crime.cpp)
+      - [1149 - Bin Packing.cpp](/home/alexander/codes/uva2/volume011/1149 - Bin Packing.cpp)
+      - [1151 - Buy or Build.cpp](/home/alexander/codes/uva2/volume011/1151 - Buy or Build.cpp)
+      - [1152 - 4 Values whose Sum is 0.cpp](/home/alexander/codes/uva2/volume011/1152 - 4 Values whose Sum is 0.cpp)
+      - [1153 - Keep the Customer Satisfied.cpp](/home/alexander/codes/uva2/volume011/1153 - Keep the Customer Satisfied.cpp)
+      - [1156 - Pixel Shuffle.cpp](/home/alexander/codes/uva2/volume011/1156 - Pixel Shuffle.cpp)
+      - [1158 - CubesSquared.cpp](/home/alexander/codes/uva2/volume011/1158 - CubesSquared.cpp)
+      - [1161 - Objective Berlin.cpp](/home/alexander/codes/uva2/volume011/1161 - Objective Berlin.cpp)
+      - [1163 - The Right Tip.cpp](/home/alexander/codes/uva2/volume011/1163 - The Right Tip.cpp)
+      - [1169 - Robotruck.cpp](/home/alexander/codes/uva2/volume011/1169 - Robotruck.cpp)
+      - [1170 - Jumping Hero.cpp](/home/alexander/codes/uva2/volume011/1170 - Jumping Hero.cpp)
+      - [1171 - Board Games.cpp](/home/alexander/codes/uva2/volume011/1171 - Board Games.cpp)
+      - [1173 - The Finest Chef.cpp](/home/alexander/codes/uva2/volume011/1173 - The Finest Chef.cpp)
+      - [1174 - IP-TV.cpp](/home/alexander/codes/uva2/volume011/1174 - IP-TV.cpp)
+      - [1174 - IP-TVv2.cpp](/home/alexander/codes/uva2/volume011/1174 - IP-TVv2.cpp)
+      - [1176 - A Benevolent Josephus.cpp](/home/alexander/codes/uva2/volume011/1176 - A Benevolent Josephus.cpp)
+      - [1177 - A General Recurrence Relation.cpp](/home/alexander/codes/uva2/volume011/1177 - A General Recurrence Relation.cpp)
+      - [1178 - The Juice Shop.cpp](/home/alexander/codes/uva2/volume011/1178 - The Juice Shop.cpp)
+      - [1182 - Sequence Alignment.cpp](/home/alexander/codes/uva2/volume011/1182 - Sequence Alignment.cpp)
+      - [1185 - Big Number.cpp](/home/alexander/codes/uva2/volume011/1185 - Big Number.cpp)
+      - [1186 - Chat Rooms.cpp](/home/alexander/codes/uva2/volume011/1186 - Chat Rooms.cpp)
+      - [1187 - Diamonds.cpp](/home/alexander/codes/uva2/volume011/1187 - Diamonds.cpp)
+      - [1189 - Find The Multiple.cpp](/home/alexander/codes/uva2/volume011/1189 - Find The Multiple.cpp)
+      - [1192 - Searching Sequence Database in Molecular Biology.cpp](/home/alexander/codes/uva2/volume011/1192 - Searching Sequence Database in Molecular Biology.cpp)
+      - [1194 - Machine Schedule.cpp](/home/alexander/codes/uva2/volume011/1194 - Machine Schedule.cpp)
+      - [1196 - Tiling Up Blocks.cpp](/home/alexander/codes/uva2/volume011/1196 - Tiling Up Blocks.cpp)
+  - volume012
+      - [1200 - A DP Problem.cpp](/home/alexander/codes/uva2/volume012/1200 - A DP Problem.cpp)
+      - [1203 - Argus.cpp](/home/alexander/codes/uva2/volume012/1203 - Argus.cpp)
+      - [1205 - Color a Tree.cpp](/home/alexander/codes/uva2/volume012/1205 - Color a Tree.cpp)
+      - [1206 - Boundary Points.cpp](/home/alexander/codes/uva2/volume012/1206 - Boundary Points.cpp)
+      - [1207 - AGTC.cpp](/home/alexander/codes/uva2/volume012/1207 - AGTC.cpp)
+      - [1208 - Oreon.cpp](/home/alexander/codes/uva2/volume012/1208 - Oreon.cpp)
+      - [1210 - Sum of Consecutive Prime Numbers.c](/home/alexander/codes/uva2/volume012/1210 - Sum of Consecutive Prime Numbers.c)
+      - [1212 - Duopoly.cpp](/home/alexander/codes/uva2/volume012/1212 - Duopoly.cpp)
+      - [1213 - Sum of Different Primes.c](/home/alexander/codes/uva2/volume012/1213 - Sum of Different Primes.c)
+      - [1215 - String Cutting.cpp](/home/alexander/codes/uva2/volume012/1215 - String Cutting.cpp)
+      - [1216 - The Bug Sensor Problem.cpp](/home/alexander/codes/uva2/volume012/1216 - The Bug Sensor Problem.cpp)
+      - [1225 - Digit Counting.cpp](/home/alexander/codes/uva2/volume012/1225 - Digit Counting.cpp)
+      - [1226 - Numerical surprises.cpp](/home/alexander/codes/uva2/volume012/1226 - Numerical surprises.cpp)
+      - [1227 - The longest constant gene[suffix_automaton].cpp](/home/alexander/codes/uva2/volume012/1227 - The longest constant gene[suffix_automaton].cpp)
+      - [1230 - MODEX.cpp](/home/alexander/codes/uva2/volume012/1230 - MODEX.cpp)
+      - [1232 - SKYLINE.cpp](/home/alexander/codes/uva2/volume012/1232 - SKYLINE.cpp)
+      - [1234 - RACING.cpp](/home/alexander/codes/uva2/volume012/1234 - RACING.cpp)
+      - [1235 - Anti Brute Force Lock.cpp](/home/alexander/codes/uva2/volume012/1235 - Anti Brute Force Lock.cpp)
+      - [1237 - Expert Enough.cpp](/home/alexander/codes/uva2/volume012/1237 - Expert Enough.cpp)
+      - [1238 - Free Parentheses.cpp](/home/alexander/codes/uva2/volume012/1238 - Free Parentheses.cpp)
+      - [1238 - Free Parentheses[v2].cpp](/home/alexander/codes/uva2/volume012/1238 - Free Parentheses[v2].cpp)
+      - [1244 - Palindromic paths.cpp](/home/alexander/codes/uva2/volume012/1244 - Palindromic paths.cpp)
+      - [1249 - Euclid.cpp](/home/alexander/codes/uva2/volume012/1249 - Euclid.cpp)
+      - [1252 - Twenty Questions.cpp](/home/alexander/codes/uva2/volume012/1252 - Twenty Questions.cpp)
+      - [1254 - Top 10.cpp](/home/alexander/codes/uva2/volume012/1254 - Top 10.cpp)
+      - [1258 - Nowhere Money.cpp](/home/alexander/codes/uva2/volume012/1258 - Nowhere Money.cpp)
+      - [1260 - Sales.cpp](/home/alexander/codes/uva2/volume012/1260 - Sales.cpp)
+      - [1261 - String Popping.cpp](/home/alexander/codes/uva2/volume012/1261 - String Popping.cpp)
+      - [1263 - Mines.cpp](/home/alexander/codes/uva2/volume012/1263 - Mines.cpp)
+      - [1264 - Binary Search Tree.cpp](/home/alexander/codes/uva2/volume012/1264 - Binary Search Tree.cpp)
+      - [1266 - Magic Square.cpp](/home/alexander/codes/uva2/volume012/1266 - Magic Square.cpp)
+      - [1267 - Network.cpp](/home/alexander/codes/uva2/volume012/1267 - Network.cpp)
+      - [1289 - Stacking Plates.cpp](/home/alexander/codes/uva2/volume012/1289 - Stacking Plates.cpp)
+      - [1290 - Takeover Wars.cpp](/home/alexander/codes/uva2/volume012/1290 - Takeover Wars.cpp)
+      - [1291 - Dance Dance Revolution.cpp](/home/alexander/codes/uva2/volume012/1291 - Dance Dance Revolution.cpp)
+      - [1292 - Strategic game.cpp](/home/alexander/codes/uva2/volume012/1292 - Strategic game.cpp)
+  - volume013
+      - [1306 - The K-League.cpp](/home/alexander/codes/uva2/volume013/1306 - The K-League.cpp)
+      - [1308 - Viva Confetti.cpp](/home/alexander/codes/uva2/volume013/1308 - Viva Confetti.cpp)
+      - [1309 - Sudoku.cpp](/home/alexander/codes/uva2/volume013/1309 - Sudoku.cpp)
+      - [1312 - Cricket Field.cpp](/home/alexander/codes/uva2/volume013/1312 - Cricket Field.cpp)
+      - [1314 - Hidden Password.cpp](/home/alexander/codes/uva2/volume013/1314 - Hidden Password.cpp)
+      - [1315 - Crazy tea party.cpp](/home/alexander/codes/uva2/volume013/1315 - Crazy tea party.cpp)
+      - [1316 - Supermarket.cpp](/home/alexander/codes/uva2/volume013/1316 - Supermarket.cpp)
+      - [1322 - Minimizing Maximizer.cpp](/home/alexander/codes/uva2/volume013/1322 - Minimizing Maximizer.cpp)
+      - [1325 - Hypertransmission.cpp](/home/alexander/codes/uva2/volume013/1325 - Hypertransmission.cpp)
+      - [1326 - Jurassic Remains.cpp](/home/alexander/codes/uva2/volume013/1326 - Jurassic Remains.cpp)
+      - [1327 - King's Quest.cpp](/home/alexander/codes/uva2/volume013/1327 - King's Quest.cpp)
+      - [1329 - Corporative Network.cpp](/home/alexander/codes/uva2/volume013/1329 - Corporative Network.cpp)
+      - [1330 - City Game.cpp](/home/alexander/codes/uva2/volume013/1330 - City Game.cpp)
+      - [1331 - Minimax Triangulation.cpp](/home/alexander/codes/uva2/volume013/1331 - Minimax Triangulation.cpp)
+      - [1335 - Beijing Guards.cpp](/home/alexander/codes/uva2/volume013/1335 - Beijing Guards.cpp)
+      - [1336 - Fixing the Great Wall.cpp](/home/alexander/codes/uva2/volume013/1336 - Fixing the Great Wall.cpp)
+      - [1339 - Ancient Cipher.cpp](/home/alexander/codes/uva2/volume013/1339 - Ancient Cipher.cpp)
+      - [1341 - Different Digits.cpp](/home/alexander/codes/uva2/volume013/1341 - Different Digits.cpp)
+      - [1342 - That Nice Euler Circuit.cpp](/home/alexander/codes/uva2/volume013/1342 - That Nice Euler Circuit.cpp)
+      - [1343 - The Rotation Game[BFS][TLE].cpp](/home/alexander/codes/uva2/volume013/1343 - The Rotation Game[BFS][TLE].cpp)
+      - [1343 - The Rotation Game[IDA].cpp](/home/alexander/codes/uva2/volume013/1343 - The Rotation Game[IDA].cpp)
+      - [1344 - Tian Ji -- The Horse Racing.cpp](/home/alexander/codes/uva2/volume013/1344 - Tian Ji -- The Horse Racing.cpp)
+      - [1345 - Jamie's Contact Groups.cpp](/home/alexander/codes/uva2/volume013/1345 - Jamie's Contact Groups.cpp)
+      - [1346 - Songs.cpp](/home/alexander/codes/uva2/volume013/1346 - Songs.cpp)
+      - [1349 - Optimal Bus Route Design.cpp](/home/alexander/codes/uva2/volume013/1349 - Optimal Bus Route Design.cpp)
+      - [1352 - Colored Cubes.cpp](/home/alexander/codes/uva2/volume013/1352 - Colored Cubes.cpp)
+      - [1352 - Colored Cubes[v2].cpp](/home/alexander/codes/uva2/volume013/1352 - Colored Cubes[v2].cpp)
+      - [1354 - Mobile Computing.cpp](/home/alexander/codes/uva2/volume013/1354 - Mobile Computing.cpp)
+      - [1356 - Bridge.cpp](/home/alexander/codes/uva2/volume013/1356 - Bridge.cpp)
+      - [1357 - Cells.cpp](/home/alexander/codes/uva2/volume013/1357 - Cells.cpp)
+      - [1359 - Hills.cpp](/home/alexander/codes/uva2/volume013/1359 - Hills.cpp)
+      - [1362 - Exploring Pyramids.cpp](/home/alexander/codes/uva2/volume013/1362 - Exploring Pyramids.cpp)
+      - [1363 - Joseph's Problem.cpp](/home/alexander/codes/uva2/volume013/1363 - Joseph's Problem.cpp)
+      - [1364 - Knights of the Round Table.cpp](/home/alexander/codes/uva2/volume013/1364 - Knights of the Round Table.cpp)
+      - [1365 - Wild West[set].cpp](/home/alexander/codes/uva2/volume013/1365 - Wild West[set].cpp)
+      - [1365 - Wild West[st].cpp](/home/alexander/codes/uva2/volume013/1365 - Wild West[st].cpp)
+      - [1366 - Martian Mining.cpp](/home/alexander/codes/uva2/volume013/1366 - Martian Mining.cpp)
+      - [1368 - DNA Consensus String.cpp](/home/alexander/codes/uva2/volume013/1368 - DNA Consensus String.cpp)
+      - [1371 - Period.cpp](/home/alexander/codes/uva2/volume013/1371 - Period.cpp)
+      - [1374 - Power Calculus.cpp](/home/alexander/codes/uva2/volume013/1374 - Power Calculus.cpp)
+      - [1376 - Animal Run.cpp](/home/alexander/codes/uva2/volume013/1376 - Animal Run.cpp)
+      - [1379 - Pitcher Rotation.cpp](/home/alexander/codes/uva2/volume013/1379 - Pitcher Rotation.cpp)
+      - [1381 - Balancing the Scale.cpp](/home/alexander/codes/uva2/volume013/1381 - Balancing the Scale.cpp)
+      - [1382 - Distant Galaxy.cpp](/home/alexander/codes/uva2/volume013/1382 - Distant Galaxy.cpp)
+      - [1383 - Harmony Forever.cpp](/home/alexander/codes/uva2/volume013/1383 - Harmony Forever.cpp)
+      - [1386 - Cellular Automaton.cpp](/home/alexander/codes/uva2/volume013/1386 - Cellular Automaton.cpp)
+      - [1390 - Interconnect.cpp](/home/alexander/codes/uva2/volume013/1390 - Interconnect.cpp)
+      - [1392 - DNA Regions.cpp](/home/alexander/codes/uva2/volume013/1392 - DNA Regions.cpp)
+      - [1392 - DNA Regionsv2.cpp](/home/alexander/codes/uva2/volume013/1392 - DNA Regionsv2.cpp)
+      - [1394 - And Then There Was One.cpp](/home/alexander/codes/uva2/volume013/1394 - And Then There Was One.cpp)
+      - [1395 - Slim Span.cpp](/home/alexander/codes/uva2/volume013/1395 - Slim Span.cpp)
+      - [1396 - Most Distant Point from the Sea.cpp](/home/alexander/codes/uva2/volume013/1396 - Most Distant Point from the Sea.cpp)
+  - volume014
+      - [1400 - Ray, Pass me the dishes.cpp](/home/alexander/codes/uva2/volume014/1400 - Ray, Pass me the dishes.cpp)
+      - [1400 - Ray, Pass me the dishes[v2].cpp](/home/alexander/codes/uva2/volume014/1400 - Ray, Pass me the dishes[v2].cpp)
+      - [1401 - Remember the Word.cpp](/home/alexander/codes/uva2/volume014/1401 - Remember the Word.cpp)
+      - [1402 - Robotic Sort.cpp](/home/alexander/codes/uva2/volume014/1402 - Robotic Sort.cpp)
+      - [1404 - Prime k-tuple.cpp](/home/alexander/codes/uva2/volume014/1404 - Prime k-tuple.cpp)
+      - [1414 - Hanoi Towers.cpp](/home/alexander/codes/uva2/volume014/1414 - Hanoi Towers.cpp)
+      - [1417 - Traffic Jam.cpp](/home/alexander/codes/uva2/volume014/1417 - Traffic Jam.cpp)
+      - [1419 - Binary Clock.cpp](/home/alexander/codes/uva2/volume014/1419 - Binary Clock.cpp)
+      - [1419 - Ugly Windows.cpp](/home/alexander/codes/uva2/volume014/1419 - Ugly Windows.cpp)
+      - [1423 - Guess.cpp](/home/alexander/codes/uva2/volume014/1423 - Guess.cpp)
+      - [1426 - Discrete Square Roots.cpp](/home/alexander/codes/uva2/volume014/1426 - Discrete Square Roots.cpp)
+      - [1428 - Ping pong.cpp](/home/alexander/codes/uva2/volume014/1428 - Ping pong.cpp)
+      - [1432 - Fire-Control System.cpp](/home/alexander/codes/uva2/volume014/1432 - Fire-Control System.cpp)
+      - [1438 - Asteroids.cpp](/home/alexander/codes/uva2/volume014/1438 - Asteroids.cpp)
+      - [1441 - Accountant notes[Aho–Corasick].cpp](/home/alexander/codes/uva2/volume014/1441 - Accountant notes[Aho–Corasick].cpp)
+      - [1441 - Accountant notes[Aho–Corasick-opt].cpp](/home/alexander/codes/uva2/volume014/1441 - Accountant notes[Aho–Corasick-opt].cpp)
+      - [1444 - Knowledge for the masses.cpp](/home/alexander/codes/uva2/volume014/1444 - Knowledge for the masses.cpp)
+      - [1447 - Malfatti Circles.cpp](/home/alexander/codes/uva2/volume014/1447 - Malfatti Circles.cpp)
+      - [1449 - Dominating Patterns.cpp](/home/alexander/codes/uva2/volume014/1449 - Dominating Patterns.cpp)
+      - [1451 - Average.cpp](/home/alexander/codes/uva2/volume014/1451 - Average.cpp)
+      - [1462 - Fuzzy Google Suggest.cpp](/home/alexander/codes/uva2/volume014/1462 - Fuzzy Google Suggest.cpp)
+      - [1467 - Installations.cpp](/home/alexander/codes/uva2/volume014/1467 - Installations.cpp)
+      - [1468 - Restaurant.cpp](/home/alexander/codes/uva2/volume014/1468 - Restaurant.cpp)
+      - [1472 - Hanging Hats.cpp](/home/alexander/codes/uva2/volume014/1472 - Hanging Hats.cpp)
+      - [1472 - Hanging Hats.cpp[opt].cpp](/home/alexander/codes/uva2/volume014/1472 - Hanging Hats.cpp[opt].cpp)
+      - [1475 - Jungle Outpost.cpp](/home/alexander/codes/uva2/volume014/1475 - Jungle Outpost.cpp)
+      - [1479 - Graph and Queries(1).cpp](/home/alexander/codes/uva2/volume014/1479 - Graph and Queries(1).cpp)
+      - [1482 - Playing With Stones.cpp](/home/alexander/codes/uva2/volume014/1482 - Playing With Stones.cpp)
+      - [1490 - Let the light guide us.cpp](/home/alexander/codes/uva2/volume014/1490 - Let the light guide us.cpp)
+      - [1490 - Let the light guide us[disjoint].cpp](/home/alexander/codes/uva2/volume014/1490 - Let the light guide us[disjoint].cpp)
+      - [1492 - Adding New Machine.cpp](/home/alexander/codes/uva2/volume014/1492 - Adding New Machine.cpp)
+      - [1493 - Draw a Mess[bitwise].cpp](/home/alexander/codes/uva2/volume014/1493 - Draw a Mess[bitwise].cpp)
+      - [1493 - Draw a Mess.cpp](/home/alexander/codes/uva2/volume014/1493 - Draw a Mess.cpp)
+      - [1494 - Qin Shi Huang's National Road System.cpp](/home/alexander/codes/uva2/volume014/1494 - Qin Shi Huang's National Road System.cpp)
+  - volume015
+      - [1501 - Construct the Great Wall.cpp](/home/alexander/codes/uva2/volume015/1501 - Construct the Great Wall.cpp)
+      - [1502 - GRE Words.cpp](/home/alexander/codes/uva2/volume015/1502 - GRE Words.cpp)
+      - [1504 - Genghis Khan the Conqueror.cpp](/home/alexander/codes/uva2/volume015/1504 - Genghis Khan the Conqueror.cpp)
+      - [1516 - Smoking gun.cpp](/home/alexander/codes/uva2/volume015/1516 - Smoking gun.cpp)
+      - [1519 - Dictionary Size.cpp](/home/alexander/codes/uva2/volume015/1519 - Dictionary Size.cpp)
+      - [1523 - Helicopter.cpp](/home/alexander/codes/uva2/volume015/1523 - Helicopter.cpp)
+      - [1524 - Hot or Cold.cpp](/home/alexander/codes/uva2/volume015/1524 - Hot or Cold.cpp)
+      - [1525 - Falling Leaves.cpp](/home/alexander/codes/uva2/volume015/1525 - Falling Leaves.cpp)
+      - [1529 - Clock.cpp](/home/alexander/codes/uva2/volume015/1529 - Clock.cpp)
+      - [1530 - Floating Point Numbers.cpp](/home/alexander/codes/uva2/volume015/1530 - Floating Point Numbers.cpp)
+      - [1534 - Taekwondo.cpp](/home/alexander/codes/uva2/volume015/1534 - Taekwondo.cpp)
+      - [1544 - Simple Arithmetics.cpp](/home/alexander/codes/uva2/volume015/1544 - Simple Arithmetics.cpp)
+      - [1546 - Complete the sequence.cpp](/home/alexander/codes/uva2/volume015/1546 - Complete the sequence.cpp)
+      - [1548 - The Game of Master-Mind.cpp](/home/alexander/codes/uva2/volume015/1548 - The Game of Master-Mind.cpp)
+      - [1549 - Lattice Point.cpp](/home/alexander/codes/uva2/volume015/1549 - Lattice Point.cpp)
+      - [1555 - Garland.cpp](/home/alexander/codes/uva2/volume015/1555 - Garland.cpp)
+      - [1556 - Disk Tree.cpp](/home/alexander/codes/uva2/volume015/1556 - Disk Tree.cpp)
+      - [1557 - Calendar Game.cpp](/home/alexander/codes/uva2/volume015/1557 - Calendar Game.cpp)
+      - [1558 - Number Game.cpp](/home/alexander/codes/uva2/volume015/1558 - Number Game.cpp)
+      - [1559 - Nim.cpp](/home/alexander/codes/uva2/volume015/1559 - Nim.cpp)
+      - [1560 - Extended Lights Out.cpp](/home/alexander/codes/uva2/volume015/1560 - Extended Lights Out.cpp)
+      - [1566 - John.cpp](/home/alexander/codes/uva2/volume015/1566 - John.cpp)
+      - [1569 - Multiple.cpp](/home/alexander/codes/uva2/volume015/1569 - Multiple.cpp)
+      - [1572 - Self-Assembly.cpp](/home/alexander/codes/uva2/volume015/1572 - Self-Assembly.cpp)
+      - [1574 - Surely You Congest.cpp](/home/alexander/codes/uva2/volume015/1574 - Surely You Congest.cpp)
+      - [1575 - Factors.cpp](/home/alexander/codes/uva2/volume015/1575 - Factors.cpp)
+      - [1577 - Low Power.cpp](/home/alexander/codes/uva2/volume015/1577 - Low Power.cpp)
+      - [1579 - Matryoshka.cpp](/home/alexander/codes/uva2/volume015/1579 - Matryoshka.cpp)
+      - [1581 - Pollution Solution[v2].cpp](/home/alexander/codes/uva2/volume015/1581 - Pollution Solution[v2].cpp)
+      - [1581 - Pollution Solution[v3].cpp](/home/alexander/codes/uva2/volume015/1581 - Pollution Solution[v3].cpp)
+      - [1583 - Digit Generator.cpp](/home/alexander/codes/uva2/volume015/1583 - Digit Generator.cpp)
+      - [1584 - Circular Sequence.cpp](/home/alexander/codes/uva2/volume015/1584 - Circular Sequence.cpp)
+      - [1585 - Score.cpp](/home/alexander/codes/uva2/volume015/1585 - Score.cpp)
+      - [1586 - Molar mass.cpp](/home/alexander/codes/uva2/volume015/1586 - Molar mass.cpp)
+      - [1587 - Box.cpp](/home/alexander/codes/uva2/volume015/1587 - Box.cpp)
+      - [1588 - Kickdown.cpp](/home/alexander/codes/uva2/volume015/1588 - Kickdown.cpp)
+      - [1590 - IP Networks.cpp](/home/alexander/codes/uva2/volume015/1590 - IP Networks.cpp)
+      - [1592 - Database.cpp](/home/alexander/codes/uva2/volume015/1592 - Database.cpp)
+      - [1594 - Ducci Sequence.cpp](/home/alexander/codes/uva2/volume015/1594 - Ducci Sequence.cpp)
+      - [1595 - Symmetry.cpp](/home/alexander/codes/uva2/volume015/1595 - Symmetry.cpp)
+  - volume016
+      - [1600 - Patrol Robot.cpp](/home/alexander/codes/uva2/volume016/1600 - Patrol Robot.cpp)
+      - [1601 - The Morning after Halloween.cpp](/home/alexander/codes/uva2/volume016/1601 - The Morning after Halloween.cpp)
+      - [1605 - Building for UN.cpp](/home/alexander/codes/uva2/volume016/1605 - Building for UN.cpp)
+      - [1608 - Non-boring sequences.cpp](/home/alexander/codes/uva2/volume016/1608 - Non-boring sequences.cpp)
+      - [1608 - Non-boring sequences[v2].cpp](/home/alexander/codes/uva2/volume016/1608 - Non-boring sequences[v2].cpp)
+      - [1610 - Party Games.cpp](/home/alexander/codes/uva2/volume016/1610 - Party Games.cpp)
+      - [1614 - Hell on the Markets.cpp](/home/alexander/codes/uva2/volume016/1614 - Hell on the Markets.cpp)
+      - [1625 - Color Length.cpp](/home/alexander/codes/uva2/volume016/1625 - Color Length.cpp)
+      - [1626 - Brackets sequence.cpp](/home/alexander/codes/uva2/volume016/1626 - Brackets sequence.cpp)
+      - [1627 - Team them up!.cpp](/home/alexander/codes/uva2/volume016/1627 - Team them up!.cpp)
+      - [1629 - Cake slicing.cpp](/home/alexander/codes/uva2/volume016/1629 - Cake slicing.cpp)
+      - [1632 - Alibaba.cpp](/home/alexander/codes/uva2/volume016/1632 - Alibaba.cpp)
+      - [1635 - Irrelevant Elements.cpp](/home/alexander/codes/uva2/volume016/1635 - Irrelevant Elements.cpp)
+      - [1636 - Headshot.cpp](/home/alexander/codes/uva2/volume016/1636 - Headshot.cpp)
+      - [1640 - The Counting Problem[digit].cpp](/home/alexander/codes/uva2/volume016/1640 - The Counting Problem[digit].cpp)
+      - [1641 - ASCII Area.cpp](/home/alexander/codes/uva2/volume016/1641 - ASCII Area.cpp)
+      - [1642 - Magical GCD.cpp](/home/alexander/codes/uva2/volume016/1642 - Magical GCD.cpp)
+      - [1644 - Prime Gap.cpp](/home/alexander/codes/uva2/volume016/1644 - Prime Gap.cpp)
+      - [1645 - Count.cpp](/home/alexander/codes/uva2/volume016/1645 - Count.cpp)
+      - [1646 - Edge Case.cpp](/home/alexander/codes/uva2/volume016/1646 - Edge Case.cpp)
+      - [1647 - Computer Transformation.cpp](/home/alexander/codes/uva2/volume016/1647 - Computer Transformation.cpp)
+      - [1649 - Binomial coefficients.cpp](/home/alexander/codes/uva2/volume016/1649 - Binomial coefficients.cpp)
+      - [1659 - Help Little Laura.cpp](/home/alexander/codes/uva2/volume016/1659 - Help Little Laura.cpp)
+      - [1665 - Islands.cpp](/home/alexander/codes/uva2/volume016/1665 - Islands.cpp)
+      - [1665 - Islands[v2].cpp](/home/alexander/codes/uva2/volume016/1665 - Islands[v2].cpp)
+      - [1673 - str2int.cpp](/home/alexander/codes/uva2/volume016/1673 - str2int.cpp)
+      - [1674 - Lightning Energy Report.cpp](/home/alexander/codes/uva2/volume016/1674 - Lightning Energy Report.cpp)
+      - [1676 - GRE Words Revenge.cpp](/home/alexander/codes/uva2/volume016/1676 - GRE Words Revenge.cpp)
+      - [1679 - Easy Geometry.cpp](/home/alexander/codes/uva2/volume016/1679 - Easy Geometry.cpp)
+      - [1683 - In case of failure[Delaunay].cpp](/home/alexander/codes/uva2/volume016/1683 - In case of failure[Delaunay].cpp)
+      - [1683 - In case of failure[kdTree].cpp](/home/alexander/codes/uva2/volume016/1683 - In case of failure[kdTree].cpp)
+  - volume017
+      - [1700 - Game Strategy.cpp](/home/alexander/codes/uva2/volume017/1700 - Game Strategy.cpp)
+      - [1700 - Game Strategy[sse].cpp](/home/alexander/codes/uva2/volume017/1700 - Game Strategy[sse].cpp)
+      - [1703 - Metal Processing Plant.cpp](/home/alexander/codes/uva2/volume017/1703 - Metal Processing Plant.cpp)
+      - [1703 - Metal Processing Plant[opt].cpp](/home/alexander/codes/uva2/volume017/1703 - Metal Processing Plant[opt].cpp)
+      - [1704 - Pachinko.cpp](/home/alexander/codes/uva2/volume017/1704 - Pachinko.cpp)
+      - [1708 - Wire Crossing.cpp](/home/alexander/codes/uva2/volume017/1708 - Wire Crossing.cpp)
+      - [1708 - Wire Crossing[opt2].cpp](/home/alexander/codes/uva2/volume017/1708 - Wire Crossing[opt2].cpp)
+      - [1708 - Wire Crossing[opt].cpp](/home/alexander/codes/uva2/volume017/1708 - Wire Crossing[opt].cpp)
+      - [1709 - Amalgamated Artichokes.cpp](/home/alexander/codes/uva2/volume017/1709 - Amalgamated Artichokes.cpp)
+      - [1709 - Amalgamated Artichokes-opt-less-precision.cpp](/home/alexander/codes/uva2/volume017/1709 - Amalgamated Artichokes-opt-less-precision.cpp)
+      - [1711 - Catering.cpp](/home/alexander/codes/uva2/volume017/1711 - Catering.cpp)
+      - [1712 - Cutting Cheese.cpp](/home/alexander/codes/uva2/volume017/1712 - Cutting Cheese.cpp)
+      - [1713 - Evolution in Parallel.cpp](/home/alexander/codes/uva2/volume017/1713 - Evolution in Parallel.cpp)
+      - [1714 - Keyboarding.cpp](/home/alexander/codes/uva2/volume017/1714 - Keyboarding.cpp)
+      - [1714 - Keyboarding-opt.cpp](/home/alexander/codes/uva2/volume017/1714 - Keyboarding-opt.cpp)
+      - [1717 - Ship Traffic.cpp](/home/alexander/codes/uva2/volume017/1717 - Ship Traffic.cpp)
+      - [1718 - Tile Cutting_brute_offline.cpp](/home/alexander/codes/uva2/volume017/1718 - Tile Cutting_brute_offline.cpp)
+      - [1718 - Tile Cutting.cpp](/home/alexander/codes/uva2/volume017/1718 - Tile Cutting.cpp)
+      - [1718 - Tile Cutting_NTT.cpp](/home/alexander/codes/uva2/volume017/1718 - Tile Cutting_NTT.cpp)
+      - [1719 - Tours.cpp](/home/alexander/codes/uva2/volume017/1719 - Tours.cpp)
+      - [1720 - Weather Report.cpp](/home/alexander/codes/uva2/volume017/1720 - Weather Report.cpp)
+      - [1720 - Weather Report[opt].cpp](/home/alexander/codes/uva2/volume017/1720 - Weather Report[opt].cpp)
+      - [1723 - Intervals.cpp](/home/alexander/codes/uva2/volume017/1723 - Intervals.cpp)
+      - [1726 - Automatic Cheater Detection.cpp](/home/alexander/codes/uva2/volume017/1726 - Automatic Cheater Detection.cpp)
+      - [1727 - Counting Weekend Days.cpp](/home/alexander/codes/uva2/volume017/1727 - Counting Weekend Days.cpp)
+      - [1728 - Toll Management IV.cpp](/home/alexander/codes/uva2/volume017/1728 - Toll Management IV.cpp)
+      - [1728 - Toll Management IV[opt].cpp](/home/alexander/codes/uva2/volume017/1728 - Toll Management IV[opt].cpp)
+      - [1729 - Owllen.cpp](/home/alexander/codes/uva2/volume017/1729 - Owllen.cpp)
+      - [1730 - Sum of MSLCM.cpp](/home/alexander/codes/uva2/volume017/1730 - Sum of MSLCM.cpp)
+      - [1731 - Unique Party.cpp](/home/alexander/codes/uva2/volume017/1731 - Unique Party.cpp)
+      - [1733 - Design New Capital.cpp](/home/alexander/codes/uva2/volume017/1733 - Design New Capital.cpp)
+      - [1734 - Numbered Cards.cpp](/home/alexander/codes/uva2/volume017/1734 - Numbered Cards.cpp)
+      - [1736 - Balanced Diet.cpp](/home/alexander/codes/uva2/volume017/1736 - Balanced Diet.cpp)
+      - [1736 - Balanced Diet[opt].cpp](/home/alexander/codes/uva2/volume017/1736 - Balanced Diet[opt].cpp)
+      - [1737 - Branch Assignment.cpp](/home/alexander/codes/uva2/volume017/1737 - Branch Assignment.cpp)
+      - [1737 - Branch Assignment[dp-opt].cpp](/home/alexander/codes/uva2/volume017/1737 - Branch Assignment[dp-opt].cpp)
+      - [1738 - Ceiling Function.cpp](/home/alexander/codes/uva2/volume017/1738 - Ceiling Function.cpp)
+      - [1741 - Longest Rivers.cpp](/home/alexander/codes/uva2/volume017/1741 - Longest Rivers.cpp)
+      - [1741 - Longest Rivers[opt].cpp](/home/alexander/codes/uva2/volume017/1741 - Longest Rivers[opt].cpp)
+      - [1742 - Oil.cpp](/home/alexander/codes/uva2/volume017/1742 - Oil.cpp)
+      - [1742 - Oil[float-radix].cpp](/home/alexander/codes/uva2/volume017/1742 - Oil[float-radix].cpp)
+      - [1747 - Swap Space.cpp](/home/alexander/codes/uva2/volume017/1747 - Swap Space.cpp)
+      - [1752 - Money for Nothing.cpp](/home/alexander/codes/uva2/volume017/1752 - Money for Nothing.cpp)
+      - [1753 - Need for Speed.cpp](/home/alexander/codes/uva2/volume017/1753 - Need for Speed.cpp)
+      - [1757 - Secret Chamber at Mount Rushmore.cpp](/home/alexander/codes/uva2/volume017/1757 - Secret Chamber at Mount Rushmore.cpp)
+  - volume040
+      - [4020 - Hard Rode.cpp](/home/alexander/codes/uva2/volume040/4020 - Hard Rode.cpp)
+  - volume041
+      - [4104 - MODEX.cpp](/home/alexander/codes/uva2/volume041/4104 - MODEX.cpp)
+  - volume047
+      - [4723 - Ducci Sequence.cpp](/home/alexander/codes/uva2/volume047/4723 - Ducci Sequence.cpp)
+      - [4725 - Airport.cpp](/home/alexander/codes/uva2/volume047/4725 - Airport.cpp)
+      - [4726 - Average.cpp](/home/alexander/codes/uva2/volume047/4726 - Average.cpp)
+      - [4727 - Jump.cpp](/home/alexander/codes/uva2/volume047/4727 - Jump.cpp)
+      - [4728 - Squares.cpp](/home/alexander/codes/uva2/volume047/4728 - Squares.cpp)
+      - [4731 - Cellular Network.cpp](/home/alexander/codes/uva2/volume047/4731 - Cellular Network.cpp)
+  - volume048
+      - [4867 - Maximum Square.cpp](/home/alexander/codes/uva2/volume048/4867 - Maximum Square.cpp)
+  - volume050
+      - [5067 - Membership Management.cpp](/home/alexander/codes/uva2/volume050/5067 - Membership Management.cpp)
+  - volume051
+      - [5102 - Fermat Point in Quadrangle.cpp](/home/alexander/codes/uva2/volume051/5102 - Fermat Point in Quadrangle.cpp)
+  - volume056
+      - [5610 - Stars.cpp](/home/alexander/codes/uva2/volume056/5610 - Stars.cpp)
+  - volume058
+      - [5861 - Hidden Terminal Problem.cpp](/home/alexander/codes/uva2/volume058/5861 - Hidden Terminal Problem.cpp)
+      - [5862 - City Travel.cpp](/home/alexander/codes/uva2/volume058/5862 - City Travel.cpp)
+      - [5864 - Register Allocation[another].cpp](/home/alexander/codes/uva2/volume058/5864 - Register Allocation[another].cpp)
+      - [5864 - Register Allocation.cpp](/home/alexander/codes/uva2/volume058/5864 - Register Allocation.cpp)
+      - [5865 - Finding Bottleneck Shorstet Paths.cpp](/home/alexander/codes/uva2/volume058/5865 - Finding Bottleneck Shorstet Paths.cpp)
+      - [5867 - Finding Feasible Paths.cpp](/home/alexander/codes/uva2/volume058/5867 - Finding Feasible Paths.cpp)
+  - volume100
+      - [10000 - Longest Paths.cpp](/home/alexander/codes/uva2/volume100/10000 - Longest Paths.cpp)
+      - [10001 - Garden of Eden.cpp](/home/alexander/codes/uva2/volume100/10001 - Garden of Eden.cpp)
+      - [10002 - Center of Masses.cpp](/home/alexander/codes/uva2/volume100/10002 - Center of Masses.cpp)
+      - [10003 - Cutting Sticks.cpp](/home/alexander/codes/uva2/volume100/10003 - Cutting Sticks.cpp)
+      - [10005 - Packing polygons.cpp](/home/alexander/codes/uva2/volume100/10005 - Packing polygons.cpp)
+      - [10006 - Carmichael Numbers.cpp](/home/alexander/codes/uva2/volume100/10006 - Carmichael Numbers.cpp)
+      - [10008 - What's Cryptanalysis.cpp](/home/alexander/codes/uva2/volume100/10008 - What's Cryptanalysis.cpp)
+      - [10010 - Where's Waldorf.cpp](/home/alexander/codes/uva2/volume100/10010 - Where's Waldorf.cpp)
+      - [10012 - How Big Is It.cpp](/home/alexander/codes/uva2/volume100/10012 - How Big Is It.cpp)
+      - [10013 - Super long sums.cpp](/home/alexander/codes/uva2/volume100/10013 - Super long sums.cpp)
+      - [10014 - Simple calculations.cpp](/home/alexander/codes/uva2/volume100/10014 - Simple calculations.cpp)
+      - [10015 - Joseph's Cousin.cpp](/home/alexander/codes/uva2/volume100/10015 - Joseph's Cousin.cpp)
+      - [10017 - The Never Ending Towers of Hanoi.cpp](/home/alexander/codes/uva2/volume100/10017 - The Never Ending Towers of Hanoi.cpp)
+      - [10018 - Reverse and Add.cpp](/home/alexander/codes/uva2/volume100/10018 - Reverse and Add.cpp)
+      - [10019 - Funny Encryption Method.cpp](/home/alexander/codes/uva2/volume100/10019 - Funny Encryption Method.cpp)
+      - [10020 - Minimal coverage.cpp](/home/alexander/codes/uva2/volume100/10020 - Minimal coverage.cpp)
+      - [10023 - Square root2.cpp](/home/alexander/codes/uva2/volume100/10023 - Square root2.cpp)
+      - [10023 - Square root3.cpp](/home/alexander/codes/uva2/volume100/10023 - Square root3.cpp)
+      - [10023 - Square root4.cpp](/home/alexander/codes/uva2/volume100/10023 - Square root4.cpp)
+      - [10023 - Square root.cpp](/home/alexander/codes/uva2/volume100/10023 - Square root.cpp)
+      - [10024 - Curling up the cube.cpp](/home/alexander/codes/uva2/volume100/10024 - Curling up the cube.cpp)
+      - [10025 - The  1  2  ...  n = k problem.cpp](/home/alexander/codes/uva2/volume100/10025 - The  1  2  ...  n = k problem.cpp)
+      - [10026 - Shoemaker's Problem.cpp](/home/alexander/codes/uva2/volume100/10026 - Shoemaker's Problem.cpp)
+      - [10029 - Edit Step Ladders.cpp](/home/alexander/codes/uva2/volume100/10029 - Edit Step Ladders.cpp)
+      - [10029 - Edit Step Ladders[hashmap].cpp](/home/alexander/codes/uva2/volume100/10029 - Edit Step Ladders[hashmap].cpp)
+      - [10029 - Edit Step Ladders[Trie].cpp](/home/alexander/codes/uva2/volume100/10029 - Edit Step Ladders[Trie].cpp)
+      - [10032 - Tug of War.cpp](/home/alexander/codes/uva2/volume100/10032 - Tug of War.cpp)
+      - [10033 - Interpreter.cpp](/home/alexander/codes/uva2/volume100/10033 - Interpreter.cpp)
+      - [10034 - Freckles.cpp](/home/alexander/codes/uva2/volume100/10034 - Freckles.cpp)
+      - [10035 - Primary Arithmetic.cpp](/home/alexander/codes/uva2/volume100/10035 - Primary Arithmetic.cpp)
+      - [10036 - Divisibility.c](/home/alexander/codes/uva2/volume100/10036 - Divisibility.c)
+      - [10036 - Divisibility.cpp](/home/alexander/codes/uva2/volume100/10036 - Divisibility.cpp)
+      - [10037 - Bridge.cpp](/home/alexander/codes/uva2/volume100/10037 - Bridge.cpp)
+      - [10038 - Jolly Jumpers.cpp](/home/alexander/codes/uva2/volume100/10038 - Jolly Jumpers.cpp)
+      - [10039 - Railroads.cpp](/home/alexander/codes/uva2/volume100/10039 - Railroads.cpp)
+      - [10040 - Ouroboros Snake.cpp](/home/alexander/codes/uva2/volume100/10040 - Ouroboros Snake.cpp)
+      - [10040 - Ouroboros Snake[v2].cpp](/home/alexander/codes/uva2/volume100/10040 - Ouroboros Snake[v2].cpp)
+      - [10041 - Vito's Family.cpp](/home/alexander/codes/uva2/volume100/10041 - Vito's Family.cpp)
+      - [10042 - Smith Numbers.cpp](/home/alexander/codes/uva2/volume100/10042 - Smith Numbers.cpp)
+      - [10043 - Chainsaw Massacre.cpp](/home/alexander/codes/uva2/volume100/10043 - Chainsaw Massacre.cpp)
+      - [10044 - Erdos Numbers.cpp](/home/alexander/codes/uva2/volume100/10044 - Erdos Numbers.cpp)
+      - [10047 - The Monocycle.cpp](/home/alexander/codes/uva2/volume100/10047 - The Monocycle.cpp)
+      - [10048 - Audiophobia.cpp](/home/alexander/codes/uva2/volume100/10048 - Audiophobia.cpp)
+      - [10050 - Hartals.cpp](/home/alexander/codes/uva2/volume100/10050 - Hartals.cpp)
+      - [10054 - The Necklace.cpp](/home/alexander/codes/uva2/volume100/10054 - The Necklace.cpp)
+      - [10055 - Hashmat the Brave Warrior.cpp](/home/alexander/codes/uva2/volume100/10055 - Hashmat the Brave Warrior.cpp)
+      - [10056 - What is the Probability.cpp](/home/alexander/codes/uva2/volume100/10056 - What is the Probability.cpp)
+      - [10057 - A mid-summer night's dream.cpp](/home/alexander/codes/uva2/volume100/10057 - A mid-summer night's dream.cpp)
+      - [10061 - How many zero's and how many digits.cpp](/home/alexander/codes/uva2/volume100/10061 - How many zero's and how many digits.cpp)
+      - [10062 - Tell me the frequencies.cpp](/home/alexander/codes/uva2/volume100/10062 - Tell me the frequencies.cpp)
+      - [10063 - Knuth's Permutation.c](/home/alexander/codes/uva2/volume100/10063 - Knuth's Permutation.c)
+      - [10065 - Useless Tile Packers.cpp](/home/alexander/codes/uva2/volume100/10065 - Useless Tile Packers.cpp)
+      - [10067 - Playing with Wheels.cpp](/home/alexander/codes/uva2/volume100/10067 - Playing with Wheels.cpp)
+      - [10070 - Leap Year or Not Leap Year and ....c](/home/alexander/codes/uva2/volume100/10070 - Leap Year or Not Leap Year and ....c)
+      - [10071 - Back to High School Physics.cpp](/home/alexander/codes/uva2/volume100/10071 - Back to High School Physics.cpp)
+      - [10074 - Take the Land.cpp](/home/alexander/codes/uva2/volume100/10074 - Take the Land.cpp)
+      - [10075 - Airlines.cpp](/home/alexander/codes/uva2/volume100/10075 - Airlines.cpp)
+      - [10077 - The Stern-Brocot Number System.cpp](/home/alexander/codes/uva2/volume100/10077 - The Stern-Brocot Number System.cpp)
+      - [10078 - The Art Gallery.cpp](/home/alexander/codes/uva2/volume100/10078 - The Art Gallery.cpp)
+      - [10079 - Pizza Cutting.cpp](/home/alexander/codes/uva2/volume100/10079 - Pizza Cutting.cpp)
+      - [10080 - Gopher II.cpp](/home/alexander/codes/uva2/volume100/10080 - Gopher II.cpp)
+      - [10081 - Tight Words.cpp](/home/alexander/codes/uva2/volume100/10081 - Tight Words.cpp)
+      - [10084 - Hotter Colder.cpp](/home/alexander/codes/uva2/volume100/10084 - Hotter Colder.cpp)
+      - [10085 - The most distant state.cpp](/home/alexander/codes/uva2/volume100/10085 - The most distant state.cpp)
+      - [10089 - Repackaging.cpp](/home/alexander/codes/uva2/volume100/10089 - Repackaging.cpp)
+      - [10090 - Marbles.cpp](/home/alexander/codes/uva2/volume100/10090 - Marbles.cpp)
+      - [10092 - The Problem with the Problem Setter.cpp](/home/alexander/codes/uva2/volume100/10092 - The Problem with the Problem Setter.cpp)
+      - [10093 - An Easy Problem!.cpp](/home/alexander/codes/uva2/volume100/10093 - An Easy Problem!.cpp)
+      - [10094 - Place the Guards.cpp](/home/alexander/codes/uva2/volume100/10094 - Place the Guards.cpp)
+      - [10094 - Place the Guards[DLX].cpp](/home/alexander/codes/uva2/volume100/10094 - Place the Guards[DLX].cpp)
+      - [10094 - Place the Guards[math].cpp](/home/alexander/codes/uva2/volume100/10094 - Place the Guards[math].cpp)
+      - [10094 - Place the Guards[random].cpp](/home/alexander/codes/uva2/volume100/10094 - Place the Guards[random].cpp)
+      - [10099 - The Tourist Guide.cpp](/home/alexander/codes/uva2/volume100/10099 - The Tourist Guide.cpp)
+  - volume101
+      - [10100 - Longest Match.cpp](/home/alexander/codes/uva2/volume101/10100 - Longest Match.cpp)
+      - [10101 - Bangla Numbers.cpp](/home/alexander/codes/uva2/volume101/10101 - Bangla Numbers.cpp)
+      - [10104 - Euclid Problem.cpp](/home/alexander/codes/uva2/volume101/10104 - Euclid Problem.cpp)
+      - [10105 - Polynomial Coefficients.cpp](/home/alexander/codes/uva2/volume101/10105 - Polynomial Coefficients.cpp)
+      - [10107 - What is the Median.cpp](/home/alexander/codes/uva2/volume101/10107 - What is the Median.cpp)
+      - [10109 - Solving Systems of Linear Equations.cpp](/home/alexander/codes/uva2/volume101/10109 - Solving Systems of Linear Equations.cpp)
+      - [10110 - Light, more light.cpp](/home/alexander/codes/uva2/volume101/10110 - Light, more light.cpp)
+      - [10112 - Myacm Triangles.cpp](/home/alexander/codes/uva2/volume101/10112 - Myacm Triangles.cpp)
+      - [10115 - Automatic Editing.cpp](/home/alexander/codes/uva2/volume101/10115 - Automatic Editing.cpp)
+      - [10116 - Robot Motion.cpp](/home/alexander/codes/uva2/volume101/10116 - Robot Motion.cpp)
+      - [10117 - Nice Milk.cpp](/home/alexander/codes/uva2/volume101/10117 - Nice Milk.cpp)
+      - [10118 - Free Candies.cpp](/home/alexander/codes/uva2/volume101/10118 - Free Candies.cpp)
+      - [10120 - Gift.cpp](/home/alexander/codes/uva2/volume101/10120 - Gift.cpp)
+      - [10123 - No Tipping.cpp](/home/alexander/codes/uva2/volume101/10123 - No Tipping.cpp)
+      - [10124 - Subway.cpp](/home/alexander/codes/uva2/volume101/10124 - Subway.cpp)
+      - [10124 - Subway[v2].cpp](/home/alexander/codes/uva2/volume101/10124 - Subway[v2].cpp)
+      - [10124 - Subway[v3].cpp](/home/alexander/codes/uva2/volume101/10124 - Subway[v3].cpp)
+      - [10125 - Sumsets.cpp](/home/alexander/codes/uva2/volume101/10125 - Sumsets.cpp)
+      - [10127 - Ones.cpp](/home/alexander/codes/uva2/volume101/10127 - Ones.cpp)
+      - [10128 - Queue.cpp](/home/alexander/codes/uva2/volume101/10128 - Queue.cpp)
+      - [10129 - Play on Words.cpp](/home/alexander/codes/uva2/volume101/10129 - Play on Words.cpp)
+      - [10129 - Play On Words(v2).cpp](/home/alexander/codes/uva2/volume101/10129 - Play On Words(v2).cpp)
+      - [10130 - SuperSale.cpp](/home/alexander/codes/uva2/volume101/10130 - SuperSale.cpp)
+      - [10131 - Is Bigger Smarter.cpp](/home/alexander/codes/uva2/volume101/10131 - Is Bigger Smarter.cpp)
+      - [10132 - File Fragmentation.cpp](/home/alexander/codes/uva2/volume101/10132 - File Fragmentation.cpp)
+      - [10136 - Chocolate Chip Cookies.cpp](/home/alexander/codes/uva2/volume101/10136 - Chocolate Chip Cookies.cpp)
+      - [10139 - Factovisors.cpp](/home/alexander/codes/uva2/volume101/10139 - Factovisors.cpp)
+      - [10140 - Prime Distance.cpp](/home/alexander/codes/uva2/volume101/10140 - Prime Distance.cpp)
+      - [10141 - Request for Proposal.cpp](/home/alexander/codes/uva2/volume101/10141 - Request for Proposal.cpp)
+      - [10142 - Australian Voting.cpp](/home/alexander/codes/uva2/volume101/10142 - Australian Voting.cpp)
+      - [10144 - Expression.cpp](/home/alexander/codes/uva2/volume101/10144 - Expression.cpp)
+      - [10146 - Dictionary.cpp](/home/alexander/codes/uva2/volume101/10146 - Dictionary.cpp)
+      - [10147 - Highways.cpp](/home/alexander/codes/uva2/volume101/10147 - Highways.cpp)
+      - [10148 - Advertisement.cpp](/home/alexander/codes/uva2/volume101/10148 - Advertisement.cpp)
+      - [10149 - Yahtzee[Anotherdp].cpp](/home/alexander/codes/uva2/volume101/10149 - Yahtzee[Anotherdp].cpp)
+      - [10149 - Yahtzee[Anotherdp_plus].cpp](/home/alexander/codes/uva2/volume101/10149 - Yahtzee[Anotherdp_plus].cpp)
+      - [10149 - Yahtzee.cpp](/home/alexander/codes/uva2/volume101/10149 - Yahtzee.cpp)
+      - [10150 - Doublets.cpp](/home/alexander/codes/uva2/volume101/10150 - Doublets.cpp)
+      - [10152 - ShellSort.cpp](/home/alexander/codes/uva2/volume101/10152 - ShellSort.cpp)
+      - [10154 - Weights and Measures.cpp](/home/alexander/codes/uva2/volume101/10154 - Weights and Measures.cpp)
+      - [10158 - War.cpp](/home/alexander/codes/uva2/volume101/10158 - War.cpp)
+      - [10160 - Servicing Stations.cpp](/home/alexander/codes/uva2/volume101/10160 - Servicing Stations.cpp)
+      - [10161 - Ant on a Chessboard.cpp](/home/alexander/codes/uva2/volume101/10161 - Ant on a Chessboard.cpp)
+      - [10162 - Last Digit.cpp](/home/alexander/codes/uva2/volume101/10162 - Last Digit.cpp)
+      - [10164 - Number Game.cpp](/home/alexander/codes/uva2/volume101/10164 - Number Game.cpp)
+      - [10167 - Birthday Cake.c](/home/alexander/codes/uva2/volume101/10167 - Birthday Cake.c)
+      - [10168 - Summation of Four Primes.cpp](/home/alexander/codes/uva2/volume101/10168 - Summation of Four Primes.cpp)
+      - [10169 - Urn-ball Probabilities.cpp](/home/alexander/codes/uva2/volume101/10169 - Urn-ball Probabilities.cpp)
+      - [10170 - The Hotel with Infinite Rooms.cpp](/home/alexander/codes/uva2/volume101/10170 - The Hotel with Infinite Rooms.cpp)
+      - [10171 - Meeting Prof. Miguel.cpp](/home/alexander/codes/uva2/volume101/10171 - Meeting Prof. Miguel.cpp)
+      - [10173 - Smallest Bounding Rectangle.cpp](/home/alexander/codes/uva2/volume101/10173 - Smallest Bounding Rectangle.cpp)
+      - [10174 - Couple-Bachelor-Spinster Numbers.cpp](/home/alexander/codes/uva2/volume101/10174 - Couple-Bachelor-Spinster Numbers.cpp)
+      - [10176 - Ocean Deep  - Make it shallow.cpp](/home/alexander/codes/uva2/volume101/10176 - Ocean Deep  - Make it shallow.cpp)
+      - [10177 - (2.3.4)-D Sqr.Rects.Cubes.Boxes.cpp](/home/alexander/codes/uva2/volume101/10177 - (2.3.4)-D Sqr.Rects.Cubes.Boxes.cpp)
+      - [10178 - Count the Faces.cpp](/home/alexander/codes/uva2/volume101/10178 - Count the Faces.cpp)
+      - [10179 - Irreducable Basic Fractions.cpp](/home/alexander/codes/uva2/volume101/10179 - Irreducable Basic Fractions.cpp)
+      - [10181 - 15-Puzzle Problem.cpp](/home/alexander/codes/uva2/volume101/10181 - 15-Puzzle Problem.cpp)
+      - [10182 - Bee Maja.cpp](/home/alexander/codes/uva2/volume101/10182 - Bee Maja.cpp)
+      - [10184 - Equidistance.cpp](/home/alexander/codes/uva2/volume101/10184 - Equidistance.cpp)
+      - [10185 - Phylogenetic Trees Inherited.cpp](/home/alexander/codes/uva2/volume101/10185 - Phylogenetic Trees Inherited.cpp)
+      - [10186 - Euro Cup 2000.cpp](/home/alexander/codes/uva2/volume101/10186 - Euro Cup 2000.cpp)
+      - [10188 - Automated Judge Script.cpp](/home/alexander/codes/uva2/volume101/10188 - Automated Judge Script.cpp)
+      - [10189 - Minesweeper.cpp](/home/alexander/codes/uva2/volume101/10189 - Minesweeper.cpp)
+      - [10190 - Divide, But Not Quite Conquer.cpp](/home/alexander/codes/uva2/volume101/10190 - Divide, But Not Quite Conquer.cpp)
+      - [10191 - Longest Nap.cpp](/home/alexander/codes/uva2/volume101/10191 - Longest Nap.cpp)
+      - [10192 - Vacation.cpp](/home/alexander/codes/uva2/volume101/10192 - Vacation.cpp)
+      - [10194 - Football (aka Soccer).cpp](/home/alexander/codes/uva2/volume101/10194 - Football (aka Soccer).cpp)
+      - [10195 - The Knights Of The Round Table.cpp](/home/alexander/codes/uva2/volume101/10195 - The Knights Of The Round Table.cpp)
+      - [10199 - Tourist Guide.cpp](/home/alexander/codes/uva2/volume101/10199 - Tourist Guide.cpp)
+  - volume102
+      - [10201 - Adventures in Moving - Part IV.cpp](/home/alexander/codes/uva2/volume102/10201 - Adventures in Moving - Part IV.cpp)
+      - [10202 - Pairsumonious Numbers.cpp](/home/alexander/codes/uva2/volume102/10202 - Pairsumonious Numbers.cpp)
+      - [10205 - Stack 'em Up.cpp](/home/alexander/codes/uva2/volume102/10205 - Stack 'em Up.cpp)
+      - [10206 - Stars2.cpp](/home/alexander/codes/uva2/volume102/10206 - Stars2.cpp)
+      - [10206 - Stars3.cpp](/home/alexander/codes/uva2/volume102/10206 - Stars3.cpp)
+      - [10206 - Stars.cpp](/home/alexander/codes/uva2/volume102/10206 - Stars.cpp)
+      - [10209 - Is This Integration.cpp](/home/alexander/codes/uva2/volume102/10209 - Is This Integration.cpp)
+      - [10213 - How Many Pieces of Land.cpp](/home/alexander/codes/uva2/volume102/10213 - How Many Pieces of Land.cpp)
+      - [10215 - The LargestSmallest Box.c](/home/alexander/codes/uva2/volume102/10215 - The LargestSmallest Box.c)
+      - [10219 - Find the ways !.cpp](/home/alexander/codes/uva2/volume102/10219 - Find the ways !.cpp)
+      - [10220 - I Love Big Numbers !.cpp](/home/alexander/codes/uva2/volume102/10220 - I Love Big Numbers !.cpp)
+      - [10221 - Satellites.cpp](/home/alexander/codes/uva2/volume102/10221 - Satellites.cpp)
+      - [10226 - Hardwood Species.cpp](/home/alexander/codes/uva2/volume102/10226 - Hardwood Species.cpp)
+      - [10226 - Hardwood Species[Trie].cpp](/home/alexander/codes/uva2/volume102/10226 - Hardwood Species[Trie].cpp)
+      - [10227 - Forests.cpp](/home/alexander/codes/uva2/volume102/10227 - Forests.cpp)
+      - [10228 - Star not a Tree.cpp](/home/alexander/codes/uva2/volume102/10228 - Star not a Tree.cpp)
+      - [10229 - Modular Fibonacci.cpp](/home/alexander/codes/uva2/volume102/10229 - Modular Fibonacci.cpp)
+      - [10234 - Frequent Substrings.cpp](/home/alexander/codes/uva2/volume102/10234 - Frequent Substrings.cpp)
+      - [10242 - Fourth Point !!.cpp](/home/alexander/codes/uva2/volume102/10242 - Fourth Point !!.cpp)
+      - [10243 - FireFireFire.cpp](/home/alexander/codes/uva2/volume102/10243 - FireFireFire.cpp)
+      - [10245 - The Closest Pair Problem.cpp](/home/alexander/codes/uva2/volume102/10245 - The Closest Pair Problem.cpp)
+      - [10248 - The Integer All-time Champ.cpp](/home/alexander/codes/uva2/volume102/10248 - The Integer All-time Champ.cpp)
+      - [10248 - The Integer All-time Champ[匹配].cpp](/home/alexander/codes/uva2/volume102/10248 - The Integer All-time Champ[匹配].cpp)
+      - [10249 - The Grand Dinner.cpp](/home/alexander/codes/uva2/volume102/10249 - The Grand Dinner.cpp)
+      - [10252 - Common Permutation.cpp](/home/alexander/codes/uva2/volume102/10252 - Common Permutation.cpp)
+      - [10253 - Series-Parallel Networks.cpp](/home/alexander/codes/uva2/volume102/10253 - Series-Parallel Networks.cpp)
+      - [10254 - The Priest Mathematician.cpp](/home/alexander/codes/uva2/volume102/10254 - The Priest Mathematician.cpp)
+      - [10256 - The Great Divide.cpp](/home/alexander/codes/uva2/volume102/10256 - The Great Divide.cpp)
+      - [10258 - Contest Scoreboard.cpp](/home/alexander/codes/uva2/volume102/10258 - Contest Scoreboard.cpp)
+      - [10260 - Soundex.cpp](/home/alexander/codes/uva2/volume102/10260 - Soundex.cpp)
+      - [10261 - Ferry Loading.cpp](/home/alexander/codes/uva2/volume102/10261 - Ferry Loading.cpp)
+      - [10263 - Railway.cpp](/home/alexander/codes/uva2/volume102/10263 - Railway.cpp)
+      - [10264 - The Most Potent Corner.cpp](/home/alexander/codes/uva2/volume102/10264 - The Most Potent Corner.cpp)
+      - [10266 - Surveying.cpp](/home/alexander/codes/uva2/volume102/10266 - Surveying.cpp)
+      - [10267 - Graphical Editor.cpp](/home/alexander/codes/uva2/volume102/10267 - Graphical Editor.cpp)
+      - [10268 - 498-bis.cpp](/home/alexander/codes/uva2/volume102/10268 - 498-bis.cpp)
+      - [10271 - Chopsticks.cpp](/home/alexander/codes/uva2/volume102/10271 - Chopsticks.cpp)
+      - [10276 - Hanoi Tower Troubles Again!.c](/home/alexander/codes/uva2/volume102/10276 - Hanoi Tower Troubles Again!.c)
+      - [10278 - Fire Station.cpp](/home/alexander/codes/uva2/volume102/10278 - Fire Station.cpp)
+      - [10279 - Mine Sweeper.cpp](/home/alexander/codes/uva2/volume102/10279 - Mine Sweeper.cpp)
+      - [10280 - Old Wine Into New Bottles.cpp](/home/alexander/codes/uva2/volume102/10280 - Old Wine Into New Bottles.cpp)
+      - [10281 - Average Speed.cpp](/home/alexander/codes/uva2/volume102/10281 - Average Speed.cpp)
+      - [10282 - Babelfish.cpp](/home/alexander/codes/uva2/volume102/10282 - Babelfish.cpp)
+      - [10283 - The Kissing Circles.cpp](/home/alexander/codes/uva2/volume102/10283 - The Kissing Circles.cpp)
+      - [10286 - Trouble with a Pentagon.cpp](/home/alexander/codes/uva2/volume102/10286 - Trouble with a Pentagon.cpp)
+      - [10288 - Coupons.cpp](/home/alexander/codes/uva2/volume102/10288 - Coupons.cpp)
+      - [10293 - Word Length and Frequency.cpp](/home/alexander/codes/uva2/volume102/10293 - Word Length and Frequency.cpp)
+      - [10295 - Hay Points.cpp](/home/alexander/codes/uva2/volume102/10295 - Hay Points.cpp)
+      - [10296 - Jogging Trail.cpp](/home/alexander/codes/uva2/volume102/10296 - Jogging Trail.cpp)
+      - [10296 - Jogging Trails.cpp](/home/alexander/codes/uva2/volume102/10296 - Jogging Trails.cpp)
+  - volume103
+      - [10300 - Ecological Premium.cpp](/home/alexander/codes/uva2/volume103/10300 - Ecological Premium.cpp)
+      - [10304 - Optimal Binary Search Tree.cpp](/home/alexander/codes/uva2/volume103/10304 - Optimal Binary Search Tree.cpp)
+      - [10305 - Ordering Tasks.cpp](/home/alexander/codes/uva2/volume103/10305 - Ordering Tasks.cpp)
+      - [10306 - e-Coins.cpp](/home/alexander/codes/uva2/volume103/10306 - e-Coins.cpp)
+      - [10308 - Roads in the North.cpp](/home/alexander/codes/uva2/volume103/10308 - Roads in the North.cpp)
+      - [10309 - Turn the Lights Off.cpp](/home/alexander/codes/uva2/volume103/10309 - Turn the Lights Off.cpp)
+      - [10310 - Dog and Gopher.c](/home/alexander/codes/uva2/volume103/10310 - Dog and Gopher.c)
+      - [10311 - Goldbach and Euler.cpp](/home/alexander/codes/uva2/volume103/10311 - Goldbach and Euler.cpp)
+      - [10312 - Expression Bracketing.cpp](/home/alexander/codes/uva2/volume103/10312 - Expression Bracketing.cpp)
+      - [10313 - Pay the Price.cpp](/home/alexander/codes/uva2/volume103/10313 - Pay the Price.cpp)
+      - [10314 - Three Pigs.cpp](/home/alexander/codes/uva2/volume103/10314 - Three Pigs.cpp)
+      - [10315 - Poker Hands.cpp](/home/alexander/codes/uva2/volume103/10315 - Poker Hands.cpp)
+      - [10316 - Airline Hub.cpp](/home/alexander/codes/uva2/volume103/10316 - Airline Hub.cpp)
+      - [10319 - Manhattan.cpp](/home/alexander/codes/uva2/volume103/10319 - Manhattan.cpp)
+      - [10320 - Cow Trouble! Help Please.cpp](/home/alexander/codes/uva2/volume103/10320 - Cow Trouble! Help Please.cpp)
+      - [10321 - Polygon Intersection.cpp](/home/alexander/codes/uva2/volume103/10321 - Polygon Intersection.cpp)
+      - [10325 - The Lottery.cpp](/home/alexander/codes/uva2/volume103/10325 - The Lottery.cpp)
+      - [10327 - Flip Sort.cpp](/home/alexander/codes/uva2/volume103/10327 - Flip Sort.cpp)
+      - [10328 - Coin Toss.cpp](/home/alexander/codes/uva2/volume103/10328 - Coin Toss.cpp)
+      - [10334 - Ray Through Glasses.cpp](/home/alexander/codes/uva2/volume103/10334 - Ray Through Glasses.cpp)
+      - [10335 - Ray Inside a Polygon.cpp](/home/alexander/codes/uva2/volume103/10335 - Ray Inside a Polygon.cpp)
+      - [10338 - Mischievous Children.c](/home/alexander/codes/uva2/volume103/10338 - Mischievous Children.c)
+      - [10340 - All in All.cpp](/home/alexander/codes/uva2/volume103/10340 - All in All.cpp)
+      - [10341 - Solve It.cpp](/home/alexander/codes/uva2/volume103/10341 - Solve It.cpp)
+      - [10341 - Solve It[Netwon].cpp](/home/alexander/codes/uva2/volume103/10341 - Solve It[Netwon].cpp)
+      - [10342 - Always Late.cpp](/home/alexander/codes/uva2/volume103/10342 - Always Late.cpp)
+      - [10342 - Always Late[spfa].cpp](/home/alexander/codes/uva2/volume103/10342 - Always Late[spfa].cpp)
+      - [10343 - Base64 Decoding.cpp](/home/alexander/codes/uva2/volume103/10343 - Base64 Decoding.cpp)
+      - [10346 - Peter's Smokes.cpp](/home/alexander/codes/uva2/volume103/10346 - Peter's Smokes.cpp)
+      - [10347 - Medians.c](/home/alexander/codes/uva2/volume103/10347 - Medians.c)
+      - [10348 - Submarines.cpp](/home/alexander/codes/uva2/volume103/10348 - Submarines.cpp)
+      - [10349 - Antenna Placement.cpp](/home/alexander/codes/uva2/volume103/10349 - Antenna Placement.cpp)
+      - [10351 - Cutting Diamonds.cpp](/home/alexander/codes/uva2/volume103/10351 - Cutting Diamonds.cpp)
+      - [10352 - Count the eWords.cpp](/home/alexander/codes/uva2/volume103/10352 - Count the eWords.cpp)
+      - [10356 - Rough Roads.cpp](/home/alexander/codes/uva2/volume103/10356 - Rough Roads.cpp)
+      - [10360 - Rat Attack.cpp](/home/alexander/codes/uva2/volume103/10360 - Rat Attack.cpp)
+      - [10363 - Tic Tac Toe.cpp](/home/alexander/codes/uva2/volume103/10363 - Tic Tac Toe.cpp)
+      - [10365 - Blocks.cpp](/home/alexander/codes/uva2/volume103/10365 - Blocks.cpp)
+      - [10368 - Euclid's Game.cpp](/home/alexander/codes/uva2/volume103/10368 - Euclid's Game.cpp)
+      - [10369 - Arctic Network.cpp](/home/alexander/codes/uva2/volume103/10369 - Arctic Network.cpp)
+      - [10370 - Above Average.cpp](/home/alexander/codes/uva2/volume103/10370 - Above Average.cpp)
+      - [10373 - The Brick Stops Here.cpp](/home/alexander/codes/uva2/volume103/10373 - The Brick Stops Here.cpp)
+      - [10374 - Election.cpp](/home/alexander/codes/uva2/volume103/10374 - Election.cpp)
+      - [10375 - Choose and divide.cpp](/home/alexander/codes/uva2/volume103/10375 - Choose and divide.cpp)
+      - [10378 - Complex Numbers.cpp](/home/alexander/codes/uva2/volume103/10378 - Complex Numbers.cpp)
+      - [10381 - The Rock.cpp](/home/alexander/codes/uva2/volume103/10381 - The Rock.cpp)
+      - [10382 - Watering Grass.cpp](/home/alexander/codes/uva2/volume103/10382 - Watering Grass.cpp)
+      - [10387 - Billiard.cpp](/home/alexander/codes/uva2/volume103/10387 - Billiard.cpp)
+      - [10389 - Subway.cpp](/home/alexander/codes/uva2/volume103/10389 - Subway.cpp)
+      - [10391 - Compound Words.cpp](/home/alexander/codes/uva2/volume103/10391 - Compound Words.cpp)
+      - [10393 - The One-Handed Typist.cpp](/home/alexander/codes/uva2/volume103/10393 - The One-Handed Typist.cpp)
+      - [10397 - Connect the Campus.cpp](/home/alexander/codes/uva2/volume103/10397 - Connect the Campus.cpp)
+      - [10397 - Connect the Campus[Delaunay].cpp](/home/alexander/codes/uva2/volume103/10397 - Connect the Campus[Delaunay].cpp)
+      - [10397 - Connect the Campus[random].cpp](/home/alexander/codes/uva2/volume103/10397 - Connect the Campus[random].cpp)
+  - volume104
+      - [10401 - Injured Queen Problem.cpp](/home/alexander/codes/uva2/volume104/10401 - Injured Queen Problem.cpp)
+      - [10404 - Bachet's Game.cpp](/home/alexander/codes/uva2/volume104/10404 - Bachet's Game.cpp)
+      - [10405 - Longest Common Subsequence.cpp](/home/alexander/codes/uva2/volume104/10405 - Longest Common Subsequence.cpp)
+      - [10407 - Simple division.cpp](/home/alexander/codes/uva2/volume104/10407 - Simple division.cpp)
+      - [10408 - Farey sequences.cpp](/home/alexander/codes/uva2/volume104/10408 - Farey sequences.cpp)
+      - [10409 - Die Game.cpp](/home/alexander/codes/uva2/volume104/10409 - Die Game.cpp)
+      - [10412 - Big Big Trees.cpp](/home/alexander/codes/uva2/volume104/10412 - Big Big Trees.cpp)
+      - [10413 - Crazy Savages.cpp](/home/alexander/codes/uva2/volume104/10413 - Crazy Savages.cpp)
+      - [10415 - Eb Alto Saxophone Player.cpp](/home/alexander/codes/uva2/volume104/10415 - Eb Alto Saxophone Player.cpp)
+      - [10419 - Sum-up the Primes.cpp](/home/alexander/codes/uva2/volume104/10419 - Sum-up the Primes.cpp)
+      - [10420 - List of Conquests.cpp](/home/alexander/codes/uva2/volume104/10420 - List of Conquests.cpp)
+      - [10424 - Love Calculator.cpp](/home/alexander/codes/uva2/volume104/10424 - Love Calculator.cpp)
+      - [10427 - Naughty Sleepy Boys.cpp](/home/alexander/codes/uva2/volume104/10427 - Naughty Sleepy Boys.cpp)
+      - [10432 - Polygon Inside A Circle.c](/home/alexander/codes/uva2/volume104/10432 - Polygon Inside A Circle.c)
+      - [10433 - Automorphic Numbers.cpp](/home/alexander/codes/uva2/volume104/10433 - Automorphic Numbers.cpp)
+      - [10438 - Meta Editor.cpp](/home/alexander/codes/uva2/volume104/10438 - Meta Editor.cpp)
+      - [10440 - Ferry Loading II.cpp](/home/alexander/codes/uva2/volume104/10440 - Ferry Loading II.cpp)
+      - [10449 - Traffic.cpp](/home/alexander/codes/uva2/volume104/10449 - Traffic.cpp)
+      - [10450 - World Cup Noise.cpp](/home/alexander/codes/uva2/volume104/10450 - World Cup Noise.cpp)
+      - [10451 - Ancient Village Sports.cpp](/home/alexander/codes/uva2/volume104/10451 - Ancient Village Sports.cpp)
+      - [10452 - Marcus.cpp](/home/alexander/codes/uva2/volume104/10452 - Marcus.cpp)
+      - [10454 - Trexpression.cpp](/home/alexander/codes/uva2/volume104/10454 - Trexpression.cpp)
+      - [10457 - Magic Car.cpp](/home/alexander/codes/uva2/volume104/10457 - Magic Car.cpp)
+      - [10459 - The Tree Root.cpp](/home/alexander/codes/uva2/volume104/10459 - The Tree Root.cpp)
+      - [10462 - Is There A Second Way Left.cpp](/home/alexander/codes/uva2/volume104/10462 - Is There A Second Way Left.cpp)
+      - [10463 - Aztec Knights.cpp](/home/alexander/codes/uva2/volume104/10463 - Aztec Knights.cpp)
+      - [10465 - Homer Simpson.cpp](/home/alexander/codes/uva2/volume104/10465 - Homer Simpson.cpp)
+      - [10467 - Parse Tree.cpp](/home/alexander/codes/uva2/volume104/10467 - Parse Tree.cpp)
+      - [10468 - Rigid Circle Packing.cpp](/home/alexander/codes/uva2/volume104/10468 - Rigid Circle Packing.cpp)
+      - [10469 - To Carry or not to Carry.cpp](/home/alexander/codes/uva2/volume104/10469 - To Carry or not to Carry.cpp)
+      - [10474 - Where is the Marble.cpp](/home/alexander/codes/uva2/volume104/10474 - Where is the Marble.cpp)
+      - [10476 - Spam or Not Spam.cpp](/home/alexander/codes/uva2/volume104/10476 - Spam or Not Spam.cpp)
+      - [10480 - Sabotage.cpp](/home/alexander/codes/uva2/volume104/10480 - Sabotage.cpp)
+      - [10482 - The Candyman Can.cpp](/home/alexander/codes/uva2/volume104/10482 - The Candyman Can.cpp)
+      - [10483 - The Sum Equals the Product.cpp](/home/alexander/codes/uva2/volume104/10483 - The Sum Equals the Product.cpp)
+      - [10484 - Divisibility of Factors.cpp](/home/alexander/codes/uva2/volume104/10484 - Divisibility of Factors.cpp)
+      - [10486 - Mountain Village.cpp](/home/alexander/codes/uva2/volume104/10486 - Mountain Village.cpp)
+      - [10487 - Closest Sums.c](/home/alexander/codes/uva2/volume104/10487 - Closest Sums.c)
+      - [10489 - Boxes of Chocolates.cpp](/home/alexander/codes/uva2/volume104/10489 - Boxes of Chocolates.cpp)
+      - [10490 - Mr. Azad and his Son.cpp](/home/alexander/codes/uva2/volume104/10490 - Mr. Azad and his Son.cpp)
+      - [10491 - Cows and Cars.cpp](/home/alexander/codes/uva2/volume104/10491 - Cows and Cars.cpp)
+      - [10496 - Collecting Beepers.cpp](/home/alexander/codes/uva2/volume104/10496 - Collecting Beepers.cpp)
+      - [10498 - Happiness[simplex].cpp](/home/alexander/codes/uva2/volume104/10498 - Happiness[simplex].cpp)
+  - volume105
+      - [10500 - Robot maps.cpp](/home/alexander/codes/uva2/volume105/10500 - Robot maps.cpp)
+      - [10502 - Counting Rectangles.cpp](/home/alexander/codes/uva2/volume105/10502 - Counting Rectangles.cpp)
+      - [10503 - The dominoes solitaire.cpp](/home/alexander/codes/uva2/volume105/10503 - The dominoes solitaire.cpp)
+      - [10505 - Montesco vs Capuleto.cpp](/home/alexander/codes/uva2/volume105/10505 - Montesco vs Capuleto.cpp)
+      - [10508 - Word Morphing.cpp](/home/alexander/codes/uva2/volume105/10508 - Word Morphing.cpp)
+      - [10509 - R U Kidding Mr. Feynman.cpp](/home/alexander/codes/uva2/volume105/10509 - R U Kidding Mr. Feynman.cpp)
+      - [10511 - Councilling.cpp](/home/alexander/codes/uva2/volume105/10511 - Councilling.cpp)
+      - [10511 - Councilling[maxflow].cpp](/home/alexander/codes/uva2/volume105/10511 - Councilling[maxflow].cpp)
+      - [10515 - Powers Et Al.cpp](/home/alexander/codes/uva2/volume105/10515 - Powers Et Al.cpp)
+      - [10520 - Determine it.cpp](/home/alexander/codes/uva2/volume105/10520 - Determine it.cpp)
+      - [10524 - Matrix Reloaded.cpp](/home/alexander/codes/uva2/volume105/10524 - Matrix Reloaded.cpp)
+      - [10527 - Persistent Numbers.cpp](/home/alexander/codes/uva2/volume105/10527 - Persistent Numbers.cpp)
+      - [10529 - Dumb Bones.cpp](/home/alexander/codes/uva2/volume105/10529 - Dumb Bones.cpp)
+      - [10530 - Guessing Game.cpp](/home/alexander/codes/uva2/volume105/10530 - Guessing Game.cpp)
+      - [10532 - Combination! Once Again.cpp](/home/alexander/codes/uva2/volume105/10532 - Combination! Once Again.cpp)
+      - [10534 - Wavio SequenceV2.cpp](/home/alexander/codes/uva2/volume105/10534 - Wavio SequenceV2.cpp)
+      - [10537 - The Toll! Revisited.cpp](/home/alexander/codes/uva2/volume105/10537 - The Toll! Revisited.cpp)
+      - [10539 - Almost Prime Numbers2.cpp](/home/alexander/codes/uva2/volume105/10539 - Almost Prime Numbers2.cpp)
+      - [10539 - Almost Prime Numbers.cpp](/home/alexander/codes/uva2/volume105/10539 - Almost Prime Numbers.cpp)
+      - [10541 - Stripe.cpp](/home/alexander/codes/uva2/volume105/10541 - Stripe.cpp)
+      - [10545 - Maximal Quadrilateral.cpp](/home/alexander/codes/uva2/volume105/10545 - Maximal Quadrilateral.cpp)
+      - [10551 - Basic Remains.cpp](/home/alexander/codes/uva2/volume105/10551 - Basic Remains.cpp)
+      - [10554 - Calories from Fat.cpp](/home/alexander/codes/uva2/volume105/10554 - Calories from Fat.cpp)
+      - [10555 - Dead Fraction.cpp](/home/alexander/codes/uva2/volume105/10555 - Dead Fraction.cpp)
+      - [10557 - XYZZY.cpp](/home/alexander/codes/uva2/volume105/10557 - XYZZY.cpp)
+      - [10562 - Undraw the Trees.cpp](/home/alexander/codes/uva2/volume105/10562 - Undraw the Trees.cpp)
+      - [10563 - Least Squares.cpp](/home/alexander/codes/uva2/volume105/10563 - Least Squares.cpp)
+      - [10566 - Crossed Ladders.cpp](/home/alexander/codes/uva2/volume105/10566 - Crossed Ladders.cpp)
+      - [10568 - n Group k.cpp](/home/alexander/codes/uva2/volume105/10568 - n Group k.cpp)
+      - [10571 - Products.cpp](/home/alexander/codes/uva2/volume105/10571 - Products.cpp)
+      - [10573 - Geometry Paradox.cpp](/home/alexander/codes/uva2/volume105/10573 - Geometry Paradox.cpp)
+      - [10574 - Counting Rectangles.cpp](/home/alexander/codes/uva2/volume105/10574 - Counting Rectangles.cpp)
+      - [10574 - Counting Rectanglesv2.cpp](/home/alexander/codes/uva2/volume105/10574 - Counting Rectanglesv2.cpp)
+      - [10576 - Y2K Accounting Bug.cpp](/home/alexander/codes/uva2/volume105/10576 - Y2K Accounting Bug.cpp)
+      - [10582 - ASCII Labyrinth.cpp](/home/alexander/codes/uva2/volume105/10582 - ASCII Labyrinth.cpp)
+      - [10585 - Center of symmetry.cpp](/home/alexander/codes/uva2/volume105/10585 - Center of symmetry.cpp)
+      - [10586 - Polynomial Remains.cpp](/home/alexander/codes/uva2/volume105/10586 - Polynomial Remains.cpp)
+      - [10588 - Queuing at the doctors.cpp](/home/alexander/codes/uva2/volume105/10588 - Queuing at the doctors.cpp)
+      - [10589 - Area.cpp](/home/alexander/codes/uva2/volume105/10589 - Area.cpp)
+      - [10592 - Freedom Fighter.cpp](/home/alexander/codes/uva2/volume105/10592 - Freedom Fighter.cpp)
+      - [10594 - Data Flow.cpp](/home/alexander/codes/uva2/volume105/10594 - Data Flow.cpp)
+      - [10596 - Morning Walk.cpp](/home/alexander/codes/uva2/volume105/10596 - Morning Walk.cpp)
+      - [10597 - Right Words.cpp](/home/alexander/codes/uva2/volume105/10597 - Right Words.cpp)
+  - volume106
+      - [10600 - ACM Contest and Blackout.cpp](/home/alexander/codes/uva2/volume106/10600 - ACM Contest and Blackout.cpp)
+      - [10602 - Editor Nottoobad.cpp](/home/alexander/codes/uva2/volume106/10602 - Editor Nottoobad.cpp)
+      - [10603 - Fill.cpp](/home/alexander/codes/uva2/volume106/10603 - Fill.cpp)
+      - [10608 - Friends.cpp](/home/alexander/codes/uva2/volume106/10608 - Friends.cpp)
+      - [10611 - The Playboy Chimp.cpp](/home/alexander/codes/uva2/volume106/10611 - The Playboy Chimp.cpp)
+      - [10613 - Mushroom Misery.cpp](/home/alexander/codes/uva2/volume106/10613 - Mushroom Misery.cpp)
+      - [10615 - Rooks.cpp](/home/alexander/codes/uva2/volume106/10615 - Rooks.cpp)
+      - [10616 - Divisible Group Sums.cpp](/home/alexander/codes/uva2/volume106/10616 - Divisible Group Sums.cpp)
+      - [10617 - Again Palindrome.cpp](/home/alexander/codes/uva2/volume106/10617 - Again Palindrome.cpp)
+      - [10622 - Perfect P-th Powers.cpp](/home/alexander/codes/uva2/volume106/10622 - Perfect P-th Powers.cpp)
+      - [10624 - Super Number.cpp](/home/alexander/codes/uva2/volume106/10624 - Super Number.cpp)
+      - [10625 - GNU = GNU'sNotUnix.cpp](/home/alexander/codes/uva2/volume106/10625 - GNU = GNU'sNotUnix.cpp)
+      - [10633 - Rare Easy Problem.cpp](/home/alexander/codes/uva2/volume106/10633 - Rare Easy Problem.cpp)
+      - [10642 - Can You Solve It.cpp](/home/alexander/codes/uva2/volume106/10642 - Can You Solve It.cpp)
+      - [10651 - Pebble Solitaire.cpp](/home/alexander/codes/uva2/volume106/10651 - Pebble Solitaire.cpp)
+      - [10652 - Board Wrapping.cpp](/home/alexander/codes/uva2/volume106/10652 - Board Wrapping.cpp)
+      - [10653 - Bombs! NO they are Mines!!.cpp](/home/alexander/codes/uva2/volume106/10653 - Bombs! NO they are Mines!!.cpp)
+      - [10656 - Maximum Sum (II).cpp](/home/alexander/codes/uva2/volume106/10656 - Maximum Sum (II).cpp)
+      - [10659 - Fitting Text into Slides.cpp](/home/alexander/codes/uva2/volume106/10659 - Fitting Text into Slides.cpp)
+      - [10660 - Citizen attention offices.cpp](/home/alexander/codes/uva2/volume106/10660 - Citizen attention offices.cpp)
+      - [10664 - Luggage.cpp](/home/alexander/codes/uva2/volume106/10664 - Luggage.cpp)
+      - [10665 - Diatribe against Pigeonholes.cpp](/home/alexander/codes/uva2/volume106/10665 - Diatribe against Pigeonholes.cpp)
+      - [10666 - The Eurocup is Here.cpp](/home/alexander/codes/uva2/volume106/10666 - The Eurocup is Here.cpp)
+      - [10667 - Largest Block.cpp](/home/alexander/codes/uva2/volume106/10667 - Largest Block.cpp)
+      - [10668 - Expanding Rods.cpp](/home/alexander/codes/uva2/volume106/10668 - Expanding Rods.cpp)
+      - [10672 - Marbles on a tree.cpp](/home/alexander/codes/uva2/volume106/10672 - Marbles on a tree.cpp)
+      - [10673 - Play with Floor and Ceil.cpp](/home/alexander/codes/uva2/volume106/10673 - Play with Floor and Ceil.cpp)
+      - [10677 - Base Equality.cpp](/home/alexander/codes/uva2/volume106/10677 - Base Equality.cpp)
+      - [10678 - The Grazing Cow.cpp](/home/alexander/codes/uva2/volume106/10678 - The Grazing Cow.cpp)
+      - [10679 - I Love Strings (2).cpp](/home/alexander/codes/uva2/volume106/10679 - I Love Strings (2).cpp)
+      - [10679 - I Love Strings(AC).cpp](/home/alexander/codes/uva2/volume106/10679 - I Love Strings(AC).cpp)
+      - [10679 - I Love Strings[case1].cpp](/home/alexander/codes/uva2/volume106/10679 - I Love Strings[case1].cpp)
+      - [10679 - I Love Strings.cpp](/home/alexander/codes/uva2/volume106/10679 - I Love Strings.cpp)
+      - [10679 - I Love Strings[SA].cpp](/home/alexander/codes/uva2/volume106/10679 - I Love Strings[SA].cpp)
+      - [10680 - LCM.cpp](/home/alexander/codes/uva2/volume106/10680 - LCM.cpp)
+      - [10681 - Teobaldo's Trip.cpp](/home/alexander/codes/uva2/volume106/10681 - Teobaldo's Trip.cpp)
+      - [10682 - Forr.cpp](/home/alexander/codes/uva2/volume106/10682 - Forr.cpp)
+      - [10683 - The decadary watch.cpp](/home/alexander/codes/uva2/volume106/10683 - The decadary watch.cpp)
+      - [10684 - The jackpot.cpp](/home/alexander/codes/uva2/volume106/10684 - The jackpot.cpp)
+      - [10685 - Nature.cpp](/home/alexander/codes/uva2/volume106/10685 - Nature.cpp)
+      - [10686 - SQF Problems.cpp](/home/alexander/codes/uva2/volume106/10686 - SQF Problems.cpp)
+      - [10688 - The Poor Giant.cpp](/home/alexander/codes/uva2/volume106/10688 - The Poor Giant.cpp)
+      - [10689 - Yet another Number Sequence.cpp](/home/alexander/codes/uva2/volume106/10689 - Yet another Number Sequence.cpp)
+      - [10691 - Subway.cpp](/home/alexander/codes/uva2/volume106/10691 - Subway.cpp)
+      - [10692 - Huge Mods.cpp](/home/alexander/codes/uva2/volume106/10692 - Huge Mods.cpp)
+      - [10693 - Traffic Volume.cpp](/home/alexander/codes/uva2/volume106/10693 - Traffic Volume.cpp)
+      - [10694 - Combinatorial Summation.java](/home/alexander/codes/uva2/volume106/10694 - Combinatorial Summation.java)
+      - [10696 - f91.cpp](/home/alexander/codes/uva2/volume106/10696 - f91.cpp)
+      - [10699 - Count the factors.cpp](/home/alexander/codes/uva2/volume106/10699 - Count the factors.cpp)
+  - volume107
+      - [10700 - Camel trading.cpp](/home/alexander/codes/uva2/volume107/10700 - Camel trading.cpp)
+      - [10701 - Pre, in and post.cpp](/home/alexander/codes/uva2/volume107/10701 - Pre, in and post.cpp)
+      - [10702 - Travelling Salesman.cpp](/home/alexander/codes/uva2/volume107/10702 - Travelling Salesman.cpp)
+      - [10703 - Free spots.cpp](/home/alexander/codes/uva2/volume107/10703 - Free spots.cpp)
+      - [10704 - Traffic.cpp](/home/alexander/codes/uva2/volume107/10704 - Traffic.cpp)
+      - [10706 - Number Sequence.cpp](/home/alexander/codes/uva2/volume107/10706 - Number Sequence.cpp)
+      - [10707 - 2D-Nim.cpp](/home/alexander/codes/uva2/volume107/10707 - 2D-Nim.cpp)
+      - [10709 - Intersection is Not that Easy.cpp](/home/alexander/codes/uva2/volume107/10709 - Intersection is Not that Easy.cpp)
+      - [10709 - Intersection is Not that Easy[v2].cpp](/home/alexander/codes/uva2/volume107/10709 - Intersection is Not that Easy[v2].cpp)
+      - [10712 - Count the Numbers.cpp](/home/alexander/codes/uva2/volume107/10712 - Count the Numbers.cpp)
+      - [10713 - Map.cpp](/home/alexander/codes/uva2/volume107/10713 - Map.cpp)
+      - [10714 - Ants.cpp](/home/alexander/codes/uva2/volume107/10714 - Ants.cpp)
+      - [10715 - Cat.cpp](/home/alexander/codes/uva2/volume107/10715 - Cat.cpp)
+      - [10715 - Cat[v2].cpp](/home/alexander/codes/uva2/volume107/10715 - Cat[v2].cpp)
+      - [10715 - Cat[v3].cpp](/home/alexander/codes/uva2/volume107/10715 - Cat[v3].cpp)
+      - [10715 - Cat[v4].cpp](/home/alexander/codes/uva2/volume107/10715 - Cat[v4].cpp)
+      - [10715 - Cat[v5].cpp](/home/alexander/codes/uva2/volume107/10715 - Cat[v5].cpp)
+      - [10717 - Mint.cpp](/home/alexander/codes/uva2/volume107/10717 - Mint.cpp)
+      - [10718 - Bit Mask.cpp](/home/alexander/codes/uva2/volume107/10718 - Bit Mask.cpp)
+      - [10719 - Quotient Polynomial.cpp](/home/alexander/codes/uva2/volume107/10719 - Quotient Polynomial.cpp)
+      - [10720 - Graph Construction.cpp](/home/alexander/codes/uva2/volume107/10720 - Graph Construction.cpp)
+      - [10721 - Bar Codes.cpp](/home/alexander/codes/uva2/volume107/10721 - Bar Codes.cpp)
+      - [10722 - Super Lucky Numbers.cpp](/home/alexander/codes/uva2/volume107/10722 - Super Lucky Numbers.cpp)
+      - [10722 - Super Lucky Numbersv2.cpp](/home/alexander/codes/uva2/volume107/10722 - Super Lucky Numbersv2.cpp)
+      - [10725 - Triangular Square.cpp](/home/alexander/codes/uva2/volume107/10725 - Triangular Square.cpp)
+      - [10728 - Help.cpp](/home/alexander/codes/uva2/volume107/10728 - Help.cpp)
+      - [10729 - Treequivalence.cpp](/home/alexander/codes/uva2/volume107/10729 - Treequivalence.cpp)
+      - [10730 - Antiarithmetic.cpp](/home/alexander/codes/uva2/volume107/10730 - Antiarithmetic.cpp)
+      - [10731 - Test.cpp](/home/alexander/codes/uva2/volume107/10731 - Test.cpp)
+      - [10732 - The Strange Research.cpp](/home/alexander/codes/uva2/volume107/10732 - The Strange Research.cpp)
+      - [10733 - The Colored Cubes.cpp](/home/alexander/codes/uva2/volume107/10733 - The Colored Cubes.cpp)
+      - [10738 - Riemann vs Mertens.cpp](/home/alexander/codes/uva2/volume107/10738 - Riemann vs Mertens.cpp)
+      - [10739 - String to Palindrome.cpp](/home/alexander/codes/uva2/volume107/10739 - String to Palindrome.cpp)
+      - [10740 - Not the Best.cpp](/home/alexander/codes/uva2/volume107/10740 - Not the Best.cpp)
+      - [10744 - The Optimal Super-Highway.cpp](/home/alexander/codes/uva2/volume107/10744 - The Optimal Super-Highway.cpp)
+      - [10745 - Dominant Strings.cpp](/home/alexander/codes/uva2/volume107/10745 - Dominant Strings.cpp)
+      - [10746 - Crime Wave - The Sequel.cpp](/home/alexander/codes/uva2/volume107/10746 - Crime Wave - The Sequel.cpp)
+      - [10747 - Maximum Subsequence.cpp](/home/alexander/codes/uva2/volume107/10747 - Maximum Subsequence.cpp)
+      - [10748 - Knights Roaming[fixed].cpp](/home/alexander/codes/uva2/volume107/10748 - Knights Roaming[fixed].cpp)
+      - [10755 - Garbage Heap.cpp](/home/alexander/codes/uva2/volume107/10755 - Garbage Heap.cpp)
+      - [10759 - Dice Throwing.cpp](/home/alexander/codes/uva2/volume107/10759 - Dice Throwing.cpp)
+      - [10762 - Treasure Castle.cpp](/home/alexander/codes/uva2/volume107/10762 - Treasure Castle.cpp)
+      - [10763 - Foreign Exchange.cpp](/home/alexander/codes/uva2/volume107/10763 - Foreign Exchange.cpp)
+      - [10764 - Signed-digit numbers.cpp](/home/alexander/codes/uva2/volume107/10764 - Signed-digit numbers.cpp)
+      - [10766 - Organising the Organisation.cpp](/home/alexander/codes/uva2/volume107/10766 - Organising the Organisation.cpp)
+      - [10769 - Pillars.cpp](/home/alexander/codes/uva2/volume107/10769 - Pillars.cpp)
+      - [10773 - Back to Intermediate Math.cpp](/home/alexander/codes/uva2/volume107/10773 - Back to Intermediate Math.cpp)
+      - [10776 - Determine The Combination.cpp](/home/alexander/codes/uva2/volume107/10776 - Determine The Combination.cpp)
+      - [10779 - Collectors Problem.cpp](/home/alexander/codes/uva2/volume107/10779 - Collectors Problem.cpp)
+      - [10783 - Odd Sum.cpp](/home/alexander/codes/uva2/volume107/10783 - Odd Sum.cpp)
+      - [10784 - Diagonal.cpp](/home/alexander/codes/uva2/volume107/10784 - Diagonal.cpp)
+      - [10788 - Parenthesizing Palindromes.cpp](/home/alexander/codes/uva2/volume107/10788 - Parenthesizing Palindromes.cpp)
+      - [10789 - Prime Frequency.cpp](/home/alexander/codes/uva2/volume107/10789 - Prime Frequency.cpp)
+      - [10790 - How Many Points of Intersection.cpp](/home/alexander/codes/uva2/volume107/10790 - How Many Points of Intersection.cpp)
+      - [10793 - The Orc Attack.cpp](/home/alexander/codes/uva2/volume107/10793 - The Orc Attack.cpp)
+      - [10794 - The Deadly Olympic Returns!!!.cpp](/home/alexander/codes/uva2/volume107/10794 - The Deadly Olympic Returns!!!.cpp)
+      - [10797 - Peaceful Sharing.cpp](/home/alexander/codes/uva2/volume107/10797 - Peaceful Sharing.cpp)
+      - [10799 - OOPS! They did it Again.cpp](/home/alexander/codes/uva2/volume107/10799 - OOPS! They did it Again.cpp)
+  - volume108
+      - [10800 - Not That Kind of Graph.cpp](/home/alexander/codes/uva2/volume108/10800 - Not That Kind of Graph.cpp)
+      - [10801 - Lift Hopping.cpp](/home/alexander/codes/uva2/volume108/10801 - Lift Hopping.cpp)
+      - [10802 - Lex Smallest Drive.cpp](/home/alexander/codes/uva2/volume108/10802 - Lex Smallest Drive.cpp)
+      - [10803 - Thunder Mountain.cpp](/home/alexander/codes/uva2/volume108/10803 - Thunder Mountain.cpp)
+      - [10804 - Gopher Strategy.cpp](/home/alexander/codes/uva2/volume108/10804 - Gopher Strategy.cpp)
+      - [10806 - Dijkstra, Dijkstra.cpp](/home/alexander/codes/uva2/volume108/10806 - Dijkstra, Dijkstra.cpp)
+      - [10806 - Dijkstra, Dijkstra[v2].cpp](/home/alexander/codes/uva2/volume108/10806 - Dijkstra, Dijkstra[v2].cpp)
+      - [10807 - Prim.cpp](/home/alexander/codes/uva2/volume108/10807 - Prim.cpp)
+      - [10810 - Ultra-QuickSort.cpp](/home/alexander/codes/uva2/volume108/10810 - Ultra-QuickSort.cpp)
+      - [10812 - Beat the Spread!.cpp](/home/alexander/codes/uva2/volume108/10812 - Beat the Spread!.cpp)
+      - [10815 - Andy's First Dictionary.cpp](/home/alexander/codes/uva2/volume108/10815 - Andy's First Dictionary.cpp)
+      - [10816 - Travel in Desert.cpp](/home/alexander/codes/uva2/volume108/10816 - Travel in Desert.cpp)
+      - [10817 - Headmaster's Headache.cpp](/home/alexander/codes/uva2/volume108/10817 - Headmaster's Headache.cpp)
+      - [10819 - Trouble of 13-Dots.cpp](/home/alexander/codes/uva2/volume108/10819 - Trouble of 13-Dots.cpp)
+      - [10820 - Send a Table.cpp](/home/alexander/codes/uva2/volume108/10820 - Send a Table.cpp)
+      - [10823 - Of Circles and Squares.cpp](/home/alexander/codes/uva2/volume108/10823 - Of Circles and Squares.cpp)
+      - [10825 - Anagram and Multiplication.cpp](/home/alexander/codes/uva2/volume108/10825 - Anagram and Multiplication.cpp)
+      - [10827 - Maximum sum on a torus.cpp](/home/alexander/codes/uva2/volume108/10827 - Maximum sum on a torus.cpp)
+      - [10828 - Back to Kernighan-Ritchie2.cpp](/home/alexander/codes/uva2/volume108/10828 - Back to Kernighan-Ritchie2.cpp)
+      - [10828 - Back to Kernighan-Ritchie.cpp](/home/alexander/codes/uva2/volume108/10828 - Back to Kernighan-Ritchie.cpp)
+      - [10830 - A New Function.cpp](/home/alexander/codes/uva2/volume108/10830 - A New Function.cpp)
+      - [10835 - Playing with Coins[AC][dp].cpp](/home/alexander/codes/uva2/volume108/10835 - Playing with Coins[AC][dp].cpp)
+      - [10838 - The Pawn Chess.cpp](/home/alexander/codes/uva2/volume108/10838 - The Pawn Chess.cpp)
+      - [10841 - Lift Hopping in the Real World.cpp](/home/alexander/codes/uva2/volume108/10841 - Lift Hopping in the Real World.cpp)
+      - [10842 - Traffic Flow.cpp](/home/alexander/codes/uva2/volume108/10842 - Traffic Flow.cpp)
+      - [10848 - Make Palindrome Checker.cpp](/home/alexander/codes/uva2/volume108/10848 - Make Palindrome Checker.cpp)
+      - [10851 - 2D Hieroglyphs decoder.cpp](/home/alexander/codes/uva2/volume108/10851 - 2D Hieroglyphs decoder.cpp)
+      - [10852 - Less Prime.cpp](/home/alexander/codes/uva2/volume108/10852 - Less Prime.cpp)
+      - [10855 - Rotated square.cpp](/home/alexander/codes/uva2/volume108/10855 - Rotated square.cpp)
+      - [10858 - Unique Factorization.cpp](/home/alexander/codes/uva2/volume108/10858 - Unique Factorization.cpp)
+      - [10860 - Many a Little makes a Mickle.cpp](/home/alexander/codes/uva2/volume108/10860 - Many a Little makes a Mickle.cpp)
+      - [10867 - Cutting a Polygon.cpp](/home/alexander/codes/uva2/volume108/10867 - Cutting a Polygon.cpp)
+      - [10870 - Recurrences.cpp](/home/alexander/codes/uva2/volume108/10870 - Recurrences.cpp)
+      - [10871 - Primed Subsequence.cpp](/home/alexander/codes/uva2/volume108/10871 - Primed Subsequence.cpp)
+      - [10874 - Segments.cpp](/home/alexander/codes/uva2/volume108/10874 - Segments.cpp)
+      - [10877 - Diceoids.cpp](/home/alexander/codes/uva2/volume108/10877 - Diceoids.cpp)
+      - [10879 - Code Refactoring.c](/home/alexander/codes/uva2/volume108/10879 - Code Refactoring.c)
+      - [10880 - Colin and Ryan.cpp](/home/alexander/codes/uva2/volume108/10880 - Colin and Ryan.cpp)
+      - [10881 - Piotr's Ants.cpp](/home/alexander/codes/uva2/volume108/10881 - Piotr's Ants.cpp)
+      - [10883 - Supermean.cpp](/home/alexander/codes/uva2/volume108/10883 - Supermean.cpp)
+      - [10888 - Warehouse.cpp](/home/alexander/codes/uva2/volume108/10888 - Warehouse.cpp)
+      - [10889 - The Lost Gift.cpp](/home/alexander/codes/uva2/volume108/10889 - The Lost Gift.cpp)
+      - [10890 - Maze.cpp](/home/alexander/codes/uva2/volume108/10890 - Maze.cpp)
+      - [10890 - Maze[v2].cpp](/home/alexander/codes/uva2/volume108/10890 - Maze[v2].cpp)
+      - [10891 - Game of Sum.cpp](/home/alexander/codes/uva2/volume108/10891 - Game of Sum.cpp)
+      - [10892 - LCM Cardinality.cpp](/home/alexander/codes/uva2/volume108/10892 - LCM Cardinality.cpp)
+      - [10894 - Save Hridoy.cpp](/home/alexander/codes/uva2/volume108/10894 - Save Hridoy.cpp)
+      - [10895 - Matrix Transpose.cpp](/home/alexander/codes/uva2/volume108/10895 - Matrix Transpose.cpp)
+      - [10896 - Known Plaintext Attack.cpp](/home/alexander/codes/uva2/volume108/10896 - Known Plaintext Attack.cpp)
+      - [10897 - Travelling Distance.cpp](/home/alexander/codes/uva2/volume108/10897 - Travelling Distance.cpp)
+  - volume109
+      - [10900 - So you want to be a 2n-aire.cpp](/home/alexander/codes/uva2/volume109/10900 - So you want to be a 2n-aire.cpp)
+      - [10901 - Ferry Loading III.cpp](/home/alexander/codes/uva2/volume109/10901 - Ferry Loading III.cpp)
+      - [10902 - Pick-up Sticks.cpp](/home/alexander/codes/uva2/volume109/10902 - Pick-up Sticks.cpp)
+      - [10903 - Rock-Paper-Scissors Tournament.cpp](/home/alexander/codes/uva2/volume109/10903 - Rock-Paper-Scissors Tournament.cpp)
+      - [10906 - Strange Integration.cpp](/home/alexander/codes/uva2/volume109/10906 - Strange Integration.cpp)
+      - [10907 - Art Gallery.cpp](/home/alexander/codes/uva2/volume109/10907 - Art Gallery.cpp)
+      - [10908 - Largest Square.cpp](/home/alexander/codes/uva2/volume109/10908 - Largest Square.cpp)
+      - [10909 - Lucky Number.cpp](/home/alexander/codes/uva2/volume109/10909 - Lucky Number.cpp)
+      - [10910 - Marks Distribution.c](/home/alexander/codes/uva2/volume109/10910 - Marks Distribution.c)
+      - [10912 - Simple Minded Hashing.cpp](/home/alexander/codes/uva2/volume109/10912 - Simple Minded Hashing.cpp)
+      - [10913 - Walking on a Grid.cpp](/home/alexander/codes/uva2/volume109/10913 - Walking on a Grid.cpp)
+      - [10915 - War on Weather.cpp](/home/alexander/codes/uva2/volume109/10915 - War on Weather.cpp)
+      - [10916 - Factstone Benchmark.cpp](/home/alexander/codes/uva2/volume109/10916 - Factstone Benchmark.cpp)
+      - [10918 - Tri Tiling.cpp](/home/alexander/codes/uva2/volume109/10918 - Tri Tiling.cpp)
+      - [10921 - Find the Telephone.cpp](/home/alexander/codes/uva2/volume109/10921 - Find the Telephone.cpp)
+      - [10922 - 2 the 9s.cpp](/home/alexander/codes/uva2/volume109/10922 - 2 the 9s.cpp)
+      - [10924 - Prime Words.cpp](/home/alexander/codes/uva2/volume109/10924 - Prime Words.cpp)
+      - [10928 - My Dear Neighbours.cpp](/home/alexander/codes/uva2/volume109/10928 - My Dear Neighbours.cpp)
+      - [10929 - You can say 11.cpp](/home/alexander/codes/uva2/volume109/10929 - You can say 11.cpp)
+      - [10930 - A-Sequence.cpp](/home/alexander/codes/uva2/volume109/10930 - A-Sequence.cpp)
+      - [10934 - Dropping water balloons.cpp](/home/alexander/codes/uva2/volume109/10934 - Dropping water balloons.cpp)
+      - [10935 - Throwing cards away I.cpp](/home/alexander/codes/uva2/volume109/10935 - Throwing cards away I.cpp)
+      - [10940 - Throwing cards away II.cpp](/home/alexander/codes/uva2/volume109/10940 - Throwing cards away II.cpp)
+      - [10943 - How do you add.cpp](/home/alexander/codes/uva2/volume109/10943 - How do you add.cpp)
+      - [10944 - Nuts for nuts.cpp](/home/alexander/codes/uva2/volume109/10944 - Nuts for nuts.cpp)
+      - [10945 - Mother bear.cpp](/home/alexander/codes/uva2/volume109/10945 - Mother bear.cpp)
+      - [10946 - You want what filled.cpp](/home/alexander/codes/uva2/volume109/10946 - You want what filled.cpp)
+      - [10947 - Bear with me, again.cpp](/home/alexander/codes/uva2/volume109/10947 - Bear with me, again.cpp)
+      - [10948 - The primary problem.cpp](/home/alexander/codes/uva2/volume109/10948 - The primary problem.cpp)
+      - [10954 - Add All.cpp](/home/alexander/codes/uva2/volume109/10954 - Add All.cpp)
+      - [10961 - Chasing After Don Giovanni.cpp](/home/alexander/codes/uva2/volume109/10961 - Chasing After Don Giovanni.cpp)
+      - [10963 - The Swallowing Ground.cpp](/home/alexander/codes/uva2/volume109/10963 - The Swallowing Ground.cpp)
+      - [10967 - The Great Escape[Accept].cpp](/home/alexander/codes/uva2/volume109/10967 - The Great Escape[Accept].cpp)
+      - [10967 - The Great Escape.cpp](/home/alexander/codes/uva2/volume109/10967 - The Great Escape.cpp)
+      - [10969 - Sweet Dream.cpp](/home/alexander/codes/uva2/volume109/10969 - Sweet Dream.cpp)
+      - [10970 - Big Chocolate.cpp](/home/alexander/codes/uva2/volume109/10970 - Big Chocolate.cpp)
+      - [10973 - Triangle Counting.cpp](/home/alexander/codes/uva2/volume109/10973 - Triangle Counting.cpp)
+      - [10975 - Dueue's Quiz[AC].cpp](/home/alexander/codes/uva2/volume109/10975 - Dueue's Quiz[AC].cpp)
+      - [10975 - Dueue's Quiz.cpp](/home/alexander/codes/uva2/volume109/10975 - Dueue's Quiz.cpp)
+      - [10978 - Let's Play Magic.cpp](/home/alexander/codes/uva2/volume109/10978 - Let's Play Magic.cpp)
+      - [10980 - Lowest Price in Town.cpp](/home/alexander/codes/uva2/volume109/10980 - Lowest Price in Town.cpp)
+      - [10986 - Sending email.cpp](/home/alexander/codes/uva2/volume109/10986 - Sending email.cpp)
+      - [10987 - Antifloyd.cpp](/home/alexander/codes/uva2/volume109/10987 - Antifloyd.cpp)
+      - [10989 - Bomb, Divide and Conquer.cpp](/home/alexander/codes/uva2/volume109/10989 - Bomb, Divide and Conquer.cpp)
+      - [10990 - Another New Function.cpp](/home/alexander/codes/uva2/volume109/10990 - Another New Function.cpp)
+      - [10991 - Region.c](/home/alexander/codes/uva2/volume109/10991 - Region.c)
+      - [10994 - Simple Addition.cpp](/home/alexander/codes/uva2/volume109/10994 - Simple Addition.cpp)
+      - [10998 - Flipping Colors.cpp](/home/alexander/codes/uva2/volume109/10998 - Flipping Colors.cpp)
+      - [10999 - Crabbles.cpp](/home/alexander/codes/uva2/volume109/10999 - Crabbles.cpp)
+  - volume110
+      - [11001 - Necklace.cpp](/home/alexander/codes/uva2/volume110/11001 - Necklace.cpp)
+      - [11002 - Towards Zero.cpp](/home/alexander/codes/uva2/volume110/11002 - Towards Zero.cpp)
+      - [11002 - Towards Zero_V2.cpp](/home/alexander/codes/uva2/volume110/11002 - Towards Zero_V2.cpp)
+      - [11003 - Boxes.cpp](/home/alexander/codes/uva2/volume110/11003 - Boxes.cpp)
+      - [11005 - Cheapest Base.cpp](/home/alexander/codes/uva2/volume110/11005 - Cheapest Base.cpp)
+      - [11015 - 05-2 Rendezvous.c](/home/alexander/codes/uva2/volume110/11015 - 05-2 Rendezvous.c)
+      - [11016 - Square Counting.cpp](/home/alexander/codes/uva2/volume110/11016 - Square Counting.cpp)
+      - [11016 - Square Counting[v2].cpp](/home/alexander/codes/uva2/volume110/11016 - Square Counting[v2].cpp)
+      - [11019 - Matrix Matcher.cpp](/home/alexander/codes/uva2/volume110/11019 - Matrix Matcher.cpp)
+      - [11020 - Efficient Solutions.cpp](/home/alexander/codes/uva2/volume110/11020 - Efficient Solutions.cpp)
+      - [11022 - String Factoring.cpp](/home/alexander/codes/uva2/volume110/11022 - String Factoring.cpp)
+      - [11026 - A Grouping Problem.cpp](/home/alexander/codes/uva2/volume110/11026 - A Grouping Problem.cpp)
+      - [11027 - Palindromic Permutation.cpp](/home/alexander/codes/uva2/volume110/11027 - Palindromic Permutation.cpp)
+      - [11028 - Sum of Product.cpp](/home/alexander/codes/uva2/volume110/11028 - Sum of Product.cpp)
+      - [11029 - Leading and Trailing.cpp](/home/alexander/codes/uva2/volume110/11029 - Leading and Trailing.cpp)
+      - [11030 - Predator II2.cpp](/home/alexander/codes/uva2/volume110/11030 - Predator II2.cpp)
+      - [11030 - Predator II.cpp](/home/alexander/codes/uva2/volume110/11030 - Predator II.cpp)
+      - [11031 - Looking for a Subset.cpp](/home/alexander/codes/uva2/volume110/11031 - Looking for a Subset.cpp)
+      - [11032 - Function Overloading2.cpp](/home/alexander/codes/uva2/volume110/11032 - Function Overloading2.cpp)
+      - [11032 - Function Overloading.cpp](/home/alexander/codes/uva2/volume110/11032 - Function Overloading.cpp)
+      - [11034 - Ferry Loading IV.cpp](/home/alexander/codes/uva2/volume110/11034 - Ferry Loading IV.cpp)
+      - [11035 - Card Hands.cpp](/home/alexander/codes/uva2/volume110/11035 - Card Hands.cpp)
+      - [11036 - Eventually Periodic Sequence.cpp](/home/alexander/codes/uva2/volume110/11036 - Eventually Periodic Sequence.cpp)
+      - [11038 - How Many O's.cpp](/home/alexander/codes/uva2/volume110/11038 - How Many O's.cpp)
+      - [11040 - Add bricks in the wall.cpp](/home/alexander/codes/uva2/volume110/11040 - Add bricks in the wall.cpp)
+      - [11042 - Complex, difficult and complicated.cpp](/home/alexander/codes/uva2/volume110/11042 - Complex, difficult and complicated.cpp)
+      - [11045 - My T-shirt suits me.cpp](/home/alexander/codes/uva2/volume110/11045 - My T-shirt suits me.cpp)
+      - [11048 - Automatic Correction of Misspellings.cpp](/home/alexander/codes/uva2/volume110/11048 - Automatic Correction of Misspellings.cpp)
+      - [11049 - Basic wall maze.cpp](/home/alexander/codes/uva2/volume110/11049 - Basic wall maze.cpp)
+      - [11053 - Flavius Josephus Reloaded.cpp](/home/alexander/codes/uva2/volume110/11053 - Flavius Josephus Reloaded.cpp)
+      - [11053 - Flavius Josephus Reloaded[v2].cpp](/home/alexander/codes/uva2/volume110/11053 - Flavius Josephus Reloaded[v2].cpp)
+      - [11054 - Wine trading in Gergovia.cpp](/home/alexander/codes/uva2/volume110/11054 - Wine trading in Gergovia.cpp)
+      - [11055 - Homogeneous squares.cpp](/home/alexander/codes/uva2/volume110/11055 - Homogeneous squares.cpp)
+      - [11056 - Formula 1.cpp](/home/alexander/codes/uva2/volume110/11056 - Formula 1.cpp)
+      - [11060 - Beverages.cpp](/home/alexander/codes/uva2/volume110/11060 - Beverages.cpp)
+      - [11062 - Andy's Second Dictionary.cpp](/home/alexander/codes/uva2/volume110/11062 - Andy's Second Dictionary.cpp)
+      - [11063 - B2-Sequence.cpp](/home/alexander/codes/uva2/volume110/11063 - B2-Sequence.cpp)
+      - [11064 - Number Theory.cpp](/home/alexander/codes/uva2/volume110/11064 - Number Theory.cpp)
+      - [11067 - Little Red Riding Hood.cpp](/home/alexander/codes/uva2/volume110/11067 - Little Red Riding Hood.cpp)
+      - [11068 - An Easy Task.cpp](/home/alexander/codes/uva2/volume110/11068 - An Easy Task.cpp)
+      - [11071 - Permutation Representation.cpp](/home/alexander/codes/uva2/volume110/11071 - Permutation Representation.cpp)
+      - [11073 - Euler's Totient Function.cpp](/home/alexander/codes/uva2/volume110/11073 - Euler's Totient Function.cpp)
+      - [11074 - Draw Grid.cpp](/home/alexander/codes/uva2/volume110/11074 - Draw Grid.cpp)
+      - [11076 - Add Again.cpp](/home/alexander/codes/uva2/volume110/11076 - Add Again.cpp)
+      - [11080 - Place the Guards.cpp](/home/alexander/codes/uva2/volume110/11080 - Place the Guards.cpp)
+      - [11081 - Strings.cpp](/home/alexander/codes/uva2/volume110/11081 - Strings.cpp)
+      - [11083 - Zeroes Revisited.cpp](/home/alexander/codes/uva2/volume110/11083 - Zeroes Revisited.cpp)
+      - [11084 Anagram Division.cpp](/home/alexander/codes/uva2/volume110/11084 Anagram Division.cpp)
+      - [11084 - Anagram Division.cpp](/home/alexander/codes/uva2/volume110/11084 - Anagram Division.cpp)
+      - [11085 - Back to the 8-Queens.cpp](/home/alexander/codes/uva2/volume110/11085 - Back to the 8-Queens.cpp)
+      - [11086 - Composite Prime.cpp](/home/alexander/codes/uva2/volume110/11086 - Composite Prime.cpp)
+      - [11087 - Divisibility Testing.cpp](/home/alexander/codes/uva2/volume110/11087 - Divisibility Testing.cpp)
+      - [11089 - Fi-binary Number.cpp](/home/alexander/codes/uva2/volume110/11089 - Fi-binary Number.cpp)
+      - [11090 - Going in Cycle2.cpp](/home/alexander/codes/uva2/volume110/11090 - Going in Cycle2.cpp)
+      - [11090 - Going in Cycle.cpp](/home/alexander/codes/uva2/volume110/11090 - Going in Cycle.cpp)
+      - [11092 - IIUC HexWorld.cpp](/home/alexander/codes/uva2/volume110/11092 - IIUC HexWorld.cpp)
+      - [11093 - Just Finish it up.cpp](/home/alexander/codes/uva2/volume110/11093 - Just Finish it up.cpp)
+      - [11094 - Continents.cpp](/home/alexander/codes/uva2/volume110/11094 - Continents.cpp)
+      - [11096 - Nails.cpp](/home/alexander/codes/uva2/volume110/11096 - Nails.cpp)
+      - [11097 - Poor My Problem!.cpp](/home/alexander/codes/uva2/volume110/11097 - Poor My Problem!.cpp)
+      - [11098 - Battle II.cpp](/home/alexander/codes/uva2/volume110/11098 - Battle II.cpp)
+      - [11099 - Next Same-Factored.cpp](/home/alexander/codes/uva2/volume110/11099 - Next Same-Factored.cpp)
+      - [11099 - Next Same-Factored[v2].cpp](/home/alexander/codes/uva2/volume110/11099 - Next Same-Factored[v2].cpp)
+  - volume111
+      - [11104 - Cousins.cpp](/home/alexander/codes/uva2/volume111/11104 - Cousins.cpp)
+      - [11105 - Semi-prime H-numbers.cpp](/home/alexander/codes/uva2/volume111/11105 - Semi-prime H-numbers.cpp)
+      - [11106 - Rectilinear Polygon.cpp](/home/alexander/codes/uva2/volume111/11106 - Rectilinear Polygon.cpp)
+      - [11107 - Life Forms.cpp](/home/alexander/codes/uva2/volume111/11107 - Life Forms.cpp)
+      - [11110 - Equidivisions.cpp](/home/alexander/codes/uva2/volume111/11110 - Equidivisions.cpp)
+      - [11111 - Generalized Matrioshkas.cpp](/home/alexander/codes/uva2/volume111/11111 - Generalized Matrioshkas.cpp)
+      - [11112 - Babylonian Roulette.cpp](/home/alexander/codes/uva2/volume111/11112 - Babylonian Roulette.cpp)
+      - [11113 - Continuous Fractions.cpp](/home/alexander/codes/uva2/volume111/11113 - Continuous Fractions.cpp)
+      - [11115 - Uncle Jack.cpp](/home/alexander/codes/uva2/volume111/11115 - Uncle Jack.cpp)
+      - [11116 - Babel Towers.cpp](/home/alexander/codes/uva2/volume111/11116 - Babel Towers.cpp)
+      - [11121 - Base -2.cpp](/home/alexander/codes/uva2/volume111/11121 - Base -2.cpp)
+      - [11122 - Tri Tri[ConvexHull].cpp](/home/alexander/codes/uva2/volume111/11122 - Tri Tri[ConvexHull].cpp)
+      - [11122 - Tri Tri.cpp](/home/alexander/codes/uva2/volume111/11122 - Tri Tri.cpp)
+      - [11123 - Counting Trapizoid.cpp](/home/alexander/codes/uva2/volume111/11123 - Counting Trapizoid.cpp)
+      - [11130 - Billiard bounces.cpp](/home/alexander/codes/uva2/volume111/11130 - Billiard bounces.cpp)
+      - [11134 - Fabled Rooks.cpp](/home/alexander/codes/uva2/volume111/11134 - Fabled Rooks.cpp)
+      - [11136 - Hoax or what.cpp](/home/alexander/codes/uva2/volume111/11136 - Hoax or what.cpp)
+      - [11137 - Ingenuous Cubrency.cpp](/home/alexander/codes/uva2/volume111/11137 - Ingenuous Cubrency.cpp)
+      - [11138 - Nuts and Bolts.cpp](/home/alexander/codes/uva2/volume111/11138 - Nuts and Bolts.cpp)
+      - [11149 - Power of Matrix.cpp](/home/alexander/codes/uva2/volume111/11149 - Power of Matrix.cpp)
+      - [11150 - Cola.cpp](/home/alexander/codes/uva2/volume111/11150 - Cola.cpp)
+      - [11151 - Longest Palindrome.cpp](/home/alexander/codes/uva2/volume111/11151 - Longest Palindrome.cpp)
+      - [11152 - Colourful Flowers.cpp](/home/alexander/codes/uva2/volume111/11152 - Colourful Flowers.cpp)
+      - [11153 - Museums.cpp](/home/alexander/codes/uva2/volume111/11153 - Museums.cpp)
+      - [11159 - Factors and Multiples.cpp](/home/alexander/codes/uva2/volume111/11159 - Factors and Multiples.cpp)
+      - [11162 - Independent Attacking Zones.cpp](/home/alexander/codes/uva2/volume111/11162 - Independent Attacking Zones.cpp)
+      - [11165 - Galactic Travel.cpp](/home/alexander/codes/uva2/volume111/11165 - Galactic Travel.cpp)
+      - [11166 - Power Signs.cpp](/home/alexander/codes/uva2/volume111/11166 - Power Signs.cpp)
+      - [11172 - Relational Operator.cpp](/home/alexander/codes/uva2/volume111/11172 - Relational Operator.cpp)
+      - [11173 - Grey Codes.cpp](/home/alexander/codes/uva2/volume111/11173 - Grey Codes.cpp)
+      - [11175 - From D to E and Back.cpp](/home/alexander/codes/uva2/volume111/11175 - From D to E and Back.cpp)
+      - [11178 - Morley's Theorem.cpp](/home/alexander/codes/uva2/volume111/11178 - Morley's Theorem.cpp)
+      - [11181 - ProbabilityGiven.cpp](/home/alexander/codes/uva2/volume111/11181 - ProbabilityGiven.cpp)
+      - [11182 - Zeroes III.cpp](/home/alexander/codes/uva2/volume111/11182 - Zeroes III.cpp)
+      - [11184 - Joyful Ride.cpp](/home/alexander/codes/uva2/volume111/11184 - Joyful Ride.cpp)
+      - [11185 - Ternary.cpp](/home/alexander/codes/uva2/volume111/11185 - Ternary.cpp)
+      - [11186 - Circum Triangle.cpp](/home/alexander/codes/uva2/volume111/11186 - Circum Triangle.cpp)
+      - [11192 - Group Reverse.cpp](/home/alexander/codes/uva2/volume111/11192 - Group Reverse.cpp)
+      - [11198 - Dancing Digits.cpp](/home/alexander/codes/uva2/volume111/11198 - Dancing Digits.cpp)
+  - volume112
+      - [11200 - Sapitaur's labyrinth.cpp](/home/alexander/codes/uva2/volume112/11200 - Sapitaur's labyrinth.cpp)
+      - [11203.c](/home/alexander/codes/uva2/volume112/11203.c)
+      - [11204 - Musical instruments.cpp](/home/alexander/codes/uva2/volume112/11204 - Musical instruments.cpp)
+      - [11205 - The broken pedometer.cpp](/home/alexander/codes/uva2/volume112/11205 - The broken pedometer.cpp)
+      - [11212 - Editing a Book.cpp](/home/alexander/codes/uva2/volume112/11212 - Editing a Book.cpp)
+      - [11214 - Guarding the Chessboard[DLX].cpp](/home/alexander/codes/uva2/volume112/11214 - Guarding the Chessboard[DLX].cpp)
+      - [11215 - How Many Numbers.cpp](/home/alexander/codes/uva2/volume112/11215 - How Many Numbers.cpp)
+      - [11218 - KTV.cpp](/home/alexander/codes/uva2/volume112/11218 - KTV.cpp)
+      - [11219 - How old are you.cpp](/home/alexander/codes/uva2/volume112/11219 - How old are you.cpp)
+      - [11220 - Decoding the message.cpp](/home/alexander/codes/uva2/volume112/11220 - Decoding the message.cpp)
+      - [11221 - Magic square palindromes.cpp](/home/alexander/codes/uva2/volume112/11221 - Magic square palindromes.cpp)
+      - [11222 - Only I did it.cpp](/home/alexander/codes/uva2/volume112/11222 - Only I did it.cpp)
+      - [11223 - O dah dah dah.cpp](/home/alexander/codes/uva2/volume112/11223 - O dah dah dah.cpp)
+      - [11227 - The silver bullet.cpp](/home/alexander/codes/uva2/volume112/11227 - The silver bullet.cpp)
+      - [11228 - Transportation system.cpp](/home/alexander/codes/uva2/volume112/11228 - Transportation system.cpp)
+      - [11231 - Black and white painting.cpp](/home/alexander/codes/uva2/volume112/11231 - Black and white painting.cpp)
+      - [11233 - Deli Deli.cpp](/home/alexander/codes/uva2/volume112/11233 - Deli Deli.cpp)
+      - [11234 - Expressions.cpp](/home/alexander/codes/uva2/volume112/11234 - Expressions.cpp)
+      - [11235 - Frequent values.cpp](/home/alexander/codes/uva2/volume112/11235 - Frequent values.cpp)
+      - [11235 - Frequent values[vx].cpp](/home/alexander/codes/uva2/volume112/11235 - Frequent values[vx].cpp)
+      - [11236 - Grocery store.cpp](/home/alexander/codes/uva2/volume112/11236 - Grocery store.cpp)
+      - [11238 - Innoumerous bowling games.cpp](/home/alexander/codes/uva2/volume112/11238 - Innoumerous bowling games.cpp)
+      - [11239 - Open Source.cpp](/home/alexander/codes/uva2/volume112/11239 - Open Source.cpp)
+      - [11243 - Texas Trip.cpp](/home/alexander/codes/uva2/volume112/11243 - Texas Trip.cpp)
+      - [11244 - Counting Stars.cpp](/home/alexander/codes/uva2/volume112/11244 - Counting Stars.cpp)
+      - [11245 - Anti-Arithmetic-Sequence.cpp](/home/alexander/codes/uva2/volume112/11245 - Anti-Arithmetic-Sequence.cpp)
+      - [11247 - Income Tax.cpp](/home/alexander/codes/uva2/volume112/11247 - Income Tax.cpp)
+      - [11248 - Frequency Hopping.cpp](/home/alexander/codes/uva2/volume112/11248 - Frequency Hopping.cpp)
+      - [11249 - Game.cpp](/home/alexander/codes/uva2/volume112/11249 - Game.cpp)
+      - [11254 - Consecutive Integers.cpp](/home/alexander/codes/uva2/volume112/11254 - Consecutive Integers.cpp)
+      - [11258 - String Partition.cpp](/home/alexander/codes/uva2/volume112/11258 - String Partition.cpp)
+      - [11259 - Coin Changing Again.cpp](/home/alexander/codes/uva2/volume112/11259 - Coin Changing Again.cpp)
+      - [11260 - Odd Root Sum.cpp](/home/alexander/codes/uva2/volume112/11260 - Odd Root Sum.cpp)
+      - [11262 - Weird Fence.cpp](/home/alexander/codes/uva2/volume112/11262 - Weird Fence.cpp)
+      - [11262 - Weird Fence[v2].cpp](/home/alexander/codes/uva2/volume112/11262 - Weird Fence[v2].cpp)
+      - [11265 - The Sultan's Problem.cpp](/home/alexander/codes/uva2/volume112/11265 - The Sultan's Problem.cpp)
+      - [11266 - Equations.cpp](/home/alexander/codes/uva2/volume112/11266 - Equations.cpp)
+      - [11275 - 3D Triangles.cpp](/home/alexander/codes/uva2/volume112/11275 - 3D Triangles.cpp)
+      - [11278 - One-Handed Typist.cpp](/home/alexander/codes/uva2/volume112/11278 - One-Handed Typist.cpp)
+      - [11280 - Flying to Fredericton.cpp](/home/alexander/codes/uva2/volume112/11280 - Flying to Fredericton.cpp)
+      - [11284 - Shopping Trip.cpp](/home/alexander/codes/uva2/volume112/11284 - Shopping Trip.cpp)
+      - [11286 - Conformity.cpp](/home/alexander/codes/uva2/volume112/11286 - Conformity.cpp)
+      - [11286 - Conformity[Map].cpp](/home/alexander/codes/uva2/volume112/11286 - Conformity[Map].cpp)
+      - [11287 - Pseudoprime Numbers.cpp](/home/alexander/codes/uva2/volume112/11287 - Pseudoprime Numbers.cpp)
+      - [11289 - Friend or Foe.cpp](/home/alexander/codes/uva2/volume112/11289 - Friend or Foe.cpp)
+      - [11294 - Wedding.cpp](/home/alexander/codes/uva2/volume112/11294 - Wedding.cpp)
+      - [11297 - Census(zkw).cpp](/home/alexander/codes/uva2/volume112/11297 - Census(zkw).cpp)
+  - volume113
+      - [11307 - Alternative Arborescence.cpp](/home/alexander/codes/uva2/volume113/11307 - Alternative Arborescence.cpp)
+      - [11309 - Counting Chaos.cpp](/home/alexander/codes/uva2/volume113/11309 - Counting Chaos.cpp)
+      - [11314 - Hardly Hard.cpp](/home/alexander/codes/uva2/volume113/11314 - Hardly Hard.cpp)
+      - [11317 - GCD+LCM.cpp](/home/alexander/codes/uva2/volume113/11317 - GCD+LCM.cpp)
+      - [11319 - Stupid Sequence.cpp](/home/alexander/codes/uva2/volume113/11319 - Stupid Sequence.cpp)
+      - [11319 - Stupid Sequence[v2].cpp](/home/alexander/codes/uva2/volume113/11319 - Stupid Sequence[v2].cpp)
+      - [11323 - Satisfying Constraints.cpp](/home/alexander/codes/uva2/volume113/11323 - Satisfying Constraints.cpp)
+      - [11324 - The Largest Clique.cpp](/home/alexander/codes/uva2/volume113/11324 - The Largest Clique.cpp)
+      - [11327 - Enumerating Rational Numbers.cpp](/home/alexander/codes/uva2/volume113/11327 - Enumerating Rational Numbers.cpp)
+      - [11332 - Summing Digits.cpp](/home/alexander/codes/uva2/volume113/11332 - Summing Digits.cpp)
+      - [11338 - Minefield.cpp](/home/alexander/codes/uva2/volume113/11338 - Minefield.cpp)
+      - [11340 - Newspaper.cpp](/home/alexander/codes/uva2/volume113/11340 - Newspaper.cpp)
+      - [11343 - Isolated Segments.cpp](/home/alexander/codes/uva2/volume113/11343 - Isolated Segments.cpp)
+      - [11344 - The Huge One.cpp](/home/alexander/codes/uva2/volume113/11344 - The Huge One.cpp)
+      - [11345 - Rectangles.cpp](/home/alexander/codes/uva2/volume113/11345 - Rectangles.cpp)
+      - [11347 - Multifactorials.cpp](/home/alexander/codes/uva2/volume113/11347 - Multifactorials.cpp)
+      - [11349 - Symmetric Matrix.c](/home/alexander/codes/uva2/volume113/11349 - Symmetric Matrix.c)
+      - [11350 - Stern-Brocot Tree.cpp](/home/alexander/codes/uva2/volume113/11350 - Stern-Brocot Tree.cpp)
+      - [11353 - A Different Kind of Sorting.cpp](/home/alexander/codes/uva2/volume113/11353 - A Different Kind of Sorting.cpp)
+      - [11355 - Cool Points.cpp](/home/alexander/codes/uva2/volume113/11355 - Cool Points.cpp)
+      - [11358 - Faster Processing Feasibility.cpp](/home/alexander/codes/uva2/volume113/11358 - Faster Processing Feasibility.cpp)
+      - [11359 - Guards, Imbecile Guards.cpp](/home/alexander/codes/uva2/volume113/11359 - Guards, Imbecile Guards.cpp)
+      - [11360 - Have Fun with Matrices.cpp](/home/alexander/codes/uva2/volume113/11360 - Have Fun with Matrices.cpp)
+      - [11362 - Phone List.cpp](/home/alexander/codes/uva2/volume113/11362 - Phone List.cpp)
+      - [11363 - Cuckoo Hashing.cpp](/home/alexander/codes/uva2/volume113/11363 - Cuckoo Hashing.cpp)
+      - [11364 - Parking.cpp](/home/alexander/codes/uva2/volume113/11364 - Parking.cpp)
+      - [11367 - Full Tank.cpp](/home/alexander/codes/uva2/volume113/11367 - Full Tank.cpp)
+      - [11368 - Nested Dolls[test].cpp](/home/alexander/codes/uva2/volume113/11368 - Nested Dolls[test].cpp)
+      - [11369 - Shopaholic.cpp](/home/alexander/codes/uva2/volume113/11369 - Shopaholic.cpp)
+      - [11370 - Moogle.cpp](/home/alexander/codes/uva2/volume113/11370 - Moogle.cpp)
+      - [11371 - Number Theory for Newbies.cpp](/home/alexander/codes/uva2/volume113/11371 - Number Theory for Newbies.cpp)
+      - [11375 - Matches.txt](/home/alexander/codes/uva2/volume113/11375 - Matches.txt)
+      - [11376 - Tilt.cpp](/home/alexander/codes/uva2/volume113/11376 - Tilt.cpp)
+      - [11378 - Bey Battle.cpp](/home/alexander/codes/uva2/volume113/11378 - Bey Battle.cpp)
+      - [11379 - Chichi's Home Work.cpp](/home/alexander/codes/uva2/volume113/11379 - Chichi's Home Work.cpp)
+      - [11380 - Down Went The Titanic.cpp](/home/alexander/codes/uva2/volume113/11380 - Down Went The Titanic.cpp)
+      - [11383 - Golden Tiger Claw.cpp](/home/alexander/codes/uva2/volume113/11383 - Golden Tiger Claw.cpp)
+      - [11385 - Da Vinci Code.cpp](/home/alexander/codes/uva2/volume113/11385 - Da Vinci Code.cpp)
+      - [11386 - Triples.cpp](/home/alexander/codes/uva2/volume113/11386 - Triples.cpp)
+      - [11387 - The 3-Regular Graph.cpp](/home/alexander/codes/uva2/volume113/11387 - The 3-Regular Graph.cpp)
+      - [11389 - The Bus Driver Problem.cpp](/home/alexander/codes/uva2/volume113/11389 - The Bus Driver Problem.cpp)
+      - [11390 - The Sultan's Feast.cpp](/home/alexander/codes/uva2/volume113/11390 - The Sultan's Feast.cpp)
+      - [11391 - Blobs in the Board.cpp](/home/alexander/codes/uva2/volume113/11391 - Blobs in the Board.cpp)
+      - [11394 - Digit Blocks.cpp](/home/alexander/codes/uva2/volume113/11394 - Digit Blocks.cpp)
+      - [11396 - Claw Decomposition.cpp](/home/alexander/codes/uva2/volume113/11396 - Claw Decomposition.cpp)
+      - [11398 - The Base-1 Number System.c](/home/alexander/codes/uva2/volume113/11398 - The Base-1 Number System.c)
+  - volume114
+      - [11401 - Triangle Counting.cpp](/home/alexander/codes/uva2/volume114/11401 - Triangle Counting.cpp)
+      - [11402 - Ahoy, Pirates.cpp](/home/alexander/codes/uva2/volume114/11402 - Ahoy, Pirates.cpp)
+      - [11402 - Ahoy, Pirates[離散].cpp](/home/alexander/codes/uva2/volume114/11402 - Ahoy, Pirates[離散].cpp)
+      - [11403 - Binary Multiplication.cpp](/home/alexander/codes/uva2/volume114/11403 - Binary Multiplication.cpp)
+      - [11404 - Palindromic Subsequence.cpp](/home/alexander/codes/uva2/volume114/11404 - Palindromic Subsequence.cpp)
+      - [11407 - Squares.cpp](/home/alexander/codes/uva2/volume114/11407 - Squares.cpp)
+      - [11408 - Count DePrimes.cpp](/home/alexander/codes/uva2/volume114/11408 - Count DePrimes.cpp)
+      - [11411 - MiniMice.cpp](/home/alexander/codes/uva2/volume114/11411 - MiniMice.cpp)
+      - [11412 - Dig the Holes.cpp](/home/alexander/codes/uva2/volume114/11412 - Dig the Holes.cpp)
+      - [11413 - Fill the Containers.c](/home/alexander/codes/uva2/volume114/11413 - Fill the Containers.c)
+      - [11414 - Dream.cpp](/home/alexander/codes/uva2/volume114/11414 - Dream.cpp)
+      - [11415 - Count the Factorials.cpp](/home/alexander/codes/uva2/volume114/11415 - Count the Factorials.cpp)
+      - [11417 - GCD.c](/home/alexander/codes/uva2/volume114/11417 - GCD.c)
+      - [11418 - Clever Naming Patterns.cpp](/home/alexander/codes/uva2/volume114/11418 - Clever Naming Patterns.cpp)
+      - [11421 - Arranging Cards.cpp](/home/alexander/codes/uva2/volume114/11421 - Arranging Cards.cpp)
+      - [11423 - Cache Simulator.cpp](/home/alexander/codes/uva2/volume114/11423 - Cache Simulator.cpp)
+      - [11423 - Cache Simulator-opt.cpp](/home/alexander/codes/uva2/volume114/11423 - Cache Simulator-opt.cpp)
+      - [11424 - GCD - Extreme (I).cpp](/home/alexander/codes/uva2/volume114/11424 - GCD - Extreme (I).cpp)
+      - [11426 - GCD - Extreme (II).cpp](/home/alexander/codes/uva2/volume114/11426 - GCD - Extreme (II).cpp)
+      - [11428 - Cubes.cpp](/home/alexander/codes/uva2/volume114/11428 - Cubes.cpp)
+      - [11439 - Maximizing the ICPC.cpp](/home/alexander/codes/uva2/volume114/11439 - Maximizing the ICPC.cpp)
+      - [11450 - Wedding shopping.cpp](/home/alexander/codes/uva2/volume114/11450 - Wedding shopping.cpp)
+      - [11455 - Behold my quadrangle.cpp](/home/alexander/codes/uva2/volume114/11455 - Behold my quadrangle.cpp)
+      - [11456 - Trainsorting.cpp](/home/alexander/codes/uva2/volume114/11456 - Trainsorting.cpp)
+      - [11457 - Classified.cpp](/home/alexander/codes/uva2/volume114/11457 - Classified.cpp)
+      - [11461 - Square Numbers.cpp](/home/alexander/codes/uva2/volume114/11461 - Square Numbers.cpp)
+      - [11463 - Commandos.cpp](/home/alexander/codes/uva2/volume114/11463 - Commandos.cpp)
+      - [11464 - Even Parity.cpp](/home/alexander/codes/uva2/volume114/11464 - Even Parity.cpp)
+      - [11466 - Largest Prime Divisor.cpp](/home/alexander/codes/uva2/volume114/11466 - Largest Prime Divisor.cpp)
+      - [11470 - Square Sums.c](/home/alexander/codes/uva2/volume114/11470 - Square Sums.c)
+      - [11472 - Beautiful Numbers.cpp](/home/alexander/codes/uva2/volume114/11472 - Beautiful Numbers.cpp)
+      - [11473 - Campus Roads.cpp](/home/alexander/codes/uva2/volume114/11473 - Campus Roads.cpp)
+      - [11475 - Extend to Palindrome.cpp](/home/alexander/codes/uva2/volume114/11475 - Extend to Palindrome.cpp)
+      - [11476 - Factorizing Larget Integers.cpp](/home/alexander/codes/uva2/volume114/11476 - Factorizing Larget Integers.cpp)
+      - [11478 - Halum.cpp](/home/alexander/codes/uva2/volume114/11478 - Halum.cpp)
+      - [11479 - Is this the easiest problem.cpp](/home/alexander/codes/uva2/volume114/11479 - Is this the easiest problem.cpp)
+      - [11480 - Jimmy's Balls.cpp](/home/alexander/codes/uva2/volume114/11480 - Jimmy's Balls.cpp)
+      - [11483 - Code Creator.cpp](/home/alexander/codes/uva2/volume114/11483 - Code Creator.cpp)
+      - [11485 - Extreme Discrete Summation.cpp](/home/alexander/codes/uva2/volume114/11485 - Extreme Discrete Summation.cpp)
+      - [11488 - Hyper Prefix Sets.cpp](/home/alexander/codes/uva2/volume114/11488 - Hyper Prefix Sets.cpp)
+      - [11489 - Integer Game.cpp](/home/alexander/codes/uva2/volume114/11489 - Integer Game.cpp)
+      - [11490 - Just Another Problem.cpp](/home/alexander/codes/uva2/volume114/11490 - Just Another Problem.cpp)
+      - [11494 - Queen.cpp](/home/alexander/codes/uva2/volume114/11494 - Queen.cpp)
+      - [11498 - Division of Nlogonia.c](/home/alexander/codes/uva2/volume114/11498 - Division of Nlogonia.c)
+  - volume115
+      - [11052 - Economic phone calls.cpp](/home/alexander/codes/uva2/volume115/11052 - Economic phone calls.cpp)
+      - [11501 - Laurel Creek.cpp](/home/alexander/codes/uva2/volume115/11501 - Laurel Creek.cpp)
+      - [11503 - Virtual Friends.cpp](/home/alexander/codes/uva2/volume115/11503 - Virtual Friends.cpp)
+      - [11504 - Dominos.cpp](/home/alexander/codes/uva2/volume115/11504 - Dominos.cpp)
+      - [11505 - Logo.cpp](/home/alexander/codes/uva2/volume115/11505 - Logo.cpp)
+      - [11506 - Angry Programmer.cpp](/home/alexander/codes/uva2/volume115/11506 - Angry Programmer.cpp)
+      - [11507 - Bender B. Rodríguez Problem.cpp](/home/alexander/codes/uva2/volume115/11507 - Bender B. Rodríguez Problem.cpp)
+      - [11507 - Bender.cpp](/home/alexander/codes/uva2/volume115/11507 - Bender.cpp)
+      - [11508 - Life on Mars.cpp](/home/alexander/codes/uva2/volume115/11508 - Life on Mars.cpp)
+      - [11511 - Frieze Patterns.cpp](/home/alexander/codes/uva2/volume115/11511 - Frieze Patterns.cpp)
+      - [11513 - 9 Puzzle.cpp](/home/alexander/codes/uva2/volume115/11513 - 9 Puzzle.cpp)
+      - [11516 - WiFi.cpp](/home/alexander/codes/uva2/volume115/11516 - WiFi.cpp)
+      - [11517 - Exact Change.cpp](/home/alexander/codes/uva2/volume115/11517 - Exact Change.cpp)
+      - [11518 - Dominos 2.cpp](/home/alexander/codes/uva2/volume115/11518 - Dominos 2.cpp)
+      - [11519 - Logo 2.cpp](/home/alexander/codes/uva2/volume115/11519 - Logo 2.cpp)
+      - [11520 - Fill the Square.cpp](/home/alexander/codes/uva2/volume115/11520 - Fill the Square.cpp)
+      - [11523 - Recycling.cpp](/home/alexander/codes/uva2/volume115/11523 - Recycling.cpp)
+      - [11524 - InCircle.cpp](/home/alexander/codes/uva2/volume115/11524 - InCircle.cpp)
+      - [11525 - Permutation.cpp](/home/alexander/codes/uva2/volume115/11525 - Permutation.cpp)
+      - [11525 - Permutation[st].cpp](/home/alexander/codes/uva2/volume115/11525 - Permutation[st].cpp)
+      - [11526 - H(n).c](/home/alexander/codes/uva2/volume115/11526 - H(n).c)
+      - [11529 - Strange Tax Calculation.cpp](/home/alexander/codes/uva2/volume115/11529 - Strange Tax Calculation.cpp)
+      - [11530 - SMS Typing.cpp](/home/alexander/codes/uva2/volume115/11530 - SMS Typing.cpp)
+      - [11532 - Simple Adjacency Maximization.cpp](/home/alexander/codes/uva2/volume115/11532 - Simple Adjacency Maximization.cpp)
+      - [11535 - Set of Marbles.cpp](/home/alexander/codes/uva2/volume115/11535 - Set of Marbles.cpp)
+      - [11536 - Smallest Sub-Array.cpp](/home/alexander/codes/uva2/volume115/11536 - Smallest Sub-Array.cpp)
+      - [11536 - Smallest Sub-Array[v2].cpp](/home/alexander/codes/uva2/volume115/11536 - Smallest Sub-Array[v2].cpp)
+      - [11539 - Another Word Game.cpp](/home/alexander/codes/uva2/volume115/11539 - Another Word Game.cpp)
+      - [11541 - Decoding.c](/home/alexander/codes/uva2/volume115/11541 - Decoding.c)
+      - [11542 - Square.cpp](/home/alexander/codes/uva2/volume115/11542 - Square.cpp)
+      - [11545 - Avoiding Jungle in the Dark.cpp](/home/alexander/codes/uva2/volume115/11545 - Avoiding Jungle in the Dark.cpp)
+      - [11547 - Automatic Answer.c](/home/alexander/codes/uva2/volume115/11547 - Automatic Answer.c)
+      - [11548 - Blackboard Bonanza.cpp](/home/alexander/codes/uva2/volume115/11548 - Blackboard Bonanza.cpp)
+      - [11550 - Demanding Dilemma.cpp](/home/alexander/codes/uva2/volume115/11550 - Demanding Dilemma.cpp)
+      - [11551 - Experienced Endeavour.cpp](/home/alexander/codes/uva2/volume115/11551 - Experienced Endeavour.cpp)
+      - [11552 - Fewest Flops.cpp](/home/alexander/codes/uva2/volume115/11552 - Fewest Flops.cpp)
+      - [11553 - Grid Game.cpp](/home/alexander/codes/uva2/volume115/11553 - Grid Game.cpp)
+      - [11555 - Aspen Avenue.cpp](/home/alexander/codes/uva2/volume115/11555 - Aspen Avenue.cpp)
+      - [11556 - Best Compression Ever.cpp](/home/alexander/codes/uva2/volume115/11556 - Best Compression Ever.cpp)
+      - [11559 - Event Planning.cpp](/home/alexander/codes/uva2/volume115/11559 - Event Planning.cpp)
+      - [11561 - Getting Gold.cpp](/home/alexander/codes/uva2/volume115/11561 - Getting Gold.cpp)
+      - [11563 - Introspective Caching.cpp](/home/alexander/codes/uva2/volume115/11563 - Introspective Caching.cpp)
+      - [11565 - Simple Equations.cpp](/home/alexander/codes/uva2/volume115/11565 - Simple Equations.cpp)
+      - [11567 - Moliu Number Generator.cpp](/home/alexander/codes/uva2/volume115/11567 - Moliu Number Generator.cpp)
+      - [11569 - Lovely Hint.cpp](/home/alexander/codes/uva2/volume115/11569 - Lovely Hint.cpp)
+      - [11573 - Ocean Currents.cpp](/home/alexander/codes/uva2/volume115/11573 - Ocean Currents.cpp)
+      - [11576 - Scrolling Sign.cpp](/home/alexander/codes/uva2/volume115/11576 - Scrolling Sign.cpp)
+      - [11577 - Letter Frequency.c](/home/alexander/codes/uva2/volume115/11577 - Letter Frequency.c)
+      - [11579 - Triangle Trouble.cpp](/home/alexander/codes/uva2/volume115/11579 - Triangle Trouble.cpp)
+      - [11585 - Nurikabe.cpp](/home/alexander/codes/uva2/volume115/11585 - Nurikabe.cpp)
+      - [11586 - Train Tracks.cpp](/home/alexander/codes/uva2/volume115/11586 - Train Tracks.cpp)
+      - [11587 - Brick Game.cpp](/home/alexander/codes/uva2/volume115/11587 - Brick Game.cpp)
+      - [11588 - Image Coding.cpp](/home/alexander/codes/uva2/volume115/11588 - Image Coding.cpp)
+      - [11590 - Prefix Lookup.cpp](/home/alexander/codes/uva2/volume115/11590 - Prefix Lookup.cpp)
+      - [11597 - Spanning Subtree.cpp](/home/alexander/codes/uva2/volume115/11597 - Spanning Subtree.cpp)
+      - [11598 - Optimal Segments.cpp](/home/alexander/codes/uva2/volume115/11598 - Optimal Segments.cpp)
+  - volume116
+      - [11600 - Masud Rana.cpp](/home/alexander/codes/uva2/volume116/11600 - Masud Rana.cpp)
+      - [11603 - Its all about the Bandwidth.cpp](/home/alexander/codes/uva2/volume116/11603 - Its all about the Bandwidth.cpp)
+      - [11605 - Lights inside a 3d Grid.cpp](/home/alexander/codes/uva2/volume116/11605 - Lights inside a 3d Grid.cpp)
+      - [11607 - Cutting Cakes.cpp](/home/alexander/codes/uva2/volume116/11607 - Cutting Cakes.cpp)
+      - [11609 - Teams.cpp](/home/alexander/codes/uva2/volume116/11609 - Teams.cpp)
+      - [11613 - Acme Corporation.cpp](/home/alexander/codes/uva2/volume116/11613 - Acme Corporation.cpp)
+      - [11614 - Etruscan Warriors Never Play Chess.cpp](/home/alexander/codes/uva2/volume116/11614 - Etruscan Warriors Never Play Chess.cpp)
+      - [11616 - Roman Numerals.cpp](/home/alexander/codes/uva2/volume116/11616 - Roman Numerals.cpp)
+      - [11617 - An Odd Love.cpp](/home/alexander/codes/uva2/volume116/11617 - An Odd Love.cpp)
+      - [11620 - City of Egocentrics.cpp](/home/alexander/codes/uva2/volume116/11620 - City of Egocentrics.cpp)
+      - [11621 - Small Factors.cpp](/home/alexander/codes/uva2/volume116/11621 - Small Factors.cpp)
+      - [11624 - Fire.cpp](/home/alexander/codes/uva2/volume116/11624 - Fire.cpp)
+      - [11626 - Convex Hull.cpp](/home/alexander/codes/uva2/volume116/11626 - Convex Hull.cpp)
+      - [11628 - Another lottery.c](/home/alexander/codes/uva2/volume116/11628 - Another lottery.c)
+      - [11629 - Ballot evaluation.cpp](/home/alexander/codes/uva2/volume116/11629 - Ballot evaluation.cpp)
+      - [11630 - Cyclic antimonotonic permutations.cpp](/home/alexander/codes/uva2/volume116/11630 - Cyclic antimonotonic permutations.cpp)
+      - [11631 - Dark roads.cpp](/home/alexander/codes/uva2/volume116/11631 - Dark roads.cpp)
+      - [11632 - Elias gamma coding.cpp](/home/alexander/codes/uva2/volume116/11632 - Elias gamma coding.cpp)
+      - [11633 - Food portion sizes.cpp](/home/alexander/codes/uva2/volume116/11633 - Food portion sizes.cpp)
+      - [11634 - Generate random numbers.cpp](/home/alexander/codes/uva2/volume116/11634 - Generate random numbers.cpp)
+      - [11638 - Temperature Monitoring.cpp](/home/alexander/codes/uva2/volume116/11638 - Temperature Monitoring.cpp)
+      - [11639 - Guard the Land.cpp](/home/alexander/codes/uva2/volume116/11639 - Guard the Land.cpp)
+      - [11646 - Athletics Track.cpp](/home/alexander/codes/uva2/volume116/11646 - Athletics Track.cpp)
+      - [11650 - Mirror Clock.c](/home/alexander/codes/uva2/volume116/11650 - Mirror Clock.c)
+      - [11651 - Krypton Number System.cpp](/home/alexander/codes/uva2/volume116/11651 - Krypton Number System.cpp)
+      - [11658 - Best Coalitions.cpp](/home/alexander/codes/uva2/volume116/11658 - Best Coalitions.cpp)
+      - [11661 - Burger Time.cpp](/home/alexander/codes/uva2/volume116/11661 - Burger Time.cpp)
+      - [11663 - GrayInc.cpp](/home/alexander/codes/uva2/volume116/11663 - GrayInc.cpp)
+      - [11666 - Logarithms.cpp](/home/alexander/codes/uva2/volume116/11666 - Logarithms.cpp)
+      - [11667 - Income Tax Hazard II.cpp](/home/alexander/codes/uva2/volume116/11667 - Income Tax Hazard II.cpp)
+      - [11669 - Non Decreasing Prime Sequence.cpp](/home/alexander/codes/uva2/volume116/11669 - Non Decreasing Prime Sequence.cpp)
+      - [11670 - Physics Experiment.cpp](/home/alexander/codes/uva2/volume116/11670 - Physics Experiment.cpp)
+      - [11675 - Happy Friends.cpp](/home/alexander/codes/uva2/volume116/11675 - Happy Friends.cpp)
+      - [11677 - Alarm Clock.cpp](/home/alexander/codes/uva2/volume116/11677 - Alarm Clock.cpp)
+      - [11680 - Dragster.cpp](/home/alexander/codes/uva2/volume116/11680 - Dragster.cpp)
+      - [11686 - Pick up sticks.cpp](/home/alexander/codes/uva2/volume116/11686 - Pick up sticks.cpp)
+      - [11687 - Digits.cpp](/home/alexander/codes/uva2/volume116/11687 - Digits.cpp)
+      - [11688 - Rotate to root.cpp](/home/alexander/codes/uva2/volume116/11688 - Rotate to root.cpp)
+      - [11689 - Soda Surpler.cpp](/home/alexander/codes/uva2/volume116/11689 - Soda Surpler.cpp)
+      - [11691 - Allergy Test.cpp](/home/alexander/codes/uva2/volume116/11691 - Allergy Test.cpp)
+      - [11696 - Beacons.cpp](/home/alexander/codes/uva2/volume116/11696 - Beacons.cpp)
+      - [11697 - Playfair Cipher.cpp](/home/alexander/codes/uva2/volume116/11697 - Playfair Cipher.cpp)
+  - volume117
+      - [11700 - Pipes.cpp](/home/alexander/codes/uva2/volume117/11700 - Pipes.cpp)
+      - [11703 - sqrt log sin.cpp](/home/alexander/codes/uva2/volume117/11703 - sqrt log sin.cpp)
+      - [11704 - Caper pizza.cpp](/home/alexander/codes/uva2/volume117/11704 - Caper pizza.cpp)
+      - [11705 - Grasshopper.cpp](/home/alexander/codes/uva2/volume117/11705 - Grasshopper.cpp)
+      - [11708 - Lexicographical ranking.cpp](/home/alexander/codes/uva2/volume117/11708 - Lexicographical ranking.cpp)
+      - [11709 - Trust groups.cpp](/home/alexander/codes/uva2/volume117/11709 - Trust groups.cpp)
+      - [11710 - Expensive subway.cpp](/home/alexander/codes/uva2/volume117/11710 - Expensive subway.cpp)
+      - [11711 - Turing.cpp](/home/alexander/codes/uva2/volume117/11711 - Turing.cpp)
+      - [11713 - Abstract Names.cpp](/home/alexander/codes/uva2/volume117/11713 - Abstract Names.cpp)
+      - [11714 - Blind Sorting.c](/home/alexander/codes/uva2/volume117/11714 - Blind Sorting.c)
+      - [11715 - Car.cpp](/home/alexander/codes/uva2/volume117/11715 - Car.cpp)
+      - [11716 - Digital Fortress.cpp](/home/alexander/codes/uva2/volume117/11716 - Digital Fortress.cpp)
+      - [11717 - Energy Saving Microcontroller.cpp](/home/alexander/codes/uva2/volume117/11717 - Energy Saving Microcontroller.cpp)
+      - [11722 - Joining with Friend.cpp](/home/alexander/codes/uva2/volume117/11722 - Joining with Friend.cpp)
+      - [11723 - Numbering Roads.cpp](/home/alexander/codes/uva2/volume117/11723 - Numbering Roads.cpp)
+      - [11724 - Evaluate the Expression.cpp](/home/alexander/codes/uva2/volume117/11724 - Evaluate the Expression.cpp)
+      - [11725 - Colorful Board.cpp](/home/alexander/codes/uva2/volume117/11725 - Colorful Board.cpp)
+      - [11727 - Cost Cutting.c](/home/alexander/codes/uva2/volume117/11727 - Cost Cutting.c)
+      - [11728 - Alternate Task.cpp](/home/alexander/codes/uva2/volume117/11728 - Alternate Task.cpp)
+      - [11729 - Commando War.cpp](/home/alexander/codes/uva2/volume117/11729 - Commando War.cpp)
+      - [11730 - Number Transformation.cpp](/home/alexander/codes/uva2/volume117/11730 - Number Transformation.cpp)
+      - [11731 - Ex-circles.cpp](/home/alexander/codes/uva2/volume117/11731 - Ex-circles.cpp)
+      - [11732 - “strcmp()” Anyone.cpp](/home/alexander/codes/uva2/volume117/11732 - “strcmp()” Anyone.cpp)
+      - [11733 - Airports.cpp](/home/alexander/codes/uva2/volume117/11733 - Airports.cpp)
+      - [11736 - Debugging RAM.cpp](/home/alexander/codes/uva2/volume117/11736 - Debugging RAM.cpp)
+      - [11737 - Extreme Primitive Society.cpp](/home/alexander/codes/uva2/volume117/11737 - Extreme Primitive Society.cpp)
+      - [11742 - Social Constraints.cpp](/home/alexander/codes/uva2/volume117/11742 - Social Constraints.cpp)
+      - [11744 - Parallel Carry Adder.cpp](/home/alexander/codes/uva2/volume117/11744 - Parallel Carry Adder.cpp)
+      - [11745 - Slitherlin.cpp](/home/alexander/codes/uva2/volume117/11745 - Slitherlin.cpp)
+      - [11747 - Heavy Cycle Edges.cpp](/home/alexander/codes/uva2/volume117/11747 - Heavy Cycle Edges.cpp)
+      - [11748 - Rigging Elections.cpp](/home/alexander/codes/uva2/volume117/11748 - Rigging Elections.cpp)
+      - [11751 - Installing Diagnostic Software.cpp](/home/alexander/codes/uva2/volume117/11751 - Installing Diagnostic Software.cpp)
+      - [11752 - The Super Powers.cpp](/home/alexander/codes/uva2/volume117/11752 - The Super Powers.cpp)
+      - [11753 - Creating Palindrome.cpp](/home/alexander/codes/uva2/volume117/11753 - Creating Palindrome.cpp)
+      - [11754 - Code Feat.cpp](/home/alexander/codes/uva2/volume117/11754 - Code Feat.cpp)
+      - [11759 - IBM Fencing.cpp](/home/alexander/codes/uva2/volume117/11759 - IBM Fencing.cpp)
+      - [11761 - Super Heronian Triangle.cpp](/home/alexander/codes/uva2/volume117/11761 - Super Heronian Triangle.cpp)
+      - [11764 - Jumping Mario.cpp](/home/alexander/codes/uva2/volume117/11764 - Jumping Mario.cpp)
+      - [11765 - Component Placement.cpp](/home/alexander/codes/uva2/volume117/11765 - Component Placement.cpp)
+      - [11766 - Racing Car Computer.cpp](/home/alexander/codes/uva2/volume117/11766 - Racing Car Computer.cpp)
+      - [11768 - Lattice Point or Not.cpp](/home/alexander/codes/uva2/volume117/11768 - Lattice Point or Not.cpp)
+      - [11769 - All Souls Night.cpp](/home/alexander/codes/uva2/volume117/11769 - All Souls Night.cpp)
+      - [11769 - All Souls Night[v2].cpp](/home/alexander/codes/uva2/volume117/11769 - All Souls Night[v2].cpp)
+      - [11770 - Lighting Away.cpp](/home/alexander/codes/uva2/volume117/11770 - Lighting Away.cpp)
+      - [11773 - King's Wish.cpp](/home/alexander/codes/uva2/volume117/11773 - King's Wish.cpp)
+      - [11776 - Oh Your Royal Greediness.cpp](/home/alexander/codes/uva2/volume117/11776 - Oh Your Royal Greediness.cpp)
+      - [11777 - Automate the Grades.cpp](/home/alexander/codes/uva2/volume117/11777 - Automate the Grades.cpp)
+      - [11782 - Optimal Cut.cpp](/home/alexander/codes/uva2/volume117/11782 - Optimal Cut.cpp)
+      - [11783 - Nails.cpp](/home/alexander/codes/uva2/volume117/11783 - Nails.cpp)
+      - [11785 - Hypercube.cpp](/home/alexander/codes/uva2/volume117/11785 - Hypercube.cpp)
+      - [11786 - Global Raining at Bididibus.cpp](/home/alexander/codes/uva2/volume117/11786 - Global Raining at Bididibus.cpp)
+      - [11787 - Numeral Hieroglyphs.cpp](/home/alexander/codes/uva2/volume117/11787 - Numeral Hieroglyphs.cpp)
+      - [11790 - Murcia's Skyline.cpp](/home/alexander/codes/uva2/volume117/11790 - Murcia's Skyline.cpp)
+      - [11792 - Krochanska is Here.cpp](/home/alexander/codes/uva2/volume117/11792 - Krochanska is Here.cpp)
+      - [11795 - Mega Man's Mission.cpp](/home/alexander/codes/uva2/volume117/11795 - Mega Man's Mission.cpp)
+      - [11796 - Dog Distance.cpp](/home/alexander/codes/uva2/volume117/11796 - Dog Distance.cpp)
+      - [11797 - Drutojan Express.cpp](/home/alexander/codes/uva2/volume117/11797 - Drutojan Express.cpp)
+      - [11798 - Colorful Board 2.cpp](/home/alexander/codes/uva2/volume117/11798 - Colorful Board 2.cpp)
+      - [11799 - Horror Dash.cpp](/home/alexander/codes/uva2/volume117/11799 - Horror Dash.cpp)
+  - volume118
+      - [11802 - All Your Bases Belong to Us.cpp](/home/alexander/codes/uva2/volume118/11802 - All Your Bases Belong to Us.cpp)
+      - [11803 - The Great Merger.cpp](/home/alexander/codes/uva2/volume118/11803 - The Great Merger.cpp)
+      - [11804 - Argentina.cpp](/home/alexander/codes/uva2/volume118/11804 - Argentina.cpp)
+      - [11805 - Bafana Bafana.cpp](/home/alexander/codes/uva2/volume118/11805 - Bafana Bafana.cpp)
+      - [11813 - Shopping.cpp](/home/alexander/codes/uva2/volume118/11813 - Shopping.cpp)
+      - [11817 - Tunnelling the Earth.cpp](/home/alexander/codes/uva2/volume118/11817 - Tunnelling the Earth.cpp)
+      - [11824 - A Minimum Land Price.cpp](/home/alexander/codes/uva2/volume118/11824 - A Minimum Land Price.cpp)
+      - [11828 - Palindrome Again.cpp](/home/alexander/codes/uva2/volume118/11828 - Palindrome Again.cpp)
+      - [11828 - Palindrome Again[v2].cpp](/home/alexander/codes/uva2/volume118/11828 - Palindrome Again[v2].cpp)
+      - [11830 - Contract Revision.cpp](/home/alexander/codes/uva2/volume118/11830 - Contract Revision.cpp)
+      - [11832 - Account Book2.cpp](/home/alexander/codes/uva2/volume118/11832 - Account Book2.cpp)
+      - [11832 - Account Book3.cpp](/home/alexander/codes/uva2/volume118/11832 - Account Book3.cpp)
+      - [11832 - Account Book.cpp](/home/alexander/codes/uva2/volume118/11832 - Account Book.cpp)
+      - [11837 - Musical Plagiarism.cpp](/home/alexander/codes/uva2/volume118/11837 - Musical Plagiarism.cpp)
+      - [11838 - Come and Go.cpp](/home/alexander/codes/uva2/volume118/11838 - Come and Go.cpp)
+      - [11844 - The Melding Plague.cpp](/home/alexander/codes/uva2/volume118/11844 - The Melding Plague.cpp)
+      - [11848 - Cargo Trains.cpp](/home/alexander/codes/uva2/volume118/11848 - Cargo Trains.cpp)
+      - [11849 - CD.c](/home/alexander/codes/uva2/volume118/11849 - CD.c)
+      - [11850 - Alaska.cpp](/home/alexander/codes/uva2/volume118/11850 - Alaska.cpp)
+      - [11851 - Celebrity Split.cpp](/home/alexander/codes/uva2/volume118/11851 - Celebrity Split.cpp)
+      - [11854 - Egypt.cpp](/home/alexander/codes/uva2/volume118/11854 - Egypt.cpp)
+      - [11855 - Buzzwords.cpp](/home/alexander/codes/uva2/volume118/11855 - Buzzwords.cpp)
+      - [11857 - Driving Range.cpp](/home/alexander/codes/uva2/volume118/11857 - Driving Range.cpp)
+      - [11858 - Frosh Week.cpp](/home/alexander/codes/uva2/volume118/11858 - Frosh Week.cpp)
+      - [11858 - Frosh Week[v2].cpp](/home/alexander/codes/uva2/volume118/11858 - Frosh Week[v2].cpp)
+      - [11858 - Frosh Week[v3].cpp](/home/alexander/codes/uva2/volume118/11858 - Frosh Week[v3].cpp)
+      - [11860 - Document Analyzer.cpp](/home/alexander/codes/uva2/volume118/11860 - Document Analyzer.cpp)
+      - [11865 - Stream My Contest.cpp](/home/alexander/codes/uva2/volume118/11865 - Stream My Contest.cpp)
+      - [11869 - SOAP Response.cpp](/home/alexander/codes/uva2/volume118/11869 - SOAP Response.cpp)
+      - [11870 - Antonyms.cpp](/home/alexander/codes/uva2/volume118/11870 - Antonyms.cpp)
+      - [11871 - New Land.cpp](/home/alexander/codes/uva2/volume118/11871 - New Land.cpp)
+      - [11871 - New Land[v2].cpp](/home/alexander/codes/uva2/volume118/11871 - New Land[v2].cpp)
+      - [11871 - New Land[v3].cpp](/home/alexander/codes/uva2/volume118/11871 - New Land[v3].cpp)
+      - [11872 - Where to Run.cpp](/home/alexander/codes/uva2/volume118/11872 - Where to Run.cpp)
+      - [11874 - Travel Company.cpp](/home/alexander/codes/uva2/volume118/11874 - Travel Company.cpp)
+      - [11875 - Brick Game.cpp](/home/alexander/codes/uva2/volume118/11875 - Brick Game.cpp)
+      - [11876 - N + NOD (N).cpp](/home/alexander/codes/uva2/volume118/11876 - N + NOD (N).cpp)
+      - [11877 - The Coco-Cola Store.cpp](/home/alexander/codes/uva2/volume118/11877 - The Coco-Cola Store.cpp)
+      - [11878 - Homework Checker.cpp](/home/alexander/codes/uva2/volume118/11878 - Homework Checker.cpp)
+      - [11879 - Multiple of 17.c](/home/alexander/codes/uva2/volume118/11879 - Multiple of 17.c)
+      - [11881 - Internal Rate of Return.cpp](/home/alexander/codes/uva2/volume118/11881 - Internal Rate of Return.cpp)
+      - [11882 - Biggest Number.cpp](/home/alexander/codes/uva2/volume118/11882 - Biggest Number.cpp)
+      - [11883 - Repairing a Road.cpp](/home/alexander/codes/uva2/volume118/11883 - Repairing a Road.cpp)
+      - [11884 - A Shooting Game.cpp](/home/alexander/codes/uva2/volume118/11884 - A Shooting Game.cpp)
+      - [11885 - Number of Battlefields.cpp](/home/alexander/codes/uva2/volume118/11885 - Number of Battlefields.cpp)
+      - [11888 - Abnormal 89's.cpp](/home/alexander/codes/uva2/volume118/11888 - Abnormal 89's.cpp)
+      - [11889 - Benefit.cpp](/home/alexander/codes/uva2/volume118/11889 - Benefit.cpp)
+      - [11893 - Fabulous DAGy.cpp](/home/alexander/codes/uva2/volume118/11893 - Fabulous DAGy.cpp)
+  - volume119
+      - [11119 - Chemical Attraction.cpp](/home/alexander/codes/uva2/volume119/11119 - Chemical Attraction.cpp)
+      - [11190 - Series of Powers.cpp](/home/alexander/codes/uva2/volume119/11190 - Series of Powers.cpp)
+      - [11900 - Boiled Eggs.cpp](/home/alexander/codes/uva2/volume119/11900 - Boiled Eggs.cpp)
+      - [11902 - Dominator.cpp](/home/alexander/codes/uva2/volume119/11902 - Dominator.cpp)
+      - [11903 - e-Friends.cpp](/home/alexander/codes/uva2/volume119/11903 - e-Friends.cpp)
+      - [11908 - Skyscraper.cpp](/home/alexander/codes/uva2/volume119/11908 - Skyscraper.cpp)
+      - [11909 - Soya Milk.cpp](/home/alexander/codes/uva2/volume119/11909 - Soya Milk.cpp)
+      - [11910 - Closest Fractions.cpp](/home/alexander/codes/uva2/volume119/11910 - Closest Fractions.cpp)
+      - [11917 - Do Your Own Homework.cpp](/home/alexander/codes/uva2/volume119/11917 - Do Your Own Homework.cpp)
+      - [11918 - Traveler of Gridland.cpp](/home/alexander/codes/uva2/volume119/11918 - Traveler of Gridland.cpp)
+      - [11919 - Hybrid Salientia.cpp](/home/alexander/codes/uva2/volume119/11919 - Hybrid Salientia.cpp)
+      - [11920 - 0 s, 1 s and  Marks.cpp](/home/alexander/codes/uva2/volume119/11920 - 0 s, 1 s and  Marks.cpp)
+      - [11922 - Permutation Transformer.cpp](/home/alexander/codes/uva2/volume119/11922 - Permutation Transformer.cpp)
+      - [11923 - Roundabout.cpp](/home/alexander/codes/uva2/volume119/11923 - Roundabout.cpp)
+      - [11925 - Generating Permutations.cpp](/home/alexander/codes/uva2/volume119/11925 - Generating Permutations.cpp)
+      - [11926 - Multitasking.cpp](/home/alexander/codes/uva2/volume119/11926 - Multitasking.cpp)
+      - [11926 - Multitasking[queue].cpp](/home/alexander/codes/uva2/volume119/11926 - Multitasking[queue].cpp)
+      - [11930 - Rectangles.cpp](/home/alexander/codes/uva2/volume119/11930 - Rectangles.cpp)
+      - [11931 - Maze Escape.cpp](/home/alexander/codes/uva2/volume119/11931 - Maze Escape.cpp)
+      - [11932 - Net Profit.cpp](/home/alexander/codes/uva2/volume119/11932 - Net Profit.cpp)
+      - [11933 - Splitting Numbers.cpp](/home/alexander/codes/uva2/volume119/11933 - Splitting Numbers.cpp)
+      - [11934 - Magic Formula.cpp](/home/alexander/codes/uva2/volume119/11934 - Magic Formula.cpp)
+      - [11941 - Creating a Quadtree.cpp](/home/alexander/codes/uva2/volume119/11941 - Creating a Quadtree.cpp)
+      - [11942 - Lumberjack Sequencing.cpp](/home/alexander/codes/uva2/volume119/11942 - Lumberjack Sequencing.cpp)
+      - [11946 - Code Number.cpp](/home/alexander/codes/uva2/volume119/11946 - Code Number.cpp)
+      - [11948 - Reading a Quadtree.cpp](/home/alexander/codes/uva2/volume119/11948 - Reading a Quadtree.cpp)
+      - [11951 - Area.cpp](/home/alexander/codes/uva2/volume119/11951 - Area.cpp)
+      - [11952 - Arithmetic.cpp](/home/alexander/codes/uva2/volume119/11952 - Arithmetic.cpp)
+      - [11953 - Battleships.cpp](/home/alexander/codes/uva2/volume119/11953 - Battleships.cpp)
+      - [11954 - Binary Calculator.cpp](/home/alexander/codes/uva2/volume119/11954 - Binary Calculator.cpp)
+      - [11955 - Binomial Theorem.cpp](/home/alexander/codes/uva2/volume119/11955 - Binomial Theorem.cpp)
+      - [11956 - Brainfuck.cpp](/home/alexander/codes/uva2/volume119/11956 - Brainfuck.cpp)
+      - [11957 - Checkers.cpp](/home/alexander/codes/uva2/volume119/11957 - Checkers.cpp)
+      - [11958 - Coming Home.cpp](/home/alexander/codes/uva2/volume119/11958 - Coming Home.cpp)
+      - [11959 - Dice.cpp](/home/alexander/codes/uva2/volume119/11959 - Dice.cpp)
+      - [11960 - Divisor Game.cpp](/home/alexander/codes/uva2/volume119/11960 - Divisor Game.cpp)
+      - [11961 - DNA.cpp](/home/alexander/codes/uva2/volume119/11961 - DNA.cpp)
+      - [11962 - DNA II.cpp](/home/alexander/codes/uva2/volume119/11962 - DNA II.cpp)
+      - [11964 - Equation.cpp](/home/alexander/codes/uva2/volume119/11964 - Equation.cpp)
+      - [11965 - Extra Spaces.cpp](/home/alexander/codes/uva2/volume119/11965 - Extra Spaces.cpp)
+      - [11970 - Lucky Numbers.cpp](/home/alexander/codes/uva2/volume119/11970 - Lucky Numbers.cpp)
+      - [11971 - Polygon.cpp](/home/alexander/codes/uva2/volume119/11971 - Polygon.cpp)
+      - [11972 - Round Trip.cpp](/home/alexander/codes/uva2/volume119/11972 - Round Trip.cpp)
+      - [11973 - Sierpinski Carpet.cpp](/home/alexander/codes/uva2/volume119/11973 - Sierpinski Carpet.cpp)
+      - [11974 - Switch The Lights.cpp](/home/alexander/codes/uva2/volume119/11974 - Switch The Lights.cpp)
+      - [11977 - Story of Tomisu Ghost.cpp](/home/alexander/codes/uva2/volume119/11977 - Story of Tomisu Ghost.cpp)
+      - [11979 - Hamming Base.cpp](/home/alexander/codes/uva2/volume119/11979 - Hamming Base.cpp)
+      - [11981 - Corrupted Friendship.cpp](/home/alexander/codes/uva2/volume119/11981 - Corrupted Friendship.cpp)
+      - [11983 - Weird Advertisement.cpp](/home/alexander/codes/uva2/volume119/11983 - Weird Advertisement.cpp)
+      - [11984 - A Change in Thermal Unit.cpp](/home/alexander/codes/uva2/volume119/11984 - A Change in Thermal Unit.cpp)
+      - [11985 - Prime Independence.cpp](/home/alexander/codes/uva2/volume119/11985 - Prime Independence.cpp)
+      - [11985 - Prime Independence[v2].cpp](/home/alexander/codes/uva2/volume119/11985 - Prime Independence[v2].cpp)
+      - [11985 - Prime Independence[v3].cpp](/home/alexander/codes/uva2/volume119/11985 - Prime Independence[v3].cpp)
+      - [11985 - Prime Independence[v4].cpp](/home/alexander/codes/uva2/volume119/11985 - Prime Independence[v4].cpp)
+      - [11987 - Almost Union-Find.cpp](/home/alexander/codes/uva2/volume119/11987 - Almost Union-Find.cpp)
+      - [11988 - Broken Keyboard (a.k.a. Beiju Text).cpp](/home/alexander/codes/uva2/volume119/11988 - Broken Keyboard (a.k.a. Beiju Text).cpp)
+      - [11990 - Dynamic Inversion.cpp](/home/alexander/codes/uva2/volume119/11990 - Dynamic Inversion.cpp)
+      - [11991 - Easy Problem from Rujia Liu.cpp](/home/alexander/codes/uva2/volume119/11991 - Easy Problem from Rujia Liu.cpp)
+      - [11992 - Fast Matrix Operations.cpp](/home/alexander/codes/uva2/volume119/11992 - Fast Matrix Operations.cpp)
+      - [11992 - Fast Matrix Operations[四分樹].cpp](/home/alexander/codes/uva2/volume119/11992 - Fast Matrix Operations[四分樹].cpp)
+      - [11992 - Fast Matrix Operations[四分樹v2].cpp](/home/alexander/codes/uva2/volume119/11992 - Fast Matrix Operations[四分樹v2].cpp)
+      - [11994 - Happy Painting.cpp](/home/alexander/codes/uva2/volume119/11994 - Happy Painting.cpp)
+      - [11995 - I Can Guess the Data Structure!.cpp](/home/alexander/codes/uva2/volume119/11995 - I Can Guess the Data Structure!.cpp)
+      - [11996 - Jewel Magic.cpp](/home/alexander/codes/uva2/volume119/11996 - Jewel Magic.cpp)
+      - [11997 - K Smallest Sums.cpp](/home/alexander/codes/uva2/volume119/11997 - K Smallest Sums.cpp)
+  - volume120
+      - [12000 - K-Transformed Permutations.cpp](/home/alexander/codes/uva2/volume120/12000 - K-Transformed Permutations.cpp)
+      - [12002 - Happy Birthday.cpp](/home/alexander/codes/uva2/volume120/12002 - Happy Birthday.cpp)
+      - [12003 - Array Transformer.cpp](/home/alexander/codes/uva2/volume120/12003 - Array Transformer.cpp)
+      - [12004 - Bubble Sort.cpp](/home/alexander/codes/uva2/volume120/12004 - Bubble Sort.cpp)
+      - [12005 - Find Solutions.cpp](/home/alexander/codes/uva2/volume120/12005 - Find Solutions.cpp)
+      - [12009 - Avaricious Maryanna.cpp](/home/alexander/codes/uva2/volume120/12009 - Avaricious Maryanna.cpp)
+      - [12010 - Boring Homework.cpp](/home/alexander/codes/uva2/volume120/12010 - Boring Homework.cpp)
+      - [12011 - Complete the Set.cpp](/home/alexander/codes/uva2/volume120/12011 - Complete the Set.cpp)
+      - [12012 - Detection of Extraterrestrial.cpp](/home/alexander/codes/uva2/volume120/12012 - Detection of Extraterrestrial.cpp)
+      - [12013 - Entertainment.cpp](/home/alexander/codes/uva2/volume120/12013 - Entertainment.cpp)
+      - [12016 - Herbicide.cpp](/home/alexander/codes/uva2/volume120/12016 - Herbicide.cpp)
+      - [12017 - Imitation.cpp](/home/alexander/codes/uva2/volume120/12017 - Imitation.cpp)
+      - [12018 - Juice Extractor.cpp](/home/alexander/codes/uva2/volume120/12018 - Juice Extractor.cpp)
+      - [12019 - Doom's Day Algorithm.cpp](/home/alexander/codes/uva2/volume120/12019 - Doom's Day Algorithm.cpp)
+      - [12022 - Ordering T-shirts.cpp](/home/alexander/codes/uva2/volume120/12022 - Ordering T-shirts.cpp)
+      - [12024 - Hats.c](/home/alexander/codes/uva2/volume120/12024 - Hats.c)
+      - [12027 - Very Big Perfect Squares.cpp](/home/alexander/codes/uva2/volume120/12027 - Very Big Perfect Squares.cpp)
+      - [12032 - The Monkey and the Oiled Bamboo.cpp](/home/alexander/codes/uva2/volume120/12032 - The Monkey and the Oiled Bamboo.cpp)
+      - [12033 - Game of CS.cpp](/home/alexander/codes/uva2/volume120/12033 - Game of CS.cpp)
+      - [12034 - Race.cpp](/home/alexander/codes/uva2/volume120/12034 - Race.cpp)
+      - [12035 - War Map.cpp](/home/alexander/codes/uva2/volume120/12035 - War Map.cpp)
+      - [12035 - War Map[v2].cpp](/home/alexander/codes/uva2/volume120/12035 - War Map[v2].cpp)
+      - [12036 - Stable Grid.cpp](/home/alexander/codes/uva2/volume120/12036 - Stable Grid.cpp)
+      - [12039 - Goldbach's Cardinality.cpp](/home/alexander/codes/uva2/volume120/12039 - Goldbach's Cardinality.cpp)
+      - [12040 - Again Lucky Numbers.cpp](/home/alexander/codes/uva2/volume120/12040 - Again Lucky Numbers.cpp)
+      - [12041 - BFS (Binary Fibonacci String).cpp](/home/alexander/codes/uva2/volume120/12041 - BFS (Binary Fibonacci String).cpp)
+      - [12042 - Colorful Eggs.cpp](/home/alexander/codes/uva2/volume120/12042 - Colorful Eggs.cpp)
+      - [12043 - Divisors.cpp](/home/alexander/codes/uva2/volume120/12043 - Divisors.cpp)
+      - [12045 - Fun with Strings.cpp](/home/alexander/codes/uva2/volume120/12045 - Fun with Strings.cpp)
+      - [12046 - Great Numbers.cpp](/home/alexander/codes/uva2/volume120/12046 - Great Numbers.cpp)
+      - [12048 - Inhabitants.cpp](/home/alexander/codes/uva2/volume120/12048 - Inhabitants.cpp)
+      - [12049 - Just Prune The List.cpp](/home/alexander/codes/uva2/volume120/12049 - Just Prune The List.cpp)
+      - [12050 - Palindrome Numbers.cpp](/home/alexander/codes/uva2/volume120/12050 - Palindrome Numbers.cpp)
+      - [12051 - Mazes in Higher Dimensions.cpp](/home/alexander/codes/uva2/volume120/12051 - Mazes in Higher Dimensions.cpp)
+      - [12052 - Cyber cafe.cpp](/home/alexander/codes/uva2/volume120/12052 - Cyber cafe.cpp)
+      - [12055 - Strange Research.cpp](/home/alexander/codes/uva2/volume120/12055 - Strange Research.cpp)
+      - [12057 - Prefix Codes.cpp](/home/alexander/codes/uva2/volume120/12057 - Prefix Codes.cpp)
+      - [12058 - Highway Monitor.cpp](/home/alexander/codes/uva2/volume120/12058 - Highway Monitor.cpp)
+      - [12060 - All Integer Average.cpp](/home/alexander/codes/uva2/volume120/12060 - All Integer Average.cpp)
+      - [12062 - Reverse Assignment.cpp](/home/alexander/codes/uva2/volume120/12062 - Reverse Assignment.cpp)
+      - [12063 - Zeros and Ones.cpp](/home/alexander/codes/uva2/volume120/12063 - Zeros and Ones.cpp)
+      - [12064 - Count the Points Inside.cpp](/home/alexander/codes/uva2/volume120/12064 - Count the Points Inside.cpp)
+      - [12064 - Count the Points Inside[force].cpp](/home/alexander/codes/uva2/volume120/12064 - Count the Points Inside[force].cpp)
+      - [12064 - Count the Points Inside[simply].cpp](/home/alexander/codes/uva2/volume120/12064 - Count the Points Inside[simply].cpp)
+      - [12065 - Permutation Primes.cpp](/home/alexander/codes/uva2/volume120/12065 - Permutation Primes.cpp)
+      - [12068 - Harmonic Mean.cpp](/home/alexander/codes/uva2/volume120/12068 - Harmonic Mean.cpp)
+      - [12069 - Robots inside the Labyrinth.cpp](/home/alexander/codes/uva2/volume120/12069 - Robots inside the Labyrinth.cpp)
+      - [12071 - Understanding Recursion.cpp](/home/alexander/codes/uva2/volume120/12071 - Understanding Recursion.cpp)
+      - [12073 - Altitude Triangle.cpp](/home/alexander/codes/uva2/volume120/12073 - Altitude Triangle.cpp)
+      - [12078 - Laserbox.cpp](/home/alexander/codes/uva2/volume120/12078 - Laserbox.cpp)
+      - [12081 - Reduced ID Numbers.cpp](/home/alexander/codes/uva2/volume120/12081 - Reduced ID Numbers.cpp)
+      - [12083 - Guardian of Decency.cpp](/home/alexander/codes/uva2/volume120/12083 - Guardian of Decency.cpp)
+      - [12086 - Potentiometers[BIT].cpp](/home/alexander/codes/uva2/volume120/12086 - Potentiometers[BIT].cpp)
+      - [12086 - Potentiometers.cpp](/home/alexander/codes/uva2/volume120/12086 - Potentiometers.cpp)
+      - [12086 - Potentiometers[zkw].cpp](/home/alexander/codes/uva2/volume120/12086 - Potentiometers[zkw].cpp)
+      - [12087 - Collecting Marbles.cpp](/home/alexander/codes/uva2/volume120/12087 - Collecting Marbles.cpp)
+      - [12088 - Expression.cpp](/home/alexander/codes/uva2/volume120/12088 - Expression.cpp)
+      - [12089 - The Luncheon.cpp](/home/alexander/codes/uva2/volume120/12089 - The Luncheon.cpp)
+      - [12091 - Multiplication.cpp](/home/alexander/codes/uva2/volume120/12091 - Multiplication.cpp)
+      - [12092 - Paint the Roads.cpp](/home/alexander/codes/uva2/volume120/12092 - Paint the Roads.cpp)
+      - [12094 - Battle of the Triangle.cpp](/home/alexander/codes/uva2/volume120/12094 - Battle of the Triangle.cpp)
+      - [12096 - The SetStack Computer.cpp](/home/alexander/codes/uva2/volume120/12096 - The SetStack Computer.cpp)
+  - volume121
+      - [12100 - Printer Queue.cpp](/home/alexander/codes/uva2/volume121/12100 - Printer Queue.cpp)
+      - [12101 - Prime Path.cpp](/home/alexander/codes/uva2/volume121/12101 - Prime Path.cpp)
+      - [12103 - Leonardo's Notebook.cpp](/home/alexander/codes/uva2/volume121/12103 - Leonardo's Notebook.cpp)
+      - [12105 - Bigger is Better.cpp](/home/alexander/codes/uva2/volume121/12105 - Bigger is Better.cpp)
+      - [12108 - Extraordinarily Tired Students.cpp](/home/alexander/codes/uva2/volume121/12108 - Extraordinarily Tired Students.cpp)
+      - [12109 - Fairies' Defence.cpp](/home/alexander/codes/uva2/volume121/12109 - Fairies' Defence.cpp)
+      - [12113 - Overlapping Squares.cpp](/home/alexander/codes/uva2/volume121/12113 - Overlapping Squares.cpp)
+      - [12114 - Bachelor Arithmetic.cpp](/home/alexander/codes/uva2/volume121/12114 - Bachelor Arithmetic.cpp)
+      - [12115 - Nested Squares.cpp](/home/alexander/codes/uva2/volume121/12115 - Nested Squares.cpp)
+      - [12117 - ACM Puzzles.cpp](/home/alexander/codes/uva2/volume121/12117 - ACM Puzzles.cpp)
+      - [12118 - Inspector's Dilemma.cpp](/home/alexander/codes/uva2/volume121/12118 - Inspector's Dilemma.cpp)
+      - [12119 - The Bells are Ringing.cpp](/home/alexander/codes/uva2/volume121/12119 - The Bells are Ringing.cpp)
+      - [12120 - Photographic Tour.cpp](/home/alexander/codes/uva2/volume121/12120 - Photographic Tour.cpp)
+      - [12123 - Magnetic Train Tracks.cpp](/home/alexander/codes/uva2/volume121/12123 - Magnetic Train Tracks.cpp)
+      - [12124 - Assemble.cpp](/home/alexander/codes/uva2/volume121/12124 - Assemble.cpp)
+      - [12125 - March of the Penguins.cpp](/home/alexander/codes/uva2/volume121/12125 - March of the Penguins.cpp)
+      - [12126 - Containers.cpp](/home/alexander/codes/uva2/volume121/12126 - Containers.cpp)
+      - [12128 - Escape from Enemy Territory.cpp](/home/alexander/codes/uva2/volume121/12128 - Escape from Enemy Territory.cpp)
+      - [12128 - Escape from Enemy Territory[mem-less].cpp](/home/alexander/codes/uva2/volume121/12128 - Escape from Enemy Territory[mem-less].cpp)
+      - [12131 - Obfuscation.cpp](/home/alexander/codes/uva2/volume121/12131 - Obfuscation.cpp)
+      - [12132 - Tower Parking.cpp](/home/alexander/codes/uva2/volume121/12132 - Tower Parking.cpp)
+      - [12134 - Find the Format String.cpp](/home/alexander/codes/uva2/volume121/12134 - Find the Format String.cpp)
+      - [12135 - Switch Bulbs.cpp](/home/alexander/codes/uva2/volume121/12135 - Switch Bulbs.cpp)
+      - [12136 - Schedule of a Married Man.cpp](/home/alexander/codes/uva2/volume121/12136 - Schedule of a Married Man.cpp)
+      - [12138 - Chemical Plant-opt.cpp](/home/alexander/codes/uva2/volume121/12138 - Chemical Plant-opt.cpp)
+      - [12141 - Line Chart.cpp](/home/alexander/codes/uva2/volume121/12141 - Line Chart.cpp)
+      - [12141 - Line Chart[v2.cpp](/home/alexander/codes/uva2/volume121/12141 - Line Chart[v2.cpp)
+      - [12144 - Almost Shortest Path.cpp](/home/alexander/codes/uva2/volume121/12144 - Almost Shortest Path.cpp)
+      - [12146 - Candy.cpp](/home/alexander/codes/uva2/volume121/12146 - Candy.cpp)
+      - [12149 - Feynman.cpp](/home/alexander/codes/uva2/volume121/12149 - Feynman.cpp)
+      - [12150 - Pole Position.cpp](/home/alexander/codes/uva2/volume121/12150 - Pole Position.cpp)
+      - [12154 - Shrinking Polygons.cpp](/home/alexander/codes/uva2/volume121/12154 - Shrinking Polygons.cpp)
+      - [12157 - Tariff Plan.cpp](/home/alexander/codes/uva2/volume121/12157 - Tariff Plan.cpp)
+      - [12160 - Unlock the Lock.cpp](/home/alexander/codes/uva2/volume121/12160 - Unlock the Lock.cpp)
+      - [12161 - Ironman Race in Treeland.cpp](/home/alexander/codes/uva2/volume121/12161 - Ironman Race in Treeland.cpp)
+      - [12166 - Equilibrium Mobile.cpp](/home/alexander/codes/uva2/volume121/12166 - Equilibrium Mobile.cpp)
+      - [12167 - Proving Equivalences.cpp](/home/alexander/codes/uva2/volume121/12167 - Proving Equivalences.cpp)
+      - [12168 - Cat vs. Dog.cpp](/home/alexander/codes/uva2/volume121/12168 - Cat vs. Dog.cpp)
+      - [12169 - Disgruntled Judge.cpp](/home/alexander/codes/uva2/volume121/12169 - Disgruntled Judge.cpp)
+      - [12172 - Matchsticks.cpp](/home/alexander/codes/uva2/volume121/12172 - Matchsticks.cpp)
+      - [12173 - White Water Rafting.cpp](/home/alexander/codes/uva2/volume121/12173 - White Water Rafting.cpp)
+      - [12174 - Shuffle.cpp](/home/alexander/codes/uva2/volume121/12174 - Shuffle.cpp)
+      - [12176 - Bring Your Own Horse.cpp](/home/alexander/codes/uva2/volume121/12176 - Bring Your Own Horse.cpp)
+      - [12179 - Randomly-priced Tickets.cpp](/home/alexander/codes/uva2/volume121/12179 - Randomly-priced Tickets.cpp)
+      - [12182 - Toll Road.cpp](/home/alexander/codes/uva2/volume121/12182 - Toll Road.cpp)
+      - [12183 - Top Secret.cpp](/home/alexander/codes/uva2/volume121/12183 - Top Secret.cpp)
+      - [12184 - Transcribed Books.cpp](/home/alexander/codes/uva2/volume121/12184 - Transcribed Books.cpp)
+      - [12189 - Dinner Hall.cpp](/home/alexander/codes/uva2/volume121/12189 - Dinner Hall.cpp)
+      - [12191 - File Recover.cpp](/home/alexander/codes/uva2/volume121/12191 - File Recover.cpp)
+      - [12192 - Grapevine.cpp](/home/alexander/codes/uva2/volume121/12192 - Grapevine.cpp)
+      - [12194 - Isosceles Triangles.cpp](/home/alexander/codes/uva2/volume121/12194 - Isosceles Triangles.cpp)
+      - [12195 - Jingle Composing.cpp](/home/alexander/codes/uva2/volume121/12195 - Jingle Composing.cpp)
+      - [12196 - Klingon Levels.cpp](/home/alexander/codes/uva2/volume121/12196 - Klingon Levels.cpp)
+      - [12197 - Trick or Treat.cpp](/home/alexander/codes/uva2/volume121/12197 - Trick or Treat.cpp)
+      - [12198 - Working at the Restaurant.cpp](/home/alexander/codes/uva2/volume121/12198 - Working at the Restaurant.cpp)
+      - [12524 - Arranging Heaps.cpp](/home/alexander/codes/uva2/volume121/12524 - Arranging Heaps.cpp)
+      - [test - 12141.cpp](/home/alexander/codes/uva2/volume121/test - 12141.cpp)
+  - volume122
+      - [12205 - Happy Telephones.cpp](/home/alexander/codes/uva2/volume122/12205 - Happy Telephones.cpp)
+      - [12206 - Stammering Aliens.cpp](/home/alexander/codes/uva2/volume122/12206 - Stammering Aliens.cpp)
+      - [12207 - That is Your Queue.cpp](/home/alexander/codes/uva2/volume122/12207 - That is Your Queue.cpp)
+      - [12208 - How Many Ones Needed.cpp](/home/alexander/codes/uva2/volume122/12208 - How Many Ones Needed.cpp)
+      - [12210 - A Match Making Problem.cpp](/home/alexander/codes/uva2/volume122/12210 - A Match Making Problem.cpp)
+      - [12216 - How Many bases.cpp](/home/alexander/codes/uva2/volume122/12216 - How Many bases.cpp)
+      - [12219 - Common Subexpression Elimination.cpp](/home/alexander/codes/uva2/volume122/12219 - Common Subexpression Elimination.cpp)
+      - [12220 - Divisible Subsequences.cpp](/home/alexander/codes/uva2/volume122/12220 - Divisible Subsequences.cpp)
+      - [12225 - Settlers of Catan.cpp](/home/alexander/codes/uva2/volume122/12225 - Settlers of Catan.cpp)
+      - [12226 - Simple Polygon.cpp](/home/alexander/codes/uva2/volume122/12226 - Simple Polygon.cpp)
+      - [12231 - Download Manager.cpp](/home/alexander/codes/uva2/volume122/12231 - Download Manager.cpp)
+      - [12232 - Exclusive-OR.cpp](/home/alexander/codes/uva2/volume122/12232 - Exclusive-OR.cpp)
+      - [12235 - Help Bubu.cpp](/home/alexander/codes/uva2/volume122/12235 - Help Bubu.cpp)
+      - [12239 - Bingo.cpp](/home/alexander/codes/uva2/volume122/12239 - Bingo.cpp)
+      - [12240 - Cocircular Points.cpp](/home/alexander/codes/uva2/volume122/12240 - Cocircular Points.cpp)
+      - [12241 - Digits Count.cpp](/home/alexander/codes/uva2/volume122/12241 - Digits Count.cpp)
+      - [12243 - Flowers Flourish from France.cpp](/home/alexander/codes/uva2/volume122/12243 - Flowers Flourish from France.cpp)
+      - [12245 - Hyperactive Girl.cpp](/home/alexander/codes/uva2/volume122/12245 - Hyperactive Girl.cpp)
+      - [12246 - Ingenious Metro.cpp](/home/alexander/codes/uva2/volume122/12246 - Ingenious Metro.cpp)
+      - [12247 - Jollo.cpp](/home/alexander/codes/uva2/volume122/12247 - Jollo.cpp)
+      - [12249 - Overlapping Scenes.cpp](/home/alexander/codes/uva2/volume122/12249 - Overlapping Scenes.cpp)
+      - [12254 - Electricity Connection[AVX2].cpp](/home/alexander/codes/uva2/volume122/12254 - Electricity Connection[AVX2].cpp)
+      - [12254 - Electricity Connection.cpp](/home/alexander/codes/uva2/volume122/12254 - Electricity Connection.cpp)
+      - [12254 - Electricity Connection[layout-opt].cpp](/home/alexander/codes/uva2/volume122/12254 - Electricity Connection[layout-opt].cpp)
+      - [12254 - Electricity Connection[SSE].cpp](/home/alexander/codes/uva2/volume122/12254 - Electricity Connection[SSE].cpp)
+      - [12257 - The Queue.cpp](/home/alexander/codes/uva2/volume122/12257 - The Queue.cpp)
+      - [12260 - Free Goodies.cpp](/home/alexander/codes/uva2/volume122/12260 - Free Goodies.cpp)
+      - [12261 - High Score.cpp](/home/alexander/codes/uva2/volume122/12261 - High Score.cpp)
+      - [12263 - Rankings.cpp](/home/alexander/codes/uva2/volume122/12263 - Rankings.cpp)
+      - [12265 - Selling Land.cpp](/home/alexander/codes/uva2/volume122/12265 - Selling Land.cpp)
+      - [12266 - Stock Prices.cpp](/home/alexander/codes/uva2/volume122/12266 - Stock Prices.cpp)
+      - [12271 - Comparing answers.cpp](/home/alexander/codes/uva2/volume122/12271 - Comparing answers.cpp)
+      - [12272 - Fake scoreboard.cpp](/home/alexander/codes/uva2/volume122/12272 - Fake scoreboard.cpp)
+      - [12272 - Fake scoreboard[opt].cpp](/home/alexander/codes/uva2/volume122/12272 - Fake scoreboard[opt].cpp)
+      - [12273 - Palindromic DNA.cpp](/home/alexander/codes/uva2/volume122/12273 - Palindromic DNA.cpp)
+      - [12274 - Jumping monkey.cpp](/home/alexander/codes/uva2/volume122/12274 - Jumping monkey.cpp)
+      - [12276 - Assembly line.cpp](/home/alexander/codes/uva2/volume122/12276 - Assembly line.cpp)
+      - [12277 - Locks and keys.cpp](/home/alexander/codes/uva2/volume122/12277 - Locks and keys.cpp)
+      - [12277 - Locks and keys[opt].cpp](/home/alexander/codes/uva2/volume122/12277 - Locks and keys[opt].cpp)
+      - [12279 - Emoogle Balance.cpp](/home/alexander/codes/uva2/volume122/12279 - Emoogle Balance.cpp)
+      - [12280 - A Digital Satire of Digital Age.cpp](/home/alexander/codes/uva2/volume122/12280 - A Digital Satire of Digital Age.cpp)
+      - [12281 - Hyper Box.cpp](/home/alexander/codes/uva2/volume122/12281 - Hyper Box.cpp)
+      - [12283 - Halloween Costumes.cpp](/home/alexander/codes/uva2/volume122/12283 - Halloween Costumes.cpp)
+      - [12284 - Digital Matrix.cpp](/home/alexander/codes/uva2/volume122/12284 - Digital Matrix.cpp)
+      - [12289 - One-Two-Three.cpp](/home/alexander/codes/uva2/volume122/12289 - One-Two-Three.cpp)
+      - [12290 - Counting Game.cpp](/home/alexander/codes/uva2/volume122/12290 - Counting Game.cpp)
+      - [12292 - Polyomino Decomposer.cpp](/home/alexander/codes/uva2/volume122/12292 - Polyomino Decomposer.cpp)
+      - [12293 - Box Game.cpp](/home/alexander/codes/uva2/volume122/12293 - Box Game.cpp)
+      - [12295 - Optimal Symmetric Paths.cpp](/home/alexander/codes/uva2/volume122/12295 - Optimal Symmetric Paths.cpp)
+      - [12298 - Super Poker II.cpp](/home/alexander/codes/uva2/volume122/12298 - Super Poker II.cpp)
+      - [12299 - RMQ with Shifts.cpp](/home/alexander/codes/uva2/volume122/12299 - RMQ with Shifts.cpp)
+  - volume123
+      - [12300 - Smallest Regular Polygon.cpp](/home/alexander/codes/uva2/volume123/12300 - Smallest Regular Polygon.cpp)
+      - [12301 - An Angular Puzzle.cpp](/home/alexander/codes/uva2/volume123/12301 - An Angular Puzzle.cpp)
+      - [12302 - Nine-Point Circle.cpp](/home/alexander/codes/uva2/volume123/12302 - Nine-Point Circle.cpp)
+      - [12303 - Composite Transformations.cpp](/home/alexander/codes/uva2/volume123/12303 - Composite Transformations.cpp)
+      - [12307 - Smallest Enclosing Rectangle.cpp](/home/alexander/codes/uva2/volume123/12307 - Smallest Enclosing Rectangle.cpp)
+      - [12310 - Point Location.cpp](/home/alexander/codes/uva2/volume123/12310 - Point Location.cpp)
+      - [12310 - Point Location[online].cpp](/home/alexander/codes/uva2/volume123/12310 - Point Location[online].cpp)
+      - [12310 - Point Location[online-ST].cpp](/home/alexander/codes/uva2/volume123/12310 - Point Location[online-ST].cpp)
+      - [12310 - Point Location[opt].cpp](/home/alexander/codes/uva2/volume123/12310 - Point Location[opt].cpp)
+      - [12311 - All-Pair Farthest Points[Approx].cpp](/home/alexander/codes/uva2/volume123/12311 - All-Pair Farthest Points[Approx].cpp)
+      - [12311 - All-Pair Farthest Points.cpp](/home/alexander/codes/uva2/volume123/12311 - All-Pair Farthest Points.cpp)
+      - [12311 - All-Pair Farthest Points[testdataGenerate].cpp](/home/alexander/codes/uva2/volume123/12311 - All-Pair Farthest Points[testdataGenerate].cpp)
+      - [12311 - All-Pair Farthest Points[v2].cpp](/home/alexander/codes/uva2/volume123/12311 - All-Pair Farthest Points[v2].cpp)
+      - [12311 - All-Pair Farthest Points[vn].cpp](/home/alexander/codes/uva2/volume123/12311 - All-Pair Farthest Points[vn].cpp)
+      - [12311 - All-Pair Farthest Points[vv].cpp](/home/alexander/codes/uva2/volume123/12311 - All-Pair Farthest Points[vv].cpp)
+      - [12312 - Bounding Volume Hierarchy.cpp](/home/alexander/codes/uva2/volume123/12312 - Bounding Volume Hierarchy.cpp)
+      - [12312 - Bounding Volume Hierarchy[opt].cpp](/home/alexander/codes/uva2/volume123/12312 - Bounding Volume Hierarchy[opt].cpp)
+      - [12316 - Sewing Buttons with Grandma.cpp](/home/alexander/codes/uva2/volume123/12316 - Sewing Buttons with Grandma.cpp)
+      - [12316 - Sewing Buttons with Grandma.java](/home/alexander/codes/uva2/volume123/12316 - Sewing Buttons with Grandma.java)
+      - [12317 - Document Compression.cpp](/home/alexander/codes/uva2/volume123/12317 - Document Compression.cpp)
+      - [12322 - Handgun Shooting Sport.cpp](/home/alexander/codes/uva2/volume123/12322 - Handgun Shooting Sport.cpp)
+      - [12325 - Zombie's Treasure Chest.cpp](/home/alexander/codes/uva2/volume123/12325 - Zombie's Treasure Chest.cpp)
+      - [12327 - Xavier is Learning to Count.cpp](/home/alexander/codes/uva2/volume123/12327 - Xavier is Learning to Count.cpp)
+      - [12333 - Revenge of Fibonacci.cpp](/home/alexander/codes/uva2/volume123/12333 - Revenge of Fibonacci.cpp)
+      - [12335 - Lexicographic Order.cpp](/home/alexander/codes/uva2/volume123/12335 - Lexicographic Order.cpp)
+      - [12337 - Bob's Beautiful Balls.cpp](/home/alexander/codes/uva2/volume123/12337 - Bob's Beautiful Balls.cpp)
+      - [12338 - Anti-Rhyme Pairs.cpp](/home/alexander/codes/uva2/volume123/12338 - Anti-Rhyme Pairs.cpp)
+      - [12342 - Tax Calculator.cpp](/home/alexander/codes/uva2/volume123/12342 - Tax Calculator.cpp)
+      - [12343 - Strange Simulation.cpp](/home/alexander/codes/uva2/volume123/12343 - Strange Simulation.cpp)
+      - [12345 - Dynamic len(set(a[LR])).cpp](/home/alexander/codes/uva2/volume123/12345 - Dynamic len(set(a[LR])).cpp)
+      - [12345 - Dynamic len(set(a[LR]))[v2].cpp](/home/alexander/codes/uva2/volume123/12345 - Dynamic len(set(a[LR]))[v2].cpp)
+      - [12347 - Binary Search Tree.cpp](/home/alexander/codes/uva2/volume123/12347 - Binary Search Tree.cpp)
+      - [12353 - Fence Making.cpp](/home/alexander/codes/uva2/volume123/12353 - Fence Making.cpp)
+      - [12354 - Paths in a Tree.cpp](/home/alexander/codes/uva2/volume123/12354 - Paths in a Tree.cpp)
+      - [12355 - Consecutive Sums.cpp](/home/alexander/codes/uva2/volume123/12355 - Consecutive Sums.cpp)
+      - [12357 - Ball Stacking.cpp](/home/alexander/codes/uva2/volume123/12357 - Ball Stacking.cpp)
+      - [12359 - Diccionario Portunol.cpp](/home/alexander/codes/uva2/volume123/12359 - Diccionario Portunol.cpp)
+      - [12360 - Elecrical Pollution.cpp](/home/alexander/codes/uva2/volume123/12360 - Elecrical Pollution.cpp)
+      - [12363 - Hedge Mazes.cpp](/home/alexander/codes/uva2/volume123/12363 - Hedge Mazes.cpp)
+      - [12365 - Jupiter Atacks!.cpp](/home/alexander/codes/uva2/volume123/12365 - Jupiter Atacks!.cpp)
+      - [12368 - Candles.cpp](/home/alexander/codes/uva2/volume123/12368 - Candles.cpp)
+      - [12368 - Candles[v2.cpp].cpp](/home/alexander/codes/uva2/volume123/12368 - Candles[v2.cpp].cpp)
+      - [12372 - Packing for Holiday.cpp](/home/alexander/codes/uva2/volume123/12372 - Packing for Holiday.cpp)
+      - [12374 - Treasure Hunt.cpp](/home/alexander/codes/uva2/volume123/12374 - Treasure Hunt.cpp)
+      - [12375 - Truchet Tiling.cpp](/home/alexander/codes/uva2/volume123/12375 - Truchet Tiling.cpp)
+      - [12376 - As Long as I Learn, I Live.cpp](/home/alexander/codes/uva2/volume123/12376 - As Long as I Learn, I Live.cpp)
+      - [12377 - Number Coding.cpp](/home/alexander/codes/uva2/volume123/12377 - Number Coding.cpp)
+      - [12379 - Central Post Office.cpp](/home/alexander/codes/uva2/volume123/12379 - Central Post Office.cpp)
+      - [12380 - Glimmr in Distress.cpp](/home/alexander/codes/uva2/volume123/12380 - Glimmr in Distress.cpp)
+      - [12382 - Grid of Lamps.cpp](/home/alexander/codes/uva2/volume123/12382 - Grid of Lamps.cpp)
+      - [12384 - Span.cpp](/home/alexander/codes/uva2/volume123/12384 - Span.cpp)
+      - [12385 - Interesting Sequences.cpp](/home/alexander/codes/uva2/volume123/12385 - Interesting Sequences.cpp)
+      - [12386 - Smallest Polygon.cpp](/home/alexander/codes/uva2/volume123/12386 - Smallest Polygon.cpp)
+      - [12389 - Cybercrime Donut Investigation.cpp](/home/alexander/codes/uva2/volume123/12389 - Cybercrime Donut Investigation.cpp)
+      - [12390 - Distributing Ballot Boxes.cpp](/home/alexander/codes/uva2/volume123/12390 - Distributing Ballot Boxes.cpp)
+      - [12391 - Game, Set and Match.cpp](/home/alexander/codes/uva2/volume123/12391 - Game, Set and Match.cpp)
+      - [12392 - Guess the Numbers.cpp](/home/alexander/codes/uva2/volume123/12392 - Guess the Numbers.cpp)
+      - [12393 - Non-negative Partial Sums.cpp](/home/alexander/codes/uva2/volume123/12393 - Non-negative Partial Sums.cpp)
+      - [12394 - Peer Review.cpp](/home/alexander/codes/uva2/volume123/12394 - Peer Review.cpp)
+      - [12395 - Regular Convex Polygon.cpp](/home/alexander/codes/uva2/volume123/12395 - Regular Convex Polygon.cpp)
+      - [12396 - Remoteland.cpp](/home/alexander/codes/uva2/volume123/12396 - Remoteland.cpp)
+      - [12397 - Roman Numerals.cpp](/home/alexander/codes/uva2/volume123/12397 - Roman Numerals.cpp)
+      - [12398 - NumPuzz I.cpp](/home/alexander/codes/uva2/volume123/12398 - NumPuzz I.cpp)
+      - [12399 - NumPuzz II.cpp](/home/alexander/codes/uva2/volume123/12399 - NumPuzz II.cpp)
+  - volume124
+    - 12402 - Parallel Missions
+        - [12402 - Parallel Missions[Astar].cpp](/home/alexander/codes/uva2/volume124/12402 - Parallel Missions/12402 - Parallel Missions[Astar].cpp)
+        - [12402 - Parallel Missions[IDA].cpp](/home/alexander/codes/uva2/volume124/12402 - Parallel Missions/12402 - Parallel Missions[IDA].cpp)
+      - [12403 - Save Setu.c](/home/alexander/codes/uva2/volume124/12403 - Save Setu.c)
+      - [12404 - Trapezium Drawing.cpp](/home/alexander/codes/uva2/volume124/12404 - Trapezium Drawing.cpp)
+      - [12405 - Scaresrpw.c](/home/alexander/codes/uva2/volume124/12405 - Scaresrpw.c)
+      - [12406 - Help Dexter.cpp](/home/alexander/codes/uva2/volume124/12406 - Help Dexter.cpp)
+      - [12407 - Speed Zones.cpp](/home/alexander/codes/uva2/volume124/12407 - Speed Zones.cpp)
+      - [12412 - A Typical Homework.cpp](/home/alexander/codes/uva2/volume124/12412 - A Typical Homework.cpp)
+      - [12415 - Digit Patterns[v2].cpp](/home/alexander/codes/uva2/volume124/12415 - Digit Patterns[v2].cpp)
+      - [12416 - Excessive Space Remover.cpp](/home/alexander/codes/uva2/volume124/12416 - Excessive Space Remover.cpp)
+      - [12419 - Heap Manager.cpp](/home/alexander/codes/uva2/volume124/12419 - Heap Manager.cpp)
+      - [12424 - Answering Queries on a Tree.cpp](/home/alexander/codes/uva2/volume124/12424 - Answering Queries on a Tree.cpp)
+      - [12425 - Best Friend.cpp](/home/alexander/codes/uva2/volume124/12425 - Best Friend.cpp)
+      - [12429 - Finding Magic Triplets.cpp](/home/alexander/codes/uva2/volume124/12429 - Finding Magic Triplets.cpp)
+      - [12431 - Happy 109 Day.cpp](/home/alexander/codes/uva2/volume124/12431 - Happy 109 Day.cpp)
+      - [12433 - Rent a Car.cpp](/home/alexander/codes/uva2/volume124/12433 - Rent a Car.cpp)
+      - [12436 - Rip Van Winkle's Code.cpp](/home/alexander/codes/uva2/volume124/12436 - Rip Van Winkle's Code.cpp)
+      - [12436 - Rip Van Winkle's Code[v2].cpp](/home/alexander/codes/uva2/volume124/12436 - Rip Van Winkle's Code[v2].cpp)
+      - [12439 - February 29.cpp](/home/alexander/codes/uva2/volume124/12439 - February 29.cpp)
+      - [12440 - Save the Trees.cpp](/home/alexander/codes/uva2/volume124/12440 - Save the Trees.cpp)
+      - [12442 - Forwarding Emails.cpp](/home/alexander/codes/uva2/volume124/12442 - Forwarding Emails.cpp)
+      - [12444 - Bits and Pieces.cpp](/home/alexander/codes/uva2/volume124/12444 - Bits and Pieces.cpp)
+      - [12445 - Happy 12.cpp](/home/alexander/codes/uva2/volume124/12445 - Happy 12.cpp)
+      - [12446 - How Many... in 3D.cpp](/home/alexander/codes/uva2/volume124/12446 - How Many... in 3D.cpp)
+      - [12447 - Pieces and Bits.cpp](/home/alexander/codes/uva2/volume124/12447 - Pieces and Bits.cpp)
+      - [12448 - Casino Advantage.cpp](/home/alexander/codes/uva2/volume124/12448 - Casino Advantage.cpp)
+      - [12450 - SpaceRecon Tournament.cpp](/home/alexander/codes/uva2/volume124/12450 - SpaceRecon Tournament.cpp)
+      - [12452 - Plants vs. Zombies HD SP.cpp](/home/alexander/codes/uva2/volume124/12452 - Plants vs. Zombies HD SP.cpp)
+      - [12455 - Bars.cpp](/home/alexander/codes/uva2/volume124/12455 - Bars.cpp)
+      - [12456 - Mirror codes.cpp](/home/alexander/codes/uva2/volume124/12456 - Mirror codes.cpp)
+      - [12458 - Oh, my trees![ANSI C].cpp](/home/alexander/codes/uva2/volume124/12458 - Oh, my trees![ANSI C].cpp)
+      - [12458 - Oh, my trees!.cpp](/home/alexander/codes/uva2/volume124/12458 - Oh, my trees!.cpp)
+      - [12459 - Bees' ancestors.cpp](/home/alexander/codes/uva2/volume124/12459 - Bees' ancestors.cpp)
+      - [12461 - Airplane.cpp](/home/alexander/codes/uva2/volume124/12461 - Airplane.cpp)
+      - [12462 - Rectangle.cpp](/home/alexander/codes/uva2/volume124/12462 - Rectangle.cpp)
+      - [12463 - Little Nephew.cpp](/home/alexander/codes/uva2/volume124/12463 - Little Nephew.cpp)
+      - [12464 - Professor Lazy, Ph.D.cpp](/home/alexander/codes/uva2/volume124/12464 - Professor Lazy, Ph.D.cpp)
+      - [12465 - The Turanga Leela Problem.cpp](/home/alexander/codes/uva2/volume124/12465 - The Turanga Leela Problem.cpp)
+      - [12466 - Ancestors.cpp](/home/alexander/codes/uva2/volume124/12466 - Ancestors.cpp)
+      - [12467 - Secret Word.cpp](/home/alexander/codes/uva2/volume124/12467 - Secret Word.cpp)
+      - [12468 - Zapping.cpp](/home/alexander/codes/uva2/volume124/12468 - Zapping.cpp)
+      - [12469 - Stones[test].cpp](/home/alexander/codes/uva2/volume124/12469 - Stones[test].cpp)
+      - [12470 - Tribonacci.cpp](/home/alexander/codes/uva2/volume124/12470 - Tribonacci.cpp)
+      - [12473 - Common Palindrome.cpp](/home/alexander/codes/uva2/volume124/12473 - Common Palindrome.cpp)
+      - [12473 - Common Palindrome[other].cpp](/home/alexander/codes/uva2/volume124/12473 - Common Palindrome[other].cpp)
+      - [12473 - Common Palindrome[recur].cpp](/home/alexander/codes/uva2/volume124/12473 - Common Palindrome[recur].cpp)
+      - [12473.docx](/home/alexander/codes/uva2/volume124/12473.docx)
+      - [12475 - Elliptic Athletics Track.cpp](/home/alexander/codes/uva2/volume124/12475 - Elliptic Athletics Track.cpp)
+      - [12477 - Good Measures of Dispersion.cpp](/home/alexander/codes/uva2/volume124/12477 - Good Measures of Dispersion.cpp)
+      - [12478 - Hardest Problem Ever (Easy).cpp](/home/alexander/codes/uva2/volume124/12478 - Hardest Problem Ever (Easy).cpp)
+      - [12482 - Short Story Competition.cpp](/home/alexander/codes/uva2/volume124/12482 - Short Story Competition.cpp)
+      - [12483 - Toboggan of Marbles.cpp](/home/alexander/codes/uva2/volume124/12483 - Toboggan of Marbles.cpp)
+      - [12484 - Cards.cpp](/home/alexander/codes/uva2/volume124/12484 - Cards.cpp)
+      - [12486 - Space Elevator.cpp](/home/alexander/codes/uva2/volume124/12486 - Space Elevator.cpp)
+      - [12487 - Midnight Cowboy.cpp](/home/alexander/codes/uva2/volume124/12487 - Midnight Cowboy.cpp)
+      - [12488 - Start Grid.cpp](/home/alexander/codes/uva2/volume124/12488 - Start Grid.cpp)
+      - [12489 - Combating cancer.cpp](/home/alexander/codes/uva2/volume124/12489 - Combating cancer.cpp)
+      - [12491 - Words.cpp](/home/alexander/codes/uva2/volume124/12491 - Words.cpp)
+      - [12494 - Distinct Substring.cpp](/home/alexander/codes/uva2/volume124/12494 - Distinct Substring.cpp)
+      - [12494 - Distinct Substring[v2].cpp](/home/alexander/codes/uva2/volume124/12494 - Distinct Substring[v2].cpp)
+      - [12494 - Distinct Substring[v3].cpp](/home/alexander/codes/uva2/volume124/12494 - Distinct Substring[v3].cpp)
+      - [12497 - Chatgaiya Postman Problem.cpp](/home/alexander/codes/uva2/volume124/12497 - Chatgaiya Postman Problem.cpp)
+      - [12497 - Chatgaiya Postman Problem[opt].cpp](/home/alexander/codes/uva2/volume124/12497 - Chatgaiya Postman Problem[opt].cpp)
+  - volume125
+      - [12501 - Bulky process of bulk reduction.cpp](/home/alexander/codes/uva2/volume125/12501 - Bulky process of bulk reduction.cpp)
+      - [12502 - Three Families.cpp](/home/alexander/codes/uva2/volume125/12502 - Three Families.cpp)
+      - [12503 - Robot Instructions.cpp](/home/alexander/codes/uva2/volume125/12503 - Robot Instructions.cpp)
+      - [12504 - Updating a Dictionary.cpp](/home/alexander/codes/uva2/volume125/12504 - Updating a Dictionary.cpp)
+      - [12505 - Searching in sqrt(n).cpp](/home/alexander/codes/uva2/volume125/12505 - Searching in sqrt(n).cpp)
+      - [12506 - Shortest Names.cpp](/home/alexander/codes/uva2/volume125/12506 - Shortest Names.cpp)
+      - [12507 - Kingdoms.cpp](/home/alexander/codes/uva2/volume125/12507 - Kingdoms.cpp)
+      - [12510 - Collecting Coins.cpp](/home/alexander/codes/uva2/volume125/12510 - Collecting Coins.cpp)
+      - [12511 - Virus.cpp](/home/alexander/codes/uva2/volume125/12511 - Virus.cpp)
+      - [12517 - Digit Sum.cpp](/home/alexander/codes/uva2/volume125/12517 - Digit Sum.cpp)
+      - [12519 - The Farnsworth Parabox.cpp](/home/alexander/codes/uva2/volume125/12519 - The Farnsworth Parabox.cpp)
+      - [12520 - Square Garden.cpp](/home/alexander/codes/uva2/volume125/12520 - Square Garden.cpp)
+      - [12523 - Lazy Professor.cpp](/home/alexander/codes/uva2/volume125/12523 - Lazy Professor.cpp)
+      - [12527 - Different Digits.cpp](/home/alexander/codes/uva2/volume125/12527 - Different Digits.cpp)
+      - [12529 - Fix the Pond.cpp](/home/alexander/codes/uva2/volume125/12529 - Fix the Pond.cpp)
+      - [12532 - Interval Product.cpp](/home/alexander/codes/uva2/volume125/12532 - Interval Product.cpp)
+      - [12534 - Binary Matrix 2.cpp](/home/alexander/codes/uva2/volume125/12534 - Binary Matrix 2.cpp)
+      - [12534 - Binary Matrix 2[opt2].cpp](/home/alexander/codes/uva2/volume125/12534 - Binary Matrix 2[opt2].cpp)
+      - [12534 - Binary Matrix 2[opt].cpp](/home/alexander/codes/uva2/volume125/12534 - Binary Matrix 2[opt].cpp)
+      - [12534 - Binary Matrix 2[v2].cpp](/home/alexander/codes/uva2/volume125/12534 - Binary Matrix 2[v2].cpp)
+      - [12535 - Probability Through Experiments.cpp](/home/alexander/codes/uva2/volume125/12535 - Probability Through Experiments.cpp)
+      - [12537 - Radiation.cpp](/home/alexander/codes/uva2/volume125/12537 - Radiation.cpp)
+      - [12537 - Radiation_sol.cpp](/home/alexander/codes/uva2/volume125/12537 - Radiation_sol.cpp)
+      - [12538 - Version Controlled IDE.cpp](/home/alexander/codes/uva2/volume125/12538 - Version Controlled IDE.cpp)
+      - [12541 - Birthdates.cpp](/home/alexander/codes/uva2/volume125/12541 - Birthdates.cpp)
+      - [12542 - Prime Substring.cpp](/home/alexander/codes/uva2/volume125/12542 - Prime Substring.cpp)
+      - [12543 - Longest Word.cpp](/home/alexander/codes/uva2/volume125/12543 - Longest Word.cpp)
+      - [12544 - Beehives.cpp](/home/alexander/codes/uva2/volume125/12544 - Beehives.cpp)
+      - [12544 - Beehives[v2].cpp](/home/alexander/codes/uva2/volume125/12544 - Beehives[v2].cpp)
+      - [12546 - LCM Pair Sum.cpp](/home/alexander/codes/uva2/volume125/12546 - LCM Pair Sum.cpp)
+      - [12550 - How do spiders walk on water.cpp](/home/alexander/codes/uva2/volume125/12550 - How do spiders walk on water.cpp)
+      - [12551 - Shares.cpp](/home/alexander/codes/uva2/volume125/12551 - Shares.cpp)
+      - [12552 - The Moon of Valencia.cpp](/home/alexander/codes/uva2/volume125/12552 - The Moon of Valencia.cpp)
+      - [12553 - Countdown.cpp](/home/alexander/codes/uva2/volume125/12553 - Countdown.cpp)
+      - [12554 - A Special Happy Birthday Song.cpp](/home/alexander/codes/uva2/volume125/12554 - A Special Happy Birthday Song.cpp)
+      - [12555 - Baby Me.cpp](/home/alexander/codes/uva2/volume125/12555 - Baby Me.cpp)
+      - [12556 - Center of perimeter midpoints.cpp](/home/alexander/codes/uva2/volume125/12556 - Center of perimeter midpoints.cpp)
+      - [12558 - Egyptian Fractions (HARD version).cpp](/home/alexander/codes/uva2/volume125/12558 - Egyptian Fractions (HARD version).cpp)
+      - [12559 - Finding Black Circles[Cut].cpp](/home/alexander/codes/uva2/volume125/12559 - Finding Black Circles[Cut].cpp)
+    - 12560 - Good Friends
+        - [12560 - Good Friends.cpp](/home/alexander/codes/uva2/volume125/12560 - Good Friends/12560 - Good Friends.cpp)
+        - [12560 - Good Friends[SSE].cpp](/home/alexander/codes/uva2/volume125/12560 - Good Friends/12560 - Good Friends[SSE].cpp)
+      - [12571 - Brother & Sisters.cpp](/home/alexander/codes/uva2/volume125/12571 - Brother & Sisters.cpp)
+      - [12572 - RMQ Overkill.cpp](/home/alexander/codes/uva2/volume125/12572 - RMQ Overkill.cpp)
+      - [12573 - Sohel Sir's Assignment.cpp](/home/alexander/codes/uva2/volume125/12573 - Sohel Sir's Assignment.cpp)
+      - [12575 - Sin Cos Problem.cpp](/home/alexander/codes/uva2/volume125/12575 - Sin Cos Problem.cpp)
+      - [12576 - Simply Loopy.cpp](/home/alexander/codes/uva2/volume125/12576 - Simply Loopy.cpp)
+      - [12577 - Hajj-e-Akbar.cpp](/home/alexander/codes/uva2/volume125/12577 - Hajj-e-Akbar.cpp)
+      - [12578 - 1062.cpp](/home/alexander/codes/uva2/volume125/12578 - 1062.cpp)
+      - [12582 - Wedding of Sultan.cpp](/home/alexander/codes/uva2/volume125/12582 - Wedding of Sultan.cpp)
+      - [12583 - Memory Overflow.cpp](/home/alexander/codes/uva2/volume125/12583 - Memory Overflow.cpp)
+      - [12587 - Reduce the Maintenance Cost.cpp](/home/alexander/codes/uva2/volume125/12587 - Reduce the Maintenance Cost.cpp)
+      - [12589 - Learning Vector.cpp](/home/alexander/codes/uva2/volume125/12589 - Learning Vector.cpp)
+      - [12595 - Galactic Transmission.cpp](/home/alexander/codes/uva2/volume125/12595 - Galactic Transmission.cpp)
+      - [12595 - Galactic Transmission[opt].cpp](/home/alexander/codes/uva2/volume125/12595 - Galactic Transmission[opt].cpp)
+      - [12598 - Starting School.cpp](/home/alexander/codes/uva2/volume125/12598 - Starting School.cpp)
+      - [12598 - Starting School[v2].cpp](/home/alexander/codes/uva2/volume125/12598 - Starting School[v2].cpp)
+      - [12599 - Black and White.cpp](/home/alexander/codes/uva2/volume125/12599 - Black and White.cpp)
+  - volume126
+      - [12602 - Nice Licence Plates.cpp](/home/alexander/codes/uva2/volume126/12602 - Nice Licence Plates.cpp)
+      - [12604 - Caesar Cipher.cpp](/home/alexander/codes/uva2/volume126/12604 - Caesar Cipher.cpp)
+      - [12607 - Amazing Maze.cpp](/home/alexander/codes/uva2/volume126/12607 - Amazing Maze.cpp)
+      - [12610 - Attractive Grid.cpp](/home/alexander/codes/uva2/volume126/12610 - Attractive Grid.cpp)
+      - [12611 - Beautiful Flag.cpp](/home/alexander/codes/uva2/volume126/12611 - Beautiful Flag.cpp)
+      - [12613 - Distinct Substring 2.cpp](/home/alexander/codes/uva2/volume126/12613 - Distinct Substring 2.cpp)
+      - [12614 - Earn For Future.cpp](/home/alexander/codes/uva2/volume126/12614 - Earn For Future.cpp)
+      - [12618 - I Puzzle You[doubleBFS].cpp](/home/alexander/codes/uva2/volume126/12618 - I Puzzle You[doubleBFS].cpp)
+      - [12618 - I Puzzle You[IDA(slow)].cpp](/home/alexander/codes/uva2/volume126/12618 - I Puzzle You[IDA(slow)].cpp)
+      - [12619 - Just Make A Wish.cpp](/home/alexander/codes/uva2/volume126/12619 - Just Make A Wish.cpp)
+      - [12620 - Fibonacci Sum.cpp](/home/alexander/codes/uva2/volume126/12620 - Fibonacci Sum.cpp)
+      - [12621 - On a Diet.cpp](/home/alexander/codes/uva2/volume126/12621 - On a Diet.cpp)
+      - [12626 - I  love pizza.cpp](/home/alexander/codes/uva2/volume126/12626 - I  love pizza.cpp)
+      - [12633 - Super Rooks on Chessboard.cpp](/home/alexander/codes/uva2/volume126/12633 - Super Rooks on Chessboard.cpp)
+      - [12634 - Pairing Boys and Girls.cpp](/home/alexander/codes/uva2/volume126/12634 - Pairing Boys and Girls.cpp)
+      - [12636 - Disguised Giveaway.cpp](/home/alexander/codes/uva2/volume126/12636 - Disguised Giveaway.cpp)
+      - [12637 - 30 Minutes or Less.cpp](/home/alexander/codes/uva2/volume126/12637 - 30 Minutes or Less.cpp)
+      - [12638 - Godel's Dream.cpp](/home/alexander/codes/uva2/volume126/12638 - Godel's Dream.cpp)
+      - [12639 - Hexagonal Puzzle.cpp](/home/alexander/codes/uva2/volume126/12639 - Hexagonal Puzzle.cpp)
+      - [12641 - Reodrnreig Lteetrs in Wrods.cpp](/home/alexander/codes/uva2/volume126/12641 - Reodrnreig Lteetrs in Wrods.cpp)
+      - [12642 - Shuffling Cards.cpp](/home/alexander/codes/uva2/volume126/12642 - Shuffling Cards.cpp)
+      - [12644 - Vocabulary.cpp](/home/alexander/codes/uva2/volume126/12644 - Vocabulary.cpp)
+      - [12645 - Water Supply.cpp](/home/alexander/codes/uva2/volume126/12645 - Water Supply.cpp)
+      - [12648 - Boss.cpp](/home/alexander/codes/uva2/volume126/12648 - Boss.cpp)
+      - [12649 - Folding Machine.cpp](/home/alexander/codes/uva2/volume126/12649 - Folding Machine.cpp)
+      - [12651 - Triangles.cpp](/home/alexander/codes/uva2/volume126/12651 - Triangles.cpp)
+      - [12652 - Lines of Containers.cpp](/home/alexander/codes/uva2/volume126/12652 - Lines of Containers.cpp)
+      - [12653 - Buses.cpp](/home/alexander/codes/uva2/volume126/12653 - Buses.cpp)
+      - [12654 - Patches.cpp](/home/alexander/codes/uva2/volume126/12654 - Patches.cpp)
+      - [12655 - Trucks.cpp](/home/alexander/codes/uva2/volume126/12655 - Trucks.cpp)
+      - [12656 - Almost Palindrome.cpp](/home/alexander/codes/uva2/volume126/12656 - Almost Palindrome.cpp)
+      - [12657 - Boxes in a Line.cpp](/home/alexander/codes/uva2/volume126/12657 - Boxes in a Line.cpp)
+      - [12661 - Funny Car Racing.cpp](/home/alexander/codes/uva2/volume126/12661 - Funny Car Racing.cpp)
+      - [12662 - Good Teacher.cpp](/home/alexander/codes/uva2/volume126/12662 - Good Teacher.cpp)
+      - [12663 - High bridge, low bridge.cpp](/home/alexander/codes/uva2/volume126/12663 - High bridge, low bridge.cpp)
+      - [12665 - Joking with Fermat's Last Theorem.cpp](/home/alexander/codes/uva2/volume126/12665 - Joking with Fermat's Last Theorem.cpp)
+      - [12667 - Last Blood.cpp](/home/alexander/codes/uva2/volume126/12667 - Last Blood.cpp)
+      - [12669 - Blogger language.cpp](/home/alexander/codes/uva2/volume126/12669 - Blogger language.cpp)
+      - [12670 - Counting ones.cpp](/home/alexander/codes/uva2/volume126/12670 - Counting ones.cpp)
+      - [12671 - Disjoint water supply.cpp](/home/alexander/codes/uva2/volume126/12671 - Disjoint water supply.cpp)
+      - [12672 - Eleven.cpp](/home/alexander/codes/uva2/volume126/12672 - Eleven.cpp)
+      - [12673 - Football.cpp](/home/alexander/codes/uva2/volume126/12673 - Football.cpp)
+      - [12674 - Go up the ultras.cpp](/home/alexander/codes/uva2/volume126/12674 - Go up the ultras.cpp)
+      - [12675 - Hide and seek.cpp](/home/alexander/codes/uva2/volume126/12675 - Hide and seek.cpp)
+      - [12677 - Join two kingdoms.cpp](/home/alexander/codes/uva2/volume126/12677 - Join two kingdoms.cpp)
+      - [12679 - It Can Be Arranged.cpp](/home/alexander/codes/uva2/volume126/12679 - It Can Be Arranged.cpp)
+      - [12682 - Joe is learning to speak.cpp](/home/alexander/codes/uva2/volume126/12682 - Joe is learning to speak.cpp)
+      - [12682 - Joe is learning to speak[v2].cpp](/home/alexander/codes/uva2/volume126/12682 - Joe is learning to speak[v2].cpp)
+      - [12684 - VivoParc.cpp](/home/alexander/codes/uva2/volume126/12684 - VivoParc.cpp)
+      - [12685 - Binary Tree.cpp](/home/alexander/codes/uva2/volume126/12685 - Binary Tree.cpp)
+      - [12686 - Trending Topic.cpp](/home/alexander/codes/uva2/volume126/12686 - Trending Topic.cpp)
+      - [12694 - Meeting Room Arrangement.cpp](/home/alexander/codes/uva2/volume126/12694 - Meeting Room Arrangement.cpp)
+      - [12696 - Cabin Baggage.cpp](/home/alexander/codes/uva2/volume126/12696 - Cabin Baggage.cpp)
+      - [12697 - Minimal Subarray Length.cpp](/home/alexander/codes/uva2/volume126/12697 - Minimal Subarray Length.cpp)
+  - volume127
+      - [12700 - Banglawash.cpp](/home/alexander/codes/uva2/volume127/12700 - Banglawash.cpp)
+      - [12701 - The Twin Head Dragon.cpp](/home/alexander/codes/uva2/volume127/12701 - The Twin Head Dragon.cpp)
+      - [12702 - Dilation.cpp](/home/alexander/codes/uva2/volume127/12702 - Dilation.cpp)
+      - [12703 - Little Rakin.cpp](/home/alexander/codes/uva2/volume127/12703 - Little Rakin.cpp)
+      - [12704 - Little Masters.cpp](/home/alexander/codes/uva2/volume127/12704 - Little Masters.cpp)
+      - [12705 - Breaking Board.cpp](/home/alexander/codes/uva2/volume127/12705 - Breaking Board.cpp)
+      - [12706 - Zero-Knowledge Protocol.cpp](/home/alexander/codes/uva2/volume127/12706 - Zero-Knowledge Protocol.cpp)
+      - [12707 - Block Meh.cpp](/home/alexander/codes/uva2/volume127/12707 - Block Meh.cpp)
+      - [12708 - GCD The Largest.cpp](/home/alexander/codes/uva2/volume127/12708 - GCD The Largest.cpp)
+      - [12709 - Falling Ants.cpp](/home/alexander/codes/uva2/volume127/12709 - Falling Ants.cpp)
+      - [12710 - Game of MJ.cpp](/home/alexander/codes/uva2/volume127/12710 - Game of MJ.cpp)
+      - [12712 - Pattern Locker.cpp](/home/alexander/codes/uva2/volume127/12712 - Pattern Locker.cpp)
+      - [12713 - Pearl Chains.cpp](/home/alexander/codes/uva2/volume127/12713 - Pearl Chains.cpp)
+      - [12714 - Two Points Revisited.cpp](/home/alexander/codes/uva2/volume127/12714 - Two Points Revisited.cpp)
+      - [12716 - GCD XOR.cpp](/home/alexander/codes/uva2/volume127/12716 - GCD XOR.cpp)
+      - [12716 - GCD XOR[v2].cpp](/home/alexander/codes/uva2/volume127/12716 - GCD XOR[v2].cpp)
+      - [12717 - Fiasco.cpp](/home/alexander/codes/uva2/volume127/12717 - Fiasco.cpp)
+      - [12718 - Dromicpalin Substrings.cpp](/home/alexander/codes/uva2/volume127/12718 - Dromicpalin Substrings.cpp)
+      - [12719 - Fill the Cuboid.cpp](/home/alexander/codes/uva2/volume127/12719 - Fill the Cuboid.cpp)
+      - [12720 - Algorithm of Phil.cpp](/home/alexander/codes/uva2/volume127/12720 - Algorithm of Phil.cpp)
+      - [12721 - Cheap B-Subsequence.cpp](/home/alexander/codes/uva2/volume127/12721 - Cheap B-Subsequence.cpp)
+      - [12722 - Cryptography of the Floating Key.cpp](/home/alexander/codes/uva2/volume127/12722 - Cryptography of the Floating Key.cpp)
+      - [12723 - Dudu, the Possum.cpp](/home/alexander/codes/uva2/volume127/12723 - Dudu, the Possum.cpp)
+      - [12724 - Hnelpig Arnde.cpp](/home/alexander/codes/uva2/volume127/12724 - Hnelpig Arnde.cpp)
+      - [12725 - Fat and Orial.cpp](/home/alexander/codes/uva2/volume127/12725 - Fat and Orial.cpp)
+      - [12726 - One Friend at a Time.cpp](/home/alexander/codes/uva2/volume127/12726 - One Friend at a Time.cpp)
+      - [12727 - The Sightseeing Tour.cpp](/home/alexander/codes/uva2/volume127/12727 - The Sightseeing Tour.cpp)
+      - [12729 - Squares Game.cpp](/home/alexander/codes/uva2/volume127/12729 - Squares Game.cpp)
+      - [12730 - Skyrk's Bar.cpp](/home/alexander/codes/uva2/volume127/12730 - Skyrk's Bar.cpp)
+      - [12745 - Wishmaster.cpp](/home/alexander/codes/uva2/volume127/12745 - Wishmaster.cpp)
+      - [12747 - Back to Edit Distance.cpp](/home/alexander/codes/uva2/volume127/12747 - Back to Edit Distance.cpp)
+      - [12748 - Wifi Access.cpp](/home/alexander/codes/uva2/volume127/12748 - Wifi Access.cpp)
+      - [12749 - John's Tree.cpp](/home/alexander/codes/uva2/volume127/12749 - John's Tree.cpp)
+      - [12750 - Keep Rafa at Chelsea.cpp](/home/alexander/codes/uva2/volume127/12750 - Keep Rafa at Chelsea.cpp)
+      - [12751 - An Interesting Game.cpp](/home/alexander/codes/uva2/volume127/12751 - An Interesting Game.cpp)
+      - [12753 - Countree Song.cpp](/home/alexander/codes/uva2/volume127/12753 - Countree Song.cpp)
+      - [12754 - Display Problem.cpp](/home/alexander/codes/uva2/volume127/12754 - Display Problem.cpp)
+      - [12755 - Easy Puzzle.cpp](/home/alexander/codes/uva2/volume127/12755 - Easy Puzzle.cpp)
+      - [12761 - Blue Chips.cpp](/home/alexander/codes/uva2/volume127/12761 - Blue Chips.cpp)
+      - [12763 - Dicey Dice.cpp](/home/alexander/codes/uva2/volume127/12763 - Dicey Dice.cpp)
+      - [12764 - Exercising Emoticons.cpp](/home/alexander/codes/uva2/volume127/12764 - Exercising Emoticons.cpp)
+      - [12765 - Factorial Products.cpp](/home/alexander/codes/uva2/volume127/12765 - Factorial Products.cpp)
+      - [12768 - Inspired Procrastination.cpp](/home/alexander/codes/uva2/volume127/12768 - Inspired Procrastination.cpp)
+      - [12769 - Kool Konstructions.cpp](/home/alexander/codes/uva2/volume127/12769 - Kool Konstructions.cpp)
+      - [12770 - Palinagram.cpp](/home/alexander/codes/uva2/volume127/12770 - Palinagram.cpp)
+      - [12771 - Meeting Point of Circles.cpp](/home/alexander/codes/uva2/volume127/12771 - Meeting Point of Circles.cpp)
+      - [12775 - Gift Dilemma.cpp](/home/alexander/codes/uva2/volume127/12775 - Gift Dilemma.cpp)
+      - [12776 - Query for Divisor-free Numbers.cpp](/home/alexander/codes/uva2/volume127/12776 - Query for Divisor-free Numbers.cpp)
+      - [12778 - Minimum Sum.cpp](/home/alexander/codes/uva2/volume127/12778 - Minimum Sum.cpp)
+      - [12779 - The Largest Circle.cpp](/home/alexander/codes/uva2/volume127/12779 - The Largest Circle.cpp)
+      - [12783 - Weak Links.cpp](/home/alexander/codes/uva2/volume127/12783 - Weak Links.cpp)
+      - [12784 - Don't Care.cpp](/home/alexander/codes/uva2/volume127/12784 - Don't Care.cpp)
+      - [12785 - Emacs Plugin.cpp](/home/alexander/codes/uva2/volume127/12785 - Emacs Plugin.cpp)
+      - [12786 - Friendship Networks.cpp](/home/alexander/codes/uva2/volume127/12786 - Friendship Networks.cpp)
+      - [12788 - Smooth Factor.cpp](/home/alexander/codes/uva2/volume127/12788 - Smooth Factor.cpp)
+      - [12790 - The Win-stay and Lose-shift Strategy.cpp](/home/alexander/codes/uva2/volume127/12790 - The Win-stay and Lose-shift Strategy.cpp)
+      - [12791 - Lap.cpp](/home/alexander/codes/uva2/volume127/12791 - Lap.cpp)
+      - [12792 - Shuffled Deck.cpp](/home/alexander/codes/uva2/volume127/12792 - Shuffled Deck.cpp)
+      - [12793 - Confederation.cpp](/home/alexander/codes/uva2/volume127/12793 - Confederation.cpp)
+      - [12794 - Miss Worm.cpp](/home/alexander/codes/uva2/volume127/12794 - Miss Worm.cpp)
+      - [12795 - Ecology.cpp](/home/alexander/codes/uva2/volume127/12795 - Ecology.cpp)
+      - [12796 - Teletransport.cpp](/home/alexander/codes/uva2/volume127/12796 - Teletransport.cpp)
+      - [12797 - Letters.cpp](/home/alexander/codes/uva2/volume127/12797 - Letters.cpp)
+      - [12798 - Handball.cpp](/home/alexander/codes/uva2/volume127/12798 - Handball.cpp)
+      - [12799 - RSA.cpp](/home/alexander/codes/uva2/volume127/12799 - RSA.cpp)
+  - volume128
+      - [12800 - Cut.cpp](/home/alexander/codes/uva2/volume128/12800 - Cut.cpp)
+      - [12801 - Grandpa Pepe's Pizza.cpp](/home/alexander/codes/uva2/volume128/12801 - Grandpa Pepe's Pizza.cpp)
+      - [12802 - Gift From the Gods.cpp](/home/alexander/codes/uva2/volume128/12802 - Gift From the Gods.cpp)
+      - [12803 - Arithmetic Expressions.cpp](/home/alexander/codes/uva2/volume128/12803 - Arithmetic Expressions.cpp)
+      - [12804 - The Necronomicon of Computing.cpp](/home/alexander/codes/uva2/volume128/12804 - The Necronomicon of Computing.cpp)
+      - [12805 - Raiders of the Lost Sign.cpp](/home/alexander/codes/uva2/volume128/12805 - Raiders of the Lost Sign.cpp)
+      - [12806 - Grand Tichu.cpp](/home/alexander/codes/uva2/volume128/12806 - Grand Tichu.cpp)
+      - [12808 - Banning Balconing.cpp](/home/alexander/codes/uva2/volume128/12808 - Banning Balconing.cpp)
+      - [12809 - Binary Search Tree.cpp](/home/alexander/codes/uva2/volume128/12809 - Binary Search Tree.cpp)
+      - [12810 - Sumthing.cpp](/home/alexander/codes/uva2/volume128/12810 - Sumthing.cpp)
+      - [12811 - The Turtle's Journey.cpp](/home/alexander/codes/uva2/volume128/12811 - The Turtle's Journey.cpp)
+      - [12812 - The Largest Diamond-Shaped Kite.cpp](/home/alexander/codes/uva2/volume128/12812 - The Largest Diamond-Shaped Kite.cpp)
+      - [12813 - Mocking the Precision.cpp](/home/alexander/codes/uva2/volume128/12813 - Mocking the Precision.cpp)
+      - [12815 - Taking the Stairs.cpp](/home/alexander/codes/uva2/volume128/12815 - Taking the Stairs.cpp)
+      - [12816 - Isosceles Triangles.cpp](/home/alexander/codes/uva2/volume128/12816 - Isosceles Triangles.cpp)
+      - [12817 - Sleight of Hand(1).cpp](/home/alexander/codes/uva2/volume128/12817 - Sleight of Hand(1).cpp)
+      - [12818 - Arc and Point.cpp](/home/alexander/codes/uva2/volume128/12818 - Arc and Point.cpp)
+      - [12820 - Cool Word.cpp](/home/alexander/codes/uva2/volume128/12820 - Cool Word.cpp)
+      - [12821 - Double Shortest Paths.cpp](/home/alexander/codes/uva2/volume128/12821 - Double Shortest Paths.cpp)
+      - [12822 - Extraordinarily large LED.cpp](/home/alexander/codes/uva2/volume128/12822 - Extraordinarily large LED.cpp)
+      - [12825 - Happy Robot.cpp](/home/alexander/codes/uva2/volume128/12825 - Happy Robot.cpp)
+      - [12826 - Incomplete Chessboard.cpp](/home/alexander/codes/uva2/volume128/12826 - Incomplete Chessboard.cpp)
+      - [12828 - Kick the ball!.cpp](/home/alexander/codes/uva2/volume128/12828 - Kick the ball!.cpp)
+      - [12830 - A Football Stadium.cpp](/home/alexander/codes/uva2/volume128/12830 - A Football Stadium.cpp)
+      - [12831 - Bob the Builder.cpp](/home/alexander/codes/uva2/volume128/12831 - Bob the Builder.cpp)
+      - [12832 - Chicken Lover.cpp](/home/alexander/codes/uva2/volume128/12832 - Chicken Lover.cpp)
+      - [12833 - Daily Potato.cpp](/home/alexander/codes/uva2/volume128/12833 - Daily Potato.cpp)
+      - [12834 - Extreme Terror.cpp](/home/alexander/codes/uva2/volume128/12834 - Extreme Terror.cpp)
+      - [12837 - Hasmot Ali Professor.cpp](/home/alexander/codes/uva2/volume128/12837 - Hasmot Ali Professor.cpp)
+      - [12839 - Judge in Queue.cpp](/home/alexander/codes/uva2/volume128/12839 - Judge in Queue.cpp)
+      - [12840 - The Archery Puzzle.cpp](/home/alexander/codes/uva2/volume128/12840 - The Archery Puzzle.cpp)
+      - [12841 - In Puzzleland (III).cpp](/home/alexander/codes/uva2/volume128/12841 - In Puzzleland (III).cpp)
+      - [12841 - In Puzzleland (III)[ver2].cpp](/home/alexander/codes/uva2/volume128/12841 - In Puzzleland (III)[ver2].cpp)
+      - [12842 - The Courier Problem.cpp](/home/alexander/codes/uva2/volume128/12842 - The Courier Problem.cpp)
+      - [12843 - Disputed Claims.cpp](/home/alexander/codes/uva2/volume128/12843 - Disputed Claims.cpp)
+      - [12844 - Outwitting the Weighing Machine.cpp](/home/alexander/codes/uva2/volume128/12844 - Outwitting the Weighing Machine.cpp)
+      - [12846 - A Daisy Puzzle Game.cpp](/home/alexander/codes/uva2/volume128/12846 - A Daisy Puzzle Game.cpp)
+      - [12848 - In Puzzleland (IV).cpp](/home/alexander/codes/uva2/volume128/12848 - In Puzzleland (IV).cpp)
+      - [12849 - Mother's Jam Puzzle.cpp](/home/alexander/codes/uva2/volume128/12849 - Mother's Jam Puzzle.cpp)
+      - [12851 - The Tinker's Puzzle.cpp](/home/alexander/codes/uva2/volume128/12851 - The Tinker's Puzzle.cpp)
+      - [12852 - The Miser's Puzzle.cpp](/home/alexander/codes/uva2/volume128/12852 - The Miser's Puzzle.cpp)
+      - [12853 - The Pony Cart Problem.cpp](/home/alexander/codes/uva2/volume128/12853 - The Pony Cart Problem.cpp)
+      - [12854 - Automated Checking Machine.cpp](/home/alexander/codes/uva2/volume128/12854 - Automated Checking Machine.cpp)
+      - [12855 - Black and white stones.cpp](/home/alexander/codes/uva2/volume128/12855 - Black and white stones.cpp)
+      - [12856 - Counting substhreengs.cpp](/home/alexander/codes/uva2/volume128/12856 - Counting substhreengs.cpp)
+      - [12858 - Even distribution.cpp](/home/alexander/codes/uva2/volume128/12858 - Even distribution.cpp)
+      - [12860 - Galaxy collision.cpp](/home/alexander/codes/uva2/volume128/12860 - Galaxy collision.cpp)
+      - [12861 - Help cupid.cpp](/home/alexander/codes/uva2/volume128/12861 - Help cupid.cpp)
+      - [12862 - Intrepid climber.cpp](/home/alexander/codes/uva2/volume128/12862 - Intrepid climber.cpp)
+      - [12863 - Journey through the kingdom.cpp](/home/alexander/codes/uva2/volume128/12863 - Journey through the kingdom.cpp)
+      - [12863 - Journey through the kingdom[v2].cpp](/home/alexander/codes/uva2/volume128/12863 - Journey through the kingdom[v2].cpp)
+      - [12863 - Journey through the kingdom[v3].cpp](/home/alexander/codes/uva2/volume128/12863 - Journey through the kingdom[v3].cpp)
+      - [12863 - Journey through the kingdom[v4].cpp](/home/alexander/codes/uva2/volume128/12863 - Journey through the kingdom[v4].cpp)
+      - [12863 - Journey through the kingdom[v5].cpp](/home/alexander/codes/uva2/volume128/12863 - Journey through the kingdom[v5].cpp)
+      - [12865 - Volume Control.cpp](/home/alexander/codes/uva2/volume128/12865 - Volume Control.cpp)
+      - [12866 - Combination.cpp](/home/alexander/codes/uva2/volume128/12866 - Combination.cpp)
+      - [12869 - Zeroes.cpp](/home/alexander/codes/uva2/volume128/12869 - Zeroes.cpp)
+      - [12870 - Fishing.cpp](/home/alexander/codes/uva2/volume128/12870 - Fishing.cpp)
+      - [12871 - Landmine Cleaner.cpp](/home/alexander/codes/uva2/volume128/12871 - Landmine Cleaner.cpp)
+      - [12872 - Hidden Plus Signs.cpp](/home/alexander/codes/uva2/volume128/12872 - Hidden Plus Signs.cpp)
+      - [12873 - The Programmers.cpp](/home/alexander/codes/uva2/volume128/12873 - The Programmers.cpp)
+      - [12874 - Blanket.cpp](/home/alexander/codes/uva2/volume128/12874 - Blanket.cpp)
+      - [12875 - Concert Tour.cpp](/home/alexander/codes/uva2/volume128/12875 - Concert Tour.cpp)
+      - [12876 - City.cpp](/home/alexander/codes/uva2/volume128/12876 - City.cpp)
+      - [12878 - Flowery Trails.cpp](/home/alexander/codes/uva2/volume128/12878 - Flowery Trails.cpp)
+      - [12880 - Book Club.cpp](/home/alexander/codes/uva2/volume128/12880 - Book Club.cpp)
+      - [12881 - Ricochet Robots.cpp](/home/alexander/codes/uva2/volume128/12881 - Ricochet Robots.cpp)
+      - [12886 - The Big Painting.cpp](/home/alexander/codes/uva2/volume128/12886 - The Big Painting.cpp)
+      - [12887 - The Soldier's Dilemma.cpp](/home/alexander/codes/uva2/volume128/12887 - The Soldier's Dilemma.cpp)
+      - [12890 - Easy Peasy.cpp](/home/alexander/codes/uva2/volume128/12890 - Easy Peasy.cpp)
+      - [12890 - Easy Peasy[v2].cpp](/home/alexander/codes/uva2/volume128/12890 - Easy Peasy[v2].cpp)
+      - [12893 - Count It.cpp](/home/alexander/codes/uva2/volume128/12893 - Count It.cpp)
+      - [12894 - Perfect Flag.cpp](/home/alexander/codes/uva2/volume128/12894 - Perfect Flag.cpp)
+      - [12895 - Armstrong Number.cpp](/home/alexander/codes/uva2/volume128/12895 - Armstrong Number.cpp)
+      - [12896 - Mobile SMS.cpp](/home/alexander/codes/uva2/volume128/12896 - Mobile SMS.cpp)
+      - [12897 - Decoding Baby Boos.cpp](/home/alexander/codes/uva2/volume128/12897 - Decoding Baby Boos.cpp)
+      - [12898 - And Or.cpp](/home/alexander/codes/uva2/volume128/12898 - And Or.cpp)
+  - volume129
+      - [12904 - Load Balancing.cpp](/home/alexander/codes/uva2/volume129/12904 - Load Balancing.cpp)
+      - [12905 - Volume of Revolution.cpp](/home/alexander/codes/uva2/volume129/12905 - Volume of Revolution.cpp)
+      - [12930 - Bigger or Smaller.cpp](/home/alexander/codes/uva2/volume129/12930 - Bigger or Smaller.cpp)
+      - [12932 - Defeat the Wrong Program.cpp](/home/alexander/codes/uva2/volume129/12932 - Defeat the Wrong Program.cpp)
+      - [12933 - Easy Graph Problem.cpp](/home/alexander/codes/uva2/volume129/12933 - Easy Graph Problem.cpp)
+      - [12934 - Factorial Division.cpp](/home/alexander/codes/uva2/volume129/12934 - Factorial Division.cpp)
+      - [12936 - Hehe.cpp](/home/alexander/codes/uva2/volume129/12936 - Hehe.cpp)
+      - [12938 - Just Another Easy Problem.cpp](/home/alexander/codes/uva2/volume129/12938 - Just Another Easy Problem.cpp)
+    - 12939 - Keep Fit
+        - [12939 - Keep Fit.cpp](/home/alexander/codes/uva2/volume129/12939 - Keep Fit/12939 - Keep Fit.cpp)
+        - [12939 - Keep Fit[SSE].cpp](/home/alexander/codes/uva2/volume129/12939 - Keep Fit/12939 - Keep Fit[SSE].cpp)
+      - [12940 - Next Palindromic Numbers.cpp](/home/alexander/codes/uva2/volume129/12940 - Next Palindromic Numbers.cpp)
+      - [12942 - Sub-expression Counting.cpp](/home/alexander/codes/uva2/volume129/12942 - Sub-expression Counting.cpp)
+      - [12943 - Designing an Electronic Device.cpp](/home/alexander/codes/uva2/volume129/12943 - Designing an Electronic Device.cpp)
+      - [12944 - Earthquake Disaster.cpp](/home/alexander/codes/uva2/volume129/12944 - Earthquake Disaster.cpp)
+      - [12945 - Farmer Jane.cpp](/home/alexander/codes/uva2/volume129/12945 - Farmer Jane.cpp)
+      - [12946 - Peanoland contacting Gaussland.cpp](/home/alexander/codes/uva2/volume129/12946 - Peanoland contacting Gaussland.cpp)
+      - [12947 - Texting with Grandma.cpp](/home/alexander/codes/uva2/volume129/12947 - Texting with Grandma.cpp)
+      - [12948 - Interstellar Travel.cpp](/home/alexander/codes/uva2/volume129/12948 - Interstellar Travel.cpp)
+      - [12949 - Voting Duels.cpp](/home/alexander/codes/uva2/volume129/12949 - Voting Duels.cpp)
+      - [12950 - Even Obsession.cpp](/home/alexander/codes/uva2/volume129/12950 - Even Obsession.cpp)
+      - [12951 - Stock Market.cpp](/home/alexander/codes/uva2/volume129/12951 - Stock Market.cpp)
+      - [12952 - Tri-du.cpp](/home/alexander/codes/uva2/volume129/12952 - Tri-du.cpp)
+      - [12953 - Puzzle.cpp](/home/alexander/codes/uva2/volume129/12953 - Puzzle.cpp)
+      - [12953 - Puzzle[WA].cpp](/home/alexander/codes/uva2/volume129/12953 - Puzzle[WA].cpp)
+      - [12954 - Spiral.cpp](/home/alexander/codes/uva2/volume129/12954 - Spiral.cpp)
+      - [12955 - Factorial.cpp](/home/alexander/codes/uva2/volume129/12955 - Factorial.cpp)
+      - [12956 - Curious Guardians.cpp](/home/alexander/codes/uva2/volume129/12956 - Curious Guardians.cpp)
+      - [12957 - Rectangle Park.cpp](/home/alexander/codes/uva2/volume129/12957 - Rectangle Park.cpp)
+      - [12959 - Strategy Game.cpp](/home/alexander/codes/uva2/volume129/12959 - Strategy Game.cpp)
+      - [12960 - Palindrome.cpp](/home/alexander/codes/uva2/volume129/12960 - Palindrome.cpp)
+      - [12961 - Lottery.cpp](/home/alexander/codes/uva2/volume129/12961 - Lottery.cpp)
+      - [12962 - Average Reuse Distance.cpp](/home/alexander/codes/uva2/volume129/12962 - Average Reuse Distance.cpp)
+      - [12965 - Angry Bids.cpp](/home/alexander/codes/uva2/volume129/12965 - Angry Bids.cpp)
+      - [12967 - Spray Graphs.cpp](/home/alexander/codes/uva2/volume129/12967 - Spray Graphs.cpp)
+      - [12970 - Alcoholic Pilots.cpp](/home/alexander/codes/uva2/volume129/12970 - Alcoholic Pilots.cpp)
+      - [12974 - Exquisite Strings.cpp](/home/alexander/codes/uva2/volume129/12974 - Exquisite Strings.cpp)
+      - [12976 - Greedy Artisan_v2.cpp](/home/alexander/codes/uva2/volume129/12976 - Greedy Artisan_v2.cpp)
+      - [12981 - Secrete Master Plan.cpp](/home/alexander/codes/uva2/volume129/12981 - Secrete Master Plan.cpp)
+      - [12983 - The Battle of Chibi.cpp](/home/alexander/codes/uva2/volume129/12983 - The Battle of Chibi.cpp)
+      - [12984 - Pick The Sticks.cpp](/home/alexander/codes/uva2/volume129/12984 - Pick The Sticks.cpp)
+      - [12984 - Pick The Sticks[opt].cpp](/home/alexander/codes/uva2/volume129/12984 - Pick The Sticks[opt].cpp)
+      - [12988 - Sudoku.cpp](/home/alexander/codes/uva2/volume129/12988 - Sudoku.cpp)
+      - [12992 - Huatuo's Medicine.cpp](/home/alexander/codes/uva2/volume129/12992 - Huatuo's Medicine.cpp)
+      - [12995 - Farey Sequence.cpp](/home/alexander/codes/uva2/volume129/12995 - Farey Sequence.cpp)
+      - [12996 - Ultimate Mango Challenge.cpp](/home/alexander/codes/uva2/volume129/12996 - Ultimate Mango Challenge.cpp)
+      - [12998 - Tree Weights.cpp](/home/alexander/codes/uva2/volume129/12998 - Tree Weights.cpp)
+  - volume130
+      - [13000 - VIP Treatment.cpp](/home/alexander/codes/uva2/volume130/13000 - VIP Treatment.cpp)
+      - [13004 - At most twice.cpp](/home/alexander/codes/uva2/volume130/13004 - At most twice.cpp)
+      - [13005 - Blood groups.cpp](/home/alexander/codes/uva2/volume130/13005 - Blood groups.cpp)
+      - [13006 - Cake cut.cpp](/home/alexander/codes/uva2/volume130/13006 - Cake cut.cpp)
+      - [13007 - D as in Daedalus.cpp](/home/alexander/codes/uva2/volume130/13007 - D as in Daedalus.cpp)
+      - [13008 - Exposing corruption.cpp](/home/alexander/codes/uva2/volume130/13008 - Exposing corruption.cpp)
+      - [13009 - Fence the vegetables fail.cpp](/home/alexander/codes/uva2/volume130/13009 - Fence the vegetables fail.cpp)
+      - [13010 - Galactic taxes.cpp](/home/alexander/codes/uva2/volume130/13010 - Galactic taxes.cpp)
+      - [13011 - Height map.cpp](/home/alexander/codes/uva2/volume130/13011 - Height map.cpp)
+      - [13012 - Identifying tea.cpp](/home/alexander/codes/uva2/volume130/13012 - Identifying tea.cpp)
+      - [13013 - Just a bit sorted.cpp](/home/alexander/codes/uva2/volume130/13013 - Just a bit sorted.cpp)
+      - [13014 - Keep it energized.cpp](/home/alexander/codes/uva2/volume130/13014 - Keep it energized.cpp)
+      - [13015 - Promotions.cpp](/home/alexander/codes/uva2/volume130/13015 - Promotions.cpp)
+      - [13017 - Canvas Painting.cpp](/home/alexander/codes/uva2/volume130/13017 - Canvas Painting.cpp)
+      - [13018 - Dice Cup.cpp](/home/alexander/codes/uva2/volume130/13018 - Dice Cup.cpp)
+      - [13022 - Sheldon Numbers.cpp](/home/alexander/codes/uva2/volume130/13022 - Sheldon Numbers.cpp)
+      - [13024 - Saint John Festival.cpp](/home/alexander/codes/uva2/volume130/13024 - Saint John Festival.cpp)
+      - [13025 - Back to the Past.cpp](/home/alexander/codes/uva2/volume130/13025 - Back to the Past.cpp)
+      - [13026 - Search the Khoj.cpp](/home/alexander/codes/uva2/volume130/13026 - Search the Khoj.cpp)
+      - [13029 - Emoticons.cpp](/home/alexander/codes/uva2/volume130/13029 - Emoticons.cpp)
+      - [13031 - Geek Power Inc.cpp](/home/alexander/codes/uva2/volume130/13031 - Geek Power Inc.cpp)
+      - [13032 - Marbles in Jars.cpp](/home/alexander/codes/uva2/volume130/13032 - Marbles in Jars.cpp)
+      - [13034 - Solve Everything.cpp](/home/alexander/codes/uva2/volume130/13034 - Solve Everything.cpp)
+      - [13035 - Another Combination Problem.cpp](/home/alexander/codes/uva2/volume130/13035 - Another Combination Problem.cpp)
+      - [13036 - Birthday Gift to SJ - 2.cpp](/home/alexander/codes/uva2/volume130/13036 - Birthday Gift to SJ - 2.cpp)
+      - [13037 - Chocolate.cpp](/home/alexander/codes/uva2/volume130/13037 - Chocolate.cpp)
+      - [13037 - Chocolate[v2].cpp](/home/alexander/codes/uva2/volume130/13037 - Chocolate[v2].cpp)
+      - [13038 - Directed Forest.cpp](/home/alexander/codes/uva2/volume130/13038 - Directed Forest.cpp)
+      - [13039 - Fibonacci Triangle.cpp](/home/alexander/codes/uva2/volume130/13039 - Fibonacci Triangle.cpp)
+      - [13043 - Marbles.cpp](/home/alexander/codes/uva2/volume130/13043 - Marbles.cpp)
+      - [13045 - Drawing Polygon.cpp](/home/alexander/codes/uva2/volume130/13045 - Drawing Polygon.cpp)
+      - [13046 - Bus Collisions.cpp](/home/alexander/codes/uva2/volume130/13046 - Bus Collisions.cpp)
+      - [13047 - Arrows.cpp](/home/alexander/codes/uva2/volume130/13047 - Arrows.cpp)
+      - [13048 - Burger Stand.cpp](/home/alexander/codes/uva2/volume130/13048 - Burger Stand.cpp)
+      - [13049 - Combination Lock.cpp](/home/alexander/codes/uva2/volume130/13049 - Combination Lock.cpp)
+      - [13052 - Fisa Flood.cpp](/home/alexander/codes/uva2/volume130/13052 - Fisa Flood.cpp)
+      - [13054 - Hippo Circus.cpp](/home/alexander/codes/uva2/volume130/13054 - Hippo Circus.cpp)
+      - [13055 - Inception.cpp](/home/alexander/codes/uva2/volume130/13055 - Inception.cpp)
+      - [13056 - Jerry's Game.cpp](/home/alexander/codes/uva2/volume130/13056 - Jerry's Game.cpp)
+      - [13057 - Prove Them All.cpp](/home/alexander/codes/uva2/volume130/13057 - Prove Them All.cpp)
+      - [13059 - Tennis Championship.cpp](/home/alexander/codes/uva2/volume130/13059 - Tennis Championship.cpp)
+      - [13061 - Going Shopping with Grandma (I).cpp](/home/alexander/codes/uva2/volume130/13061 - Going Shopping with Grandma (I).cpp)
+      - [13067 - Prime Kebab Menu.cpp](/home/alexander/codes/uva2/volume130/13067 - Prime Kebab Menu.cpp)
+      - [13068 - The Weakest Link.cpp](/home/alexander/codes/uva2/volume130/13068 - The Weakest Link.cpp)
+      - [13069 - The calculator machine.cpp](/home/alexander/codes/uva2/volume130/13069 - The calculator machine.cpp)
+      - [13070 - Palm trees in the snow.cpp](/home/alexander/codes/uva2/volume130/13070 - Palm trees in the snow.cpp)
+      - [13071 - Double decker.cpp](/home/alexander/codes/uva2/volume130/13071 - Double decker.cpp)
+      - [13072 - Duckindromes.cpp](/home/alexander/codes/uva2/volume130/13072 - Duckindromes.cpp)
+      - [13073 - The Count of the Rose.cpp](/home/alexander/codes/uva2/volume130/13073 - The Count of the Rose.cpp)
+      - [13074 - Fixed-point theorem.cpp](/home/alexander/codes/uva2/volume130/13074 - Fixed-point theorem.cpp)
+      - [13075 - Ice-cream cones.cpp](/home/alexander/codes/uva2/volume130/13075 - Ice-cream cones.cpp)
+      - [13078 - Feeding chicks.cpp](/home/alexander/codes/uva2/volume130/13078 - Feeding chicks.cpp)
+      - [13079 - On the beach.cpp](/home/alexander/codes/uva2/volume130/13079 - On the beach.cpp)
+      - [13080 - Piano keyboard.cpp](/home/alexander/codes/uva2/volume130/13080 - Piano keyboard.cpp)
+      - [13081 - XOR Sequence Revisited.cpp](/home/alexander/codes/uva2/volume130/13081 - XOR Sequence Revisited.cpp)
+      - [13082 - High School Assembly.cpp](/home/alexander/codes/uva2/volume130/13082 - High School Assembly.cpp)
+      - [13083 - Yet another GCDSUM.cpp](/home/alexander/codes/uva2/volume130/13083 - Yet another GCDSUM.cpp)
+      - [13085 - Forming Teams.cpp](/home/alexander/codes/uva2/volume130/13085 - Forming Teams.cpp)
+      - [13088 - Lexicographically Smallest FPIS.cpp](/home/alexander/codes/uva2/volume130/13088 - Lexicographically Smallest FPIS.cpp)
+      - [13090 - Base of MJ.cpp](/home/alexander/codes/uva2/volume130/13090 - Base of MJ.cpp)
+      - [13091 - No Ball.cpp](/home/alexander/codes/uva2/volume130/13091 - No Ball.cpp)
+      - [13092 - Fold the String.cpp](/home/alexander/codes/uva2/volume130/13092 - Fold the String.cpp)
+      - [13093 - Acronyms.cpp](/home/alexander/codes/uva2/volume130/13093 - Acronyms.cpp)
+      - [13094 - Tobby Bones.cpp](/home/alexander/codes/uva2/volume130/13094 - Tobby Bones.cpp)
+      - [13094 - Tobby Bones[opt].cpp](/home/alexander/codes/uva2/volume130/13094 - Tobby Bones[opt].cpp)
+      - [13094 - Tobby Bones[pbds].cpp](/home/alexander/codes/uva2/volume130/13094 - Tobby Bones[pbds].cpp)
+      - [13095 - Tobby and Query.cpp](/home/alexander/codes/uva2/volume130/13095 - Tobby and Query.cpp)
+      - [13096 - Standard Deviation.cpp](/home/alexander/codes/uva2/volume130/13096 - Standard Deviation.cpp)
+      - [13097 - Tobby and the LED display.cpp](/home/alexander/codes/uva2/volume130/13097 - Tobby and the LED display.cpp)
+      - [13098 - Triangular Test II.cpp](/home/alexander/codes/uva2/volume130/13098 - Triangular Test II.cpp)
+  - volume131
+      - [13100 - Painting the Wall.cpp](/home/alexander/codes/uva2/volume131/13100 - Painting the Wall.cpp)
+      - [13100 - Painting the Wall[DLX].cpp](/home/alexander/codes/uva2/volume131/13100 - Painting the Wall[DLX].cpp)
+      - [13101 - Tobby on Tree.cpp](/home/alexander/codes/uva2/volume131/13101 - Tobby on Tree.cpp)
+      - [13102 - Tobby Stones.cpp](/home/alexander/codes/uva2/volume131/13102 - Tobby Stones.cpp)
+      - [13103 - Tobby and Seven.cpp](/home/alexander/codes/uva2/volume131/13103 - Tobby and Seven.cpp)
+      - [13104 - Tobby and Prime Sum.cpp](/home/alexander/codes/uva2/volume131/13104 - Tobby and Prime Sum.cpp)
+      - [13105 - Alliances in Hogwarts.cpp](/home/alexander/codes/uva2/volume131/13105 - Alliances in Hogwarts.cpp)
+      - [13106 - Vogons.cpp](/home/alexander/codes/uva2/volume131/13106 - Vogons.cpp)
+      - [13107 - Royale With Cheese.cpp](/home/alexander/codes/uva2/volume131/13107 - Royale With Cheese.cpp)
+      - [13108 - Juanma and the Drinking Fountains.cpp](/home/alexander/codes/uva2/volume131/13108 - Juanma and the Drinking Fountains.cpp)
+      - [13109 - Elephants.cpp](/home/alexander/codes/uva2/volume131/13109 - Elephants.cpp)
+      - [13110 - Funny day in Playland.cpp](/home/alexander/codes/uva2/volume131/13110 - Funny day in Playland.cpp)
+      - [13111 - The price is correct.cpp](/home/alexander/codes/uva2/volume131/13111 - The price is correct.cpp)
+      - [13112 - Are you ok.cpp](/home/alexander/codes/uva2/volume131/13112 - Are you ok.cpp)
+      - [13113 - Presidential Election.cpp](/home/alexander/codes/uva2/volume131/13113 - Presidential Election.cpp)
+      - [13114 - Josephus lottery II.cpp](/home/alexander/codes/uva2/volume131/13114 - Josephus lottery II.cpp)
+      - [13115 - Sudoku.cpp](/home/alexander/codes/uva2/volume131/13115 - Sudoku.cpp)
+      - [13116 - Multistory Labyrinth.cpp](/home/alexander/codes/uva2/volume131/13116 - Multistory Labyrinth.cpp)
+      - [13117 - ACIS, A Contagious vIruS.cpp](/home/alexander/codes/uva2/volume131/13117 - ACIS, A Contagious vIruS.cpp)
+      - [13118 - Binary Land.cpp](/home/alexander/codes/uva2/volume131/13118 - Binary Land.cpp)
+      - [13119 - Castaways.cpp](/home/alexander/codes/uva2/volume131/13119 - Castaways.cpp)
+      - [13121 - Eclipsing Gianik Star.cpp](/home/alexander/codes/uva2/volume131/13121 - Eclipsing Gianik Star.cpp)
+      - [13122 - Funny Cardiologist.cpp](/home/alexander/codes/uva2/volume131/13122 - Funny Cardiologist.cpp)
+      - [13123 - Christmas Lights.cpp](/home/alexander/codes/uva2/volume131/13123 - Christmas Lights.cpp)
+      - [13123 - Christmas Lights-opt.cpp](/home/alexander/codes/uva2/volume131/13123 - Christmas Lights-opt.cpp)
+      - [13124 - socialhare.cpp](/home/alexander/codes/uva2/volume131/13124 - socialhare.cpp)
+      - [13125 - Water troubles.cpp](/home/alexander/codes/uva2/volume131/13125 - Water troubles.cpp)
+      - [13126 - Wildcards.cpp](/home/alexander/codes/uva2/volume131/13126 - Wildcards.cpp)
+      - [13127 - Bank Robbery.cpp](/home/alexander/codes/uva2/volume131/13127 - Bank Robbery.cpp)
+      - [13128 - Tangamandapio.cpp](/home/alexander/codes/uva2/volume131/13128 - Tangamandapio.cpp)
+      - [13129 - Subsets.cpp](/home/alexander/codes/uva2/volume131/13129 - Subsets.cpp)
+      - [13130 - Cacho.cpp](/home/alexander/codes/uva2/volume131/13130 - Cacho.cpp)
+      - [13131 - Divisors.cpp](/home/alexander/codes/uva2/volume131/13131 - Divisors.cpp)
+      - [13132 - Laser Mirrors.cpp](/home/alexander/codes/uva2/volume131/13132 - Laser Mirrors.cpp)
+      - [13133 - ConcatFibos.cpp](/home/alexander/codes/uva2/volume131/13133 - ConcatFibos.cpp)
+      - [13134 - Generate, Sort and Search.cpp](/home/alexander/codes/uva2/volume131/13134 - Generate, Sort and Search.cpp)
+      - [13135 - Homework.cpp](/home/alexander/codes/uva2/volume131/13135 - Homework.cpp)
+      - [13136 - Recurrences.cpp](/home/alexander/codes/uva2/volume131/13136 - Recurrences.cpp)
+      - [13137 - Progressions.cpp](/home/alexander/codes/uva2/volume131/13137 - Progressions.cpp)
+      - [13137 - Progressions_v2.cpp](/home/alexander/codes/uva2/volume131/13137 - Progressions_v2.cpp)
+      - [13140 - Squares, Lists and Digital Sums.cpp](/home/alexander/codes/uva2/volume131/13140 - Squares, Lists and Digital Sums.cpp)
+      - [13141 - Growing Trees.cpp](/home/alexander/codes/uva2/volume131/13141 - Growing Trees.cpp)
+      - [13142 - Destroy the Moon to Save the Earth.cpp](/home/alexander/codes/uva2/volume131/13142 - Destroy the Moon to Save the Earth.cpp)
+      - [13144 - Go Boards.cpp](/home/alexander/codes/uva2/volume131/13144 - Go Boards.cpp)
+      - [13145 - Wuymul Wixcha.cpp](/home/alexander/codes/uva2/volume131/13145 - Wuymul Wixcha.cpp)
+      - [13146 - Edid Tistance.cpp](/home/alexander/codes/uva2/volume131/13146 - Edid Tistance.cpp)
+      - [13147 - Travel Planning.cpp](/home/alexander/codes/uva2/volume131/13147 - Travel Planning.cpp)
+      - [13148 - A Giveaway.cpp](/home/alexander/codes/uva2/volume131/13148 - A Giveaway.cpp)
+      - [13149 - Game of XOR.cpp](/home/alexander/codes/uva2/volume131/13149 - Game of XOR.cpp)
+      - [13150 - National Bomb Defusing Squad.cpp](/home/alexander/codes/uva2/volume131/13150 - National Bomb Defusing Squad.cpp)
+      - [13151 - Rational Grading.cpp](/home/alexander/codes/uva2/volume131/13151 - Rational Grading.cpp)
+      - [13152 - Balanced String.cpp](/home/alexander/codes/uva2/volume131/13152 - Balanced String.cpp)
+      - [13153 - Number of Connected Components.cpp](/home/alexander/codes/uva2/volume131/13153 - Number of Connected Components.cpp)
+      - [13154 - Extreme XOR Sum.cpp](/home/alexander/codes/uva2/volume131/13154 - Extreme XOR Sum.cpp)
+      - [13157 - Prime Distance.cpp](/home/alexander/codes/uva2/volume131/13157 - Prime Distance.cpp)
+      - [13160 - Bribing Eve.cpp](/home/alexander/codes/uva2/volume131/13160 - Bribing Eve.cpp)
+      - [13161 - Candle Box.cpp](/home/alexander/codes/uva2/volume131/13161 - Candle Box.cpp)
+      - [13171 - Pixel Art.cpp](/home/alexander/codes/uva2/volume131/13171 - Pixel Art.cpp)
+      - [13177 - Orchestral scores.cpp](/home/alexander/codes/uva2/volume131/13177 - Orchestral scores.cpp)
+      - [13178 - Is it multiple of 3.cpp](/home/alexander/codes/uva2/volume131/13178 - Is it multiple of 3.cpp)
+      - [13180 - The countess pearls.cpp](/home/alexander/codes/uva2/volume131/13180 - The countess pearls.cpp)
+      - [13181 - Sleeping in hostels.cpp](/home/alexander/codes/uva2/volume131/13181 - Sleeping in hostels.cpp)
+      - [13182 - Tobby's Ancestors.cpp](/home/alexander/codes/uva2/volume131/13182 - Tobby's Ancestors.cpp)
+    - 13183 - Tobby and Array
+        - [13183 - Tobby and Array.cpp](/home/alexander/codes/uva2/volume131/13183 - Tobby and Array/13183 - Tobby and Array.cpp)
+        - [13183 - Tobby and Array-opt.cpp](/home/alexander/codes/uva2/volume131/13183 - Tobby and Array/13183 - Tobby and Array-opt.cpp)
+      - [13184 - Counting Edges and Graphs.cpp](/home/alexander/codes/uva2/volume131/13184 - Counting Edges and Graphs.cpp)
+      - [13185 - DPA Numbers I.cpp](/home/alexander/codes/uva2/volume131/13185 - DPA Numbers I.cpp)
+    - 13186 - Tobby and the quaseEquals strings
+        - [13186 - Tobby and the quaseEquals strings.cpp](/home/alexander/codes/uva2/volume131/13186 - Tobby and the quaseEquals strings/13186 - Tobby and the quaseEquals strings.cpp)
+        - [13186 - Tobby and the quaseEquals strings-opt.cpp](/home/alexander/codes/uva2/volume131/13186 - Tobby and the quaseEquals strings/13186 - Tobby and the quaseEquals strings-opt.cpp)
+        - [13186 - Tobby and the quaseEquals strings-tri.cpp](/home/alexander/codes/uva2/volume131/13186 - Tobby and the quaseEquals strings/13186 - Tobby and the quaseEquals strings-tri.cpp)
+      - [13187 - Felipe and the Sequence.cpp](/home/alexander/codes/uva2/volume131/13187 - Felipe and the Sequence.cpp)
+      - [13188 - Rectangular Sum.cpp](/home/alexander/codes/uva2/volume131/13188 - Rectangular Sum.cpp)
+      - [13189 - Humbertov and the Triangular Spiral.cpp](/home/alexander/codes/uva2/volume131/13189 - Humbertov and the Triangular Spiral.cpp)
+      - [13190 - Rockabye Tobby.cpp](/home/alexander/codes/uva2/volume131/13190 - Rockabye Tobby.cpp)
+      - [13191 - Tobby Primes.cpp](/home/alexander/codes/uva2/volume131/13191 - Tobby Primes.cpp)
+      - [13193 - Rotations.cpp](/home/alexander/codes/uva2/volume131/13193 - Rotations.cpp)
+      - [13194 - DPA Numbers II.cpp](/home/alexander/codes/uva2/volume131/13194 - DPA Numbers II.cpp)
+  - volume132
+      - [13203 - Disk Madness.cpp](/home/alexander/codes/uva2/volume132/13203 - Disk Madness.cpp)
+      - [13204 - Count these Permutations.cpp](/home/alexander/codes/uva2/volume132/13204 - Count these Permutations.cpp)
+      - [13205 - Antivirus.cpp](/home/alexander/codes/uva2/volume132/13205 - Antivirus.cpp)
+      - [13206 - Beautiful Triad.cpp](/home/alexander/codes/uva2/volume132/13206 - Beautiful Triad.cpp)
+      - [13207 - AirCraft Monster.cpp](/home/alexander/codes/uva2/volume132/13207 - AirCraft Monster.cpp)
+      - [13208 - Drought In Nlogonia.cpp](/home/alexander/codes/uva2/volume132/13208 - Drought In Nlogonia.cpp)
+      - [13209 - My Password is a Palindromic Prime Number.cpp](/home/alexander/codes/uva2/volume132/13209 - My Password is a Palindromic Prime Number.cpp)
+      - [13211 - Geonosis.cpp](/home/alexander/codes/uva2/volume132/13211 - Geonosis.cpp)
+      - [13211 - Geonosis-opt.cpp](/home/alexander/codes/uva2/volume132/13211 - Geonosis-opt.cpp)
+      - [13212 - How many inversions.cpp](/home/alexander/codes/uva2/volume132/13212 - How many inversions.cpp)
+      - [13213 - Quidditch Match.cpp](/home/alexander/codes/uva2/volume132/13213 - Quidditch Match.cpp)
+      - [13214 - The Robot's Grid.cpp](/home/alexander/codes/uva2/volume132/13214 - The Robot's Grid.cpp)
+      - [13215 - Polygonal Park.cpp](/home/alexander/codes/uva2/volume132/13215 - Polygonal Park.cpp)
+      - [13216 - Problem with a ridiculously long name but with a ridiculously short description.cpp](/home/alexander/codes/uva2/volume132/13216 - Problem with a ridiculously long name but with a ridiculously short description.cpp)
+      - [13217 - Amazing Function.cpp](/home/alexander/codes/uva2/volume132/13217 - Amazing Function.cpp)
+      - [13221 - Elegant Pillars.cpp](/home/alexander/codes/uva2/volume132/13221 - Elegant Pillars.cpp)
+      - [13227 - Katrina's Shadow.cpp](/home/alexander/codes/uva2/volume132/13227 - Katrina's Shadow.cpp)
+      - [13229 - Alice's Travels.cpp](/home/alexander/codes/uva2/volume132/13229 - Alice's Travels.cpp)
+      - [13241 - Blade Ranas 2040.cpp](/home/alexander/codes/uva2/volume132/13241 - Blade Ranas 2040.cpp)
+      - [13242 - Pool Filling.cpp](/home/alexander/codes/uva2/volume132/13242 - Pool Filling.cpp)
+      - [13243 - The broken DNA of Jack the Ripper.cpp](/home/alexander/codes/uva2/volume132/13243 - The broken DNA of Jack the Ripper.cpp)
+      - [13243 - The broken DNA of Jack the Ripper[opt].cpp](/home/alexander/codes/uva2/volume132/13243 - The broken DNA of Jack the Ripper[opt].cpp)
+      - [13244 - Space Happiness.cpp](/home/alexander/codes/uva2/volume132/13244 - Space Happiness.cpp)
+      - [13245 - Prime Darts.cpp](/home/alexander/codes/uva2/volume132/13245 - Prime Darts.cpp)
+      - [13247 - Recomputing Dependencies.cpp](/home/alexander/codes/uva2/volume132/13247 - Recomputing Dependencies.cpp)
+      - [13248 - Rogue One- Time to Impact.cpp](/home/alexander/codes/uva2/volume132/13248 - Rogue One- Time to Impact.cpp)
+      - [13249 - A Contest to Meet.cpp](/home/alexander/codes/uva2/volume132/13249 - A Contest to Meet.cpp)
+      - [13250 - Balance Game.cpp](/home/alexander/codes/uva2/volume132/13250 - Balance Game.cpp)
+      - [13251 - Compact Terms.cpp](/home/alexander/codes/uva2/volume132/13251 - Compact Terms.cpp)
+      - [13252 - Rotating Drum.cpp](/home/alexander/codes/uva2/volume132/13252 - Rotating Drum.cpp)
+      - [13253 - Rational Coins.cpp](/home/alexander/codes/uva2/volume132/13253 - Rational Coins.cpp)
+      - [13254 - Fish.cpp](/home/alexander/codes/uva2/volume132/13254 - Fish.cpp)
+      - [13254 - Fish-v2.cpp](/home/alexander/codes/uva2/volume132/13254 - Fish-v2.cpp)
+      - [13256 - Hip-$n$.cpp](/home/alexander/codes/uva2/volume132/13256 - Hip-$n$.cpp)
+      - [13257 - License Plates.cpp](/home/alexander/codes/uva2/volume132/13257 - License Plates.cpp)
+      - [13258 - Romeo and Juliet Secrets.cpp](/home/alexander/codes/uva2/volume132/13258 - Romeo and Juliet Secrets.cpp)
+      - [13259 - Soccer Championship.cpp](/home/alexander/codes/uva2/volume132/13259 - Soccer Championship.cpp)
+      - [13260 - Alice's Travels II.cpp](/home/alexander/codes/uva2/volume132/13260 - Alice's Travels II.cpp)
+      - [13260 - Alice's Travels II[opt].cpp](/home/alexander/codes/uva2/volume132/13260 - Alice's Travels II[opt].cpp)
+      - [13262 - Count Equation Solutions.cpp](/home/alexander/codes/uva2/volume132/13262 - Count Equation Solutions.cpp)
+      - [13271 - Brick Walls.cpp](/home/alexander/codes/uva2/volume132/13271 - Brick Walls.cpp)
+      - [13272 - Bracket Sequence.cpp](/home/alexander/codes/uva2/volume132/13272 - Bracket Sequence.cpp)
+      - [13273 - Making a Team.cpp](/home/alexander/codes/uva2/volume132/13273 - Making a Team.cpp)
+      - [13274 - Christmas Tree.cpp](/home/alexander/codes/uva2/volume132/13274 - Christmas Tree.cpp)
+      - [13275 - Leap Birthdays.cpp](/home/alexander/codes/uva2/volume132/13275 - Leap Birthdays.cpp)
+      - [13276 - Megamind.cpp](/home/alexander/codes/uva2/volume132/13276 - Megamind.cpp)
+      - [13277 - XOR Path.cpp](/home/alexander/codes/uva2/volume132/13277 - XOR Path.cpp)
+      - [13278 - Angry Birds Transformers.cpp](/home/alexander/codes/uva2/volume132/13278 - Angry Birds Transformers.cpp)
+      - [13279 - Divisors.cpp](/home/alexander/codes/uva2/volume132/13279 - Divisors.cpp)
+      - [13280 - Substring Sorting.cpp](/home/alexander/codes/uva2/volume132/13280 - Substring Sorting.cpp)
+    - 13282 - Cakey McCakeFace
+        - [13282 - Cakey McCakeFace[block].cpp](/home/alexander/codes/uva2/volume132/13282 - Cakey McCakeFace/13282 - Cakey McCakeFace[block].cpp)
+        - [13282 - Cakey McCakeFace.cpp](/home/alexander/codes/uva2/volume132/13282 - Cakey McCakeFace/13282 - Cakey McCakeFace.cpp)
+        - [13282 - Cakey McCakeFace[opt2].cpp](/home/alexander/codes/uva2/volume132/13282 - Cakey McCakeFace/13282 - Cakey McCakeFace[opt2].cpp)
+        - [13282 - Cakey McCakeFace[opt].cpp](/home/alexander/codes/uva2/volume132/13282 - Cakey McCakeFace/13282 - Cakey McCakeFace[opt].cpp)
+      - [13283 - Table.cpp](/home/alexander/codes/uva2/volume132/13283 - Table.cpp)
+      - [13284 - Macarons.cpp](/home/alexander/codes/uva2/volume132/13284 - Macarons.cpp)
+      - [13286 - Ingredients.cpp](/home/alexander/codes/uva2/volume132/13286 - Ingredients.cpp)
+      - [13287 - Shattered Cake.cpp](/home/alexander/codes/uva2/volume132/13287 - Shattered Cake.cpp)
+      - [13288 - Cordon Bleu.cpp](/home/alexander/codes/uva2/volume132/13288 - Cordon Bleu.cpp)
+      - [13291 - Frosting on the Cake.cpp](/home/alexander/codes/uva2/volume132/13291 - Frosting on the Cake.cpp)
+      - [13292 - Blowing Candles.cpp](/home/alexander/codes/uva2/volume132/13292 - Blowing Candles.cpp)
+      - [13293 - All-star Three-point Contest.cpp](/home/alexander/codes/uva2/volume132/13293 - All-star Three-point Contest.cpp)
+      - [13294 - Forming Better Groups.cpp](/home/alexander/codes/uva2/volume132/13294 - Forming Better Groups.cpp)
+      - [13295 - Carrol's Scrabble.cpp](/home/alexander/codes/uva2/volume132/13295 - Carrol's Scrabble.cpp)
+      - [13296 - Dominoes Magic Squares.cpp](/home/alexander/codes/uva2/volume132/13296 - Dominoes Magic Squares.cpp)
+      - [13297 - Extended Puzzle.cpp](/home/alexander/codes/uva2/volume132/13297 - Extended Puzzle.cpp)
+      - [13297 - Extended Puzzle[opt].cpp](/home/alexander/codes/uva2/volume132/13297 - Extended Puzzle[opt].cpp)
+      - [13298 - A Fibonacci Family Formula.cpp](/home/alexander/codes/uva2/volume132/13298 - A Fibonacci Family Formula.cpp)
+      - [13298 - A Fibonacci Family Formula[L-2-R-sliding-opt].cpp](/home/alexander/codes/uva2/volume132/13298 - A Fibonacci Family Formula[L-2-R-sliding-opt].cpp)
